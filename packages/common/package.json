@@ -1,0 +1,114 @@
+{
+  "name": "@codesandbox/common",
+  "version": "1.0.12",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codesandbox/codesandbox-client",
+    "directory": "packages/common"
+  },
+  "files": [
+    "lib"
+  ],
+  "source": true,
+  "scripts": {
+    "build": "yarn build:lib",
+    "build:dev": "yarn build",
+    "build:lib": "yarn clean && yarn tsc && yarn babel src --out-dir lib && yarn cpx \"src/**/*.{css,svg,png,jpg,woff,woff2,d.ts}\" lib",
+    "build:storybook": "build-storybook -c .storybook -o public",
+    "clean": "rimraf lib && yarn rimraf node_modules/@types/react-native",
+    "lint": "eslint --ext .js,.ts,.tsx src",
+    "prepublish": "yarn build",
+    "start": "(yarn tsc --watch & yarn babel src --out-dir lib --watch & yarn cpx \"src/**/*.{css,svg,png,jpg,woff,woff2}\" lib --watch)",
+    "start:storybook": "start-storybook",
+    "test": "cross-env NODE_ENV=test jest --env=jsdom --maxWorkers 2",
+    "test:update": "cross-env NODE_ENV=test jest --env=jsdom --updateSnapshot",
+    "typecheck": "tsc --noEmit"
+  },
+  "jest": {
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "modulePathIgnorePatterns": [
+      "lib"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>src/test/setupTests.ts"
+    ],
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.css$": "<rootDir>/__mocks__/styleMock.js"
+    }
+  },
+  "dependencies": {
+    "@amplitude/analytics-browser": "^2.2.0",
+    "@babel/plugin-transform-flow-strip-types": "^7.0.0",
+    "@babel/polyfill": "^7.4.4",
+    "@codesandbox/components": "^0.0.7",
+    "@codesandbox/notifications": "^1.0.6",
+    "@sentry/browser": "^5.19.0",
+    "@styled-system/css": "^5.0.23",
+    "@tippy.js/react": "^3.1.1",
+    "babel-plugin-preval": "^3.0.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "codesandbox-api": "0.0.32",
+    "color": "^3.2.0",
+    "date-fns": "^2.0.0",
+    "dot-object": "^2.0.0",
+    "error-polyfill": "^0.1.2",
+    "humps": "CompuIves/humps",
+    "image-extensions": "^1.1.0",
+    "immer": "^9.0.6",
+    "lodash": "^4.17.21",
+    "markty-toml": "^0.0.9",
+    "memoize-one": "^3.1.1",
+    "ot": "^0.0.15",
+    "react": "^16.8.6",
+    "react-icons": "^2.2.7",
+    "react-input-autosize": "2.2.1",
+    "react-router-dom": "^5.2.0",
+    "react-scrollbars-custom": "^4.0.20",
+    "react-spring": "^8.0.25",
+    "react-textarea-autosize": "^6.1.0",
+    "semver": "^7.3.5",
+    "sha1": "^1.1.1",
+    "styled-components": "^5.2.0",
+    "@codesandbox/template-icons": "^2.0.2",
+    "typeface-inter": "^3.10.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-async-to-generator": "^7.5.0",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@storybook/addon-a11y": "^7.5.1",
+    "@storybook/addon-actions": "^7.5.1",
+    "@storybook/addon-knobs": "^7.0.2",
+    "@storybook/addon-storysource": "^7.5.1",
+    "@storybook/addon-viewport": "^7.5.1",
+    "@storybook/react": "^7.5.1",
+    "@types/color": "3.0.5",
+    "@types/humps": "^1.1.2",
+    "@types/lodash": "^4.14.200",
+    "@types/react": "^16.9.17",
+    "@types/react-icons": "^2.2.7",
+    "@types/styled-components": "^5.1.7",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-macros": "^2.6.1",
+    "babel-plugin-system-import-transformer": "^4.0.0",
+    "cpx": "^1.5.0",
+    "jest": "^29.7.0",
+    "jest-styled-components": "^7.0.2",
+    "rimraf": "^2.6.3",
+    "typescript": "^5.2.2",
+    "yarn": "^1.17.3"
+  }
+}

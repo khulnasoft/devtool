@@ -1,0 +1,15 @@
+{
+  "extends": "../tsconfig.json",
+  "exclude": ["node_modules", "./**/*.test.ts"],
+  "include": ["./src/**/*"],
+
+  "compilerOptions": {
+    "lib": ["es6", "dom", "es2017.object", "es2017.sharedmemory"],
+    "outDir": "lib",
+    "declaration": true,
+    "allowJs": false,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  }
+}

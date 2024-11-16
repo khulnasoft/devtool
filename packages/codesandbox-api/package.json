@@ -1,0 +1,93 @@
+{
+  "name": "codesandbox-api",
+  "version": "0.0.32",
+  "description": "",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codesandbox/codesandbox-client",
+    "directory": "packages/codesandbox-api"
+  },
+  "license": "MIT",
+  "author": "Ives van Hoorne <ives.v.h@gmail.com>",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/codesandbox.umd.js",
+  "module": "dist/codesandbox.es5.js",
+  "typings": "dist/types/codesandbox.d.ts",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc && rollup -c && rimraf compiled",
+    "build:clean": "tsc && rollup -c",
+    "build:dev": "tsc && rollup -c",
+    "commit": "git-cz",
+    "deploy-docs": "ts-node tools/gh-pages-publish",
+    "lint": "tslint -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
+    "start": "nodemon --watch \"src/**/*.ts\" -e ts --exec \"npm run build:clean\"",
+    "test": "jest --env=jsdom",
+    "test:prod": "npm run lint && npm run test -- --coverage --no-cache",
+    "test:watch": "jest --env=jsdom --watch"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/test/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 95,
+        "lines": 95,
+        "statements": 95
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist/",
+      "<rootDir>/compiled/"
+    ],
+    "preset": "ts-jest",
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/debug": "^0.0.30",
+    "@types/glob": "^7.1.1",
+    "@types/uuid": "^3.4.3",
+    "@types/node": "^16.18.14",
+    "colors": "^1.1.2",
+    "cross-env": "^5.0.1",
+    "cz-conventional-changelog": "^2.0.0",
+    "jest": "^29.7.0",
+    "lodash.camelcase": "^4.3.0",
+    "nodemon": "^3.0.1",
+    "prompt": "^1.0.0",
+    "replace-in-file": "^2.5.0",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.46.0",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^3.0.6",
+    "tsc-watch": "^1.0.5",
+    "tslint": "^5.4.3",
+    "tslint-config-prettier": "^1.1.0",
+    "tslint-config-standard": "^6.0.0",
+    "typescript": "^5.2.2",
+    "uuid": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}
