@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { OrganizationSettings } from "@devtool/public-api/lib/devtool/v1/organization_pb";
+import { OrganizationSettings } from "@khulnasoft/public-api/lib/devtool/v1/organization_pb";
 import React, { Children, ReactNode, useCallback, useMemo, useState } from "react";
 import Alert from "../components/Alert";
 import ConfirmationModal from "../components/ConfirmationModal";
@@ -24,7 +24,7 @@ import { organizationClient } from "../service/public-api";
 import { devtoolHostUrl } from "../service/service";
 import { useCurrentUser } from "../user-context";
 import { OrgSettingsPage } from "./OrgSettingsPage";
-import { ErrorCode } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ErrorCode } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { Button } from "@podkit/buttons/Button";
 import { useInstallationDefaultWorkspaceImageQuery } from "../data/installation/default-workspace-image-query";
 import { ConfigurationSettingsField } from "../repositories/detail/ConfigurationSettingsField";

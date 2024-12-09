@@ -5,10 +5,10 @@
  */
 
 import { ImageBuilderClient } from "./imgbuilder_grpc_pb";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
-import { Deferred } from "@devtool/devtool-protocol/lib/util/deferred";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
-import { createClientCallMetricsInterceptor, IClientCallMetrics } from "@devtool/devtool-protocol/lib/util/grpc";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
+import { Deferred } from "@khulnasoft/devtool-protocol/lib/util/deferred";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
+import { createClientCallMetricsInterceptor, IClientCallMetrics } from "@khulnasoft/devtool-protocol/lib/util/grpc";
 import * as opentracing from "opentracing";
 import { Metadata } from "@grpc/grpc-js";
 import {
@@ -25,7 +25,7 @@ import {
 import { injectable, inject, optional } from "inversify";
 import * as grpc from "@grpc/grpc-js";
 import { TextDecoder } from "util";
-import { ImageBuildLogInfo, User, Workspace, WorkspaceInstance } from "@devtool/devtool-protocol";
+import { ImageBuildLogInfo, User, Workspace, WorkspaceInstance } from "@khulnasoft/devtool-protocol";
 
 export const ImageBuilderClientProvider = Symbol("ImageBuilderClientProvider");
 

@@ -4,10 +4,10 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { SuggestedRepository } from "@devtool/public-api/lib/devtool/v1/scm_pb";
-import { SelectAccountPayload } from "@devtool/devtool-protocol/lib/auth";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
-import { Deferred } from "@devtool/devtool-protocol/lib/util/deferred";
+import { SuggestedRepository } from "@khulnasoft/public-api/lib/devtool/v1/scm_pb";
+import { SelectAccountPayload } from "@khulnasoft/devtool-protocol/lib/auth";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { Deferred } from "@khulnasoft/devtool-protocol/lib/util/deferred";
 import { FC, FunctionComponent, useCallback, useContext, useEffect, useMemo, useState, ReactNode } from "react";
 import { useHistory, useLocation } from "react-router";
 import Alert from "../components/Alert";
@@ -36,17 +36,17 @@ import { SelectAccountModal } from "../user-settings/SelectAccountModal";
 import { settingsPathIntegrations } from "../user-settings/settings.routes";
 import { BrowserExtensionBanner } from "./BrowserExtensionBanner";
 import { WorkspaceEntry } from "./WorkspaceEntry";
-import { AuthProviderType } from "@devtool/public-api/lib/devtool/v1/authprovider_pb";
+import { AuthProviderType } from "@khulnasoft/public-api/lib/devtool/v1/authprovider_pb";
 import {
     CreateAndStartWorkspaceRequest_ContextURL,
     WorkspacePhase_Phase,
-} from "@devtool/public-api/lib/devtool/v1/workspace_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/workspace_pb";
 import { Button } from "@podkit/buttons/Button";
 import { LoadingButton } from "@podkit/buttons/LoadingButton";
-import { CreateAndStartWorkspaceRequest } from "@devtool/public-api/lib/devtool/v1/workspace_pb";
+import { CreateAndStartWorkspaceRequest } from "@khulnasoft/public-api/lib/devtool/v1/workspace_pb";
 import { PartialMessage } from "@bufbuild/protobuf";
-import { User_WorkspaceAutostartOption } from "@devtool/public-api/lib/devtool/v1/user_pb";
-import { EditorReference } from "@devtool/public-api/lib/devtool/v1/editor_pb";
+import { User_WorkspaceAutostartOption } from "@khulnasoft/public-api/lib/devtool/v1/user_pb";
+import { EditorReference } from "@khulnasoft/public-api/lib/devtool/v1/editor_pb";
 import { converter } from "../service/public-api";
 import { useUpdateCurrentUserMutation } from "../data/current-user/update-mutation";
 import { useAllowedWorkspaceClassesMemo } from "../data/workspaces/workspace-classes-query";
@@ -56,9 +56,9 @@ import { useAllowedWorkspaceEditorsMemo } from "../data/ide-options/ide-options-
 import { isDevtoolIo } from "../utils";
 import { useListConfigurations } from "../data/configurations/configuration-queries";
 import { flattenPagedConfigurations } from "../data/git-providers/unified-repositories-search-query";
-import { Configuration } from "@devtool/public-api/lib/devtool/v1/configuration_pb";
+import { Configuration } from "@khulnasoft/public-api/lib/devtool/v1/configuration_pb";
 import { useMemberRole } from "../data/organizations/members-query";
-import { OrganizationPermission } from "@devtool/public-api/lib/devtool/v1/organization_pb";
+import { OrganizationPermission } from "@khulnasoft/public-api/lib/devtool/v1/organization_pb";
 
 type NextLoadOption = "searchParams" | "autoStart" | "allDone";
 

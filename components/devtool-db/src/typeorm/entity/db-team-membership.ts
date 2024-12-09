@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { TeamMemberRole } from "@devtool/devtool-protocol";
+import { TeamMemberRole } from "@khulnasoft/devtool-protocol";
 import { Entity, Column, PrimaryColumn, Index } from "typeorm";
 import { TypeORM } from "../typeorm";
 

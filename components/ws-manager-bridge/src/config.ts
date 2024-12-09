@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { WorkspaceCluster } from "@devtool/devtool-protocol/lib/workspace-cluster";
+import { WorkspaceCluster } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
 import { ClusterServiceServerOptions } from "./cluster-service-server";
 
 export const Configuration = Symbol("Configuration");

@@ -6,16 +6,16 @@
 
 import dayjs from "dayjs";
 import { useEffect, useState } from "react";
-import { Team, TeamMemberInfo, TeamMemberRole, VALID_ORG_MEMBER_ROLES } from "@devtool/devtool-protocol";
+import { Team, TeamMemberInfo, TeamMemberRole, VALID_ORG_MEMBER_ROLES } from "@khulnasoft/devtool-protocol";
 import { getDevtoolService } from "../service/service";
 import { Item, ItemField, ItemsList } from "../components/ItemsList";
 import DropDown from "../components/DropDown";
 import { Link } from "react-router-dom";
 import Label from "./Label";
 import Property from "./Property";
-import { AttributionId } from "@devtool/devtool-protocol/lib/attribution";
-import { BillingMode } from "@devtool/devtool-protocol/lib/billing-mode";
-import { CostCenterJSON, CostCenter_BillingStrategy } from "@devtool/devtool-protocol/lib/usage";
+import { AttributionId } from "@khulnasoft/devtool-protocol/lib/attribution";
+import { BillingMode } from "@khulnasoft/devtool-protocol/lib/billing-mode";
+import { CostCenterJSON, CostCenter_BillingStrategy } from "@khulnasoft/devtool-protocol/lib/usage";
 import Modal from "../components/Modal";
 import { Heading2 } from "../components/typography/headings";
 import search from "../icons/search.svg";

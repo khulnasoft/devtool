@@ -12,7 +12,7 @@ import * as fs from "fs";
 import { WorkspaceManagerBridgeFactory, WorkspaceManagerBridge } from "./bridge";
 import { Metrics } from "./metrics";
 import { BridgeController, WorkspaceManagerClientProviderConfigSource } from "./bridge-controller";
-import { filePathTelepresenceAware } from "@devtool/devtool-protocol/lib/env";
+import { filePathTelepresenceAware } from "@khulnasoft/devtool-protocol/lib/env";
 import {
     WorkspaceManagerClientProvider,
     IWorkspaceManagerClientCallMetrics,
@@ -23,14 +23,14 @@ import {
     WorkspaceManagerClientProviderSource,
 } from "@devtool/ws-manager/lib/client-provider-source";
 import { ClusterService, ClusterServiceServer } from "./cluster-service-server";
-import { IAnalyticsWriter } from "@devtool/devtool-protocol/lib/analytics";
-import { newAnalyticsWriterFromEnv } from "@devtool/devtool-protocol/lib/util/analytics";
-import { IClientCallMetrics } from "@devtool/devtool-protocol/lib/util/grpc";
-import { PrometheusClientCallMetrics } from "@devtool/devtool-protocol/lib/messaging/client-call-metrics";
+import { IAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
+import { newAnalyticsWriterFromEnv } from "@khulnasoft/devtool-protocol/lib/util/analytics";
+import { IClientCallMetrics } from "@khulnasoft/devtool-protocol/lib/util/grpc";
+import { PrometheusClientCallMetrics } from "@khulnasoft/devtool-protocol/lib/messaging/client-call-metrics";
 import { PrebuildStateMapper } from "./prebuild-state-mapper";
-import { DebugApp } from "@devtool/devtool-protocol/lib/util/debug-app";
-import { Client as ExperimentsClient } from "@devtool/devtool-protocol/lib/experiments/types";
-import { getExperimentsClientForBackend } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
+import { DebugApp } from "@khulnasoft/devtool-protocol/lib/util/debug-app";
+import { Client as ExperimentsClient } from "@khulnasoft/devtool-protocol/lib/experiments/types";
+import { getExperimentsClientForBackend } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import { WorkspaceInstanceController, WorkspaceInstanceControllerImpl } from "./workspace-instance-controller";
 import { AppClusterWorkspaceInstancesController } from "./app-cluster-instance-controller";
 import { PrebuildUpdater } from "./prebuild-updater";

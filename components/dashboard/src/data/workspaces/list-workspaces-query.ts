@@ -7,7 +7,7 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useCurrentOrg } from "../organizations/orgs-query";
 import { workspaceClient } from "../../service/public-api";
-import { Workspace } from "@devtool/public-api/lib/devtool/v1/workspace_pb";
+import { Workspace } from "@khulnasoft/public-api/lib/devtool/v1/workspace_pb";
 
 export type ListWorkspacesQueryResult = Workspace[];
 

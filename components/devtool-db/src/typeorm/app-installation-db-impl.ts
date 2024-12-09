@@ -4,14 +4,14 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { AppInstallation, AppInstallationPlatform, AppInstallationState } from "@devtool/devtool-protocol";
+import { AppInstallation, AppInstallationPlatform, AppInstallationState } from "@khulnasoft/devtool-protocol";
 import { injectable, inject } from "inversify";
 import { TypeORM } from "./typeorm";
 
 import { AppInstallationDB } from "../app-installation-db";
 import { Repository } from "typeorm";
 import { DBAppInstallation } from "./entity/db-app-installation";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 
 @injectable()
 export class TypeORMAppInstallationDBImpl implements AppInstallationDB {

@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { AppInstallation, AppInstallationPlatform } from "@devtool/devtool-protocol";
+import { AppInstallation, AppInstallationPlatform } from "@khulnasoft/devtool-protocol";
 
 export const AppInstallationDB = Symbol("AppInstallationDB");
 

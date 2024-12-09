@@ -6,7 +6,7 @@
 
 import { HandlerContext, ServiceImpl } from "@connectrpc/connect";
 import { inject, injectable } from "inversify";
-import { OrganizationService as OrganizationServiceInterface } from "@devtool/public-api/lib/devtool/v1/organization_connect";
+import { OrganizationService as OrganizationServiceInterface } from "@khulnasoft/public-api/lib/devtool/v1/organization_connect";
 import {
     CreateOrganizationRequest,
     CreateOrganizationResponse,
@@ -37,14 +37,14 @@ import {
     ListOrganizationsRequest_Scope,
     ListOrganizationWorkspaceClassesRequest,
     ListOrganizationWorkspaceClassesResponse,
-} from "@devtool/public-api/lib/devtool/v1/organization_pb";
-import { PublicAPIConverter } from "@devtool/public-api-common/lib/public-api-converter";
+} from "@khulnasoft/public-api/lib/devtool/v1/organization_pb";
+import { PublicAPIConverter } from "@khulnasoft/public-api-common/lib/public-api-converter";
 import { OrganizationService } from "../orgs/organization-service";
-import { OrganizationSettings as ProtocolOrganizationSettings } from "@devtool/devtool-protocol";
-import { PaginationResponse } from "@devtool/public-api/lib/devtool/v1/pagination_pb";
+import { OrganizationSettings as ProtocolOrganizationSettings } from "@khulnasoft/devtool-protocol";
+import { PaginationResponse } from "@khulnasoft/public-api/lib/devtool/v1/pagination_pb";
 import { validate as uuidValidate } from "uuid";
 import { ctxUserId } from "../util/request-context";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 
 @injectable()
 export class OrganizationServiceAPI implements ServiceImpl<typeof OrganizationServiceInterface> {

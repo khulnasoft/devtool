@@ -4,11 +4,11 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { Project } from "@devtool/devtool-protocol/lib/teams-projects-protocol";
+import { Project } from "@khulnasoft/devtool-protocol/lib/teams-projects-protocol";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useCurrentOrg } from "../organizations/orgs-query";
 import { listAllProjects, projectsService } from "../../service/public-api";
-import type { PartialProject } from "@devtool/devtool-protocol";
+import type { PartialProject } from "@khulnasoft/devtool-protocol";
 import { getDevtoolService } from "../../service/service";
 
 const BASE_KEY = "projects";

@@ -14,26 +14,26 @@ import {
     WorkspaceTimeoutDuration,
     OrgMemberRole,
     User,
-} from "@devtool/devtool-protocol";
-import { IAnalyticsWriter } from "@devtool/devtool-protocol/lib/analytics";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+} from "@khulnasoft/devtool-protocol";
+import { IAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { inject, injectable } from "inversify";
 import { Authorizer, SYSTEM_USER, SYSTEM_USER_ID } from "../authorization/authorizer";
 import { ProjectsService } from "../projects/projects-service";
 import { TransactionalContext } from "@devtool/devtool-db/lib/typeorm/transactional-db-impl";
 import { DefaultWorkspaceImageValidator } from "./default-workspace-image-validator";
-import { getPrimaryEmail } from "@devtool/public-api-common/lib/user-utils";
+import { getPrimaryEmail } from "@khulnasoft/public-api-common/lib/user-utils";
 import { UserService } from "../user/user-service";
-import { SupportedWorkspaceClass } from "@devtool/devtool-protocol/lib/workspace-class";
+import { SupportedWorkspaceClass } from "@khulnasoft/devtool-protocol/lib/workspace-class";
 import { InstallationService } from "../auth/installation-service";
-import { getExperimentsClientForBackend } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
+import { getExperimentsClientForBackend } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import { runWithSubjectId } from "../util/request-context";
 import { IDEService } from "../ide-service";
 import { StripeService } from "../billing/stripe-service";
-import { AttributionId } from "@devtool/devtool-protocol/lib/attribution";
+import { AttributionId } from "@khulnasoft/devtool-protocol/lib/attribution";
 import { UsageService } from "./usage-service";
-import { CostCenter_BillingStrategy } from "@devtool/devtool-protocol/lib/usage";
+import { CostCenter_BillingStrategy } from "@khulnasoft/devtool-protocol/lib/usage";
 import { CreateUserParams, UserAuthentication } from "../user/user-authentication";
 
 @injectable()

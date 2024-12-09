@@ -7,9 +7,9 @@
 import { injectable, inject } from "inversify";
 
 import { FileProvider, MaybeContent, RevisionNotFoundError } from "../repohost/file-provider";
-import { Commit, User, Repository } from "@devtool/devtool-protocol";
+import { Commit, User, Repository } from "@khulnasoft/devtool-protocol";
 import { GitLabApi, GitLab } from "./api";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 
 @injectable()
 export class GitlabFileProvider implements FileProvider {

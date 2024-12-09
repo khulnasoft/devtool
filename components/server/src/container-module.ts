@@ -7,17 +7,17 @@
 import { ContainerModule } from "inversify";
 
 import { RedisPublisher, newRedisClient } from "@devtool/devtool-db/lib";
-import { IAnalyticsWriter } from "@devtool/devtool-protocol/lib/analytics";
-import { DevtoolFileParser } from "@devtool/devtool-protocol/lib/devtool-file-parser";
-import { PrometheusClientCallMetrics } from "@devtool/devtool-protocol/lib/messaging/client-call-metrics";
-import { newAnalyticsWriterFromEnv } from "@devtool/devtool-protocol/lib/util/analytics";
-import { DebugApp } from "@devtool/devtool-protocol/lib/util/debug-app";
+import { IAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
+import { DevtoolFileParser } from "@khulnasoft/devtool-protocol/lib/devtool-file-parser";
+import { PrometheusClientCallMetrics } from "@khulnasoft/devtool-protocol/lib/messaging/client-call-metrics";
+import { newAnalyticsWriterFromEnv } from "@khulnasoft/devtool-protocol/lib/util/analytics";
+import { DebugApp } from "@khulnasoft/devtool-protocol/lib/util/debug-app";
 import {
     IClientCallMetrics,
     createClientCallMetricsInterceptor,
     defaultGRPCOptions,
-} from "@devtool/devtool-protocol/lib/util/grpc";
-import { prometheusClientMiddleware } from "@devtool/devtool-protocol/lib/util/nice-grpc";
+} from "@khulnasoft/devtool-protocol/lib/util/grpc";
+import { prometheusClientMiddleware } from "@khulnasoft/devtool-protocol/lib/util/nice-grpc";
 import { IDEServiceClient, IDEServiceDefinition } from "@devtool/ide-service-api/lib/ide.pb";
 import { ImageBuilderClientCallMetrics, ImageBuilderClientProvider } from "@devtool/image-builder/lib";
 import { BillingServiceClient, BillingServiceDefinition } from "@devtool/usage-api/lib/usage/v1/billing.pb";

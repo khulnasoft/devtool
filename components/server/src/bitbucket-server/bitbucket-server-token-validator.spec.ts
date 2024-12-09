@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { ifEnvVarNotSet } from "@devtool/devtool-protocol/lib/util/skip-if";
+import { ifEnvVarNotSet } from "@khulnasoft/devtool-protocol/lib/util/skip-if";
 import { Container, ContainerModule } from "inversify";
 import { retries, skip, suite, test, timeout } from "@testdeck/mocha";
 import { expect } from "chai";

@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { User } from "@devtool/devtool-protocol";
+import { User } from "@khulnasoft/devtool-protocol";
 
 import { Gitlab } from "@gitbeaker/rest";
 import {
@@ -25,10 +25,10 @@ import {
     ProjectSchema,
     SimpleProjectSchema,
 } from "@gitbeaker/core";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { AuthProviderParams } from "../auth/auth-provider";
 import { GitLabTokenHelper } from "./gitlab-token-helper";
-import { GitLabOAuthScopes } from "@devtool/public-api-common/lib/auth-providers";
+import { GitLabOAuthScopes } from "@khulnasoft/public-api-common/lib/auth-providers";
 
 @injectable()
 export class GitLabApi {

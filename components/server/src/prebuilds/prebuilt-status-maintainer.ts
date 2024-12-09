@@ -8,17 +8,17 @@ import { ProbotOctokit } from "probot";
 import { injectable, inject } from "inversify";
 import { WorkspaceDB, TracedWorkspaceDB, DBWithTracing } from "@devtool/devtool-db/lib";
 import { v4 as uuidv4 } from "uuid";
-import { HeadlessWorkspaceEvent } from "@devtool/devtool-protocol/lib/headless-workspace-log";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { HeadlessWorkspaceEvent } from "@khulnasoft/devtool-protocol/lib/headless-workspace-log";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import {
     PrebuiltWorkspaceUpdatable,
     PrebuiltWorkspace,
     Disposable,
     DisposableCollection,
     WorkspaceConfig,
-} from "@devtool/devtool-protocol";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
-import { repeat } from "@devtool/devtool-protocol/lib/util/repeat";
+} from "@khulnasoft/devtool-protocol";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
+import { repeat } from "@khulnasoft/devtool-protocol/lib/util/repeat";
 import { RedisSubscriber } from "../messaging/redis-subscriber";
 
 export interface CheckRunInfo {

@@ -5,8 +5,8 @@
  */
 
 import { BUILTIN_INSTLLATION_ADMIN_USER_ID, TeamDB } from "@devtool/devtool-db/lib";
-import { User } from "@devtool/devtool-protocol";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { User } from "@khulnasoft/devtool-protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import express from "express";
 import { inject, injectable, postConstruct } from "inversify";
 import passport from "passport";

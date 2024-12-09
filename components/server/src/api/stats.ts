@@ -6,8 +6,8 @@
 
 import { ServiceImpl } from "@connectrpc/connect";
 import { UserDB } from "@devtool/devtool-db/lib";
-import { StatsService } from "@devtool/public-api/lib/devtool/experimental/v1/stats_connect";
-import { GetUserStatsRequest, GetUserStatsResponse } from "@devtool/public-api/lib/devtool/experimental/v1/stats_pb";
+import { StatsService } from "@khulnasoft/public-api/lib/devtool/experimental/v1/stats_connect";
+import { GetUserStatsRequest, GetUserStatsResponse } from "@khulnasoft/public-api/lib/devtool/experimental/v1/stats_pb";
 import { inject, injectable } from "inversify";
 
 @injectable()

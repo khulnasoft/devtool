@@ -9,16 +9,16 @@ import { Octokit, RestEndpointMethodTypes } from "@octokit/rest";
 import { OctokitResponse } from "@octokit/types";
 import { OctokitOptions } from "@octokit/core/dist-types/types";
 
-import { Branch, CommitInfo, User } from "@devtool/devtool-protocol";
-import { GarbageCollectedCache } from "@devtool/devtool-protocol/lib/util/garbage-collected-cache";
+import { Branch, CommitInfo, User } from "@khulnasoft/devtool-protocol";
+import { GarbageCollectedCache } from "@khulnasoft/devtool-protocol/lib/util/garbage-collected-cache";
 import { injectable, inject } from "inversify";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { AuthProviderParams } from "../auth/auth-provider";
 import { GitHubTokenHelper } from "./github-token-helper";
-import { Deferred } from "@devtool/devtool-protocol/lib/util/deferred";
+import { Deferred } from "@khulnasoft/devtool-protocol/lib/util/deferred";
 
 import { URL } from "url";
-import { GitHubOAuthScopes } from "@devtool/public-api-common/lib/auth-providers";
+import { GitHubOAuthScopes } from "@khulnasoft/public-api-common/lib/auth-providers";
 
 export class GitHubApiError extends Error {
     readonly code: number;

@@ -5,14 +5,14 @@
  */
 
 import { HandlerContext, ServiceImpl } from "@connectrpc/connect";
-import { AuditLogService as AuditLogServiceInterface } from "@devtool/public-api/lib/devtool/v1/auditlogs_connect";
-import { ListAuditLogsRequest, ListAuditLogsResponse } from "@devtool/public-api/lib/devtool/v1/auditlogs_pb";
+import { AuditLogService as AuditLogServiceInterface } from "@khulnasoft/public-api/lib/devtool/v1/auditlogs_connect";
+import { ListAuditLogsRequest, ListAuditLogsResponse } from "@khulnasoft/public-api/lib/devtool/v1/auditlogs_pb";
 import { inject, injectable } from "inversify";
 import { AuditLogService } from "../audit/AuditLogService";
 import { ctxUserId } from "../util/request-context";
-import { PublicAPIConverter } from "@devtool/public-api-common/lib/public-api-converter";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
-import { parsePagination } from "@devtool/public-api-common/lib/public-api-pagination";
+import { PublicAPIConverter } from "@khulnasoft/public-api-common/lib/public-api-converter";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { parsePagination } from "@khulnasoft/public-api-common/lib/public-api-pagination";
 import { validate as uuidValidate } from "uuid";
 
 @injectable()

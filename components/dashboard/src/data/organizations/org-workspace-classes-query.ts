@@ -8,7 +8,7 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { organizationClient } from "../../service/public-api";
 import { useCallback } from "react";
 import { useCurrentOrg } from "./orgs-query";
-import { WorkspaceClass } from "@devtool/public-api/lib/devtool/v1/workspace_pb";
+import { WorkspaceClass } from "@khulnasoft/public-api/lib/devtool/v1/workspace_pb";
 import { noPersistence } from "../setup";
 
 export function useOrgWorkspaceClassesQueryInvalidator() {

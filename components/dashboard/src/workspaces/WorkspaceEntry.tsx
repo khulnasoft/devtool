@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { DevtoolHostUrl } from "@devtool/devtool-protocol/lib/util/devtool-host-url";
+import { DevtoolHostUrl } from "@khulnasoft/devtool-protocol/lib/util/devtool-host-url";
 import { FunctionComponent, useCallback, useMemo, useState } from "react";
 import { Item, ItemFieldIcon } from "../components/ItemsList";
 import PendingChangesDropdown from "../components/PendingChangesDropdown";
@@ -12,7 +12,7 @@ import Tooltip from "../components/Tooltip";
 import dayjs from "dayjs";
 import { WorkspaceEntryOverflowMenu } from "./WorkspaceOverflowMenu";
 import { WorkspaceStatusIndicator } from "./WorkspaceStatusIndicator";
-import { Workspace } from "@devtool/public-api/lib/devtool/v1/workspace_pb";
+import { Workspace } from "@khulnasoft/public-api/lib/devtool/v1/workspace_pb";
 import { GitBranchIcon, PinIcon } from "lucide-react";
 import { useUpdateWorkspaceMutation } from "../data/workspaces/update-workspace-mutation";
 import { fromWorkspaceName } from "./RenameWorkspaceModal";

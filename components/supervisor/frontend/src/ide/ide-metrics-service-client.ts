@@ -8,7 +8,7 @@ import { serverUrl, workspaceUrl } from "../shared/urls";
 const commit = require("../../config.json").commit;
 import { v4 } from "uuid";
 
-import { MetricsReporter } from "@devtool/devtool-protocol/lib/metrics";
+import { MetricsReporter } from "@khulnasoft/devtool-protocol/lib/metrics";
 
 export const metricsReporter = new MetricsReporter({
     devtoolUrl: serverUrl.toString(),

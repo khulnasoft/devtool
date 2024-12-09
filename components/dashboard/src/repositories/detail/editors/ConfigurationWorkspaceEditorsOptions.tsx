@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import type { Configuration } from "@devtool/public-api/lib/devtool/v1/configuration_pb";
+import type { Configuration } from "@khulnasoft/public-api/lib/devtool/v1/configuration_pb";
 import { useState } from "react";
 import { Heading3, Subheading } from "@podkit/typography/Headings";
 import { ConfigurationSettingsField } from "../ConfigurationSettingsField";

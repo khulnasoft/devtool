@@ -7,7 +7,7 @@
 import { Entity, Column, PrimaryColumn, Index } from "typeorm";
 
 import { Transformer } from "../transformer";
-import { WebhookEvent } from "@devtool/devtool-protocol";
+import { WebhookEvent } from "@khulnasoft/devtool-protocol";
 
 @Entity()
 // on DB but not Typeorm: @Index("ind_lastModified", ["_lastModified"])   // DBSync

@@ -9,7 +9,7 @@ import SelectIDEComponent from "../components/SelectIDEComponent";
 import { ThemeSelector } from "../components/ThemeSelector";
 import { Heading2, Subheading } from "../components/typography/headings";
 import { OnboardingStep } from "./OnboardingStep";
-import { User } from "@devtool/public-api/lib/devtool/v1/user_pb";
+import { User } from "@khulnasoft/public-api/lib/devtool/v1/user_pb";
 import Alert from "../components/Alert";
 
 type Props = {

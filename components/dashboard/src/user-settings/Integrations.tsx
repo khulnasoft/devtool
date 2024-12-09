@@ -9,8 +9,8 @@ import {
     getRequiredScopes,
     getScopeNameForScope,
     getScopesForAuthProviderType,
-} from "@devtool/public-api-common/lib/auth-providers";
-import { SelectAccountPayload } from "@devtool/devtool-protocol/lib/auth";
+} from "@khulnasoft/public-api-common/lib/auth-providers";
+import { SelectAccountPayload } from "@khulnasoft/devtool-protocol/lib/auth";
 import { useQuery } from "@tanstack/react-query";
 import { useCallback, useContext, useEffect, useMemo, useState } from "react";
 import Alert from "../components/Alert";
@@ -38,13 +38,13 @@ import {
     AuthProvider,
     AuthProviderDescription,
     AuthProviderType,
-} from "@devtool/public-api/lib/devtool/v1/authprovider_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/authprovider_pb";
 import { authProviderClient, scmClient, userClient } from "../service/public-api";
 import { useCreateUserAuthProviderMutation } from "../data/auth-providers/create-user-auth-provider-mutation";
 import { useUpdateUserAuthProviderMutation } from "../data/auth-providers/update-user-auth-provider-mutation";
 import { useDeleteUserAuthProviderMutation } from "../data/auth-providers/delete-user-auth-provider-mutation";
 import { Button } from "@podkit/buttons/Button";
-import { isOrganizationOwned } from "@devtool/public-api-common/lib/user-utils";
+import { isOrganizationOwned } from "@khulnasoft/public-api-common/lib/user-utils";
 import { InputWithCopy } from "../components/InputWithCopy";
 import { useAuthProviderOptionsQuery } from "../data/auth-providers/auth-provider-options-query";
 

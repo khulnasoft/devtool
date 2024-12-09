@@ -5,8 +5,8 @@
  */
 
 import { WorkspaceDB } from "@devtool/devtool-db/lib/workspace-db";
-import { Queue } from "@devtool/devtool-protocol";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { Queue } from "@khulnasoft/devtool-protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import {
     WorkspaceCluster,
     WorkspaceClusterDB,
@@ -16,7 +16,7 @@ import {
     AdmissionConstraintHasPermission,
     WorkspaceClusterWoTLS,
     WorkspaceClass,
-} from "@devtool/devtool-protocol/lib/workspace-cluster";
+} from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
 import {
     ClusterServiceService,
     ClusterState,
@@ -43,7 +43,7 @@ import { inject, injectable } from "inversify";
 import { BridgeController } from "./bridge-controller";
 import { Configuration } from "./config";
 import { GRPCError } from "./rpc";
-import { isWorkspaceRegion } from "@devtool/devtool-protocol/lib/workspace-cluster";
+import { isWorkspaceRegion } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
 import { DescribeClusterRequest, DescribeClusterResponse, WorkspaceManagerClient } from "@devtool/ws-manager/lib";
 
 export interface ClusterServiceServerOptions {

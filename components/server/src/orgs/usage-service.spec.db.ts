@@ -5,11 +5,11 @@
  */
 
 import { BUILTIN_INSTLLATION_ADMIN_USER_ID, TypeORM } from "@devtool/devtool-db/lib";
-import { Organization, User } from "@devtool/devtool-protocol";
-import { AttributionId } from "@devtool/devtool-protocol/lib/attribution";
-import { Experiments } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
-import { ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
-import { ListUsageRequest, Ordering } from "@devtool/devtool-protocol/lib/usage";
+import { Organization, User } from "@khulnasoft/devtool-protocol";
+import { AttributionId } from "@khulnasoft/devtool-protocol/lib/attribution";
+import { Experiments } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
+import { ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { ListUsageRequest, Ordering } from "@khulnasoft/devtool-protocol/lib/usage";
 import {
     CostCenter_BillingStrategy,
     GetCostCenterRequest,

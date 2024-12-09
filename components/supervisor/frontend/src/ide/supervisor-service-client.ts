@@ -12,7 +12,7 @@ import {
 import { WorkspaceInfoResponse } from "@devtool/supervisor-api-grpc/lib/info_pb";
 import { workspaceUrl } from "../shared/urls";
 import { FrontendDashboardServiceClient } from "../shared/frontend-dashboard-service";
-import { Timeout } from "@devtool/devtool-protocol/lib/util/timeout";
+import { Timeout } from "@khulnasoft/devtool-protocol/lib/util/timeout";
 
 export class SupervisorServiceClient {
     readonly supervisorReady = this.checkReady("supervisor");

@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { ListUsageRequest, Ordering, Usage } from "@devtool/devtool-protocol/lib/usage";
+import { ListUsageRequest, Ordering, Usage } from "@khulnasoft/devtool-protocol/lib/usage";
 import { getDevtoolService } from "../../service/service";
 
 type GetAllUsageRecordsArgs = Pick<ListUsageRequest, "attributionId" | "from" | "to"> & {

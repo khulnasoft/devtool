@@ -8,7 +8,7 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useCallback } from "react";
 import { useCurrentOrg } from "../organizations/orgs-query";
 import { authProviderClient } from "../../service/public-api";
-import { AuthProvider, ListAuthProvidersRequest } from "@devtool/public-api/lib/devtool/v1/authprovider_pb";
+import { AuthProvider, ListAuthProvidersRequest } from "@khulnasoft/public-api/lib/devtool/v1/authprovider_pb";
 
 export const useOrgAuthProvidersQuery = () => {
     const organization = useCurrentOrg().data;

@@ -5,7 +5,7 @@
  */
 
 import { useQuery } from "@tanstack/react-query";
-import { GetWorkspaceDefaultImageResponse } from "@devtool/public-api/lib/devtool/v1/workspace_pb";
+import { GetWorkspaceDefaultImageResponse } from "@khulnasoft/public-api/lib/devtool/v1/workspace_pb";
 import { workspaceClient } from "../../service/public-api";
 
 export const useWorkspaceDefaultImageQuery = (workspaceId?: string) => {

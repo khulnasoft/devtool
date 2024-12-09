@@ -19,7 +19,7 @@ import { useCurrentUser } from "../user-context";
 import { SpinnerLoader } from "../components/Loader";
 import { InputField } from "../components/forms/InputField";
 import { InputWithCopy } from "../components/InputWithCopy";
-import { OrganizationMember, OrganizationRole } from "@devtool/public-api/lib/devtool/v1/organization_pb";
+import { OrganizationMember, OrganizationRole } from "@khulnasoft/public-api/lib/devtool/v1/organization_pb";
 import { useListOrganizationMembers, useOrganizationMembersInvalidator } from "../data/organizations/members-query";
 import { useInvitationId, useInviteInvalidator } from "../data/organizations/invite-query";
 import { Delayed } from "@podkit/loading/Delayed";

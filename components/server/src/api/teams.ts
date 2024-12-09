@@ -6,7 +6,7 @@
 
 import { Code, ConnectError, ServiceImpl } from "@connectrpc/connect";
 import { inject, injectable } from "inversify";
-import { TeamsService as TeamServiceInterface } from "@devtool/public-api/lib/devtool/experimental/v1/teams_connect";
+import { TeamsService as TeamServiceInterface } from "@khulnasoft/public-api/lib/devtool/experimental/v1/teams_connect";
 import {
     CreateTeamRequest,
     CreateTeamResponse,
@@ -32,10 +32,10 @@ import {
     TeamRole,
     UpdateTeamMemberRequest,
     UpdateTeamMemberResponse,
-} from "@devtool/public-api/lib/devtool/experimental/v1/teams_pb";
+} from "@khulnasoft/public-api/lib/devtool/experimental/v1/teams_pb";
 import { TeamDB } from "@devtool/devtool-db/lib";
 import { validate } from "uuid";
-import { OrgMemberInfo, Organization, TeamMembershipInvite } from "@devtool/devtool-protocol";
+import { OrgMemberInfo, Organization, TeamMembershipInvite } from "@khulnasoft/devtool-protocol";
 import { Timestamp } from "@bufbuild/protobuf";
 
 @injectable()

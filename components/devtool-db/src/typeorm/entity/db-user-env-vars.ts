@@ -6,9 +6,9 @@
 
 import { PrimaryColumn, Column, Entity, Index } from "typeorm";
 import { TypeORM } from "../typeorm";
-import { UserEnvVar } from "@devtool/devtool-protocol";
+import { UserEnvVar } from "@khulnasoft/devtool-protocol";
 import { Transformer } from "../transformer";
-import { getGlobalEncryptionService } from "@devtool/devtool-protocol/lib/encryption/encryption-service";
+import { getGlobalEncryptionService } from "@khulnasoft/devtool-protocol/lib/encryption/encryption-service";
 
 @Entity()
 // on DB but not Typeorm: @Index("ind_lastModified", ["_lastModified"])   // DBSync

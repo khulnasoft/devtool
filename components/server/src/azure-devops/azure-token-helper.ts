@@ -4,12 +4,12 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { User, Token } from "@devtool/devtool-protocol";
+import { User, Token } from "@khulnasoft/devtool-protocol";
 import { UnauthorizedError } from "../errors";
 import { AuthProviderParams } from "../auth/auth-provider";
 import { injectable, inject } from "inversify";
 import { TokenProvider } from "../user/token-provider";
-import { AzureDevOpsOAuthScopes } from "@devtool/public-api-common/lib/auth-providers";
+import { AzureDevOpsOAuthScopes } from "@khulnasoft/public-api-common/lib/auth-providers";
 
 @injectable()
 export class AzureDevOpsTokenHelper {

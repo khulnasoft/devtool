@@ -6,7 +6,7 @@
 
 import { PrimaryColumn, Column, Entity, Index } from "typeorm";
 
-import { PrebuiltWorkspaceUpdatable } from "@devtool/devtool-protocol";
+import { PrebuiltWorkspaceUpdatable } from "@khulnasoft/devtool-protocol";
 import { TypeORM } from "../typeorm";
 import { Transformer } from "../transformer";
 

@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { WorkspaceInstanceUser } from "@devtool/devtool-protocol";
+import { WorkspaceInstanceUser } from "@khulnasoft/devtool-protocol";
 import { Column, Entity, PrimaryColumn } from "typeorm";
 import { TypeORM } from "../typeorm";
 import { Transformer } from "../transformer";

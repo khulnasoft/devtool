@@ -17,9 +17,9 @@ import isEmail from "validator/lib/isEmail";
 import { useToast } from "../components/toasts/Toasts";
 import { InputWithCopy } from "../components/InputWithCopy";
 import { InputField } from "../components/forms/InputField";
-import { getPrimaryEmail, isOrganizationOwned } from "@devtool/public-api-common/lib/user-utils";
-import { User } from "@devtool/public-api/lib/devtool/v1/user_pb";
-import { User as UserProtocol, ProfileDetails } from "@devtool/devtool-protocol";
+import { getPrimaryEmail, isOrganizationOwned } from "@khulnasoft/public-api-common/lib/user-utils";
+import { User } from "@khulnasoft/public-api/lib/devtool/v1/user_pb";
+import { User as UserProtocol, ProfileDetails } from "@khulnasoft/devtool-protocol";
 import { useUpdateCurrentUserMutation } from "../data/current-user/update-mutation";
 
 type UserProfile = Pick<ProfileDetails, "emailAddress"> & Required<Pick<UserProtocol, "name" | "avatarUrl">>;

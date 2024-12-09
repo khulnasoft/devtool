@@ -4,7 +4,7 @@
   "license": "UNLICENSED",
   "version": "0.0.0",
   "dependencies": {
-    "@devtool/devtool-protocol": "0.1.5",
+    "@khulnasoft/devtool-protocol": "0.1.5",
     "@devtool/supervisor-api-grpc": "0.1.5",
     "buffer": "^4.3.0",
     "crypto-browserify": "3.12.0",

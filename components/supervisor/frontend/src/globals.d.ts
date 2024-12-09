@@ -4,4 +4,4 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-/// <reference types='@devtool/devtool-protocol/lib/typings/globals'/>
+/// <reference types='@khulnasoft/devtool-protocol/lib/typings/globals'/>

@@ -11,14 +11,14 @@ import { BUILTIN_INSTLLATION_ADMIN_USER_ID } from "@devtool/devtool-db/lib/user-
 import express from "express";
 import { Authenticator } from "../auth/authenticator";
 import { Config } from "../config";
-import { log, LogContext } from "@devtool/devtool-protocol/lib/util/logging";
+import { log, LogContext } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { AuthorizationService } from "./authorization-service";
-import { Permission } from "@devtool/devtool-protocol/lib/permission";
-import { parseWorkspaceIdFromHostname } from "@devtool/devtool-protocol/lib/util/parse-workspace-id";
+import { Permission } from "@khulnasoft/devtool-protocol/lib/permission";
+import { parseWorkspaceIdFromHostname } from "@khulnasoft/devtool-protocol/lib/util/parse-workspace-id";
 import { SessionHandler } from "../session-handler";
 import { URL } from "url";
 import { getRequestingClientInfo } from "../express-util";
-import { DevtoolToken, DevtoolTokenType, User } from "@devtool/devtool-protocol";
+import { DevtoolToken, DevtoolTokenType, User } from "@khulnasoft/devtool-protocol";
 import { HostContextProvider } from "../auth/host-context-provider";
 import { reportJWTCookieIssued } from "../prometheus-metrics";
 import {
@@ -30,14 +30,14 @@ import {
 import { OneTimeSecretServer } from "../one-time-secret-server";
 import { ClientMetadata } from "../websocket/websocket-connection-manager";
 import * as fs from "fs/promises";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { DevtoolServerImpl } from "../workspace/devtool-server-impl";
 import { StopWorkspacePolicy } from "@devtool/ws-manager/lib";
 import { UserService } from "./user-service";
 import { WorkspaceService } from "../workspace/workspace-service";
 import { runWithSubjectId } from "../util/request-context";
 import { SubjectId } from "../auth/subject-id";
-import { TrustedValue } from "@devtool/devtool-protocol/lib/util/scrubbing";
+import { TrustedValue } from "@khulnasoft/devtool-protocol/lib/util/scrubbing";
 
 export const ServerFactory = Symbol("ServerFactory");
 export type ServerFactory = () => DevtoolServerImpl;

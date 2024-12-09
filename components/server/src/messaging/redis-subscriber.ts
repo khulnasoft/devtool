@@ -19,8 +19,8 @@ import {
     RedisPrebuildUpdate,
     RedisWorkspaceInstanceUpdate,
     WorkspaceInstanceUpdatesChannel,
-} from "@devtool/devtool-protocol";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+} from "@khulnasoft/devtool-protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import {
     reportRedisUpdateCompleted,
     reportRedisUpdateReceived,

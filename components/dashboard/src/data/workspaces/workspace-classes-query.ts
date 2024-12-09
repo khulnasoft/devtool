@@ -6,13 +6,13 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { workspaceClient } from "../../service/public-api";
-import { WorkspaceClass } from "@devtool/public-api/lib/devtool/v1/workspace_pb";
+import { WorkspaceClass } from "@khulnasoft/public-api/lib/devtool/v1/workspace_pb";
 import { useOrgSettingsQuery } from "../organizations/org-settings-query";
-import { Configuration, WorkspaceSettings } from "@devtool/public-api/lib/devtool/v1/configuration_pb";
+import { Configuration, WorkspaceSettings } from "@khulnasoft/public-api/lib/devtool/v1/configuration_pb";
 import { useMemo } from "react";
 import { PlainMessage } from "@bufbuild/protobuf";
 import { useConfiguration } from "../configurations/configuration-queries";
-import { OrganizationSettings } from "@devtool/public-api/lib/devtool/v1/organization_pb";
+import { OrganizationSettings } from "@khulnasoft/public-api/lib/devtool/v1/organization_pb";
 import { useDeepCompareMemoize } from "use-deep-compare-effect";
 
 export const DEFAULT_WS_CLASS = "g1-standard";

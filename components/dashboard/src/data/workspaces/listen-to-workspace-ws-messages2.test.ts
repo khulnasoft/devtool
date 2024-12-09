@@ -4,14 +4,14 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { Disposable } from "@devtool/devtool-protocol";
+import { Disposable } from "@khulnasoft/devtool-protocol";
 import { WatchWorkspaceStatusCallback, watchWorkspaceStatus } from "./listen-to-workspace-ws-messages";
 import { WatchWorkspaceStatusPriority, watchWorkspaceStatusInOrder } from "./listen-to-workspace-ws-messages2";
 import {
     WatchWorkspaceStatusResponse,
     WorkspacePhase_Phase,
     WorkspaceStatus,
-} from "@devtool/public-api/lib/devtool/v1/workspace_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/workspace_pb";
 
 jest.mock("./listen-to-workspace-ws-messages", () => ({
     watchWorkspaceStatus: jest.fn(),

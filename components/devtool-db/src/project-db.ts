@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { PartialProject, Project, ProjectEnvVar, ProjectEnvVarWithValue, ProjectUsage } from "@devtool/devtool-protocol";
+import { PartialProject, Project, ProjectEnvVar, ProjectEnvVarWithValue, ProjectUsage } from "@khulnasoft/devtool-protocol";
 import { TransactionalDB } from "./typeorm/transactional-db-impl";
 
 export const ProjectDB = Symbol("ProjectDB");

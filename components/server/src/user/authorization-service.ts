@@ -6,9 +6,9 @@
 
 import { injectable } from "inversify";
 
-import { RoleOrPermission, PermissionName, RolesOrPermissions } from "@devtool/devtool-protocol/lib/permission";
-import { User } from "@devtool/devtool-protocol";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { RoleOrPermission, PermissionName, RolesOrPermissions } from "@khulnasoft/devtool-protocol/lib/permission";
+import { User } from "@khulnasoft/devtool-protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 
 export const AuthorizationService = Symbol("AuthorizationService");
 export interface AuthorizationService {

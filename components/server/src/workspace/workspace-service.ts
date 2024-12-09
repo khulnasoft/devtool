@@ -30,11 +30,11 @@ import {
     WorkspaceSession,
     WorkspaceSoftDeletion,
     WorkspaceTimeoutDuration,
-} from "@devtool/devtool-protocol";
-import { ErrorCodes, ApplicationError } from "@devtool/devtool-protocol/lib/messaging/error";
-import { generateAsyncGenerator } from "@devtool/devtool-protocol/lib/generate-async-generator";
+} from "@khulnasoft/devtool-protocol";
+import { ErrorCodes, ApplicationError } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { generateAsyncGenerator } from "@khulnasoft/devtool-protocol/lib/generate-async-generator";
 import { Authorizer } from "../authorization/authorizer";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { WorkspaceFactory } from "./workspace-factory";
 import {
     DescribeWorkspaceRequest,
@@ -55,27 +55,27 @@ import {
     isClusterMaintenanceError,
     getWorkspaceClassForInstance,
 } from "./workspace-starter";
-import { LogContext, log } from "@devtool/devtool-protocol/lib/util/logging";
+import { LogContext, log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { EntitlementService, MayStartWorkspaceResult } from "../billing/entitlement-service";
 import * as crypto from "crypto";
-import { WorkspaceRegion, isWorkspaceRegion } from "@devtool/devtool-protocol/lib/workspace-cluster";
+import { WorkspaceRegion, isWorkspaceRegion } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
 import { RegionService } from "./region-service";
 import { LazyPrebuildManager, ProjectsService } from "../projects/projects-service";
 import { WorkspaceManagerClientProvider } from "@devtool/ws-manager/lib/client-provider";
-import { SupportedWorkspaceClass } from "@devtool/devtool-protocol/lib/workspace-class";
+import { SupportedWorkspaceClass } from "@khulnasoft/devtool-protocol/lib/workspace-class";
 import { Config } from "../config";
-import { goDurationToHumanReadable } from "@devtool/devtool-protocol/lib/util/timeutil";
+import { goDurationToHumanReadable } from "@khulnasoft/devtool-protocol/lib/util/timeutil";
 import { HeadlessLogEndpoint, HeadlessLogService } from "./headless-log-service";
-import { Deferred } from "@devtool/devtool-protocol/lib/util/deferred";
+import { Deferred } from "@khulnasoft/devtool-protocol/lib/util/deferred";
 import { OrganizationService } from "../orgs/organization-service";
-import { isGrpcError } from "@devtool/devtool-protocol/lib/util/grpc";
+import { isGrpcError } from "@khulnasoft/devtool-protocol/lib/util/grpc";
 import { RedisSubscriber } from "../messaging/redis-subscriber";
 import { SnapshotService } from "./snapshot-service";
 import { InstallationService } from "../auth/installation-service";
-import { PublicAPIConverter } from "@devtool/public-api-common/lib/public-api-converter";
-import { WatchWorkspaceStatusResponse } from "@devtool/public-api/lib/devtool/v1/workspace_pb";
+import { PublicAPIConverter } from "@khulnasoft/public-api-common/lib/public-api-converter";
+import { WatchWorkspaceStatusResponse } from "@khulnasoft/public-api/lib/devtool/v1/workspace_pb";
 import { ContextParser } from "./context-parser-service";
-import { scrubber, TrustedValue } from "@devtool/devtool-protocol/lib/util/scrubbing";
+import { scrubber, TrustedValue } from "@khulnasoft/devtool-protocol/lib/util/scrubbing";
 
 export const GIT_STATUS_LENGTH_CAP_BYTES = 4096;
 

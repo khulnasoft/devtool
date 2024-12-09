@@ -4,8 +4,8 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { HeadlessWorkspaceEvent, PrebuildWithStatus, WorkspaceInstance } from "@devtool/devtool-protocol";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+import { HeadlessWorkspaceEvent, PrebuildWithStatus, WorkspaceInstance } from "@khulnasoft/devtool-protocol";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 
 export interface PrebuildUpdateListener {
     (ctx: TraceContext, evt: PrebuildWithStatus): void;

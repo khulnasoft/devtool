@@ -4,13 +4,13 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { SuggestedRepository } from "@devtool/public-api/lib/devtool/v1/scm_pb";
+import { SuggestedRepository } from "@khulnasoft/public-api/lib/devtool/v1/scm_pb";
 import { useSearchRepositories } from "./search-repositories-query";
 import { useSuggestedRepositories } from "./suggested-repositories-query";
 import { useMemo } from "react";
 import { useListConfigurations } from "../configurations/configuration-queries";
 import type { UseInfiniteQueryResult } from "@tanstack/react-query";
-import { Configuration } from "@devtool/public-api/lib/devtool/v1/configuration_pb";
+import { Configuration } from "@khulnasoft/public-api/lib/devtool/v1/configuration_pb";
 import { parseUrl } from "../../utils";
 
 export const flattenPagedConfigurations = (

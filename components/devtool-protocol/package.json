@@ -1,5 +1,5 @@
 {
-    "name": "@devtool/devtool-protocol",
+    "name": "@khulnasoft/devtool-protocol",
     "version": "0.1.5",
     "license": "UNLICENSED",
     "main": "./lib/index.js",

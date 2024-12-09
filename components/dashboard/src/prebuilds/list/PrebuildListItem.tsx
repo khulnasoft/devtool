@@ -9,11 +9,11 @@ import { TextMuted } from "@podkit/typography/TextMuted";
 import { Text } from "@podkit/typography/Text";
 import { LinkButton } from "@podkit/buttons/LinkButton";
 import { TableCell, TableRow } from "@podkit/tables/Table";
-import type { Prebuild } from "@devtool/public-api/lib/devtool/v1/prebuild_pb";
+import type { Prebuild } from "@khulnasoft/public-api/lib/devtool/v1/prebuild_pb";
 import dayjs from "dayjs";
 import { shortCommitMessage } from "../../projects/render-utils";
 import { Link } from "react-router-dom";
-import { Configuration } from "@devtool/public-api/lib/devtool/v1/configuration_pb";
+import { Configuration } from "@khulnasoft/public-api/lib/devtool/v1/configuration_pb";
 import { PrebuildStatus } from "../../projects/prebuild-utils";
 
 /**

@@ -22,14 +22,14 @@ import {
     RepositoryResourceGuard,
     SharedWorkspaceAccessGuard,
 } from "./resource-access";
-import { PrebuiltWorkspace, User, UserEnvVar, Workspace, WorkspaceType } from "@devtool/devtool-protocol/lib/protocol";
+import { PrebuiltWorkspace, User, UserEnvVar, Workspace, WorkspaceType } from "@khulnasoft/devtool-protocol/lib/protocol";
 import {
     OrgMemberInfo,
     Organization,
     TeamMemberInfo,
     TeamMemberRole,
     WorkspaceInstance,
-} from "@devtool/devtool-protocol";
+} from "@khulnasoft/devtool-protocol";
 import { HostContextProvider } from "./host-context-provider";
 
 class MockedRepositoryResourceGuard extends RepositoryResourceGuard {

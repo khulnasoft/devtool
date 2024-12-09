@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { DevtoolToken, DevtoolTokenType } from "@devtool/devtool-protocol";
+import { DevtoolToken, DevtoolTokenType } from "@khulnasoft/devtool-protocol";
 import { Column, Entity, PrimaryColumn } from "typeorm";
 import { Transformer } from "../transformer";
 import { TypeORM } from "../typeorm";

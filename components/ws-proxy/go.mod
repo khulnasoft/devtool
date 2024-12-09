@@ -9,7 +9,7 @@ require (
 	github.com/khulnasoft/devtool/server/go v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/devtool/supervisor/api v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/devtool/ws-manager/api v0.0.0-00010101000000-000000000000
-	github.com/khulnasoft/golang-crypto v0.0.0-20231122075959-de838e9cb174
+	github.com/gitpod-io/golang-crypto v0.0.0-20231122075959-de838e9cb174
 	github.com/go-ozzo/ozzo-validation v3.6.0+incompatible
 	github.com/google/go-cmp v0.6.0
 	github.com/gorilla/handlers v1.5.1

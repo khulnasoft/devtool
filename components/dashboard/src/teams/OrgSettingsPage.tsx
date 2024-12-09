@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { BillingMode } from "@devtool/devtool-protocol/lib/billing-mode";
+import { BillingMode } from "@khulnasoft/devtool-protocol/lib/billing-mode";
 import { useMemo } from "react";
 import { Redirect } from "react-router";
 import Header from "../components/Header";
@@ -13,7 +13,7 @@ import { PageWithSubMenu } from "../components/PageWithSubMenu";
 import { useOrgBillingMode } from "../data/billing-mode/org-billing-mode-query";
 import { useCurrentOrg } from "../data/organizations/orgs-query";
 import { useFeatureFlag } from "../data/featureflag-query";
-import { Organization } from "@devtool/public-api/lib/devtool/v1/organization_pb";
+import { Organization } from "@khulnasoft/public-api/lib/devtool/v1/organization_pb";
 import { useIsOwner } from "../data/organizations/members-query";
 import { isDevtoolIo } from "../utils";
 

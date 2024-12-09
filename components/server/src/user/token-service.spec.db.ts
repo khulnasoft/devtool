@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { Experiments } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
+import { Experiments } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import * as chai from "chai";
 import "mocha";
 import { Container } from "inversify";
@@ -12,7 +12,7 @@ import { createTestContainer } from "../test/service-testing-container-module";
 import { BUILTIN_INSTLLATION_ADMIN_USER_ID, TypeORM, UserDB } from "@devtool/devtool-db/lib";
 import { resetDB } from "@devtool/devtool-db/lib/test/reset-db";
 import { OrganizationService } from "../orgs/organization-service";
-import { Organization, Token, User } from "@devtool/devtool-protocol";
+import { Organization, Token, User } from "@khulnasoft/devtool-protocol";
 import { TokenService } from "./token-service";
 import { TokenProvider } from "./token-provider";
 import { HostContextProvider } from "../auth/host-context-provider";

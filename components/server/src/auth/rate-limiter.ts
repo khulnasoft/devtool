@@ -4,8 +4,8 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { DevtoolServer } from "@devtool/devtool-protocol";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { DevtoolServer } from "@khulnasoft/devtool-protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { RateLimiterMemory, RateLimiterRes } from "rate-limiter-flexible";
 
 export const accessCodeSyncStorage = "accessCodeSyncStorage";

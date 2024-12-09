@@ -6,7 +6,7 @@
 
 import { Entity, Column, PrimaryColumn, Index } from "typeorm";
 import { TypeORM } from "../typeorm";
-import { Project, ProjectSettings } from "@devtool/devtool-protocol";
+import { Project, ProjectSettings } from "@khulnasoft/devtool-protocol";
 import { Transformer } from "../transformer";
 
 @Entity()

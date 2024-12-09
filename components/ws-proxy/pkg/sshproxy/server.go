@@ -24,7 +24,7 @@ import (
 	supervisor "github.com/khulnasoft/devtool/supervisor/api"
 	tracker "github.com/khulnasoft/devtool/ws-proxy/pkg/analytics"
 	"github.com/khulnasoft/devtool/ws-proxy/pkg/common"
-	"github.com/khulnasoft/golang-crypto/ssh"
+	"github.com/gitpod-io/golang-crypto/ssh"
 	"github.com/prometheus/client_golang/prometheus"
 	"golang.org/x/xerrors"
 	"google.golang.org/grpc"

@@ -5,7 +5,7 @@
  */
 
 import { Entity, Column, PrimaryColumn } from "typeorm";
-import { Project } from "@devtool/devtool-protocol";
+import { Project } from "@khulnasoft/devtool-protocol";
 
 import { TypeORM } from "../typeorm";
 

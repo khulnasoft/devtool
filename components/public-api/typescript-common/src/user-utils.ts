@@ -4,8 +4,8 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { User } from "@devtool/public-api/lib/devtool/v1/user_pb";
-import { User as UserProtocol } from "@devtool/devtool-protocol/lib/protocol";
+import { User } from "@khulnasoft/public-api/lib/devtool/v1/user_pb";
+import { User as UserProtocol } from "@khulnasoft/devtool-protocol/lib/protocol";
 import { Timestamp } from "@bufbuild/protobuf";
 
 /**

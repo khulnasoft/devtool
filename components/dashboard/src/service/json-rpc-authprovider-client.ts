@@ -6,7 +6,7 @@
 
 import { PartialMessage } from "@bufbuild/protobuf";
 import { PromiseClient } from "@connectrpc/connect";
-import { AuthProviderService } from "@devtool/public-api/lib/devtool/v1/authprovider_connect";
+import { AuthProviderService } from "@khulnasoft/public-api/lib/devtool/v1/authprovider_connect";
 import {
     CreateAuthProviderRequest,
     CreateAuthProviderResponse,
@@ -20,10 +20,10 @@ import {
     ListAuthProvidersResponse,
     UpdateAuthProviderRequest,
     UpdateAuthProviderResponse,
-} from "@devtool/public-api/lib/devtool/v1/authprovider_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/authprovider_pb";
 import { converter } from "./public-api";
 import { getDevtoolService } from "./service";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 
 export class JsonRpcAuthProviderClient implements PromiseClient<typeof AuthProviderService> {
     async createAuthProvider(request: PartialMessage<CreateAuthProviderRequest>): Promise<CreateAuthProviderResponse> {

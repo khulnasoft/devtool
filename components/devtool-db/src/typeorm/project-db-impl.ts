@@ -4,8 +4,8 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { PartialProject, Project, ProjectEnvVar, ProjectEnvVarWithValue, ProjectUsage } from "@devtool/devtool-protocol";
-import { EncryptionService } from "@devtool/devtool-protocol/lib/encryption/encryption-service";
+import { PartialProject, Project, ProjectEnvVar, ProjectEnvVarWithValue, ProjectUsage } from "@khulnasoft/devtool-protocol";
+import { EncryptionService } from "@khulnasoft/devtool-protocol/lib/encryption/encryption-service";
 import { inject, injectable, optional } from "inversify";
 import { Brackets, EntityManager, FindConditions, Repository } from "typeorm";
 import { v4 as uuidv4 } from "uuid";
@@ -16,7 +16,7 @@ import { DBProjectInfo } from "./entity/db-project-info";
 import { DBProjectUsage } from "./entity/db-project-usage";
 import { TransactionalDBImpl } from "./transactional-db-impl";
 import { TypeORM } from "./typeorm";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { filter } from "../utils";
 
 function toProjectEnvVar(envVarWithValue: DBProjectEnvVar): ProjectEnvVar {

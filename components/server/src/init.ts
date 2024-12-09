@@ -54,9 +54,9 @@ if (typeof (Symbol as any).asyncIterator === "undefined") {
 import express from "express";
 import { Container } from "inversify";
 import { Server } from "./server";
-import { log, LogrusLogLevel } from "@devtool/devtool-protocol/lib/util/logging";
-import { installLogCountMetric } from "@devtool/devtool-protocol/lib/util/logging-node";
-import { TracingManager } from "@devtool/devtool-protocol/lib/util/tracing";
+import { log, LogrusLogLevel } from "@khulnasoft/devtool-protocol/lib/util/logging";
+import { installLogCountMetric } from "@khulnasoft/devtool-protocol/lib/util/logging-node";
+import { TracingManager } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { TypeORM } from "@devtool/devtool-db/lib";
 import { dbConnectionsEnqueued, dbConnectionsFree, dbConnectionsTotal } from "./prometheus-metrics";
 import { installCtxLogAugmenter } from "./util/log-context";

@@ -4,12 +4,12 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { Repository, User } from "@devtool/devtool-protocol";
-import { ifEnvVarNotSet } from "@devtool/devtool-protocol/lib/util/skip-if";
+import { Repository, User } from "@khulnasoft/devtool-protocol";
+import { ifEnvVarNotSet } from "@khulnasoft/devtool-protocol/lib/util/skip-if";
 import { Container, ContainerModule } from "inversify";
 import { retries, skip, suite, test, timeout } from "@testdeck/mocha";
 import { expect } from "chai";
-import { DevtoolHostUrl } from "@devtool/devtool-protocol/lib/util/devtool-host-url";
+import { DevtoolHostUrl } from "@khulnasoft/devtool-protocol/lib/util/devtool-host-url";
 import { BitbucketServerFileProvider } from "./bitbucket-server-file-provider";
 import { AuthProviderParams } from "../auth/auth-provider";
 import { BitbucketServerContextParser } from "./bitbucket-server-context-parser";

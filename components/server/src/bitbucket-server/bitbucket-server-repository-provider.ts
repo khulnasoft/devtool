@@ -4,12 +4,12 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { Branch, CommitInfo, Repository, RepositoryInfo, User } from "@devtool/devtool-protocol";
+import { Branch, CommitInfo, Repository, RepositoryInfo, User } from "@khulnasoft/devtool-protocol";
 import { inject, injectable } from "inversify";
 import { RepoURL } from "../repohost";
 import { RepositoryProvider } from "../repohost/repository-provider";
 import { BitbucketServer, BitbucketServerApi } from "./bitbucket-server-api";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 
 @injectable()
 export class BitbucketServerRepositoryProvider implements RepositoryProvider {

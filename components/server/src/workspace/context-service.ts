@@ -13,16 +13,16 @@ import {
     WorkspaceContext,
     Project,
     SnapshotContext,
-} from "@devtool/devtool-protocol";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+} from "@khulnasoft/devtool-protocol";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { inject, injectable } from "inversify";
 import { ContextParser } from "./context-parser-service";
 import { ConfigProvider } from "./config-provider";
 import { ProjectsService } from "../projects/projects-service";
-import { OpenPrebuildContext, WithDefaultConfig } from "@devtool/devtool-protocol/lib/protocol";
+import { OpenPrebuildContext, WithDefaultConfig } from "@khulnasoft/devtool-protocol/lib/protocol";
 import { IncrementalWorkspaceService } from "../prebuilds/incremental-workspace-service";
 import { Authorizer } from "../authorization/authorizer";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 
 @injectable()
 export class ContextService {

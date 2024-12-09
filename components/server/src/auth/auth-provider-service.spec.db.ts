@@ -5,8 +5,8 @@
  */
 
 import { TypeORM } from "@devtool/devtool-db/lib";
-import { AuthProviderInfo, Organization, User } from "@devtool/devtool-protocol";
-import { Experiments } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
+import { AuthProviderInfo, Organization, User } from "@khulnasoft/devtool-protocol";
+import { Experiments } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import * as chai from "chai";
 import { Container } from "inversify";
 import "mocha";
@@ -15,9 +15,9 @@ import { resetDB } from "@devtool/devtool-db/lib/test/reset-db";
 import { UserService } from "../user/user-service";
 import { AuthProviderService } from "./auth-provider-service";
 import { Config } from "../config";
-import { ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { expectError } from "../test/expect-utils";
-import { AuthProviderEntry } from "@devtool/devtool-protocol";
+import { AuthProviderEntry } from "@khulnasoft/devtool-protocol";
 import { AuthProviderParams } from "./auth-provider";
 import { OrganizationService } from "../orgs/organization-service";
 import { SYSTEM_USER } from "../authorization/authorizer";

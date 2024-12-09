@@ -14,7 +14,7 @@ import {
     ImageBuildInfo,
     WorkspaceInstanceRepoStatus,
     WorkspaceInstanceMetrics,
-} from "@devtool/devtool-protocol";
+} from "@khulnasoft/devtool-protocol";
 import { TypeORM } from "../typeorm";
 import { Transformer } from "../transformer";
 

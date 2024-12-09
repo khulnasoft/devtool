@@ -5,19 +5,19 @@
  */
 
 import { injectable, inject } from "inversify";
-import { User, Identity, Token, IdentityLookup } from "@devtool/devtool-protocol";
+import { User, Identity, Token, IdentityLookup } from "@khulnasoft/devtool-protocol";
 import { EmailDomainFilterDB, MaybeUser, UserDB } from "@devtool/devtool-db/lib";
 import { HostContextProvider } from "../auth/host-context-provider";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { Config } from "../config";
 import { AuthUser } from "../auth/auth-provider";
 import { TokenService } from "./token-service";
 import { EmailAddressAlreadyTakenException, SelectAccountException } from "../auth/errors";
-import { SelectAccountPayload } from "@devtool/devtool-protocol/lib/auth";
+import { SelectAccountPayload } from "@khulnasoft/devtool-protocol/lib/auth";
 import { UserService } from "./user-service";
 import { Authorizer } from "../authorization/authorizer";
-import { getExperimentsClientForBackend } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
-import { isOrganizationOwned, isAllowedToCreateOrganization } from "@devtool/public-api-common/lib/user-utils";
+import { getExperimentsClientForBackend } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
+import { isOrganizationOwned, isAllowedToCreateOrganization } from "@khulnasoft/public-api-common/lib/user-utils";
 
 export interface CreateUserParams {
     organizationId?: string;

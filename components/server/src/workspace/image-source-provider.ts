@@ -8,7 +8,7 @@ import { injectable, inject } from "inversify";
 import { createHash } from "crypto";
 import path from "path";
 import { HostContextProvider } from "../auth/host-context-provider";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import {
     CommitContext,
     WorkspaceImageSource,
@@ -19,7 +19,7 @@ import {
     ExternalImageConfigFile,
     User,
     AdditionalContentContext,
-} from "@devtool/devtool-protocol";
+} from "@khulnasoft/devtool-protocol";
 import { ImageFileRevisionMissing, RevisionNotFoundError } from "../repohost";
 
 @injectable()

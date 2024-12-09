@@ -19,27 +19,27 @@ import {
     Workspace,
     WorkspaceConfig,
     WorkspaceInstance,
-} from "@devtool/devtool-protocol";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+} from "@khulnasoft/devtool-protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { getCommitInfo, HostContextProvider } from "../auth/host-context-provider";
 import { ConfigProvider } from "../workspace/config-provider";
 import { Config } from "../config";
 import { ProjectsService } from "../projects/projects-service";
-import { secondsBefore } from "@devtool/devtool-protocol/lib/util/timeutil";
+import { secondsBefore } from "@khulnasoft/devtool-protocol/lib/util/timeutil";
 
 import { inject, injectable } from "inversify";
 import * as opentracing from "opentracing";
 import { IncrementalWorkspaceService } from "./incremental-workspace-service";
 import { PrebuildRateLimiterConfig } from "../workspace/prebuild-rate-limiter";
-import { ErrorCodes, ApplicationError } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ErrorCodes, ApplicationError } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { EntitlementService, MayStartWorkspaceResult } from "../billing/entitlement-service";
 import { WorkspaceService } from "../workspace/workspace-service";
 import { minimatch as globMatch } from "minimatch";
 import { Authorizer } from "../authorization/authorizer";
 import { ContextParser } from "../workspace/context-parser-service";
-import { IAnalyticsWriter } from "@devtool/devtool-protocol/lib/analytics";
-import { generateAsyncGenerator } from "@devtool/devtool-protocol/lib/generate-async-generator";
+import { IAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
+import { generateAsyncGenerator } from "@khulnasoft/devtool-protocol/lib/generate-async-generator";
 import { RedisSubscriber } from "../messaging/redis-subscriber";
 
 export interface StartPrebuildParams {

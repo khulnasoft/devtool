@@ -6,7 +6,7 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { authProviderClient } from "../../service/public-api";
-import { AuthProvider, GetAuthProviderRequest } from "@devtool/public-api/lib/devtool/v1/authprovider_pb";
+import { AuthProvider, GetAuthProviderRequest } from "@khulnasoft/public-api/lib/devtool/v1/authprovider_pb";
 
 export const useGetAuthProviderQuery = (authProviderId: string | undefined) => {
     return useQuery<AuthProvider | undefined, Error>(getAuthProviderQueryKey(authProviderId || ""), async () => {

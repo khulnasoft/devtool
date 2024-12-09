@@ -15,28 +15,28 @@ import {
     User,
     CommitContext,
     WebhookEvent,
-} from "@devtool/devtool-protocol";
+} from "@khulnasoft/devtool-protocol";
 import { HostContextProvider } from "../auth/host-context-provider";
 import { RepoURL } from "../repohost";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import {
     PartialProject,
     PrebuildSettings,
     ProjectSettings,
     ProjectUsage,
-} from "@devtool/devtool-protocol/lib/teams-projects-protocol";
-import { IAnalyticsWriter } from "@devtool/devtool-protocol/lib/analytics";
-import { ErrorCodes, ApplicationError } from "@devtool/devtool-protocol/lib/messaging/error";
+} from "@khulnasoft/devtool-protocol/lib/teams-projects-protocol";
+import { IAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
+import { ErrorCodes, ApplicationError } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { URL } from "url";
 import { Authorizer, SYSTEM_USER, SYSTEM_USER_ID } from "../authorization/authorizer";
 import { TransactionalContext } from "@devtool/devtool-db/lib/typeorm/transactional-db-impl";
-import { daysBefore, isDateSmaller } from "@devtool/devtool-protocol/lib/util/timeutil";
+import { daysBefore, isDateSmaller } from "@khulnasoft/devtool-protocol/lib/util/timeutil";
 import deepmerge from "deepmerge";
 import { runWithSubjectId } from "../util/request-context";
 import { InstallationService } from "../auth/installation-service";
 import { IDEService } from "../ide-service";
 import type { PrebuildManager } from "../prebuilds/prebuild-manager";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { ContextParser } from "../workspace/context-parser-service";
 import { UnauthorizedError } from "../errors";
 

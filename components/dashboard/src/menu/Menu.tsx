@@ -19,8 +19,8 @@ import { isDevtoolIo } from "../utils";
 import OrganizationSelector from "./OrganizationSelector";
 import { getAdminTabs } from "../admin/admin.routes";
 import classNames from "classnames";
-import { User, RoleOrPermission } from "@devtool/public-api/lib/devtool/v1/user_pb";
-import { getPrimaryEmail } from "@devtool/public-api-common/lib/user-utils";
+import { User, RoleOrPermission } from "@khulnasoft/public-api/lib/devtool/v1/user_pb";
+import { getPrimaryEmail } from "@khulnasoft/public-api-common/lib/user-utils";
 import { ConfigurationsMigrationCoachmark } from "../repositories/coachmarks/MigrationCoachmark";
 
 interface Entry {

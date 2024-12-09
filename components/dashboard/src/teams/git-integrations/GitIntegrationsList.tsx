@@ -11,7 +11,7 @@ import { Item, ItemField, ItemFieldIcon, ItemsList } from "../../components/Item
 import { Heading2, Subheading } from "../../components/typography/headings";
 import { GitIntegrationListItem } from "./GitIntegrationListItem";
 import { GitIntegrationModal } from "./GitIntegrationModal";
-import { AuthProvider } from "@devtool/public-api/lib/devtool/v1/authprovider_pb";
+import { AuthProvider } from "@khulnasoft/public-api/lib/devtool/v1/authprovider_pb";
 
 type Props = {
     providers: AuthProvider[];

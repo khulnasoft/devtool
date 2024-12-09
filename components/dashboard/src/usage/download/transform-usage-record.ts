@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { Usage, WorkspaceInstanceUsageData } from "@devtool/devtool-protocol/lib/usage";
+import { Usage, WorkspaceInstanceUsageData } from "@khulnasoft/devtool-protocol/lib/usage";
 
 export const transformUsageRecord = (usage: Usage): UsageCSVRow | undefined => {
     if (usage.kind !== "workspaceinstance") {

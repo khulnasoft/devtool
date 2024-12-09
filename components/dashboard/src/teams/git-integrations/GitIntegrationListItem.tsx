@@ -13,7 +13,7 @@ import { GitIntegrationModal } from "./GitIntegrationModal";
 import { ModalFooterAlert } from "../../components/Modal";
 import { useToast } from "../../components/toasts/Toasts";
 import { useListOrganizationMembers } from "../../data/organizations/members-query";
-import { AuthProvider } from "@devtool/public-api/lib/devtool/v1/authprovider_pb";
+import { AuthProvider } from "@khulnasoft/public-api/lib/devtool/v1/authprovider_pb";
 import { toAuthProviderLabel } from "../../provider-utils";
 
 type Props = {

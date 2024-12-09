@@ -6,7 +6,7 @@
 
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { organizationClient } from "../../service/public-api";
-import { OrganizationSettings } from "@devtool/public-api/lib/devtool/v1/organization_pb";
+import { OrganizationSettings } from "@khulnasoft/public-api/lib/devtool/v1/organization_pb";
 import { useCallback } from "react";
 import { useCurrentOrg } from "./orgs-query";
 

@@ -6,7 +6,7 @@
 
 import { useMutation } from "@tanstack/react-query";
 import { envVarClient } from "../../service/public-api";
-import { EnvironmentVariableAdmission } from "@devtool/public-api/lib/devtool/v1/envvar_pb";
+import { EnvironmentVariableAdmission } from "@khulnasoft/public-api/lib/devtool/v1/envvar_pb";
 
 type SetProjectEnvVarArgs = {
     configurationId: string;

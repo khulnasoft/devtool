@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { ContextURL, User, WorkspaceContext } from "@devtool/devtool-protocol";
+import { ContextURL, User, WorkspaceContext } from "@khulnasoft/devtool-protocol";
 import { injectable } from "inversify";
 import { IPrefixContextParser } from "./context-parser";
 

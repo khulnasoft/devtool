@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { User } from "@devtool/devtool-protocol";
+import { User } from "@khulnasoft/devtool-protocol";
 import * as chai from "chai";
 import { Container, ContainerModule } from "inversify";
 import { retries, skip, suite, test, timeout } from "@testdeck/mocha";
@@ -16,7 +16,7 @@ import { BasicAuthBitbucketApiFactory, BitbucketApiFactory } from "./bitbucket-a
 import { BitbucketRepositoryProvider } from "./bitbucket-repository-provider";
 import { BitbucketTokenHelper } from "./bitbucket-token-handler";
 const expect = chai.expect;
-import { ifEnvVarNotSet } from "@devtool/devtool-protocol/lib/util/skip-if";
+import { ifEnvVarNotSet } from "@khulnasoft/devtool-protocol/lib/util/skip-if";
 
 @suite(timeout(10000), retries(0), skip(ifEnvVarNotSet("DEVTOOL_TEST_TOKEN_BITBUCKET")))
 class TestBitbucketRepositoryProvider {

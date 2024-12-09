@@ -5,7 +5,7 @@
  */
 
 import { IPrefixContextParser } from "./context-parser";
-import { User, WorkspaceContext, WithReferrerContext } from "@devtool/devtool-protocol";
+import { User, WorkspaceContext, WithReferrerContext } from "@khulnasoft/devtool-protocol";
 import { injectable } from "inversify";
 
 @injectable()

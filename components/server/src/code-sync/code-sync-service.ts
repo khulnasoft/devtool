@@ -6,7 +6,7 @@
 
 import { status } from "@grpc/grpc-js";
 import fetch from "node-fetch";
-import { User } from "@devtool/devtool-protocol/lib/protocol";
+import { User } from "@khulnasoft/devtool-protocol/lib/protocol";
 import * as util from "util";
 import express from "express";
 import { inject, injectable } from "inversify";
@@ -21,7 +21,7 @@ import {
     UploadUrlRequest,
     UploadUrlResponse,
 } from "@devtool/content-service/lib/blobs_pb";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { v4 as uuidv4 } from "uuid";
 import { accessCodeSyncStorage, UserRateLimiter } from "../auth/rate-limiter";
 import { Config } from "../config";

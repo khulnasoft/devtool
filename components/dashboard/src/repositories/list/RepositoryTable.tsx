@@ -9,7 +9,7 @@ import { TextInput } from "../../components/forms/TextInputField";
 import { Table, TableBody, TableHead, TableHeader, TableRow } from "@podkit/tables/Table";
 import { RepositoryListItem } from "./RepoListItem";
 import { LoadingButton } from "@podkit/buttons/LoadingButton";
-import { Configuration } from "@devtool/public-api/lib/devtool/v1/configuration_pb";
+import { Configuration } from "@khulnasoft/public-api/lib/devtool/v1/configuration_pb";
 import { TextMuted } from "@podkit/typography/TextMuted";
 import { Subheading } from "@podkit/typography/Headings";
 import { cn } from "@podkit/lib/cn";

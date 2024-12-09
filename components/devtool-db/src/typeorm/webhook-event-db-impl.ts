@@ -11,7 +11,7 @@ import { v4 as uuidv4 } from "uuid";
 import { TypeORM } from "./typeorm";
 import { WebhookEventDB } from "../webhook-event-db";
 import { DBWebhookEvent } from "./entity/db-webhook-event";
-import { WebhookEvent } from "@devtool/devtool-protocol";
+import { WebhookEvent } from "@khulnasoft/devtool-protocol";
 
 @injectable()
 export class WebhookEventDBImpl implements WebhookEventDB {

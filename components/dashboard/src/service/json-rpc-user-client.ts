@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { UserService } from "@devtool/public-api/lib/devtool/v1/user_connect";
+import { UserService } from "@khulnasoft/public-api/lib/devtool/v1/user_connect";
 
 import { PromiseClient } from "@connectrpc/connect";
 import { PartialMessage } from "@bufbuild/protobuf";
@@ -27,10 +27,10 @@ import {
     UpdateUserResponse,
     VerifyUserRequest,
     VerifyUserResponse,
-} from "@devtool/public-api/lib/devtool/v1/user_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/user_pb";
 import { getDevtoolService } from "./service";
 import { converter } from "./public-api";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 
 export class JsonRpcUserClient implements PromiseClient<typeof UserService> {
     async getAuthenticatedUser(

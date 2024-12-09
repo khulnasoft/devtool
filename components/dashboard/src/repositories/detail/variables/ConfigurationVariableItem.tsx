@@ -7,7 +7,7 @@
 import {
     ConfigurationEnvironmentVariable,
     EnvironmentVariableAdmission,
-} from "@devtool/public-api/lib/devtool/v1/envvar_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/envvar_pb";
 import { DropdownActions } from "@podkit/dropdown/DropDownActions";
 import { TableRow, TableCell } from "@podkit/tables/Table";
 import { useState } from "react";

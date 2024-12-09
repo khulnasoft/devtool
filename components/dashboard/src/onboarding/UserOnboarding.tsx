@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { User } from "@devtool/public-api/lib/devtool/v1/user_pb";
+import { User } from "@khulnasoft/public-api/lib/devtool/v1/user_pb";
 import { FunctionComponent, useCallback, useContext, useState } from "react";
 import devtoolIcon from "../icons/devtool.svg";
 import { Separator } from "../components/Separator";

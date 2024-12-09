@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { WorkspaceRegion } from "@devtool/devtool-protocol/lib/workspace-cluster";
+import { WorkspaceRegion } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
 import { countries, continents } from "countries-list";
 
 const NorthAmerica: WorkspaceRegion = "north-america";

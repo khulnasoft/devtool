@@ -6,8 +6,8 @@
 
 import { AuthCodeRepositoryDB } from "@devtool/devtool-db/lib/typeorm/auth-code-repository-db";
 import { UserDB } from "@devtool/devtool-db/lib/user-db";
-import { User } from "@devtool/devtool-protocol";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { User } from "@khulnasoft/devtool-protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { OAuthRequest, OAuthResponse } from "@jmondi/oauth2-server";
 import { handleExpressResponse, handleExpressError } from "@jmondi/oauth2-server/dist/adapters/express";
 import express from "express";

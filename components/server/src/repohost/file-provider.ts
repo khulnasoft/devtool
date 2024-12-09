@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { User, Repository, Commit } from "@devtool/devtool-protocol";
+import { User, Repository, Commit } from "@khulnasoft/devtool-protocol";
 
 export type MaybeContent = string | undefined;
 

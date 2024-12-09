@@ -4,8 +4,8 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { User, WorkspaceAndInstance, ContextURL, WorkspaceInstance } from "@devtool/devtool-protocol";
-import { DevtoolHostUrl } from "@devtool/devtool-protocol/lib/util/devtool-host-url";
+import { User, WorkspaceAndInstance, ContextURL, WorkspaceInstance } from "@khulnasoft/devtool-protocol";
+import { DevtoolHostUrl } from "@khulnasoft/devtool-protocol/lib/util/devtool-host-url";
 import dayjs from "dayjs";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -14,7 +14,7 @@ import { getDevtoolService } from "../service/service";
 import { getProjectPath } from "../workspaces/WorkspaceEntry";
 import { WorkspaceStatusIndicator } from "../workspaces/WorkspaceStatusIndicator";
 import Property from "./Property";
-import { AttributionId } from "@devtool/devtool-protocol/lib/attribution";
+import { AttributionId } from "@khulnasoft/devtool-protocol/lib/attribution";
 import { converter } from "../service/public-api";
 import { Button } from "@podkit/buttons/Button";
 

@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import type { Configuration } from "@devtool/public-api/lib/devtool/v1/configuration_pb";
+import type { Configuration } from "@khulnasoft/public-api/lib/devtool/v1/configuration_pb";
 import { LoadingButton } from "@podkit/buttons/LoadingButton";
 import { FC, useCallback, useState } from "react";
 import { TextInputField } from "../../../components/forms/TextInputField";

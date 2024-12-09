@@ -6,7 +6,7 @@
 
 import { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useDownloadUsageCSV } from "./download-usage-csv";
-import { AttributionId } from "@devtool/devtool-protocol/lib/attribution";
+import { AttributionId } from "@khulnasoft/devtool-protocol/lib/attribution";
 import { Dayjs } from "dayjs";
 import { useToast } from "../../components/toasts/Toasts";
 import { useCurrentOrg } from "../../data/organizations/orgs-query";

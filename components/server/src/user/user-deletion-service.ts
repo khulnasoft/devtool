@@ -6,9 +6,9 @@
 
 import { injectable, inject } from "inversify";
 import { WorkspaceDB, TeamDB } from "@devtool/devtool-db/lib";
-import { User, Workspace } from "@devtool/devtool-protocol";
+import { User, Workspace } from "@khulnasoft/devtool-protocol";
 import { StorageClient } from "../storage/storage-client";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { StopWorkspacePolicy } from "@devtool/ws-manager/lib";
 import { AuthProviderService } from "../auth/auth-provider-service";
 import { WorkspaceService } from "../workspace/workspace-service";

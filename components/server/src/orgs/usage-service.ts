@@ -4,8 +4,8 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { AttributionId } from "@devtool/devtool-protocol/lib/attribution";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { AttributionId } from "@khulnasoft/devtool-protocol/lib/attribution";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import {
     CostCenter_BillingStrategy,
     ListUsageRequest_Ordering,
@@ -15,9 +15,9 @@ import {
 } from "@devtool/usage-api/lib/usage/v1/usage.pb";
 import { inject, injectable } from "inversify";
 import { Authorizer } from "../authorization/authorizer";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
-import { CostCenterJSON, ListUsageRequest, ListUsageResponse } from "@devtool/devtool-protocol/lib/usage";
-import { TrustedValue } from "@devtool/devtool-protocol/lib/util/scrubbing";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { CostCenterJSON, ListUsageRequest, ListUsageResponse } from "@khulnasoft/devtool-protocol/lib/usage";
+import { TrustedValue } from "@khulnasoft/devtool-protocol/lib/util/scrubbing";
 
 @injectable()
 export class UsageService {

@@ -4,16 +4,16 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { User } from "@devtool/devtool-protocol";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { User } from "@khulnasoft/devtool-protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { inject, injectable } from "inversify";
 import { Config } from "../config";
 import { Twilio } from "twilio";
 import { ServiceContext } from "twilio/lib/rest/verify/v2/service";
 import { TeamDB, UserDB } from "@devtool/devtool-db/lib";
-import { ErrorCodes, ApplicationError } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ErrorCodes, ApplicationError } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { v4 as uuidv4, validate as uuidValidate } from "uuid";
-import { IAnalyticsWriter } from "@devtool/devtool-protocol/lib/analytics";
+import { IAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
 import { UserService } from "../user/user-service";
 
 interface VerificationEndpoint {

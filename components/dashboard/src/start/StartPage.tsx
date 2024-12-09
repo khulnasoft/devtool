@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import Alert from "../components/Alert";
 import { UsageLimitReachedModal } from "../components/UsageLimitReachedModal";
 import { Heading2 } from "../components/typography/headings";
@@ -12,7 +12,7 @@ import { useDocumentTitle } from "../hooks/use-document-title";
 import { devtoolHostUrl } from "../service/service";
 import { VerifyModal } from "./VerifyModal";
 import { useWorkspaceDefaultImageQuery } from "../data/workspaces/default-workspace-image-query";
-import { GetWorkspaceDefaultImageResponse_Source } from "@devtool/public-api/lib/devtool/v1/workspace_pb";
+import { GetWorkspaceDefaultImageResponse_Source } from "@khulnasoft/public-api/lib/devtool/v1/workspace_pb";
 import { ProductLogo } from "../components/ProductLogo";
 
 export enum StartPhase {

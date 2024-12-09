@@ -7,7 +7,7 @@
 import websocket from "ws";
 import express from "express";
 import { WsHandler, WsRequestHandler, WsErrorHandler, WsNextFunction, MaybePromise } from "./ws-handler";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 
 export interface WsLayer {
     handleError: WsErrorHandler;

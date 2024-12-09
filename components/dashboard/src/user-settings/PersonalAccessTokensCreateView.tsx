@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { PersonalAccessToken } from "@devtool/public-api/lib/devtool/experimental/v1/tokens_pb";
+import { PersonalAccessToken } from "@khulnasoft/public-api/lib/devtool/experimental/v1/tokens_pb";
 import { useEffect, useMemo, useState } from "react";
 import { useHistory, useParams } from "react-router";
 import Alert from "../components/Alert";

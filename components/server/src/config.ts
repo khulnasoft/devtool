@@ -4,17 +4,17 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { DevtoolHostUrl } from "@devtool/devtool-protocol/lib/util/devtool-host-url";
+import { DevtoolHostUrl } from "@khulnasoft/devtool-protocol/lib/util/devtool-host-url";
 import { AuthProviderParams, normalizeAuthProviderParams } from "./auth/auth-provider";
 
-import { NamedWorkspaceFeatureFlag } from "@devtool/devtool-protocol";
+import { NamedWorkspaceFeatureFlag } from "@khulnasoft/devtool-protocol";
 
 import { RateLimiterConfig } from "./auth/rate-limiter";
 import { CodeSyncConfig } from "./code-sync/code-sync-service";
 import * as fs from "fs";
 import * as yaml from "js-yaml";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
-import { filePathTelepresenceAware } from "@devtool/devtool-protocol/lib/env";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
+import { filePathTelepresenceAware } from "@khulnasoft/devtool-protocol/lib/env";
 import { WorkspaceClassesConfig } from "./workspace/workspace-classes";
 import { PrebuildRateLimiters } from "./workspace/prebuild-rate-limiter";
 import { IRateLimiterOptions } from "rate-limiter-flexible";

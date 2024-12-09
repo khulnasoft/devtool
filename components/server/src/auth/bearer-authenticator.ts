@@ -5,8 +5,8 @@
  */
 
 import { UserDB, PersonalAccessTokenDB } from "@devtool/devtool-db/lib";
-import { DevtoolTokenType, User } from "@devtool/devtool-protocol";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { DevtoolTokenType, User } from "@khulnasoft/devtool-protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import * as crypto from "crypto";
 import express from "express";
 import { inject, injectable } from "inversify";

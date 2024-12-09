@@ -24,7 +24,7 @@ import {
     WorkspaceConfig,
     PrebuiltWorkspaceState,
     PrebuiltWorkspace,
-} from "@devtool/devtool-protocol";
+} from "@khulnasoft/devtool-protocol";
 import * as chai from "chai";
 import { Container } from "inversify";
 import "mocha";
@@ -36,12 +36,12 @@ import { UserService } from "../user/user-service";
 import { SnapshotService } from "./snapshot-service";
 import { ContextService } from "./context-service";
 import { ContextParser } from "./context-parser-service";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { ConfigProvider } from "./config-provider";
 import { PrebuildManager } from "../prebuilds/prebuild-manager";
 import { HostContextProvider } from "../auth/host-context-provider";
 import { AuthProvider } from "../auth/auth-provider";
-import { Experiments } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
+import { Experiments } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import { SYSTEM_USER } from "../authorization/authorizer";
 import { RepositoryProvider } from "../repohost";
 

@@ -6,13 +6,13 @@
 
 import { FC, useCallback, useState } from "react";
 import Modal, { ModalBody, ModalFooter, ModalFooterAlert, ModalHeader } from "../../components/Modal";
-import { SuggestedRepository } from "@devtool/devtool-protocol";
+import { SuggestedRepository } from "@khulnasoft/devtool-protocol";
 import RepositoryFinder from "../../components/RepositoryFinder";
 import { InputField } from "../../components/forms/InputField";
 import { AuthorizeGit, useNeedsGitAuthorization } from "../../components/AuthorizeGit";
 import { useTemporaryState } from "../../hooks/use-temporary-value";
 import { CreateConfigurationArgs, useCreateConfiguration } from "../../data/configurations/configuration-queries";
-import type { Configuration } from "@devtool/public-api/lib/devtool/v1/configuration_pb";
+import type { Configuration } from "@khulnasoft/public-api/lib/devtool/v1/configuration_pb";
 import { LoadingButton } from "@podkit/buttons/LoadingButton";
 import { Button } from "@podkit/buttons/Button";
 

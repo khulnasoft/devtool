@@ -4,8 +4,8 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
-import { PaginationRequest } from "@devtool/public-api/lib/devtool/v1/pagination_pb";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { PaginationRequest } from "@khulnasoft/public-api/lib/devtool/v1/pagination_pb";
 
 export const PAGE_SIZE_DEFAULT = 25;
 export const PAGE_SIZE_MAX = 100;

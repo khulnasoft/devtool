@@ -4,12 +4,12 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { IssueContext, User, PullRequestContext, Repository, Token } from "@devtool/devtool-protocol";
+import { IssueContext, User, PullRequestContext, Repository, Token } from "@khulnasoft/devtool-protocol";
 import {
     GitHubOAuthScopes,
     GitLabOAuthScopes,
     AzureDevOpsOAuthScopes,
-} from "@devtool/public-api-common/lib/auth-providers";
+} from "@khulnasoft/public-api-common/lib/auth-providers";
 import { AzureDevOpsContextParser } from "../azure-devops/azure-context-parser";
 import { AzureDevOpsApi } from "../azure-devops/azure-api";
 import { AuthProviderParams } from "../auth/auth-provider";

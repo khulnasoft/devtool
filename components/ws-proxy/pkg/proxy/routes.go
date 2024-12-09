@@ -28,7 +28,7 @@ import (
 
 	"github.com/gorilla/websocket"
 
-	"github.com/khulnasoft/golang-crypto/ssh"
+	"github.com/gitpod-io/golang-crypto/ssh"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	"github.com/sirupsen/logrus"

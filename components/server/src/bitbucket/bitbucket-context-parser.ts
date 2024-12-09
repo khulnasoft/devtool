@@ -11,9 +11,9 @@ import {
     Repository,
     User,
     WorkspaceContext,
-} from "@devtool/devtool-protocol";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+} from "@khulnasoft/devtool-protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { Schema } from "bitbucket";
 import { inject, injectable } from "inversify";
 import { NotFoundError } from "../errors";

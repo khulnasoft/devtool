@@ -5,14 +5,14 @@
  */
 
 import { HandlerContext, ServiceImpl } from "@connectrpc/connect";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
-import { VerificationService as VerificationServiceInterface } from "@devtool/public-api/lib/devtool/v1/verification_connect";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { VerificationService as VerificationServiceInterface } from "@khulnasoft/public-api/lib/devtool/v1/verification_connect";
 import {
     SendPhoneNumberVerificationTokenRequest,
     SendPhoneNumberVerificationTokenResponse,
     VerifyPhoneNumberVerificationTokenRequest,
     VerifyPhoneNumberVerificationTokenResponse,
-} from "@devtool/public-api/lib/devtool/v1/verification_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/verification_pb";
 import { inject, injectable } from "inversify";
 import { VerificationService } from "../auth/verification-service";
 import { ctxUserId } from "../util/request-context";

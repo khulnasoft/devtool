@@ -6,9 +6,9 @@
 
 import { ProjectDB, TypeORM, UserDB, WorkspaceDB } from "@devtool/devtool-db/lib";
 import { resetDB } from "@devtool/devtool-db/lib/test/reset-db";
-import { Organization, Project, ProjectSettings, User } from "@devtool/devtool-protocol";
-import { Experiments } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
-import { ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { Organization, Project, ProjectSettings, User } from "@khulnasoft/devtool-protocol";
+import { Experiments } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
+import { ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import * as chai from "chai";
 import { Container } from "inversify";
 import "mocha";
@@ -16,7 +16,7 @@ import { OrganizationService } from "../orgs/organization-service";
 import { expectError } from "../test/expect-utils";
 import { createTestContainer, withTestCtx } from "../test/service-testing-container-module";
 import { OldProjectSettings, ProjectsService } from "./projects-service";
-import { daysBefore } from "@devtool/devtool-protocol/lib/util/timeutil";
+import { daysBefore } from "@khulnasoft/devtool-protocol/lib/util/timeutil";
 import { SYSTEM_USER } from "../authorization/authorizer";
 import { EnvVarService } from "../user/env-var-service";
 

@@ -13,8 +13,8 @@ import {
     User,
     Workspace,
     WorkspaceInstance,
-} from "@devtool/devtool-protocol";
-import { log, LogContext } from "@devtool/devtool-protocol/lib/util/logging";
+} from "@khulnasoft/devtool-protocol";
+import { log, LogContext } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import {
     CompositeResourceAccessGuard,
     OwnerResourceGuard,
@@ -38,15 +38,15 @@ import { accessHeadlessLogs } from "../auth/rate-limiter";
 import { BearerAuth } from "../auth/bearer-authenticator";
 import { ProjectsService } from "../projects/projects-service";
 import { HostContextProvider } from "../auth/host-context-provider";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { WorkspaceService } from "./workspace-service";
 import { ctxIsAborted, ctxOnAbort, ctxTrySubjectId, runWithSubSignal, runWithSubjectId } from "../util/request-context";
 import { SubjectId } from "../auth/subject-id";
 import { PrebuildManager } from "../prebuilds/prebuild-manager";
 import { validate as uuidValidate } from "uuid";
-import { getPrebuildErrorMessage } from "@devtool/public-api-common/lib/prebuild-utils";
-import { Deferred } from "@devtool/devtool-protocol/lib/util/deferred";
+import { getPrebuildErrorMessage } from "@khulnasoft/public-api-common/lib/prebuild-utils";
+import { Deferred } from "@khulnasoft/devtool-protocol/lib/util/deferred";
 
 @injectable()
 export class HeadlessLogController {

@@ -8,7 +8,7 @@ import { suite, test } from "@testdeck/mocha";
 import * as chai from "chai";
 import { PrebuildStateMapper } from "./prebuild-state-mapper";
 import { WorkspaceConditionBool, WorkspacePhase, WorkspaceStatus } from "@devtool/ws-manager/lib";
-import { PrebuiltWorkspace } from "@devtool/devtool-protocol";
+import { PrebuiltWorkspace } from "@khulnasoft/devtool-protocol";
 
 const expect = chai.expect;
 

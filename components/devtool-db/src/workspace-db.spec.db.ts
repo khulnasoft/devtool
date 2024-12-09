@@ -9,12 +9,12 @@ const expect = chai.expect;
 import { suite, test, timeout } from "@testdeck/mocha";
 import { fail } from "assert";
 
-import { WorkspaceInstance, Workspace, PrebuiltWorkspace, CommitContext } from "@devtool/devtool-protocol";
+import { WorkspaceInstance, Workspace, PrebuiltWorkspace, CommitContext } from "@khulnasoft/devtool-protocol";
 import { testContainer } from "./test-container";
 import { TypeORMWorkspaceDBImpl } from "./typeorm/workspace-db-impl";
 import { TypeORM } from "./typeorm/typeorm";
 import { DBPrebuiltWorkspace } from "./typeorm/entity/db-prebuilt-workspace";
-import { secondsBefore } from "@devtool/devtool-protocol/lib/util/timeutil";
+import { secondsBefore } from "@khulnasoft/devtool-protocol/lib/util/timeutil";
 import { resetDB } from "./test/reset-db";
 import { v4 } from "uuid";
 

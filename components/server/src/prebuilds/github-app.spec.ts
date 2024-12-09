@@ -8,7 +8,7 @@ import { Container, ContainerModule } from "inversify";
 import "mocha";
 import * as chai from "chai";
 import { GithubAppRules } from "./github-app-rules";
-import { GithubAppPrebuildConfig, WorkspaceConfig } from "@devtool/devtool-protocol";
+import { GithubAppPrebuildConfig, WorkspaceConfig } from "@khulnasoft/devtool-protocol";
 
 const containerModule = new ContainerModule((bind) => {
     bind(GithubAppRules).toSelf().inSingletonScope();

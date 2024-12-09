@@ -6,7 +6,7 @@
 
 import { inject, injectable, interfaces, optional } from "inversify";
 import * as grpc from "@grpc/grpc-js";
-import { createClientCallMetricsInterceptor, IClientCallMetrics } from "@devtool/devtool-protocol/lib/util/grpc";
+import { createClientCallMetricsInterceptor, IClientCallMetrics } from "@khulnasoft/devtool-protocol/lib/util/grpc";
 import { IDEPluginServiceClient } from "@devtool/content-service/lib/ideplugin_grpc_pb";
 import { ContentServiceClient } from "@devtool/content-service/lib/content_grpc_pb";
 import { BlobServiceClient } from "@devtool/content-service/lib/blobs_grpc_pb";

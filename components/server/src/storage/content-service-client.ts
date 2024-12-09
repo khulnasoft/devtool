@@ -21,7 +21,7 @@ import {
     WorkspaceSnapshotExistsRequest,
     WorkspaceSnapshotExistsResponse,
 } from "@devtool/content-service/lib/workspace_pb";
-import { SnapshotUrl } from "@devtool/devtool-protocol";
+import { SnapshotUrl } from "@khulnasoft/devtool-protocol";
 import { inject, injectable } from "inversify";
 import {
     CachingContentServiceClientProvider,

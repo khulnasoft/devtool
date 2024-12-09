@@ -5,16 +5,16 @@
  */
 
 import { injectable, inject } from "inversify";
-import { Commit, User } from "@devtool/devtool-protocol";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { Commit, User } from "@khulnasoft/devtool-protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 
 import { AuthProviderParams } from "../auth/auth-provider";
 import { AzureDevOpsTokenHelper } from "./azure-token-helper";
 import { WebApi, getHandlerFromToken } from "azure-devops-node-api";
 import { MaybeContent } from "../repohost";
 import { GitVersionDescriptor, GitVersionType } from "azure-devops-node-api/interfaces/GitInterfaces";
-import { AzureDevOpsOAuthScopes } from "@devtool/public-api-common/lib/auth-providers";
-import { RepositoryNotFoundError } from "@devtool/public-api-common/lib/public-api-errors";
+import { AzureDevOpsOAuthScopes } from "@khulnasoft/public-api-common/lib/auth-providers";
+import { RepositoryNotFoundError } from "@khulnasoft/public-api-common/lib/public-api-errors";
 import { IncomingMessage } from "node:http";
 
 @injectable()

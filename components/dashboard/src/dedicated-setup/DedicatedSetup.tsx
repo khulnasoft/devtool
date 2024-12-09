@@ -15,11 +15,11 @@ import { useCurrentOrg } from "../data/organizations/orgs-query";
 import { SpinnerLoader } from "../components/Loader";
 import { getDevtoolService } from "../service/service";
 import { UserContext } from "../user-context";
-import { OIDCClientConfig } from "@devtool/public-api/lib/devtool/experimental/v1/oidc_pb";
+import { OIDCClientConfig } from "@khulnasoft/public-api/lib/devtool/experimental/v1/oidc_pb";
 import { useQueryParams } from "../hooks/use-query-params";
 import { useDocumentTitle } from "../hooks/use-document-title";
 import { forceDedicatedSetupParam } from "./use-show-dedicated-setup";
-import { Organization } from "@devtool/public-api/lib/devtool/v1/organization_pb";
+import { Organization } from "@khulnasoft/public-api/lib/devtool/v1/organization_pb";
 import { Delayed } from "@podkit/loading/Delayed";
 import { userClient } from "../service/public-api";
 

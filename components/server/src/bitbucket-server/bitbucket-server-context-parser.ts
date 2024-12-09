@@ -4,9 +4,9 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { NavigatorContext, PullRequestContext, Repository, User, WorkspaceContext } from "@devtool/devtool-protocol";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+import { NavigatorContext, PullRequestContext, Repository, User, WorkspaceContext } from "@khulnasoft/devtool-protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { inject, injectable } from "inversify";
 import { NotFoundError } from "../errors";
 import { AbstractContextParser, IContextParser, URLParts } from "../workspace/context-parser";

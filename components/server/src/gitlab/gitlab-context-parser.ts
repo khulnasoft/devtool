@@ -14,14 +14,14 @@ import {
     PullRequestContext,
     IssueContext,
     RefType,
-} from "@devtool/devtool-protocol";
+} from "@khulnasoft/devtool-protocol";
 import { GitLabApi, GitLab } from "./api";
 import { UnauthorizedError, NotFoundError } from "../errors";
-import { GitLabOAuthScopes } from "@devtool/public-api-common/lib/auth-providers";
+import { GitLabOAuthScopes } from "@khulnasoft/public-api-common/lib/auth-providers";
 import { IContextParser, IssueContexts, AbstractContextParser, URLParts } from "../workspace/context-parser";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { GitLabTokenHelper } from "./gitlab-token-helper";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 const path = require("path");
 import { URL } from "url";
 import { RepoURL } from "../repohost";

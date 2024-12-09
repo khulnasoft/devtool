@@ -8,11 +8,11 @@ import "reflect-metadata";
 
 import { Duration, PartialMessage, Timestamp, toPlainMessage } from "@bufbuild/protobuf";
 import { Code, ConnectError } from "@connectrpc/connect";
-import { DevtoolServer } from "@devtool/devtool-protocol";
-import { BlockedRepository as ProtocolBlockedRepository } from "@devtool/devtool-protocol/lib/blocked-repositories-protocol";
-import { ContextURL } from "@devtool/devtool-protocol/lib/context-url";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
-import { RoleOrPermission as ProtocolRoleOrPermission } from "@devtool/devtool-protocol/lib/permission";
+import { DevtoolServer } from "@khulnasoft/devtool-protocol";
+import { BlockedRepository as ProtocolBlockedRepository } from "@khulnasoft/devtool-protocol/lib/blocked-repositories-protocol";
+import { ContextURL } from "@khulnasoft/devtool-protocol/lib/context-url";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { RoleOrPermission as ProtocolRoleOrPermission } from "@khulnasoft/devtool-protocol/lib/permission";
 import {
     AuthProviderInfo,
     AuthProviderEntry as AuthProviderProtocol,
@@ -40,8 +40,8 @@ import {
     WorkspaceInfo,
     WorkspaceSession as WorkspaceSessionProtocol,
     Configuration as DevtoolServerInstallationConfiguration,
-} from "@devtool/devtool-protocol/lib/protocol";
-import { AuditLog as AuditLogProtocol } from "@devtool/devtool-protocol/lib/audit-log";
+} from "@khulnasoft/devtool-protocol/lib/protocol";
+import { AuditLog as AuditLogProtocol } from "@khulnasoft/devtool-protocol/lib/audit-log";
 import {
     OrgMemberInfo,
     OrganizationSettings as OrganizationSettingsProtocol,
@@ -53,11 +53,11 @@ import {
     Organization as ProtocolOrganization,
     OrgMemberPermission,
     OrgMemberRole,
-} from "@devtool/devtool-protocol/lib/teams-projects-protocol";
-import type { DeepPartial } from "@devtool/devtool-protocol/lib/util/deep-partial";
-import { parseGoDurationToMs } from "@devtool/devtool-protocol/lib/util/timeutil";
-import { SupportedWorkspaceClass } from "@devtool/devtool-protocol/lib/workspace-class";
-import { isWorkspaceRegion } from "@devtool/devtool-protocol/lib/workspace-cluster";
+} from "@khulnasoft/devtool-protocol/lib/teams-projects-protocol";
+import type { DeepPartial } from "@khulnasoft/devtool-protocol/lib/util/deep-partial";
+import { parseGoDurationToMs } from "@khulnasoft/devtool-protocol/lib/util/timeutil";
+import { SupportedWorkspaceClass } from "@khulnasoft/devtool-protocol/lib/workspace-class";
+import { isWorkspaceRegion } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
 import {
     ConfigurationIdeConfig,
     PortProtocol,
@@ -65,14 +65,14 @@ import {
     WorkspaceInstanceConditions,
     WorkspaceInstancePhase,
     WorkspaceInstancePort,
-} from "@devtool/devtool-protocol/lib/workspace-instance";
+} from "@khulnasoft/devtool-protocol/lib/workspace-instance";
 import {
     AuthProvider,
     AuthProviderDescription,
     AuthProviderType,
     OAuth2Config,
-} from "@devtool/public-api/lib/devtool/v1/authprovider_pb";
-import { AuditLog } from "@devtool/public-api/lib/devtool/v1/auditlogs_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/authprovider_pb";
+import { AuditLog } from "@khulnasoft/public-api/lib/devtool/v1/auditlogs_pb";
 import {
     BranchMatchingStrategy,
     Configuration,
@@ -80,14 +80,14 @@ import {
     PrebuildSettings,
     WorkspaceSettings,
     PrebuildCloneSettings,
-} from "@devtool/public-api/lib/devtool/v1/configuration_pb";
-import { EditorReference } from "@devtool/public-api/lib/devtool/v1/editor_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/configuration_pb";
+import { EditorReference } from "@khulnasoft/public-api/lib/devtool/v1/editor_pb";
 import {
     ConfigurationEnvironmentVariable,
     EnvironmentVariable,
     EnvironmentVariableAdmission,
     UserEnvironmentVariable,
-} from "@devtool/public-api/lib/devtool/v1/envvar_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/envvar_pb";
 import {
     CellDisabledError,
     FailedPreconditionDetails,
@@ -101,20 +101,20 @@ import {
     RepositoryUnauthorizedError as RepositoryUnauthorizedErrorData,
     TooManyRunningWorkspacesError,
     UserBlockedError,
-} from "@devtool/public-api/lib/devtool/v1/error_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/error_pb";
 import {
     BlockedEmailDomain,
     BlockedRepository,
     InstallationConfiguration,
     OnboardingState,
-} from "@devtool/public-api/lib/devtool/v1/installation_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/installation_pb";
 import {
     Organization,
     OrganizationMember,
     OrganizationPermission,
     OrganizationRole,
     OrganizationSettings,
-} from "@devtool/public-api/lib/devtool/v1/organization_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/organization_pb";
 import {
     Prebuild,
     ListOrganizationPrebuildsRequest_Filter_State as PrebuildFilterState,
@@ -122,10 +122,10 @@ import {
     PrebuildPhase_Phase,
     PrebuildStatus,
     TaskLog,
-} from "@devtool/public-api/lib/devtool/v1/prebuild_pb";
-import { Author, Commit, SCMToken, SuggestedRepository } from "@devtool/public-api/lib/devtool/v1/scm_pb";
-import { Sort, SortOrder } from "@devtool/public-api/lib/devtool/v1/sorting_pb";
-import { SSHPublicKey } from "@devtool/public-api/lib/devtool/v1/ssh_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/prebuild_pb";
+import { Author, Commit, SCMToken, SuggestedRepository } from "@khulnasoft/public-api/lib/devtool/v1/scm_pb";
+import { Sort, SortOrder } from "@khulnasoft/public-api/lib/devtool/v1/sorting_pb";
+import { SSHPublicKey } from "@khulnasoft/public-api/lib/devtool/v1/ssh_pb";
 import {
     Identity,
     RoleOrPermission,
@@ -135,7 +135,7 @@ import {
     User_UserFeatureFlag,
     User_WorkspaceAutostartOption,
     User_WorkspaceTimeoutSettings,
-} from "@devtool/public-api/lib/devtool/v1/user_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/user_pb";
 import {
     AdmissionLevel,
     CreateAndStartWorkspaceRequest,
@@ -165,8 +165,8 @@ import {
     WorkspaceStatus,
     WorkspaceStatus_PrebuildResult,
     WorkspaceStatus_WorkspaceConditions,
-} from "@devtool/public-api/lib/devtool/v1/workspace_pb";
-import { BigIntToJson } from "@devtool/devtool-protocol/lib/util/stringify";
+} from "@khulnasoft/public-api/lib/devtool/v1/workspace_pb";
+import { BigIntToJson } from "@khulnasoft/devtool-protocol/lib/util/stringify";
 import { getPrebuildLogPath } from "./prebuild-utils";
 import { InvalidDevtoolYMLError, RepositoryNotFoundError, UnauthorizedRepositoryAccessError } from "./public-api-errors";
 const URL = require("url").URL || window.URL;

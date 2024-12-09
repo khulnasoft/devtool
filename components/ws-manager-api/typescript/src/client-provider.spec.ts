@@ -14,8 +14,8 @@ import {
     WorkspaceManagerClientProviderCompositeSource,
     WorkspaceManagerClientProviderSource,
 } from "./client-provider-source";
-import { WorkspaceCluster, WorkspaceClusterWoTLS } from "@devtool/devtool-protocol/lib/workspace-cluster";
-import { User, Workspace, WorkspaceInstance } from "@devtool/devtool-protocol";
+import { WorkspaceCluster, WorkspaceClusterWoTLS } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
+import { User, Workspace, WorkspaceInstance } from "@khulnasoft/devtool-protocol";
 import { PromisifiedWorkspaceManagerClient } from ".";
 import { Constraint, ConstraintArgs, constraintHasPermissions, intersect, invert } from "./constraints";
 const expect = chai.expect;

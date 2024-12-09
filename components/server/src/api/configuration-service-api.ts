@@ -6,8 +6,8 @@
 
 import { HandlerContext, ServiceImpl } from "@connectrpc/connect";
 import { inject, injectable } from "inversify";
-import { ConfigurationService as ConfigurationServiceInterface } from "@devtool/public-api/lib/devtool/v1/configuration_connect";
-import { PublicAPIConverter, PartialConfiguration } from "@devtool/public-api-common/lib/public-api-converter";
+import { ConfigurationService as ConfigurationServiceInterface } from "@khulnasoft/public-api/lib/devtool/v1/configuration_connect";
+import { PublicAPIConverter, PartialConfiguration } from "@khulnasoft/public-api-common/lib/public-api-converter";
 import { ProjectsService } from "../projects/projects-service";
 import {
     CreateConfigurationRequest,
@@ -19,16 +19,16 @@ import {
     ListConfigurationsResponse,
     PrebuildSettings,
     UpdateConfigurationRequest,
-} from "@devtool/public-api/lib/devtool/v1/configuration_pb";
-import { PaginationResponse } from "@devtool/public-api/lib/devtool/v1/pagination_pb";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+} from "@khulnasoft/public-api/lib/devtool/v1/configuration_pb";
+import { PaginationResponse } from "@khulnasoft/public-api/lib/devtool/v1/pagination_pb";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { validate as uuidValidate } from "uuid";
 import { PaginationToken, generatePaginationToken, parsePaginationToken } from "./pagination";
 import { ctxUserId } from "../util/request-context";
 import { UserService } from "../user/user-service";
-import { SortOrder } from "@devtool/public-api/lib/devtool/v1/sorting_pb";
-import { CommitContext, Project } from "@devtool/devtool-protocol";
-import { DeepPartial } from "@devtool/devtool-protocol/lib/util/deep-partial";
+import { SortOrder } from "@khulnasoft/public-api/lib/devtool/v1/sorting_pb";
+import { CommitContext, Project } from "@khulnasoft/devtool-protocol";
+import { DeepPartial } from "@khulnasoft/devtool-protocol/lib/util/deep-partial";
 import { ContextService } from "../workspace/context-service";
 
 function buildUpdateObject<T extends Record<string, any>>(obj: T): Partial<T> {

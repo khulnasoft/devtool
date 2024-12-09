@@ -4,9 +4,9 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { ErrorCodes, ApplicationError } from "@devtool/devtool-protocol/lib/messaging/error";
-import { LinkedInProfile, User } from "@devtool/devtool-protocol/lib/protocol";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { ErrorCodes, ApplicationError } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { LinkedInProfile, User } from "@khulnasoft/devtool-protocol/lib/protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { LinkedInProfileDB } from "@devtool/devtool-db/lib";
 import { inject, injectable } from "inversify";
 import fetch from "node-fetch";

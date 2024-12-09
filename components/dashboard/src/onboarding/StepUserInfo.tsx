@@ -4,15 +4,15 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { LinkedInProfile } from "@devtool/devtool-protocol";
+import { LinkedInProfile } from "@khulnasoft/devtool-protocol";
 import { FC, useCallback, useState } from "react";
 import { TextInputField } from "../components/forms/TextInputField";
 import { useUpdateCurrentUserMutation } from "../data/current-user/update-mutation";
 import { useOnBlurError } from "../hooks/use-onblur-error";
 import { OnboardingStep } from "./OnboardingStep";
 import { LinkedInBanner } from "./LinkedInBanner";
-import { User } from "@devtool/public-api/lib/devtool/v1/user_pb";
-import { getPrimaryEmail } from "@devtool/public-api-common/lib/user-utils";
+import { User } from "@khulnasoft/public-api/lib/devtool/v1/user_pb";
+import { getPrimaryEmail } from "@khulnasoft/public-api-common/lib/user-utils";
 
 type Props = {
     user: User;

@@ -7,7 +7,7 @@
 import { TypeORM } from "./typeorm/typeorm";
 import { Config } from "./config";
 import { MigrateMigrations0_2_0 } from "./typeorm/migrate-migrations-0_2_0";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 
 async function migrateMigrationsTable() {
     const config = new Config();

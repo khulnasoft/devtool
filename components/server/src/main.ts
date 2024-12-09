@@ -7,7 +7,7 @@
 import "source-map-support/register";
 
 import { start } from "./init";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { Container } from "inversify";
 import { productionContainerModule } from "./container-module";
 import { dbContainerModule } from "@devtool/devtool-db/lib/container-module";

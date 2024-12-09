@@ -12,22 +12,22 @@ import {
     DevtoolService,
     DevtoolServiceImpl,
     Disposable,
-} from "@devtool/devtool-protocol";
-import { WebSocketConnectionProvider } from "@devtool/devtool-protocol/lib/messaging/browser/connection";
-import { DevtoolHostUrl } from "@devtool/devtool-protocol/lib/util/devtool-host-url";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
-import { IDEFrontendDashboardService } from "@devtool/devtool-protocol/lib/frontend-dashboard-service";
-import { RemoteTrackMessage } from "@devtool/devtool-protocol/lib/analytics";
+} from "@khulnasoft/devtool-protocol";
+import { WebSocketConnectionProvider } from "@khulnasoft/devtool-protocol/lib/messaging/browser/connection";
+import { DevtoolHostUrl } from "@khulnasoft/devtool-protocol/lib/util/devtool-host-url";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
+import { IDEFrontendDashboardService } from "@khulnasoft/devtool-protocol/lib/frontend-dashboard-service";
+import { RemoteTrackMessage } from "@khulnasoft/devtool-protocol/lib/analytics";
 import { converter, helloService, stream, userClient, workspaceClient } from "./public-api";
 import { getExperimentsClient } from "../experiments/client";
 import { instrumentWebSocket } from "./metrics";
-import { LotsOfRepliesResponse } from "@devtool/public-api/lib/devtool/experimental/v1/dummy_pb";
-import { User } from "@devtool/public-api/lib/devtool/v1/user_pb";
+import { LotsOfRepliesResponse } from "@khulnasoft/public-api/lib/devtool/experimental/v1/dummy_pb";
+import { User } from "@khulnasoft/public-api/lib/devtool/v1/user_pb";
 import {
     WatchWorkspaceStatusPriority,
     watchWorkspaceStatusInOrder,
 } from "../data/workspaces/listen-to-workspace-ws-messages2";
-import { Workspace, WorkspaceSpec_WorkspaceType, WorkspaceStatus } from "@devtool/public-api/lib/devtool/v1/workspace_pb";
+import { Workspace, WorkspaceSpec_WorkspaceType, WorkspaceStatus } from "@khulnasoft/public-api/lib/devtool/v1/workspace_pb";
 import { sendTrackEvent } from "../Analytics";
 
 export const devtoolHostUrl = new DevtoolHostUrl(window.location.toString());

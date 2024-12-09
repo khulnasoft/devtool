@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { Job } from "../jobs/runner";
 import { RelationshipUpdater } from "./relationship-updater";
 import { UserDB } from "@devtool/devtool-db/lib";

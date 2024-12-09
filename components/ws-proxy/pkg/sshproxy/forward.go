@@ -12,7 +12,7 @@ import (
 	"github.com/khulnasoft/devtool/common-go/analytics"
 	"github.com/khulnasoft/devtool/common-go/log"
 	tracker "github.com/khulnasoft/devtool/ws-proxy/pkg/analytics"
-	"github.com/khulnasoft/golang-crypto/ssh"
+	"github.com/gitpod-io/golang-crypto/ssh"
 	"golang.org/x/net/context"
 )
 

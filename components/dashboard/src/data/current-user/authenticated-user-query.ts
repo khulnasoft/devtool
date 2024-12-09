@@ -6,7 +6,7 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { userClient } from "../../service/public-api";
-import { GetAuthenticatedUserRequest, User } from "@devtool/public-api/lib/devtool/v1/user_pb";
+import { GetAuthenticatedUserRequest, User } from "@khulnasoft/public-api/lib/devtool/v1/user_pb";
 
 export const useAuthenticatedUser = () => {
     const query = useQuery<User>({

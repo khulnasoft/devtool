@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { AttributionId } from "@devtool/devtool-protocol/lib/attribution";
+import { AttributionId } from "@khulnasoft/devtool-protocol/lib/attribution";
 import dayjs from "dayjs";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useLocation } from "react-router";

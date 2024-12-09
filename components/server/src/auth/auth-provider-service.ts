@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject } from "inversify";
-import { AuthProviderEntry as AuthProviderEntry, AuthProviderInfo, OAuth2Config, User } from "@devtool/devtool-protocol";
+import { AuthProviderEntry as AuthProviderEntry, AuthProviderInfo, OAuth2Config, User } from "@khulnasoft/devtool-protocol";
 import { AuthProviderParams } from "./auth-provider";
 import { AuthProviderEntryDB, TeamDB } from "@devtool/devtool-db/lib";
 import { Config } from "../config";
@@ -15,13 +15,13 @@ import { oauthUrls as gitlabUrls } from "../gitlab/gitlab-urls";
 import { oauthUrls as bbsUrls } from "../bitbucket-server/bitbucket-server-urls";
 import { oauthUrls as bbUrls } from "../bitbucket/bitbucket-urls";
 import { oauthUrls as azureUrls } from "../azure-devops/azure-urls";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import fetch from "node-fetch";
 import { Authorizer } from "../authorization/authorizer";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
-import { getRequiredScopes, getScopesForAuthProviderType } from "@devtool/public-api-common/lib/auth-providers";
-import { PublicAPIConverter } from "@devtool/public-api-common/lib/public-api-converter";
-import { AuthProviderType } from "@devtool/public-api/lib/devtool/v1/authprovider_pb";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { getRequiredScopes, getScopesForAuthProviderType } from "@khulnasoft/public-api-common/lib/auth-providers";
+import { PublicAPIConverter } from "@khulnasoft/public-api-common/lib/public-api-converter";
+import { AuthProviderType } from "@khulnasoft/public-api/lib/devtool/v1/authprovider_pb";
 
 @injectable()
 export class AuthProviderService {

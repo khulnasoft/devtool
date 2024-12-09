@@ -5,8 +5,8 @@
  */
 
 import { TypeORM, resetDB } from "@devtool/devtool-db/lib";
-import { User } from "@devtool/devtool-protocol";
-import { Deferred } from "@devtool/devtool-protocol/lib/util/deferred";
+import { User } from "@khulnasoft/devtool-protocol";
+import { Deferred } from "@khulnasoft/devtool-protocol/lib/util/deferred";
 import { expect } from "chai";
 import * as express from "express";
 import { Container } from "inversify";

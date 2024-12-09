@@ -5,7 +5,7 @@
  */
 
 import { Timestamp } from "@bufbuild/protobuf";
-import { Identity, User, User_ProfileDetails } from "@devtool/public-api/lib/devtool/v1/user_pb";
+import { Identity, User, User_ProfileDetails } from "@khulnasoft/public-api/lib/devtool/v1/user_pb";
 import * as chai from "chai";
 import { getPrimaryEmail } from "./user-utils";
 

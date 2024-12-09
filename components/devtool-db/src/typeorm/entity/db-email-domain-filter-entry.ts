@@ -5,7 +5,7 @@
  */
 
 import { Entity, Column, PrimaryColumn } from "typeorm";
-import { EmailDomainFilterEntry } from "@devtool/devtool-protocol";
+import { EmailDomainFilterEntry } from "@khulnasoft/devtool-protocol";
 
 @Entity("d_b_email_domain_filter")
 // on DB but not Typeorm: @Index("ind_lastModified", ["_lastModified"])   // DBSync

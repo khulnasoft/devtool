@@ -7,8 +7,8 @@
 import { useCurrentUser } from "../user-context";
 import { useQueryParams } from "../hooks/use-query-params";
 import { FORCE_ONBOARDING_PARAM, FORCE_ONBOARDING_PARAM_VALUE } from "./UserOnboarding";
-import { isOrganizationOwned } from "@devtool/public-api-common/lib/user-utils";
-import { User } from "@devtool/public-api/lib/devtool/v1/user_pb";
+import { isOrganizationOwned } from "@khulnasoft/public-api-common/lib/user-utils";
+import { User } from "@khulnasoft/public-api/lib/devtool/v1/user_pb";
 
 export const useShowUserOnboarding = () => {
     const user = useCurrentUser();

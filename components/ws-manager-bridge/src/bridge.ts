@@ -12,8 +12,8 @@ import {
     PortVisibility,
     DisposableCollection,
     PortProtocol,
-} from "@devtool/devtool-protocol";
-import * as protocol from "@devtool/devtool-protocol";
+} from "@khulnasoft/devtool-protocol";
+import * as protocol from "@khulnasoft/devtool-protocol";
 import {
     WorkspaceStatus,
     WorkspacePhase,
@@ -23,17 +23,17 @@ import {
     DescribeClusterRequest,
     WorkspaceType,
 } from "@devtool/ws-manager/lib";
-import { scrubber, TrustedValue } from "@devtool/devtool-protocol/lib/util/scrubbing";
+import { scrubber, TrustedValue } from "@khulnasoft/devtool-protocol/lib/util/scrubbing";
 import { WorkspaceDB } from "@devtool/devtool-db/lib/workspace-db";
-import { log, LogContext } from "@devtool/devtool-protocol/lib/util/logging";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
-import { IAnalyticsWriter } from "@devtool/devtool-protocol/lib/analytics";
+import { log, LogContext } from "@khulnasoft/devtool-protocol/lib/util/logging";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
+import { IAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
 import { TracedWorkspaceDB, DBWithTracing } from "@devtool/devtool-db/lib/traced-db";
 import { Metrics } from "./metrics";
 import { ClientProvider, WsmanSubscriber } from "./wsman-subscriber";
 import { Timestamp } from "google-protobuf/google/protobuf/timestamp_pb";
 import { Configuration } from "./config";
-import { WorkspaceClass, WorkspaceCluster, WorkspaceClusterDB } from "@devtool/devtool-protocol/lib/workspace-cluster";
+import { WorkspaceClass, WorkspaceCluster, WorkspaceClusterDB } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
 import { performance } from "perf_hooks";
 import { WorkspaceInstanceController } from "./workspace-instance-controller";
 import { PrebuildUpdater } from "./prebuild-updater";

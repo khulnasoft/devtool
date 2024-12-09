@@ -6,9 +6,9 @@
 
 import * as prom from "prom-client";
 import { injectable } from "inversify";
-import { WorkspaceInstance } from "@devtool/devtool-protocol";
-import { WorkspaceClusterWoTLS } from "@devtool/devtool-protocol/lib/workspace-cluster";
-import { WorkspaceType } from "@devtool/devtool-protocol";
+import { WorkspaceInstance } from "@khulnasoft/devtool-protocol";
+import { WorkspaceClusterWoTLS } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
+import { WorkspaceType } from "@khulnasoft/devtool-protocol";
 
 @injectable()
 export class Metrics {

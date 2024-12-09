@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { SelectAccountPayload } from "@devtool/devtool-protocol/lib/auth";
+import { SelectAccountPayload } from "@khulnasoft/devtool-protocol/lib/auth";
 import { useEffect, useState } from "react";
 import { devtoolHostUrl } from "../service/service";
 import InfoBox from "../components/InfoBox";

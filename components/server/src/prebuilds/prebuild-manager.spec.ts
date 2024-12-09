@@ -17,10 +17,10 @@ import { Config } from "../config";
 import { ProjectsService } from "../projects/projects-service";
 import { IncrementalWorkspaceService } from "./incremental-workspace-service";
 import { EntitlementService } from "../billing/entitlement-service";
-import { CommitContext, Project, ProjectSettings, Repository, WorkspaceConfig } from "@devtool/devtool-protocol";
+import { CommitContext, Project, ProjectSettings, Repository, WorkspaceConfig } from "@khulnasoft/devtool-protocol";
 import { Authorizer } from "../authorization/authorizer";
 import { ContextParser } from "../workspace/context-parser-service";
-import { IAnalyticsWriter } from "@devtool/devtool-protocol/lib/analytics";
+import { IAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
 import { RedisSubscriber } from "../messaging/redis-subscriber";
 
 const expect = chai.expect;

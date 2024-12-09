@@ -4,10 +4,10 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { HeadlessWorkspaceEventType, PrebuiltWorkspace } from "@devtool/devtool-protocol";
-import { Client as ExperimentsClient } from "@devtool/devtool-protocol/lib/experiments/types";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
-import { TrustedValue } from "@devtool/devtool-protocol/lib/util/scrubbing";
+import { HeadlessWorkspaceEventType, PrebuiltWorkspace } from "@khulnasoft/devtool-protocol";
+import { Client as ExperimentsClient } from "@khulnasoft/devtool-protocol/lib/experiments/types";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
+import { TrustedValue } from "@khulnasoft/devtool-protocol/lib/util/scrubbing";
 import { WorkspacePhase, WorkspaceStatus } from "@devtool/ws-manager/lib";
 import { inject, injectable } from "inversify";
 

@@ -6,7 +6,7 @@
 import "reflect-metadata";
 
 import { inject, injectable } from "inversify";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import {
     HeadlessUpdatesChannel,
     PrebuildUpdatesChannel,
@@ -14,7 +14,7 @@ import {
     RedisPrebuildUpdate,
     RedisWorkspaceInstanceUpdate,
     WorkspaceInstanceUpdatesChannel,
-} from "@devtool/devtool-protocol";
+} from "@khulnasoft/devtool-protocol";
 import { Redis } from "ioredis";
 import { reportUpdatePublished } from "./metrics";
 

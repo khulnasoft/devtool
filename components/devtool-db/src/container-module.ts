@@ -12,8 +12,8 @@ import { TypeORMUserDBImpl } from "./typeorm/user-db-impl";
 import { UserDB } from "./user-db";
 import { Config } from "./config";
 import { TypeORM } from "./typeorm/typeorm";
-import { encryptionModule } from "@devtool/devtool-protocol/lib/encryption/container-module";
-import { KeyProviderImpl, KeyProviderConfig } from "@devtool/devtool-protocol/lib/encryption/key-provider";
+import { encryptionModule } from "@khulnasoft/devtool-protocol/lib/encryption/container-module";
+import { KeyProviderImpl, KeyProviderConfig } from "@khulnasoft/devtool-protocol/lib/encryption/key-provider";
 import { DBWithTracing, bindDbWithTracing, TracedWorkspaceDB, TracedUserDB, TracedOneTimeSecretDB } from "./traced-db";
 import { OneTimeSecretDB } from "./one-time-secret-db";
 import { TypeORMAppInstallationDBImpl } from "./typeorm/app-installation-db-impl";
@@ -43,8 +43,8 @@ import { PersonalAccessTokenDBImpl } from "./typeorm/personal-access-token-db-im
 import { LinkedInProfileDBImpl } from "./typeorm/linked-in-profile-db-impl";
 import { LinkedInProfileDB } from "./linked-in-profile-db";
 import { DataCache, DataCacheNoop } from "./data-cache";
-import { TracingManager } from "@devtool/devtool-protocol/lib/util/tracing";
-import { EncryptionService, GlobalEncryptionService } from "@devtool/devtool-protocol/lib/encryption/encryption-service";
+import { TracingManager } from "@khulnasoft/devtool-protocol/lib/util/tracing";
+import { EncryptionService, GlobalEncryptionService } from "@khulnasoft/devtool-protocol/lib/encryption/encryption-service";
 import { AuditLogDB } from "./audit-log-db";
 import { AuditLogDBImpl } from "./typeorm/audit-log-db-impl";
 

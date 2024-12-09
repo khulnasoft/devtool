@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { AuthProviderEntry } from "@devtool/devtool-protocol";
+import { AuthProviderEntry } from "@khulnasoft/devtool-protocol";
 
 export function oauthUrls(customConfig: Required<AuthProviderEntry.OAuth2CustomConfig>) {
     return {

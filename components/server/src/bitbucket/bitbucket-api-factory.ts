@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { User, Token } from "@devtool/devtool-protocol";
+import { User, Token } from "@khulnasoft/devtool-protocol";
 import { APIClient, Bitbucket } from "bitbucket";
 import { inject, injectable } from "inversify";
 import { AuthProviderParams } from "../auth/auth-provider";

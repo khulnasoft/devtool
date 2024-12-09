@@ -8,8 +8,8 @@ import { useMutation } from "@tanstack/react-query";
 import { useOrgSettingsQueryInvalidator } from "./org-settings-query";
 import { useCurrentOrg } from "./orgs-query";
 import { organizationClient } from "../../service/public-api";
-import { OrganizationSettings } from "@devtool/public-api/lib/devtool/v1/organization_pb";
-import { ErrorCode } from "@devtool/devtool-protocol/lib/messaging/error";
+import { OrganizationSettings } from "@khulnasoft/public-api/lib/devtool/v1/organization_pb";
+import { ErrorCode } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { useOrgWorkspaceClassesQueryInvalidator } from "./org-workspace-classes-query";
 import { PlainMessage } from "@bufbuild/protobuf";
 

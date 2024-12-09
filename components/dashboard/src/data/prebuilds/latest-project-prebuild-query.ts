@@ -6,8 +6,8 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { prebuildClient } from "../../service/public-api";
-import { Prebuild } from "@devtool/public-api/lib/devtool/v1/prebuild_pb";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { Prebuild } from "@khulnasoft/public-api/lib/devtool/v1/prebuild_pb";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 
 type Args = {
     projectId: string;

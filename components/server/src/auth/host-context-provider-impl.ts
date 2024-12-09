@@ -10,10 +10,10 @@ import { AuthProviderParams } from "./auth-provider";
 import { Config } from "../config";
 import { AuthProviderService } from "./auth-provider-service";
 import { HostContextProvider, HostContextProviderFactory } from "./host-context-provider";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { HostContainerMapping } from "./host-container-mapping";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
-import { repeat } from "@devtool/devtool-protocol/lib/util/repeat";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
+import { repeat } from "@khulnasoft/devtool-protocol/lib/util/repeat";
 import { RepositoryService } from "../repohost/repo-service";
 
 @injectable()

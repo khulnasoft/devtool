@@ -5,9 +5,9 @@
  */
 
 import { HandlerContext, ServiceImpl } from "@connectrpc/connect";
-import { UserService as UserServiceInterface } from "@devtool/public-api/lib/devtool/v1/user_connect";
+import { UserService as UserServiceInterface } from "@khulnasoft/public-api/lib/devtool/v1/user_connect";
 import { inject, injectable } from "inversify";
-import { PublicAPIConverter } from "@devtool/public-api-common/lib/public-api-converter";
+import { PublicAPIConverter } from "@khulnasoft/public-api-common/lib/public-api-converter";
 import {
     UpdateUserRequest,
     UpdateUserResponse,
@@ -27,11 +27,11 @@ import {
     ListUsersResponse,
     SetRolesOrPermissionsRequest,
     SetRolesOrPermissionsResponse,
-} from "@devtool/public-api/lib/devtool/v1/user_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/user_pb";
 import { UserService } from "../user/user-service";
 import { validate as uuidValidate } from "uuid";
 import { ctxUserId } from "../util/request-context";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 
 @injectable()
 export class UserServiceAPI implements ServiceImpl<typeof UserServiceInterface> {

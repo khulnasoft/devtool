@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { WorkspaceConfig } from "@devtool/devtool-protocol";
+import { WorkspaceConfig } from "@khulnasoft/devtool-protocol";
 
 export interface Context {
     config: WorkspaceConfig;

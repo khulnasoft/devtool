@@ -5,7 +5,7 @@
  */
 
 import { ValueTransformer } from "typeorm/decorator/options/ValueTransformer";
-import { EncryptionService } from "@devtool/devtool-protocol/lib/encryption/encryption-service";
+import { EncryptionService } from "@khulnasoft/devtool-protocol/lib/encryption/encryption-service";
 
 export namespace Transformer {
     export const MAP_EMPTY_STR_TO_UNDEFINED: ValueTransformer = {

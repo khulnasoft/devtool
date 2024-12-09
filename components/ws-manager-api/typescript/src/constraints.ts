@@ -4,8 +4,8 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { PermissionName, RolesOrPermissions, User, Workspace, WorkspaceInstance } from "@devtool/devtool-protocol";
-import { AdmissionConstraint, WorkspaceClusterWoTLS } from "@devtool/devtool-protocol/lib/workspace-cluster";
+import { PermissionName, RolesOrPermissions, User, Workspace, WorkspaceInstance } from "@khulnasoft/devtool-protocol";
+import { AdmissionConstraint, WorkspaceClusterWoTLS } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
 
 export interface WorkspaceClusterConstraintSet {
     name: string;

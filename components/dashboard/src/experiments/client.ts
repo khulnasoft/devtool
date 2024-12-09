@@ -5,8 +5,8 @@
  */
 
 import * as configcat from "configcat-js";
-import { ConfigCatClient } from "@devtool/devtool-protocol/lib/experiments/configcat";
-import { Client } from "@devtool/devtool-protocol/lib/experiments/types";
+import { ConfigCatClient } from "@khulnasoft/devtool-protocol/lib/experiments/configcat";
+import { Client } from "@khulnasoft/devtool-protocol/lib/experiments/types";
 import { LogLevel } from "configcat-common";
 
 let client: Client | undefined;

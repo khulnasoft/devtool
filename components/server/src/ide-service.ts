@@ -4,18 +4,18 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { IDESettings, User, Workspace } from "@devtool/devtool-protocol";
-import { IDEClient, IDEOption, IDEOptions, IDESettingsVersion } from "@devtool/devtool-protocol/lib/ide-protocol";
+import { IDESettings, User, Workspace } from "@khulnasoft/devtool-protocol";
+import { IDEClient, IDEOption, IDEOptions, IDESettingsVersion } from "@khulnasoft/devtool-protocol/lib/ide-protocol";
 import * as IdeServiceApi from "@devtool/ide-service-api/lib/ide.pb";
 import {
     IDEServiceClient,
     IDEServiceDefinition,
     ResolveWorkspaceConfigResponse,
 } from "@devtool/ide-service-api/lib/ide.pb";
-import { getPrimaryEmail } from "@devtool/public-api-common/lib/user-utils";
+import { getPrimaryEmail } from "@khulnasoft/public-api-common/lib/user-utils";
 import { inject, injectable } from "inversify";
 import { AuthorizationService } from "./user/authorization-service";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 
 interface IDEVersion {
     version: string;

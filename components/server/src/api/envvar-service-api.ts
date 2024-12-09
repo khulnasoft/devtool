@@ -5,7 +5,7 @@
  */
 
 import { HandlerContext, ServiceImpl } from "@connectrpc/connect";
-import { EnvironmentVariableService as EnvironmentVariableServiceInterface } from "@devtool/public-api/lib/devtool/v1/envvar_connect";
+import { EnvironmentVariableService as EnvironmentVariableServiceInterface } from "@khulnasoft/public-api/lib/devtool/v1/envvar_connect";
 import {
     ListUserEnvironmentVariablesRequest,
     ListUserEnvironmentVariablesResponse,
@@ -27,15 +27,15 @@ import {
     ResolveWorkspaceEnvironmentVariablesResponse,
     ResolveWorkspaceEnvironmentVariablesRequest,
     EnvironmentVariable,
-} from "@devtool/public-api/lib/devtool/v1/envvar_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/envvar_pb";
 import { inject, injectable } from "inversify";
 import { EnvVarService } from "../user/env-var-service";
-import { PublicAPIConverter } from "@devtool/public-api-common/lib/public-api-converter";
-import { ProjectEnvVarWithValue, UserEnvVarValue } from "@devtool/devtool-protocol";
+import { PublicAPIConverter } from "@khulnasoft/public-api-common/lib/public-api-converter";
+import { ProjectEnvVarWithValue, UserEnvVarValue } from "@khulnasoft/devtool-protocol";
 import { WorkspaceService } from "../workspace/workspace-service";
 import { ctxUserId } from "../util/request-context";
 import { validate as uuidValidate } from "uuid";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 
 @injectable()
 export class EnvironmentVariableServiceAPI implements ServiceImpl<typeof EnvironmentVariableServiceInterface> {

@@ -5,8 +5,8 @@
  */
 
 import { v1 } from "@authzed/authzed-node";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
-import { TrustedValue } from "@devtool/devtool-protocol/lib/util/scrubbing";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
+import { TrustedValue } from "@khulnasoft/devtool-protocol/lib/util/scrubbing";
 
 import { incSpiceDBRequestsCheckTotal, observeSpicedbClientLatency, spicedbClientLatency } from "../prometheus-metrics";
 import { SpiceDBClientProvider } from "./spicedb";
@@ -14,8 +14,8 @@ import * as grpc from "@grpc/grpc-js";
 import { base64decode } from "@jmondi/oauth2-server";
 import { DecodedZedToken } from "@devtool/spicedb-impl/lib/impl/v1/impl.pb";
 import { ctxTryGetCache, ctxTrySetCache } from "../util/request-context";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
-import { isGrpcError } from "@devtool/devtool-protocol/lib/util/grpc";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { isGrpcError } from "@khulnasoft/devtool-protocol/lib/util/grpc";
 
 async function tryThree<T>(errMessage: string, code: (attempt: number) => Promise<T>): Promise<T> {
     let attempt = 0;

@@ -13,8 +13,8 @@ import {
     WorkspaceDB,
 } from "@devtool/devtool-db/lib";
 import { resetDB } from "@devtool/devtool-db/lib/test/reset-db";
-import { User, Workspace } from "@devtool/devtool-protocol";
-import { Experiments } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
+import { User, Workspace } from "@khulnasoft/devtool-protocol";
+import { Experiments } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import * as chai from "chai";
 import { Container } from "inversify";
 import "mocha";

@@ -5,10 +5,10 @@
  */
 
 import { useEffect, useMemo } from "react";
-import { matchPrebuildError } from "@devtool/public-api-common/lib/prebuild-utils";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
-import { Disposable, DisposableCollection, HEADLESS_LOG_STREAM_STATUS_CODE_REGEX } from "@devtool/devtool-protocol";
-import { Prebuild, PrebuildPhase_Phase } from "@devtool/public-api/lib/devtool/v1/prebuild_pb";
+import { matchPrebuildError } from "@khulnasoft/public-api-common/lib/prebuild-utils";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { Disposable, DisposableCollection, HEADLESS_LOG_STREAM_STATUS_CODE_REGEX } from "@khulnasoft/devtool-protocol";
+import { Prebuild, PrebuildPhase_Phase } from "@khulnasoft/public-api/lib/devtool/v1/prebuild_pb";
 import { PlainMessage } from "@bufbuild/protobuf";
 import { ReplayableEventEmitter } from "../../utils";
 

@@ -8,14 +8,14 @@ import { inject, injectable } from "inversify";
 import Stripe from "stripe";
 import * as grpc from "@grpc/grpc-js";
 import { Config } from "../config";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import {
     observeStripeClientRequestsCompleted,
     stripeClientRequestsCompletedDurationSeconds,
 } from "../prometheus-metrics";
 import { BillingServiceClient, BillingServiceDefinition } from "@devtool/usage-api/lib/usage/v1/billing.pb";
-import { ErrorCodes, ApplicationError } from "@devtool/devtool-protocol/lib/messaging/error";
-import { AttributionId } from "@devtool/devtool-protocol/lib/attribution";
+import { ErrorCodes, ApplicationError } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { AttributionId } from "@khulnasoft/devtool-protocol/lib/attribution";
 
 @injectable()
 export class StripeService {

@@ -9,7 +9,7 @@ import { LoadingButton } from "@podkit/buttons/LoadingButton";
 import Modal, { ModalHeader, ModalBody, ModalFooter, ModalFooterAlert } from "../../../components/Modal";
 import { CheckboxInputField } from "../../../components/forms/CheckboxInputField";
 import { Button } from "@podkit/buttons/Button";
-import { EnvironmentVariableAdmission } from "@devtool/public-api/lib/devtool/v1/envvar_pb";
+import { EnvironmentVariableAdmission } from "@khulnasoft/public-api/lib/devtool/v1/envvar_pb";
 import { useCreateConfigurationVariable } from "../../../data/configurations/configuration-queries";
 import { useToast } from "../../../components/toasts/Toasts";
 import { TextInputField } from "../../../components/forms/TextInputField";

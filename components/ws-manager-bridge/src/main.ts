@@ -7,11 +7,11 @@
 import { Container } from "inversify";
 import * as express from "express";
 import * as prometheusClient from "prom-client";
-import { log, LogrusLogLevel } from "@devtool/devtool-protocol/lib/util/logging";
-import { installLogCountMetric } from "@devtool/devtool-protocol/lib/util/logging-node";
-import { DebugApp } from "@devtool/devtool-protocol/lib/util/debug-app";
+import { log, LogrusLogLevel } from "@khulnasoft/devtool-protocol/lib/util/logging";
+import { installLogCountMetric } from "@khulnasoft/devtool-protocol/lib/util/logging-node";
+import { DebugApp } from "@khulnasoft/devtool-protocol/lib/util/debug-app";
 import { TypeORM } from "@devtool/devtool-db/lib/typeorm/typeorm";
-import { TracingManager } from "@devtool/devtool-protocol/lib/util/tracing";
+import { TracingManager } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { ClusterServiceServer } from "./cluster-service-server";
 import { BridgeController } from "./bridge-controller";
 import { AppClusterWorkspaceInstancesController } from "./app-cluster-instance-controller";

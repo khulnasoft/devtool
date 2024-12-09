@@ -4,9 +4,9 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { User, WorkspaceContext } from "@devtool/devtool-protocol";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
-import { OpenPrebuildContext } from "@devtool/devtool-protocol/lib/protocol";
+import { User, WorkspaceContext } from "@khulnasoft/devtool-protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
+import { OpenPrebuildContext } from "@khulnasoft/devtool-protocol/lib/protocol";
 import { inject, injectable } from "inversify";
 import { Config } from "../config";
 import { IPrefixContextParser } from "./context-parser";

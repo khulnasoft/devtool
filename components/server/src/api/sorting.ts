@@ -4,8 +4,8 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
-import { Sort, SortOrder } from "@devtool/public-api/lib/devtool/v1/sorting_pb";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { Sort, SortOrder } from "@khulnasoft/public-api/lib/devtool/v1/sorting_pb";
 
 export type Sorting = {
     orderBy: string;

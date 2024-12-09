@@ -7,16 +7,16 @@
 import { useInfiniteQuery, useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useCurrentOrg } from "../organizations/orgs-query";
 import { configurationClient } from "../../service/public-api";
-import { SortOrder } from "@devtool/public-api/lib/devtool/v1/sorting_pb";
+import { SortOrder } from "@khulnasoft/public-api/lib/devtool/v1/sorting_pb";
 import { TableSortOrder } from "@podkit/tables/SortableTable";
-import type { Configuration, UpdateConfigurationRequest } from "@devtool/public-api/lib/devtool/v1/configuration_pb";
+import type { Configuration, UpdateConfigurationRequest } from "@khulnasoft/public-api/lib/devtool/v1/configuration_pb";
 import type { PartialMessage } from "@bufbuild/protobuf";
 import { envVarClient } from "../../service/public-api";
 import {
     ConfigurationEnvironmentVariable,
     EnvironmentVariableAdmission,
-} from "@devtool/public-api/lib/devtool/v1/envvar_pb";
-import { ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+} from "@khulnasoft/public-api/lib/devtool/v1/envvar_pb";
+import { ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 
 const BASE_KEY = "configurations";
 

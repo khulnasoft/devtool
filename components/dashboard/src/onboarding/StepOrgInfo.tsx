@@ -17,7 +17,7 @@ import { getSignupGoalsOptions, SIGNUP_GOALS_OTHER } from "./signup-goals";
 import { getCompanySizeOptions } from "./company-size";
 import { useCurrentOrg } from "../data/organizations/orgs-query";
 import { useCreateOrgMutation } from "../data/organizations/create-org-mutation";
-import { User } from "@devtool/public-api/lib/devtool/v1/user_pb";
+import { User } from "@khulnasoft/public-api/lib/devtool/v1/user_pb";
 
 type Props = {
     user: User;

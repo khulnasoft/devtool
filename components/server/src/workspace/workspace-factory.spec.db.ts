@@ -18,8 +18,8 @@ import {
     Workspace,
     WorkspaceConfig,
     WorkspaceImageSource,
-} from "@devtool/devtool-protocol";
-import { Experiments } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
+} from "@khulnasoft/devtool-protocol";
+import { Experiments } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import * as chai from "chai";
 import { Container, injectable } from "inversify";
 import "mocha";
@@ -32,7 +32,7 @@ import { SYSTEM_USER } from "../authorization/authorizer";
 import { WorkspaceFactory } from "./workspace-factory";
 import { IncrementalWorkspaceService } from "../prebuilds/incremental-workspace-service";
 import { ImageSourceProvider } from "./image-source-provider";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 
 const expect = chai.expect;
 

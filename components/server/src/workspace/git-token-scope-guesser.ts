@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { AuthProviderInfo, GuessedGitTokenScopes, GuessGitTokenScopesParams } from "@devtool/devtool-protocol";
+import { AuthProviderInfo, GuessedGitTokenScopes, GuessGitTokenScopesParams } from "@khulnasoft/devtool-protocol";
 import { inject, injectable } from "inversify";
 import { RepoURL } from "../repohost";
 import { GitTokenValidator } from "./git-token-validator";

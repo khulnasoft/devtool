@@ -5,7 +5,7 @@
  */
 
 import { DBWithTracing, OneTimeSecretDB, TracedOneTimeSecretDB } from "@devtool/devtool-db/lib";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { inject, injectable } from "inversify";
 import { Job } from "./runner";
 

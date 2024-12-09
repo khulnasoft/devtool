@@ -7,8 +7,8 @@
 import { v1 } from "@authzed/authzed-node";
 
 import { BUILTIN_INSTLLATION_ADMIN_USER_ID } from "@devtool/devtool-db/lib";
-import { Project, TeamMemberRole } from "@devtool/devtool-protocol";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { Project, TeamMemberRole } from "@khulnasoft/devtool-protocol";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import {
     AllResourceTypes,
     InstallationID,
@@ -23,8 +23,8 @@ import {
     rel,
 } from "./definitions";
 import { SpiceDBAuthorizer } from "./spicedb-authorizer";
-import { getExperimentsClientForBackend } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { getExperimentsClientForBackend } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { Subject, SubjectId } from "../auth/subject-id";
 import { ctxTrySubjectId } from "../util/request-context";
 import { reportAuthorizerSubjectId } from "../prometheus-metrics";

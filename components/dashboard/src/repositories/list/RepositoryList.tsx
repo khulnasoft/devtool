@@ -10,7 +10,7 @@ import { useListConfigurations } from "../../data/configurations/configuration-q
 import { PageHeading } from "@podkit/layout/PageHeading";
 import { useDocumentTitle } from "../../hooks/use-document-title";
 import { ImportRepositoryModal } from "../create/AddRepositoryModal";
-import type { Configuration } from "@devtool/public-api/lib/devtool/v1/configuration_pb";
+import type { Configuration } from "@khulnasoft/public-api/lib/devtool/v1/configuration_pb";
 import { useQueryParams } from "../../hooks/use-query-params";
 import { RepoListEmptyState } from "./RepoListEmptyState";
 import { useStateWithDebounce } from "../../hooks/use-state-with-debounce";

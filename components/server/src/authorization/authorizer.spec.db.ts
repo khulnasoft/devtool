@@ -6,7 +6,7 @@
 import { v1 } from "@authzed/authzed-node";
 import { TypeORM } from "@devtool/devtool-db/lib";
 import { resetDB } from "@devtool/devtool-db/lib/test/reset-db";
-import { Experiments } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
+import { Experiments } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import * as chai from "chai";
 import { Container } from "inversify";
 import "mocha";
@@ -17,7 +17,7 @@ import { v4 } from "uuid";
 import { Subject, SubjectId } from "../auth/subject-id";
 import { runWithRequestContext } from "../util/request-context";
 import { fail } from "assert";
-import { ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 
 const expect = chai.expect;
 

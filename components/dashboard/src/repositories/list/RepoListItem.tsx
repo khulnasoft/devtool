@@ -9,7 +9,7 @@ import { usePrettyRepoURL } from "../../hooks/use-pretty-repo-url";
 import { TextMuted } from "@podkit/typography/TextMuted";
 import { Text } from "@podkit/typography/Text";
 import { LinkButton } from "@podkit/buttons/LinkButton";
-import type { Configuration } from "@devtool/public-api/lib/devtool/v1/configuration_pb";
+import type { Configuration } from "@khulnasoft/public-api/lib/devtool/v1/configuration_pb";
 import { AlertTriangleIcon, CheckCircle2Icon } from "lucide-react";
 import { TableCell, TableRow } from "@podkit/tables/Table";
 

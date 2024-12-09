@@ -5,8 +5,8 @@
  */
 
 import { FC, useCallback } from "react";
-import type { RepositoryUnauthorizedError } from "@devtool/public-api/lib/devtool/v1/error_pb";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import type { RepositoryUnauthorizedError } from "@khulnasoft/public-api/lib/devtool/v1/error_pb";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { openAuthorizeWindow } from "../../../provider-utils";
 import { useToast } from "../../../components/toasts/Toasts";
 import { Button } from "@podkit/buttons/Button";

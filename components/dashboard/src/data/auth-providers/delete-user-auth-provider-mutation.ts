@@ -6,7 +6,7 @@
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { authProviderClient } from "../../service/public-api";
-import { AuthProvider, DeleteAuthProviderRequest } from "@devtool/public-api/lib/devtool/v1/authprovider_pb";
+import { AuthProvider, DeleteAuthProviderRequest } from "@khulnasoft/public-api/lib/devtool/v1/authprovider_pb";
 import { getUserAuthProvidersQueryKey } from "./user-auth-providers-query";
 import { useCurrentUser } from "../../user-context";
 

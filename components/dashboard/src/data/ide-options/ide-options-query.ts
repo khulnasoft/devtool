@@ -6,10 +6,10 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { getDevtoolService } from "../../service/service";
-import { IDEOption, IDEOptions } from "@devtool/devtool-protocol/lib/ide-protocol";
+import { IDEOption, IDEOptions } from "@khulnasoft/devtool-protocol/lib/ide-protocol";
 import { DisableScope, Scope } from "../workspaces/workspace-classes-query";
 import { useOrgSettingsQuery } from "../organizations/org-settings-query";
-import { OrganizationSettings } from "@devtool/public-api/lib/devtool/v1/organization_pb";
+import { OrganizationSettings } from "@khulnasoft/public-api/lib/devtool/v1/organization_pb";
 import { useMemo } from "react";
 import { useConfiguration } from "../configurations/configuration-queries";
 import { useDeepCompareMemoize } from "use-deep-compare-effect";

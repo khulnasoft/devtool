@@ -13,7 +13,7 @@ import {
     WorkspaceImageSource,
     WorkspaceType,
     WorkspaceSoftDeletion,
-} from "@devtool/devtool-protocol";
+} from "@khulnasoft/devtool-protocol";
 import { TypeORM } from "../typeorm";
 import { Transformer } from "../transformer";
 import * as IndexWorkspaceIdDeleted1647333804782 from "../migration/1647333804782-IndexWorkspaceIdDeleted";

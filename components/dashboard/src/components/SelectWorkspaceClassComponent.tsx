@@ -7,7 +7,7 @@
 import { FC, useCallback, useEffect, useMemo } from "react";
 import WorkspaceClassIcon from "../icons/WorkspaceClass.svg";
 import { Combobox, ComboboxElement, ComboboxSelectedItem } from "./podkit/combobox/Combobox";
-import { WorkspaceClass } from "@devtool/public-api/lib/devtool/v1/workspace_pb";
+import { WorkspaceClass } from "@khulnasoft/public-api/lib/devtool/v1/workspace_pb";
 import { useAllowedWorkspaceClassesMemo } from "../data/workspaces/workspace-classes-query";
 import { PlainMessage } from "@bufbuild/protobuf";
 import { Link } from "react-router-dom";

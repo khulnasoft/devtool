@@ -6,13 +6,13 @@
 
 import express from "express";
 import { injectable, inject } from "inversify";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
-import { AuthProviderInfo } from "@devtool/devtool-protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
+import { AuthProviderInfo } from "@khulnasoft/devtool-protocol";
 import { AzureDevOpsApi } from "./azure-api";
 import { GenericAuthProvider } from "../auth/generic-auth-provider";
 import { AuthUserSetup } from "../auth/auth-provider";
 import { oauthUrls } from "./azure-urls";
-import { AzureDevOpsOAuthScopes } from "@devtool/public-api-common/lib/auth-providers";
+import { AzureDevOpsOAuthScopes } from "@khulnasoft/public-api-common/lib/auth-providers";
 
 @injectable()
 export class AzureDevOpsAuthProvider extends GenericAuthProvider {

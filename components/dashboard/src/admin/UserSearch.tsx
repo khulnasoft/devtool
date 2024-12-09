@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { AdminGetListResult, User } from "@devtool/devtool-protocol";
+import { AdminGetListResult, User } from "@khulnasoft/devtool-protocol";
 import dayjs from "dayjs";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
@@ -16,7 +16,7 @@ import { AdminPageHeader } from "./AdminPageHeader";
 import UserDetail from "./UserDetail";
 import searchIcon from "../icons/search.svg";
 import Tooltip from "../components/Tooltip";
-import { getPrimaryEmail } from "@devtool/public-api-common/lib/user-utils";
+import { getPrimaryEmail } from "@khulnasoft/public-api-common/lib/user-utils";
 
 export default function UserSearch() {
     const location = useLocation();

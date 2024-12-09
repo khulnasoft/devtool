@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { Prebuild, PrebuildPhase_Phase } from "@devtool/public-api/lib/devtool/v1/prebuild_pb";
+import { Prebuild, PrebuildPhase_Phase } from "@khulnasoft/public-api/lib/devtool/v1/prebuild_pb";
 import { PauseCircle, LucideProps, Clock, CheckCircle2, XCircle, Loader2Icon } from "lucide-react";
 import type { ForwardRefExoticComponent } from "react";
 import { cn } from "@podkit/lib/cn";

@@ -4,8 +4,8 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { User } from "@devtool/public-api/lib/devtool/v1/user_pb";
-import { AuthProviderDescription, AuthProviderType } from "@devtool/public-api/lib/devtool/v1/authprovider_pb";
+import { User } from "@khulnasoft/public-api/lib/devtool/v1/user_pb";
+import { AuthProviderDescription, AuthProviderType } from "@khulnasoft/public-api/lib/devtool/v1/authprovider_pb";
 import EventEmitter from "events";
 import { uniq } from "lodash";
 

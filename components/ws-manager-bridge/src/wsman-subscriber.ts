@@ -11,10 +11,10 @@ import {
     GetWorkspacesRequest,
     PromisifiedWorkspaceManagerClient,
 } from "@devtool/ws-manager/lib";
-import { Disposable } from "@devtool/devtool-protocol";
+import { Disposable } from "@khulnasoft/devtool-protocol";
 import { ClientReadableStream } from "@grpc/grpc-js";
-import { log, LogPayload } from "@devtool/devtool-protocol/lib/util/logging";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+import { log, LogPayload } from "@khulnasoft/devtool-protocol/lib/util/logging";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import * as opentracing from "opentracing";
 
 export type ClientProvider = () => Promise<PromisifiedWorkspaceManagerClient>;

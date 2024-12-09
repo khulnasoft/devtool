@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { CheckWriteAccessResult, IGitTokenValidator, IGitTokenValidatorParams } from "../workspace/git-token-validator";
 import { AzureDevOpsApi } from "./azure-api";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { getOrgAndProject } from "./azure-converter";
 
 @injectable()

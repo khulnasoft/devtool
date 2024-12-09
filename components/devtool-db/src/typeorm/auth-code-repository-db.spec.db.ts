@@ -11,7 +11,7 @@ import { UserDB } from "../user-db";
 import { DBOAuthAuthCodeEntry } from "./entity/db-oauth-auth-code";
 import { TypeORM } from "./typeorm";
 import * as chai from "chai";
-import { User } from "@devtool/devtool-protocol";
+import { User } from "@khulnasoft/devtool-protocol";
 import { resetDB } from "../test/reset-db";
 const expect = chai.expect;
 

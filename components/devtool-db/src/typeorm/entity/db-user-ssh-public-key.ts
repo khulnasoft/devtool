@@ -6,9 +6,9 @@
 
 import { PrimaryColumn, Column, Entity, Index } from "typeorm";
 import { TypeORM } from "../typeorm";
-import { UserSSHPublicKey } from "@devtool/devtool-protocol";
+import { UserSSHPublicKey } from "@khulnasoft/devtool-protocol";
 import { Transformer } from "../transformer";
-import { getGlobalEncryptionService } from "@devtool/devtool-protocol/lib/encryption/encryption-service";
+import { getGlobalEncryptionService } from "@khulnasoft/devtool-protocol/lib/encryption/encryption-service";
 
 @Entity("d_b_user_ssh_public_key")
 export class DBUserSshPublicKey implements UserSSHPublicKey {

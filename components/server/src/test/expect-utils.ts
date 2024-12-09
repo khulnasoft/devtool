@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { ApplicationError, ErrorCode } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ApplicationError, ErrorCode } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { expect } from "chai";
 
 export async function expectError(errorCode: ErrorCode, code: Promise<any> | (() => Promise<any>), message?: string) {

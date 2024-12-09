@@ -9,7 +9,7 @@ import { UserContext } from "../user-context";
 import { trackLocation } from "../Analytics";
 import { useQuery } from "@tanstack/react-query";
 import { noPersistence } from "../data/setup";
-import { ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { userClient } from "../service/public-api";
 
 export const useUserLoader = () => {

@@ -22,9 +22,9 @@ import {
     WorkspaceInstanceUser,
     WorkspaceSession,
     WorkspaceType,
-} from "@devtool/devtool-protocol";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
-import { daysBefore } from "@devtool/devtool-protocol/lib/util/timeutil";
+} from "@khulnasoft/devtool-protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
+import { daysBefore } from "@khulnasoft/devtool-protocol/lib/util/timeutil";
 import * as crypto from "crypto";
 import { inject, injectable, optional } from "inversify";
 import { Brackets, DeepPartial, EntityManager, Repository } from "typeorm";
@@ -59,9 +59,9 @@ import {
 } from "./metrics";
 import { TransactionalDBImpl } from "./transactional-db-impl";
 import { TypeORM } from "./typeorm";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { DBProject } from "./entity/db-project";
-import { PrebuiltWorkspaceWithWorkspace } from "@devtool/devtool-protocol/src/protocol";
+import { PrebuiltWorkspaceWithWorkspace } from "@khulnasoft/devtool-protocol/src/protocol";
 
 type RawTo<T> = (instance: WorkspaceInstance, ws: Workspace) => T;
 interface OrderBy {

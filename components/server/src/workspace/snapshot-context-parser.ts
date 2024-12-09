@@ -4,11 +4,11 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { User, SnapshotContext, ContextURL } from "@devtool/devtool-protocol";
+import { User, SnapshotContext, ContextURL } from "@khulnasoft/devtool-protocol";
 import { injectable, inject } from "inversify";
 import { WorkspaceDB } from "@devtool/devtool-db/lib";
 import { IContextParser } from "../workspace/context-parser";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 
 @injectable()
 export class SnapshotContextParser implements IContextParser {

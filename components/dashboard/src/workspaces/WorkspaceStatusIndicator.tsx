@@ -4,9 +4,9 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { WorkspaceInstanceConditions } from "@devtool/devtool-protocol";
+import { WorkspaceInstanceConditions } from "@khulnasoft/devtool-protocol";
 import Tooltip from "../components/Tooltip";
-import { WorkspacePhase_Phase, WorkspaceStatus } from "@devtool/public-api/lib/devtool/v1/workspace_pb";
+import { WorkspacePhase_Phase, WorkspaceStatus } from "@khulnasoft/public-api/lib/devtool/v1/workspace_pb";
 
 export function WorkspaceStatusIndicator({ status }: { status?: WorkspaceStatus }) {
     const state: WorkspacePhase_Phase = status?.phase?.name ?? WorkspacePhase_Phase.STOPPED;

@@ -5,10 +5,10 @@
  */
 
 import { inject, injectable } from "inversify";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { WorkspaceStatus, WorkspaceType } from "@devtool/ws-manager/lib";
-import { HeadlessWorkspaceEventType, WorkspaceInstance } from "@devtool/devtool-protocol";
-import { log, LogContext } from "@devtool/devtool-protocol/lib/util/logging";
+import { HeadlessWorkspaceEventType, WorkspaceInstance } from "@khulnasoft/devtool-protocol";
+import { log, LogContext } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { PrebuildStateMapper } from "./prebuild-state-mapper";
 import { DBWithTracing, TracedWorkspaceDB } from "@devtool/devtool-db/lib/traced-db";
 import { WorkspaceDB } from "@devtool/devtool-db/lib/workspace-db";

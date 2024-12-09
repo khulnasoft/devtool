@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { OIDCClientConfig } from "@devtool/public-api/lib/devtool/experimental/v1/oidc_pb";
+import { OIDCClientConfig } from "@khulnasoft/public-api/lib/devtool/experimental/v1/oidc_pb";
 import { FC, useCallback, useMemo, useState } from "react";
 import ConfirmationModal from "../../components/ConfirmationModal";
 import { ContextMenuEntry } from "../../components/ContextMenu";

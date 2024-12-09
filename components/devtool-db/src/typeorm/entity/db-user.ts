@@ -5,7 +5,7 @@
  */
 
 import { PrimaryColumn, Entity, Column, OneToMany, JoinColumn, Index } from "typeorm";
-import { User, RoleOrPermission, AdditionalUserData, UserFeatureSettings } from "@devtool/devtool-protocol";
+import { User, RoleOrPermission, AdditionalUserData, UserFeatureSettings } from "@khulnasoft/devtool-protocol";
 import { DBIdentity } from "./db-identity";
 import { TypeORM } from "../typeorm";
 import { Transformer } from "../transformer";

@@ -11,10 +11,10 @@ import * as https from "https";
 import * as url from "url";
 import * as net from "net";
 import { WsLayer } from "./ws-layer";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { increaseHttpRequestCounter } from "../prometheus-metrics";
 import { Disposable } from "vscode-ws-jsonrpc";
-import { DisposableCollection } from "@devtool/devtool-protocol";
+import { DisposableCollection } from "@khulnasoft/devtool-protocol";
 
 export type HttpServer = http.Server | https.Server;
 export type RouteMatcher = string | RegExp;

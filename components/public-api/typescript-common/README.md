@@ -2,11 +2,11 @@
 
 ## Overview
 
-This package serves as a bridge for code conversion between two distinct Devtool packages: @devtool/devtool-protocol and @devtool/public-api. Its primary responsibility is to ensure seamless translation of application data structures from the devtool-protocol format to the public-api gRPC format, and vice versa.
+This package serves as a bridge for code conversion between two distinct Devtool packages: @khulnasoft/devtool-protocol and @khulnasoft/public-api. Its primary responsibility is to ensure seamless translation of application data structures from the devtool-protocol format to the public-api gRPC format, and vice versa.
 
 ## Allowed Usage
 
-Use this package exclusively for tasks that require data structure from @devtool/devtool-protocol and @devtool/public-api. It's important not to introduce dependencies on this package from devtool-protocol or public-api to ensure changes in one package don't trigger rebuilds of unrelated components such as ws-manager-bridge and supervisor-frontend.
+Use this package exclusively for tasks that require data structure from @khulnasoft/devtool-protocol and @khulnasoft/public-api. It's important not to introduce dependencies on this package from devtool-protocol or public-api to ensure changes in one package don't trigger rebuilds of unrelated components such as ws-manager-bridge and supervisor-frontend.
 
 ## Golden tests
 

@@ -5,7 +5,7 @@
  */
 
 import { v1 } from "@authzed/authzed-node";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import * as grpc from "@grpc/grpc-js";
 
 export interface SpiceDBClientConfig {

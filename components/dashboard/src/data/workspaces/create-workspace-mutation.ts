@@ -10,7 +10,7 @@ import { workspaceClient } from "../../service/public-api";
 import {
     CreateAndStartWorkspaceRequest,
     CreateAndStartWorkspaceResponse,
-} from "@devtool/public-api/lib/devtool/v1/workspace_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/workspace_pb";
 import { PartialMessage } from "@bufbuild/protobuf";
 import { ConnectError } from "@connectrpc/connect";
 

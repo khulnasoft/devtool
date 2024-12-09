@@ -6,7 +6,7 @@
 
 import { useMutation } from "@tanstack/react-query";
 import { useUpdateWorkspaceInCache } from "./list-workspaces-query";
-import { UpdateWorkspaceRequest } from "@devtool/public-api/lib/devtool/v1/workspace_pb";
+import { UpdateWorkspaceRequest } from "@khulnasoft/public-api/lib/devtool/v1/workspace_pb";
 import { PartialMessage } from "@bufbuild/protobuf";
 import { workspaceClient } from "../../service/public-api";
 

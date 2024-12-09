@@ -7,7 +7,7 @@
 import { serverUrl } from "../shared/urls";
 import { metricsReporter } from "./ide-metrics-service-client";
 import ReconnectingWebSocket from "reconnecting-websocket";
-import { Disposable } from "@devtool/devtool-protocol/lib/util/disposable";
+import { Disposable } from "@khulnasoft/devtool-protocol/lib/util/disposable";
 
 let connected = false;
 const workspaceSockets = new Set<IDEWebSocket>();

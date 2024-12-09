@@ -5,11 +5,6 @@ go 1.22
 require (
 	github.com/bufbuild/connect-go v1.10.0
 	github.com/creack/pty v1.1.17
-	github.com/khulnasoft/devtool/common-go v0.0.0-00010101000000-000000000000
-	github.com/khulnasoft/devtool/components/public-api/go v0.0.0-20230220133850-852f5cd5b180
-	github.com/khulnasoft/devtool/devtool-protocol v0.0.0-00010101000000-000000000000
-	github.com/khulnasoft/devtool/ide-metrics-api v0.0.0-00010101000000-000000000000
-	github.com/khulnasoft/devtool/supervisor/api v0.0.0-00010101000000-000000000000
 	github.com/go-errors/errors v1.4.2
 	github.com/golang-jwt/jwt/v5 v5.2.1
 	github.com/golang/mock v1.6.0
@@ -17,6 +12,11 @@ require (
 	github.com/google/shlex v0.0.0-20181106134648-c34317bd91bf
 	github.com/google/tcpproxy v0.0.0-20180808230851-dfa16c61dad2
 	github.com/gorilla/handlers v1.5.1
+	github.com/khulnasoft/devtool/common-go v0.0.0-00010101000000-000000000000
+	github.com/khulnasoft/devtool/components/public-api/go v0.0.0-00010101000000-000000000000
+	github.com/khulnasoft/devtool/devtool-protocol v0.0.0-00010101000000-000000000000
+	github.com/khulnasoft/devtool/ide-metrics-api v0.0.0-00010101000000-000000000000
+	github.com/khulnasoft/devtool/supervisor/api v0.0.0-00010101000000-000000000000
 	github.com/manifoldco/promptui v0.9.0
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/prometheus/procfs v0.10.1
@@ -35,9 +35,9 @@ require (
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/khulnasoft/devtool/components/scrubber v0.0.0-00010101000000-000000000000 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0 // indirect
 	github.com/hashicorp/golang-lru v1.0.2 // indirect
+	github.com/khulnasoft/devtool/components/scrubber v0.0.0-20241209224028-94c9dc49a033 // indirect
 	github.com/mattn/go-colorable v0.0.9 // indirect
 	github.com/mattn/go-isatty v0.0.3 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.4 // indirect

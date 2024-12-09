@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { OIDCClientConfig } from "@devtool/public-api/lib/devtool/experimental/v1/oidc_pb";
+import { OIDCClientConfig } from "@khulnasoft/public-api/lib/devtool/experimental/v1/oidc_pb";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { oidcService } from "../../service/public-api";
 import { useCurrentOrg } from "../organizations/orgs-query";

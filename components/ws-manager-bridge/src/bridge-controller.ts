@@ -9,14 +9,14 @@ import { WorkspaceClusterInfo, WorkspaceManagerBridge, WorkspaceManagerBridgeFac
 import { Configuration } from "./config";
 import { WorkspaceManagerClientProvider } from "@devtool/ws-manager/lib/client-provider";
 import { WorkspaceManagerClientProviderSource } from "@devtool/ws-manager/lib/client-provider-source";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
-import { TLSConfig, WorkspaceClusterWoTLS } from "@devtool/devtool-protocol/lib/workspace-cluster";
-import { WorkspaceCluster } from "@devtool/devtool-protocol/lib/workspace-cluster";
-import { Queue } from "@devtool/devtool-protocol";
-import { defaultGRPCOptions } from "@devtool/devtool-protocol/lib/util/grpc";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
+import { TLSConfig, WorkspaceClusterWoTLS } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
+import { WorkspaceCluster } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
+import { Queue } from "@khulnasoft/devtool-protocol";
+import { defaultGRPCOptions } from "@khulnasoft/devtool-protocol/lib/util/grpc";
 import * as grpc from "@grpc/grpc-js";
 import { Metrics } from "./metrics";
-import { TrustedValue } from "@devtool/devtool-protocol/lib/util/scrubbing";
+import { TrustedValue } from "@khulnasoft/devtool-protocol/lib/util/scrubbing";
 
 @injectable()
 export class BridgeController {

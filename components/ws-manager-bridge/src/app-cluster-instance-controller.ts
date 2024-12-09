@@ -5,10 +5,10 @@
  */
 
 import { WorkspaceDB } from "@devtool/devtool-db/lib/workspace-db";
-import { Disposable, DisposableCollection } from "@devtool/devtool-protocol";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
-import { repeat } from "@devtool/devtool-protocol/lib/util/repeat";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+import { Disposable, DisposableCollection } from "@khulnasoft/devtool-protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
+import { repeat } from "@khulnasoft/devtool-protocol/lib/util/repeat";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { inject, injectable } from "inversify";
 import { Configuration } from "./config";
 import { WorkspaceInstanceController } from "./workspace-instance-controller";

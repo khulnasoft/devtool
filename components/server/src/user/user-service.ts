@@ -17,14 +17,14 @@ import {
     User,
     WorkspaceTimeoutDuration,
     WorkspaceTimeoutSetting,
-} from "@devtool/devtool-protocol";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+} from "@khulnasoft/devtool-protocol";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { CreateUserParams } from "./user-authentication";
-import { IAnalyticsWriter } from "@devtool/devtool-protocol/lib/analytics";
+import { IAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
 import { TransactionalContext } from "@devtool/devtool-db/lib/typeorm/transactional-db-impl";
 import { RelationshipUpdater } from "../authorization/relationship-updater";
-import { getName, getPrimaryEmail } from "@devtool/public-api-common/lib/user-utils";
+import { getName, getPrimaryEmail } from "@khulnasoft/public-api-common/lib/user-utils";
 
 @injectable()
 export class UserService {

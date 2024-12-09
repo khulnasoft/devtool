@@ -10,7 +10,7 @@ import {
     redisCacheGetLatencyHistogram,
     redisCacheSetLatencyHistogram,
 } from "../prometheus-metrics";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { DataCache } from "@devtool/devtool-db/lib/data-cache";
 import { Redis } from "ioredis";
 

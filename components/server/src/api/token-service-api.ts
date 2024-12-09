@@ -6,19 +6,19 @@
 
 import { ServiceImpl } from "@connectrpc/connect";
 import { HandlerContext } from "@connectrpc/connect/dist/cjs/implementation";
-import { TokenService as TokenServiceInterface } from "@devtool/public-api/lib/devtool/v1/token_connect";
+import { TokenService as TokenServiceInterface } from "@khulnasoft/public-api/lib/devtool/v1/token_connect";
 import {
     CreateTemporaryAccessTokenRequest,
     CreateTemporaryAccessTokenResponse,
-} from "@devtool/public-api/lib/devtool/v1/token_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/token_pb";
 import { inject, injectable } from "inversify";
 import { SessionHandler } from "../session-handler";
 import { ctxUserId } from "../util/request-context";
 import { Authorizer } from "../authorization/authorizer";
 import { validate as uuidValidate } from "uuid";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
-import { getExperimentsClientForBackend } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { getExperimentsClientForBackend } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 
 @injectable()
 export class TokenServiceAPI implements ServiceImpl<typeof TokenServiceInterface> {

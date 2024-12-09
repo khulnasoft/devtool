@@ -5,7 +5,7 @@
  */
 
 import React, { useEffect, useState } from "react";
-import { User } from "@devtool/public-api/lib/devtool/v1/user_pb";
+import { User } from "@khulnasoft/public-api/lib/devtool/v1/user_pb";
 import { useCurrentUser } from "../user-context";
 import { storageAvailable } from "../utils";
 import { Heading3 } from "@podkit/typography/Headings";

@@ -8,7 +8,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useCurrentOrg } from "../organizations/orgs-query";
 import { getOrgAuthProvidersQueryKey } from "./org-auth-providers-query";
 import { authProviderClient } from "../../service/public-api";
-import { AuthProvider, DeleteAuthProviderRequest } from "@devtool/public-api/lib/devtool/v1/authprovider_pb";
+import { AuthProvider, DeleteAuthProviderRequest } from "@khulnasoft/public-api/lib/devtool/v1/authprovider_pb";
 
 type DeleteAuthProviderArgs = {
     providerId: string;

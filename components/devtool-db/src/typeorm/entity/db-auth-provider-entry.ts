@@ -6,9 +6,9 @@
 
 import { PrimaryColumn, Column, Entity, Index } from "typeorm";
 import { TypeORM } from "../typeorm";
-import { AuthProviderEntry, OAuth2Config } from "@devtool/devtool-protocol";
+import { AuthProviderEntry, OAuth2Config } from "@khulnasoft/devtool-protocol";
 import { Transformer } from "../transformer";
-import { getGlobalEncryptionService } from "@devtool/devtool-protocol/lib/encryption/encryption-service";
+import { getGlobalEncryptionService } from "@khulnasoft/devtool-protocol/lib/encryption/encryption-service";
 
 @Entity()
 export class DBAuthProviderEntry implements AuthProviderEntry {

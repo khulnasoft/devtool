@@ -8,7 +8,7 @@ import { Heading3, Subheading } from "@podkit/typography/Headings";
 import { RemoveConfigurationModal } from "./RemoveConfigurationModal";
 import { useHistory } from "react-router";
 import { useCallback, useState } from "react";
-import type { Configuration } from "@devtool/public-api/lib/devtool/v1/configuration_pb";
+import type { Configuration } from "@khulnasoft/public-api/lib/devtool/v1/configuration_pb";
 import { ConfigurationSettingsField } from "../ConfigurationSettingsField";
 import { Button } from "@podkit/buttons/Button";
 

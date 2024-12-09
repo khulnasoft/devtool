@@ -7,9 +7,9 @@
 import { inject, injectable } from "inversify";
 import { v4 as uuidv4 } from "uuid";
 import { WorkspaceDB } from "@devtool/devtool-db/lib";
-import { DevtoolServer, Snapshot } from "@devtool/devtool-protocol";
+import { DevtoolServer, Snapshot } from "@khulnasoft/devtool-protocol";
 import { StorageClient } from "../storage/storage-client";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 
 export interface WaitForSnapshotOptions {
     workspaceOwner: string;

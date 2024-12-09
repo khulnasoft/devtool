@@ -5,7 +5,7 @@
  */
 
 import * as grpc from "@grpc/grpc-js";
-import { IAnalyticsWriter, NullAnalyticsWriter } from "@devtool/devtool-protocol/lib/analytics";
+import { IAnalyticsWriter, NullAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
 import { IDEServiceClient, IDEServiceDefinition } from "@devtool/ide-service-api/lib/ide.pb";
 import { UsageServiceDefinition } from "@devtool/usage-api/lib/usage/v1/usage.pb";
 import { ContainerModule } from "inversify";
@@ -22,7 +22,7 @@ import { createMock } from "./mocks/mock";
 import { UsageServiceClientMock } from "./mocks/usage-service-client-mock";
 import { env, nextTick } from "process";
 import { WorkspaceManagerClientProviderSource } from "@devtool/ws-manager/lib/client-provider-source";
-import { WorkspaceClusterWoTLS } from "@devtool/devtool-protocol/lib/workspace-cluster";
+import { WorkspaceClusterWoTLS } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
 import { WorkspaceManagerClientProvider } from "@devtool/ws-manager/lib/client-provider";
 import {
     BuildInfo,
@@ -34,13 +34,13 @@ import {
 } from "@devtool/image-builder/lib";
 import { IWorkspaceManagerClient, StartWorkspaceResponse } from "@devtool/ws-manager/lib";
 import { TokenProvider } from "../user/token-provider";
-import { DevtoolHostUrl } from "@devtool/devtool-protocol/lib/util/devtool-host-url";
+import { DevtoolHostUrl } from "@khulnasoft/devtool-protocol/lib/util/devtool-host-url";
 import * as crypto from "crypto";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { Subject, SubjectId } from "../auth/subject-id";
-import { User } from "@devtool/devtool-protocol";
+import { User } from "@khulnasoft/devtool-protocol";
 import { runWithRequestContext } from "../util/request-context";
-import { GitHubOAuthScopes } from "@devtool/public-api-common/lib/auth-providers";
+import { GitHubOAuthScopes } from "@khulnasoft/public-api-common/lib/auth-providers";
 
 const signingKeyPair = crypto.generateKeyPairSync("rsa", { modulusLength: 2048 });
 const validatingKeyPair1 = crypto.generateKeyPairSync("rsa", { modulusLength: 2048 });

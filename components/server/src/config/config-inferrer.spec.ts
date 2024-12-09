@@ -7,7 +7,7 @@
 import "mocha";
 import * as chai from "chai";
 import { ConfigInferrer, Context } from "./config-inferrer";
-import { WorkspaceConfig } from "@devtool/devtool-protocol";
+import { WorkspaceConfig } from "@khulnasoft/devtool-protocol";
 
 function context(files: { [path: string]: string }): Context {
     const cache = new Set<string>();

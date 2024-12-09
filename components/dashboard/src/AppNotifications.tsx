@@ -11,13 +11,13 @@ import { useUserLoader } from "./hooks/use-user-loader";
 import { isDevtoolIo } from "./utils";
 import { trackEvent } from "./Analytics";
 import { useUpdateCurrentUserMutation } from "./data/current-user/update-mutation";
-import { User as UserProtocol } from "@devtool/devtool-protocol";
-import { User } from "@devtool/public-api/lib/devtool/v1/user_pb";
+import { User as UserProtocol } from "@khulnasoft/devtool-protocol";
+import { User } from "@khulnasoft/public-api/lib/devtool/v1/user_pb";
 import { useCurrentOrg } from "./data/organizations/orgs-query";
-import { AttributionId } from "@devtool/devtool-protocol/lib/attribution";
+import { AttributionId } from "@khulnasoft/devtool-protocol/lib/attribution";
 import { getDevtoolService } from "./service/service";
 import { useOrgBillingMode } from "./data/billing-mode/org-billing-mode-query";
-import { Organization } from "@devtool/public-api/lib/devtool/v1/organization_pb";
+import { Organization } from "@khulnasoft/public-api/lib/devtool/v1/organization_pb";
 
 const KEY_APP_DISMISSED_NOTIFICATIONS = "devtool-app-notifications-dismissed";
 const PRIVACY_POLICY_LAST_UPDATED = "2024-12-03";

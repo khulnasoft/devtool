@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { IDESettings } from "@devtool/devtool-protocol";
+import { IDESettings } from "@khulnasoft/devtool-protocol";
 
 export interface StartWorkspaceOptions {
     workspaceClass?: string;

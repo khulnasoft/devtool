@@ -8,13 +8,13 @@ import { inject, injectable } from "inversify";
 import { Authorizer } from "../authorization/authorizer";
 import { Config } from "../config";
 import { TokenProvider } from "../user/token-provider";
-import { CommitContext, Project, SuggestedRepository, Token, WorkspaceInfo } from "@devtool/devtool-protocol";
+import { CommitContext, Project, SuggestedRepository, Token, WorkspaceInfo } from "@khulnasoft/devtool-protocol";
 import { HostContextProvider } from "../auth/host-context-provider";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { AuthProviderService } from "../auth/auth-provider-service";
 import { UserService } from "../user/user-service";
 import { GitTokenScopeGuesser } from "../workspace/git-token-scope-guesser";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import {
     SuggestedRepositoryWithSorting,
     sortSuggestedRepositories,

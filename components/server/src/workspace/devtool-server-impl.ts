@@ -53,8 +53,8 @@ import {
     GetDefaultWorkspaceImageParams,
     GetDefaultWorkspaceImageResult,
     SearchRepositoriesParams,
-} from "@devtool/devtool-protocol";
-import { BlockedRepository } from "@devtool/devtool-protocol/lib/blocked-repositories-protocol";
+} from "@khulnasoft/devtool-protocol";
+import { BlockedRepository } from "@khulnasoft/devtool-protocol/lib/blocked-repositories-protocol";
 import {
     AdminBlockUserRequest,
     AdminGetListRequest,
@@ -63,16 +63,16 @@ import {
     AdminModifyPermanentWorkspaceFeatureFlagRequest,
     AdminModifyRoleOrPermissionRequest,
     WorkspaceAndInstance,
-} from "@devtool/devtool-protocol/lib/admin-protocol";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
-import { log, LogContext } from "@devtool/devtool-protocol/lib/util/logging";
+} from "@khulnasoft/devtool-protocol/lib/admin-protocol";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { log, LogContext } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import {
     InterfaceWithTraceContext,
     TraceContext,
     TraceContextWithSpan,
-} from "@devtool/devtool-protocol/lib/util/tracing";
-import { RemoteIdentifyMessage, RemotePageMessage, RemoteTrackMessage } from "@devtool/devtool-protocol/lib/analytics";
-import { SupportedWorkspaceClass } from "@devtool/devtool-protocol/lib/workspace-class";
+} from "@khulnasoft/devtool-protocol/lib/util/tracing";
+import { RemoteIdentifyMessage, RemotePageMessage, RemoteTrackMessage } from "@khulnasoft/devtool-protocol/lib/analytics";
+import { SupportedWorkspaceClass } from "@khulnasoft/devtool-protocol/lib/workspace-class";
 import { StopWorkspacePolicy } from "@devtool/ws-manager/lib/core_pb";
 import { inject, injectable } from "inversify";
 import { v4 as uuidv4, validate as uuidValidate } from "uuid";
@@ -84,14 +84,14 @@ import { AuthorizationService } from "../user/authorization-service";
 import { UserAuthentication } from "../user/user-authentication";
 import { ContextParser } from "./context-parser-service";
 import { isClusterMaintenanceError } from "./workspace-starter";
-import { HeadlessLogUrls } from "@devtool/devtool-protocol/lib/headless-workspace-log";
+import { HeadlessLogUrls } from "@khulnasoft/devtool-protocol/lib/headless-workspace-log";
 import { ProjectsService } from "../projects/projects-service";
-import { IDEOption, IDEOptions } from "@devtool/devtool-protocol/lib/ide-protocol";
+import { IDEOption, IDEOptions } from "@khulnasoft/devtool-protocol/lib/ide-protocol";
 import {
     PartialProject,
     OrganizationSettings,
     Organization,
-} from "@devtool/devtool-protocol/lib/teams-projects-protocol";
+} from "@khulnasoft/devtool-protocol/lib/teams-projects-protocol";
 import { ClientMetadata, traceClientMetadata } from "../websocket/websocket-connection-manager";
 import {
     EmailDomainFilterEntry,
@@ -102,16 +102,16 @@ import {
     UserFeatureSettings,
     WorkspaceImageBuild,
     WorkspaceTimeoutSetting,
-} from "@devtool/devtool-protocol/lib/protocol";
-import { ListUsageRequest, ListUsageResponse } from "@devtool/devtool-protocol/lib/usage";
+} from "@khulnasoft/devtool-protocol/lib/protocol";
+import { ListUsageRequest, ListUsageResponse } from "@khulnasoft/devtool-protocol/lib/usage";
 import { VerificationService } from "../auth/verification-service";
 import { InstallationService } from "../auth/installation-service";
-import { BillingMode } from "@devtool/devtool-protocol/lib/billing-mode";
+import { BillingMode } from "@khulnasoft/devtool-protocol/lib/billing-mode";
 import { formatPhoneNumber } from "../user/phone-numbers";
 import { IDEService } from "../ide-service";
-import { AttributionId } from "@devtool/devtool-protocol/lib/attribution";
-import { CostCenterJSON } from "@devtool/devtool-protocol/lib/usage";
-import { getExperimentsClientForBackend } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
+import { AttributionId } from "@khulnasoft/devtool-protocol/lib/attribution";
+import { CostCenterJSON } from "@khulnasoft/devtool-protocol/lib/usage";
+import { getExperimentsClientForBackend } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import { LinkedInService } from "../linkedin-service";
 import { PrebuildManager } from "../prebuilds/prebuild-manager";
 import { StripeService } from "../billing/stripe-service";
@@ -135,7 +135,7 @@ import { ScmService } from "../scm/scm-service";
 import { ContextService } from "./context-service";
 import { runWithRequestContext, runWithSubjectId } from "../util/request-context";
 import { SubjectId } from "../auth/subject-id";
-import { getPrimaryEmail } from "@devtool/public-api-common/lib/user-utils";
+import { getPrimaryEmail } from "@khulnasoft/public-api-common/lib/user-utils";
 import { AnalyticsController } from "../analytics-controller";
 import { ClientHeaderFields } from "../express-util";
 import { filter } from "../util/objects";

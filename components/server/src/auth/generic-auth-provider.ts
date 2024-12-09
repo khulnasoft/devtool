@@ -10,8 +10,8 @@ import express from "express";
 import passport from "passport";
 import OAuth2Strategy from "passport-oauth2";
 import { UserDB } from "@devtool/devtool-db/lib";
-import { AuthProviderInfo, Identity, Token, User } from "@devtool/devtool-protocol";
-import { log, LogContext } from "@devtool/devtool-protocol/lib/util/logging";
+import { AuthProviderInfo, Identity, Token, User } from "@khulnasoft/devtool-protocol";
+import { log, LogContext } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { oauth2tokenCallback, OAuth2 } from "oauth";
 import { URL } from "url";
 import { AuthProvider, AuthUser } from "../auth/auth-provider";
@@ -30,13 +30,13 @@ import { AuthProviderService } from "./auth-provider-service";
 import { LoginCompletionHandler } from "./login-completion-handler";
 import { OutgoingHttpHeaders } from "http2";
 import { trackSignup } from "../analytics";
-import { daysBefore, isDateSmaller } from "@devtool/devtool-protocol/lib/util/timeutil";
-import { IAnalyticsWriter } from "@devtool/devtool-protocol/lib/analytics";
+import { daysBefore, isDateSmaller } from "@khulnasoft/devtool-protocol/lib/util/timeutil";
+import { IAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
 import { VerificationService } from "../auth/verification-service";
 import { SignInJWT } from "./jwt";
 import { UserService } from "../user/user-service";
 import { reportLoginCompleted } from "../prometheus-metrics";
-import { TrustedValue } from "@devtool/devtool-protocol/lib/util/scrubbing";
+import { TrustedValue } from "@khulnasoft/devtool-protocol/lib/util/scrubbing";
 
 /**
  * This is a generic implementation of OAuth2-based AuthProvider.

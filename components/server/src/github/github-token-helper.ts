@@ -6,10 +6,10 @@
 
 import { injectable, inject } from "inversify";
 import { AuthProviderParams } from "../auth/auth-provider";
-import { User, Token } from "@devtool/devtool-protocol";
+import { User, Token } from "@khulnasoft/devtool-protocol";
 import { UnauthorizedError } from "../errors";
 import { TokenProvider } from "../user/token-provider";
-import { GitHubOAuthScopes } from "@devtool/public-api-common/lib/auth-providers";
+import { GitHubOAuthScopes } from "@khulnasoft/public-api-common/lib/auth-providers";
 
 @injectable()
 export class GitHubTokenHelper {

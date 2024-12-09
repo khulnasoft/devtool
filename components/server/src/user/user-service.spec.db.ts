@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { Experiments } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
+import { Experiments } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import * as chai from "chai";
 import "mocha";
 import { Container } from "inversify";
@@ -14,8 +14,8 @@ import { resetDB } from "@devtool/devtool-db/lib/test/reset-db";
 import { OrganizationService } from "../orgs/organization-service";
 import { Authorizer } from "../authorization/authorizer";
 import { UserService } from "./user-service";
-import { Organization, User } from "@devtool/devtool-protocol";
-import { ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { Organization, User } from "@khulnasoft/devtool-protocol";
+import { ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { expectError } from "../test/expect-utils";
 
 const expect = chai.expect;

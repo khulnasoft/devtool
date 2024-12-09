@@ -4,12 +4,12 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { User, Token } from "@devtool/devtool-protocol";
+import { User, Token } from "@khulnasoft/devtool-protocol";
 import {
     RepositoryNotFoundError,
     UnauthorizedRepositoryAccessError,
-} from "@devtool/public-api-common/lib/public-api-errors";
-import { RepositoryUnauthorizedError } from "@devtool/public-api/lib/devtool/v1/error_pb";
+} from "@khulnasoft/public-api-common/lib/public-api-errors";
+import { RepositoryUnauthorizedError } from "@khulnasoft/public-api/lib/devtool/v1/error_pb";
 
 export namespace NotFoundError {
     export async function create(

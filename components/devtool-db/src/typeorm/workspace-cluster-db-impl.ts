@@ -13,7 +13,7 @@ import {
     WorkspaceCluster,
     WorkspaceClusterFilter,
     WorkspaceClusterWoTLS,
-} from "@devtool/devtool-protocol/lib/workspace-cluster";
+} from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
 
 @injectable()
 export class WorkspaceClusterDBImpl implements WorkspaceClusterDB {

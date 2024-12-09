@@ -60,13 +60,13 @@ import {
     WorkspaceInstancePhase,
     WorkspaceInstanceStatus,
     WorkspaceTimeoutDuration,
-} from "@devtool/devtool-protocol";
-import { IAnalyticsWriter, TrackMessage } from "@devtool/devtool-protocol/lib/analytics";
-import { AttributionId } from "@devtool/devtool-protocol/lib/attribution";
-import { Deferred } from "@devtool/devtool-protocol/lib/util/deferred";
-import { LogContext, log } from "@devtool/devtool-protocol/lib/util/logging";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
-import { WorkspaceRegion } from "@devtool/devtool-protocol/lib/workspace-cluster";
+} from "@khulnasoft/devtool-protocol";
+import { IAnalyticsWriter, TrackMessage } from "@khulnasoft/devtool-protocol/lib/analytics";
+import { AttributionId } from "@khulnasoft/devtool-protocol/lib/attribution";
+import { Deferred } from "@khulnasoft/devtool-protocol/lib/util/deferred";
+import { LogContext, log } from "@khulnasoft/devtool-protocol/lib/util/logging";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
+import { WorkspaceRegion } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
 import * as IdeServiceApi from "@devtool/ide-service-api/lib/ide.pb";
 import {
     BuildRegistryAuth,
@@ -131,12 +131,12 @@ import { SYSTEM_USER, SYSTEM_USER_ID } from "../authorization/authorizer";
 import { EnvVarService, ResolvedEnvVars } from "../user/env-var-service";
 import { RedlockAbortSignal } from "redlock";
 import { ConfigProvider } from "./config-provider";
-import { isGrpcError } from "@devtool/devtool-protocol/lib/util/grpc";
-import { getExperimentsClientForBackend } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
+import { isGrpcError } from "@khulnasoft/devtool-protocol/lib/util/grpc";
+import { getExperimentsClientForBackend } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import { ctxIsAborted, runWithRequestContext, runWithSubjectId } from "../util/request-context";
 import { SubjectId } from "../auth/subject-id";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
-import { IDESettingsVersion } from "@devtool/devtool-protocol/lib/ide-protocol";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { IDESettingsVersion } from "@khulnasoft/devtool-protocol/lib/ide-protocol";
 import { getFeatureFlagEnableExperimentalJBTB } from "../util/featureflags";
 import { OrganizationService } from "../orgs/organization-service";
 import { ProjectsService } from "../projects/projects-service";

@@ -22,11 +22,11 @@ import {
     Workspace,
     WorkspaceContext,
     WorkspaceImageSourceDocker,
-} from "@devtool/devtool-protocol";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
-import { generateWorkspaceID } from "@devtool/devtool-protocol/lib/util/generate-workspace-id";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+} from "@khulnasoft/devtool-protocol";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { generateWorkspaceID } from "@khulnasoft/devtool-protocol/lib/util/generate-workspace-id";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { inject, injectable } from "inversify";
 import { ImageFileRevisionMissing, RepoURL } from "../repohost";
 import { ConfigProvider } from "./config-provider";

@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { PersonalAccessToken } from "@devtool/public-api/lib/devtool/experimental/v1/tokens_pb";
+import { PersonalAccessToken } from "@khulnasoft/public-api/lib/devtool/experimental/v1/tokens_pb";
 import dayjs from "dayjs";
 import { ContextMenuEntry } from "../components/ContextMenu";
 import { ItemFieldContextMenu } from "../components/ItemsList";

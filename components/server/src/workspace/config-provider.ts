@@ -8,7 +8,7 @@ import { inject, injectable } from "inversify";
 import * as path from "path";
 import * as crypto from "crypto";
 
-import { log, LogContext } from "@devtool/devtool-protocol/lib/util/logging";
+import { log, LogContext } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import {
     User,
     WorkspaceConfig,
@@ -22,17 +22,17 @@ import {
     AdditionalContentContext,
     WithDefaultConfig,
     ProjectConfig,
-} from "@devtool/devtool-protocol";
-import { DevtoolFileParser } from "@devtool/devtool-protocol/lib/devtool-file-parser";
+} from "@khulnasoft/devtool-protocol";
+import { DevtoolFileParser } from "@khulnasoft/devtool-protocol/lib/devtool-file-parser";
 
 import { ConfigurationService } from "../config/configuration-service";
 import { HostContextProvider } from "../auth/host-context-provider";
 import { AuthorizationService } from "../user/authorization-service";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { Config } from "../config";
 import { EntitlementService } from "../billing/entitlement-service";
 import { TeamDB } from "@devtool/devtool-db/lib";
-import { InvalidDevtoolYMLError } from "@devtool/public-api-common/lib/public-api-errors";
+import { InvalidDevtoolYMLError } from "@khulnasoft/public-api-common/lib/public-api-errors";
 import { ImageFileRevisionMissing, RevisionNotFoundError } from "../repohost";
 
 const POD_PATH_WORKSPACE_BASE = "/workspace";

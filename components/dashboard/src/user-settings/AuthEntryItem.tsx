@@ -7,9 +7,9 @@
 import { useState } from "react";
 import { ContextMenuEntry } from "../components/ContextMenu";
 import { Item, ItemFieldIcon, ItemField, ItemFieldContextMenu } from "../components/ItemsList";
-import { AuthProviderDescription } from "@devtool/public-api/lib/devtool/v1/authprovider_pb";
+import { AuthProviderDescription } from "@khulnasoft/public-api/lib/devtool/v1/authprovider_pb";
 import { toAuthProviderLabel } from "../provider-utils";
-import { getScopeNameForScope } from "@devtool/public-api-common/lib/auth-providers";
+import { getScopeNameForScope } from "@khulnasoft/public-api-common/lib/auth-providers";
 
 interface AuthEntryItemParams {
     ap: AuthProviderDescription;

@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { Branch, CommitInfo, Repository, RepositoryInfo, User } from "@devtool/devtool-protocol";
+import { Branch, CommitInfo, Repository, RepositoryInfo, User } from "@khulnasoft/devtool-protocol";
 
 export const RepositoryProvider = Symbol("RepositoryProvider");
 export interface RepositoryProvider {

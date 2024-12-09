@@ -6,14 +6,14 @@
 
 import { UserDB } from "@devtool/devtool-db/lib";
 import { AuditLogDB } from "@devtool/devtool-db/lib/audit-log-db";
-import { AuditLog } from "@devtool/devtool-protocol/lib/audit-log";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
-import { TrustedValue, scrubber } from "@devtool/devtool-protocol/lib/util/scrubbing";
+import { AuditLog } from "@khulnasoft/devtool-protocol/lib/audit-log";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
+import { TrustedValue, scrubber } from "@khulnasoft/devtool-protocol/lib/util/scrubbing";
 import { inject, injectable } from "inversify";
 import { v4 } from "uuid";
 import { Authorizer } from "../authorization/authorizer";
-import { getExperimentsClientForBackend } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
+import { getExperimentsClientForBackend } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 
 @injectable()
 export class AuditLogService {

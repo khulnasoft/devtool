@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { AuditLog } from "@devtool/devtool-protocol/lib/audit-log";
+import { AuditLog } from "@khulnasoft/devtool-protocol/lib/audit-log";
 
 export const AuditLogDB = Symbol("AuditLogDB");
 

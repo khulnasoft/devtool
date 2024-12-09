@@ -11,7 +11,7 @@ import TeamDetail from "./TeamDetail";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import { getDevtoolService } from "../service/service";
-import { AdminGetListResult, Team } from "@devtool/devtool-protocol";
+import { AdminGetListResult, Team } from "@khulnasoft/devtool-protocol";
 import Label from "./Label";
 import { AdminPageHeader } from "./AdminPageHeader";
 import Pagination from "../Pagination/Pagination";

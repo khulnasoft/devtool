@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { AuthProviderType } from "@devtool/public-api/lib/devtool/v1/authprovider_pb";
+import { AuthProviderType } from "@khulnasoft/public-api/lib/devtool/v1/authprovider_pb";
 import { isDevtoolIo } from "../../utils";
 import { useMemo } from "react";
 

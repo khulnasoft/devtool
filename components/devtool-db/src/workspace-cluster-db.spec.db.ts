@@ -8,7 +8,7 @@ import * as chai from "chai";
 import { suite, test, timeout } from "@testdeck/mocha";
 import { testContainer } from "./test-container";
 import { TypeORM } from "./typeorm/typeorm";
-import { WorkspaceCluster, WorkspaceClusterDB } from "@devtool/devtool-protocol/lib/workspace-cluster";
+import { WorkspaceCluster, WorkspaceClusterDB } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
 import { DBWorkspaceCluster } from "./typeorm/entity/db-workspace-cluster";
 import { resetDB } from "./test/reset-db";
 const expect = chai.expect;

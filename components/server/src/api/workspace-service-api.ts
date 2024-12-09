@@ -5,7 +5,7 @@
  */
 
 import { HandlerContext, ServiceImpl } from "@connectrpc/connect";
-import { WorkspaceService as WorkspaceServiceInterface } from "@devtool/public-api/lib/devtool/v1/workspace_connect";
+import { WorkspaceService as WorkspaceServiceInterface } from "@khulnasoft/public-api/lib/devtool/v1/workspace_connect";
 import {
     CreateAndStartWorkspaceRequest,
     CreateAndStartWorkspaceResponse,
@@ -46,19 +46,19 @@ import {
     WorkspacePort_Protocol,
     ListWorkspaceSessionsRequest,
     ListWorkspaceSessionsResponse,
-} from "@devtool/public-api/lib/devtool/v1/workspace_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/workspace_pb";
 import { inject, injectable } from "inversify";
 import { WorkspaceService } from "../workspace/workspace-service";
-import { PublicAPIConverter } from "@devtool/public-api-common/lib/public-api-converter";
+import { PublicAPIConverter } from "@khulnasoft/public-api-common/lib/public-api-converter";
 import { ctxClientRegion, ctxSignal, ctxUserId } from "../util/request-context";
-import { parsePagination } from "@devtool/public-api-common/lib/public-api-pagination";
-import { PaginationResponse } from "@devtool/public-api/lib/devtool/v1/pagination_pb";
+import { parsePagination } from "@khulnasoft/public-api-common/lib/public-api-pagination";
+import { PaginationResponse } from "@khulnasoft/public-api/lib/devtool/v1/pagination_pb";
 import { validate as uuidValidate } from "uuid";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { ContextService } from "../workspace/context-service";
 import { UserService } from "../user/user-service";
 import { ContextParser } from "../workspace/context-parser-service";
-import { matchesNewWorkspaceIdExactly as isWorkspaceId } from "@devtool/devtool-protocol/lib/util/parse-workspace-id";
+import { matchesNewWorkspaceIdExactly as isWorkspaceId } from "@khulnasoft/devtool-protocol/lib/util/parse-workspace-id";
 
 @injectable()
 export class WorkspaceServiceAPI implements ServiceImpl<typeof WorkspaceServiceInterface> {

@@ -9,8 +9,8 @@ import { inject, injectable } from "inversify";
 import websocket from "ws";
 import * as crypto from "crypto";
 
-import { User } from "@devtool/devtool-protocol";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { User } from "@khulnasoft/devtool-protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { AuthJWT } from "./auth/jwt";
 import { Config } from "./config";
 import { WsNextFunction, WsRequestHandler } from "./express/ws-handler";

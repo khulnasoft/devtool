@@ -9,7 +9,7 @@ import { Heading1, Subheading } from "../components/typography/headings";
 import { SetupLayout } from "./SetupLayout";
 import { SSOConfigForm, isValid, ssoConfigReducer, useSaveSSOConfig } from "../teams/sso/SSOConfigForm";
 import Alert from "../components/Alert";
-import { OIDCClientConfig } from "@devtool/public-api/lib/devtool/experimental/v1/oidc_pb";
+import { OIDCClientConfig } from "@khulnasoft/public-api/lib/devtool/experimental/v1/oidc_pb";
 import { openOIDCStartWindow } from "../provider-utils";
 import { LoadingButton } from "@podkit/buttons/LoadingButton";
 

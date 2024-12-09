@@ -5,7 +5,7 @@
  */
 
 import { OrgSettingsPage } from "./OrgSettingsPage";
-import { BillingMode } from "@devtool/devtool-protocol/lib/billing-mode";
+import { BillingMode } from "@khulnasoft/devtool-protocol/lib/billing-mode";
 import UsageBasedBillingConfig from "../components/UsageBasedBillingConfig";
 import { useOrgBillingMode } from "../data/billing-mode/org-billing-mode-query";
 import { useIsOwner } from "../data/organizations/members-query";

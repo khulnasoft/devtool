@@ -10,15 +10,15 @@ import {
     DevtoolServerPath,
     RateLimiterError,
     User,
-} from "@devtool/devtool-protocol";
-import { ApplicationError, ErrorCode, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
-import { ConnectionHandler } from "@devtool/devtool-protocol/lib/messaging/handler";
+} from "@khulnasoft/devtool-protocol";
+import { ApplicationError, ErrorCode, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
+import { ConnectionHandler } from "@khulnasoft/devtool-protocol/lib/messaging/handler";
 import {
     JsonRpcConnectionHandler,
     JsonRpcProxy,
     JsonRpcProxyFactory,
-} from "@devtool/devtool-protocol/lib/messaging/proxy-factory";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+} from "@khulnasoft/devtool-protocol/lib/messaging/proxy-factory";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { EventEmitter } from "events";
 import express from "express";
 import { ErrorCodes as RPCErrorCodes, MessageConnection, ResponseError, CancellationToken } from "vscode-jsonrpc";
@@ -45,8 +45,8 @@ import {
 } from "../prometheus-metrics";
 import { DevtoolServerImpl } from "../workspace/devtool-server-impl";
 import * as opentracing from "opentracing";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
-import { DevtoolHostUrl } from "@devtool/devtool-protocol/lib/util/devtool-host-url";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
+import { DevtoolHostUrl } from "@khulnasoft/devtool-protocol/lib/util/devtool-host-url";
 import { maskIp } from "../analytics";
 import { runWithRequestContext } from "../util/request-context";
 import { SubjectId } from "../auth/subject-id";

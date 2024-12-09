@@ -6,7 +6,7 @@
 
 import { useState } from "react";
 import { ConfigurationSettingsField } from "../ConfigurationSettingsField";
-import type { Configuration } from "@devtool/public-api/lib/devtool/v1/configuration_pb";
+import type { Configuration } from "@khulnasoft/public-api/lib/devtool/v1/configuration_pb";
 import { Button } from "@podkit/buttons/Button";
 import { AddVariableModal } from "./ConfigurationAddVariableModal";
 import { Heading3, Subheading } from "@podkit/typography/Headings";

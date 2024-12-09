@@ -15,10 +15,10 @@ import { AllowedWorkspaceClass } from "../data/workspaces/workspace-classes-quer
 import { useToast } from "./toasts/Toasts";
 import Modal, { ModalBaseFooter, ModalBody, ModalHeader } from "./Modal";
 import { LoadingState } from "@podkit/loading/LoadingState";
-import { VALID_ORG_MEMBER_ROLES } from "@devtool/devtool-protocol";
-import { OrganizationPermission, RoleRestrictionEntry } from "@devtool/public-api/lib/devtool/v1/organization_pb";
+import { VALID_ORG_MEMBER_ROLES } from "@khulnasoft/devtool-protocol";
+import { OrganizationPermission, RoleRestrictionEntry } from "@khulnasoft/public-api/lib/devtool/v1/organization_pb";
 import { PlainMessage } from "@bufbuild/protobuf";
-import { PublicAPIConverter } from "@devtool/public-api-common/lib/public-api-converter";
+import { PublicAPIConverter } from "@khulnasoft/public-api-common/lib/public-api-converter";
 
 const converter = new PublicAPIConverter();
 

@@ -4,15 +4,15 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { createClientCallMetricsInterceptor, IClientCallMetrics } from "@devtool/devtool-protocol/lib/util/grpc";
-import { Disposable, User, Workspace, WorkspaceInstance } from "@devtool/devtool-protocol";
-import { defaultGRPCOptions } from "@devtool/devtool-protocol/lib/util/grpc";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { createClientCallMetricsInterceptor, IClientCallMetrics } from "@khulnasoft/devtool-protocol/lib/util/grpc";
+import { Disposable, User, Workspace, WorkspaceInstance } from "@khulnasoft/devtool-protocol";
+import { defaultGRPCOptions } from "@khulnasoft/devtool-protocol/lib/util/grpc";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import {
     WorkspaceClusterWoTLS,
     WorkspaceManagerConnectionInfo,
     WorkspaceRegion,
-} from "@devtool/devtool-protocol/lib/workspace-cluster";
+} from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
 import * as grpc from "@grpc/grpc-js";
 import { inject, injectable, optional } from "inversify";
 import {

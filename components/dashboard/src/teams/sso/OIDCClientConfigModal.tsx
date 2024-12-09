@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { CreateClientConfigResponse, OIDCClientConfig } from "@devtool/public-api/lib/devtool/experimental/v1/oidc_pb";
+import { CreateClientConfigResponse, OIDCClientConfig } from "@khulnasoft/public-api/lib/devtool/experimental/v1/oidc_pb";
 import { FC, useCallback, useReducer } from "react";
 import { Button } from "@podkit/buttons/Button";
 import Modal, { ModalBody, ModalFooter, ModalFooterAlert, ModalHeader } from "../../components/Modal";

@@ -10,7 +10,7 @@ import { getOIDCClientsQueryKey } from "./oidc-clients-query";
 import {
     CreateClientConfigResponse,
     UpdateClientConfigResponse,
-} from "@devtool/public-api/lib/devtool/experimental/v1/oidc_pb";
+} from "@khulnasoft/public-api/lib/devtool/experimental/v1/oidc_pb";
 
 // TODO: find a better way to type this against the API
 type UpsertOIDCClientMutationArgs =

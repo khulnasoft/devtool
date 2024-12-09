@@ -5,9 +5,9 @@
  */
 
 import express from "express";
-import { AuthProviderInfo, User, AuthProviderEntry, Token } from "@devtool/devtool-protocol";
+import { AuthProviderInfo, User, AuthProviderEntry, Token } from "@khulnasoft/devtool-protocol";
 
-import { UserEnvVarValue } from "@devtool/devtool-protocol";
+import { UserEnvVarValue } from "@khulnasoft/devtool-protocol";
 
 export const AuthProviderParams = Symbol("AuthProviderParams");
 export interface AuthProviderParams extends AuthProviderEntry {

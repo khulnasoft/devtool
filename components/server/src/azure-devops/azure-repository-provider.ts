@@ -6,11 +6,11 @@
 
 import { injectable, inject } from "inversify";
 
-import { User, Repository, Branch, CommitInfo, RepositoryInfo } from "@devtool/devtool-protocol";
+import { User, Repository, Branch, CommitInfo, RepositoryInfo } from "@khulnasoft/devtool-protocol";
 import { AzureDevOpsApi } from "./azure-api";
 import { RepositoryProvider } from "../repohost/repository-provider";
 
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { getOrgAndProject, toBranch, toCommit, toRepository } from "./azure-converter";
 import { AuthProviderParams } from "../auth/auth-provider";
 

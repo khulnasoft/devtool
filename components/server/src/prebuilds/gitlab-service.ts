@@ -5,7 +5,7 @@
  */
 
 import { RepositoryService } from "../repohost/repo-service";
-import { User } from "@devtool/devtool-protocol";
+import { User } from "@khulnasoft/devtool-protocol";
 import { inject, injectable } from "inversify";
 import { GitLabApi, GitLab } from "../gitlab/api";
 import { GitLabApp } from "./gitlab-app";
@@ -13,7 +13,7 @@ import { Config } from "../config";
 import { GitlabContextParser } from "../gitlab/gitlab-context-parser";
 import { RepoURL } from "../repohost";
 import { UnauthorizedError } from "../errors";
-import { GitLabOAuthScopes } from "@devtool/public-api-common/lib/auth-providers";
+import { GitLabOAuthScopes } from "@khulnasoft/public-api-common/lib/auth-providers";
 
 @injectable()
 export class GitlabService extends RepositoryService {

@@ -10,7 +10,7 @@ import { useCurrentUser } from "../../user-context";
 import {
     AuthProviderDescription,
     ListAuthProviderDescriptionsRequest,
-} from "@devtool/public-api/lib/devtool/v1/authprovider_pb";
+} from "@khulnasoft/public-api/lib/devtool/v1/authprovider_pb";
 
 export const useAuthProviderDescriptions = () => {
     const user = useCurrentUser();

@@ -35,7 +35,7 @@
   ],
   "dependencies": {
     "@devtool/devtool-db": "0.1.5",
-    "@devtool/devtool-protocol": "0.1.5",
+    "@khulnasoft/devtool-protocol": "0.1.5",
     "@devtool/ws-daemon": "0.1.5",
     "@devtool/ws-manager": "0.1.5",
     "@devtool/ws-manager-bridge-api": "0.1.5",

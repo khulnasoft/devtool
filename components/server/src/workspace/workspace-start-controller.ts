@@ -5,12 +5,12 @@
  */
 
 import { inject, injectable } from "inversify";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { Job } from "../jobs/runner";
 import { DBWithTracing, TracedWorkspaceDB, UserDB, WorkspaceDB } from "@devtool/devtool-db/lib";
-import { durationLongerThanSeconds } from "@devtool/devtool-protocol/lib/util/timeutil";
+import { durationLongerThanSeconds } from "@khulnasoft/devtool-protocol/lib/util/timeutil";
 import { WorkspaceStarter } from "./workspace-starter";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 
 @injectable()
 export class WorkspaceStartController implements Job {

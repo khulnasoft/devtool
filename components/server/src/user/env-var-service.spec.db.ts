@@ -14,8 +14,8 @@ import {
     UserEnvVarValue,
     WithEnvvarsContext,
     WorkspaceConfig,
-} from "@devtool/devtool-protocol";
-import { Experiments } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
+} from "@khulnasoft/devtool-protocol";
+import { Experiments } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import * as chai from "chai";
 import { Container } from "inversify";
 import "mocha";
@@ -24,7 +24,7 @@ import { resetDB } from "@devtool/devtool-db/lib/test/reset-db";
 import { OrganizationService } from "../orgs/organization-service";
 import { UserService } from "./user-service";
 import { expectError } from "../test/expect-utils";
-import { ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { EnvVarService } from "./env-var-service";
 import { ProjectsService } from "../projects/projects-service";
 

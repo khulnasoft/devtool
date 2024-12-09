@@ -37,7 +37,7 @@ import (
 	"github.com/khulnasoft/devtool/ws-proxy/pkg/config"
 	"github.com/khulnasoft/devtool/ws-proxy/pkg/proxy"
 	"github.com/khulnasoft/devtool/ws-proxy/pkg/sshproxy"
-	"github.com/khulnasoft/golang-crypto/ssh"
+	"github.com/gitpod-io/golang-crypto/ssh"
 )
 
 var (

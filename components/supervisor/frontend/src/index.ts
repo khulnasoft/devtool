@@ -47,8 +47,8 @@ window.addEventListener("error", (event) => {
 
 require("../src/shared/index.css");
 
-import { WorkspaceInstancePhase } from "@devtool/devtool-protocol";
-import { DisposableCollection } from "@devtool/devtool-protocol/lib/util/disposable";
+import { WorkspaceInstancePhase } from "@khulnasoft/devtool-protocol";
+import { DisposableCollection } from "@khulnasoft/devtool-protocol/lib/util/disposable";
 import * as heartBeat from "./ide/heart-beat";
 import * as IDEFrontendService from "./ide/ide-frontend-service-impl";
 import * as IDEWorker from "./ide/ide-worker";

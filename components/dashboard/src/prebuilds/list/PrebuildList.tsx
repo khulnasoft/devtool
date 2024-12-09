@@ -12,13 +12,13 @@ import { PrebuildListErrorState } from "./PrebuildListErrorState";
 import { PrebuildsTable } from "./PrebuildTable";
 import { LoadingState } from "@podkit/loading/LoadingState";
 import { useListOrganizationPrebuildsQuery } from "../../data/prebuilds/organization-prebuilds-query";
-import { ListOrganizationPrebuildsRequest_Filter_State, Prebuild } from "@devtool/public-api/lib/devtool/v1/prebuild_pb";
+import { ListOrganizationPrebuildsRequest_Filter_State, Prebuild } from "@khulnasoft/public-api/lib/devtool/v1/prebuild_pb";
 import { validate } from "uuid";
 import type { TableSortOrder } from "@podkit/tables/SortableTable";
-import { SortOrder } from "@devtool/public-api/lib/devtool/v1/sorting_pb";
+import { SortOrder } from "@khulnasoft/public-api/lib/devtool/v1/sorting_pb";
 import { RunPrebuildModal } from "./RunPrebuildModal";
 import { isPrebuildDone, watchPrebuild } from "../../data/prebuilds/prebuild-queries";
-import { Disposable } from "@devtool/devtool-protocol";
+import { Disposable } from "@khulnasoft/devtool-protocol";
 
 const STATUS_FILTER_VALUES = ["succeeded", "failed", "unfinished", undefined] as const; // undefined means any status
 export type StatusOption = typeof STATUS_FILTER_VALUES[number];

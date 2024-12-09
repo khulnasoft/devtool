@@ -5,8 +5,8 @@
  */
 
 import { TypeORM } from "@devtool/devtool-db/lib";
-import { User } from "@devtool/devtool-protocol";
-import { Experiments } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
+import { User } from "@khulnasoft/devtool-protocol";
+import { Experiments } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import * as chai from "chai";
 import { Container } from "inversify";
 import "mocha";
@@ -17,7 +17,7 @@ import { Config } from "../config";
 import { ScmService } from "./scm-service";
 import { AuthProviderParams } from "../auth/auth-provider";
 import { expectError } from "../test/expect-utils";
-import { ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 
 const expect = chai.expect;
 

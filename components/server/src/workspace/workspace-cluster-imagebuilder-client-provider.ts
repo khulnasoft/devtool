@@ -4,9 +4,9 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { User, Workspace, WorkspaceInstance } from "@devtool/devtool-protocol";
-import { defaultGRPCOptions } from "@devtool/devtool-protocol/lib/util/grpc";
-import { WorkspaceRegion } from "@devtool/devtool-protocol/lib/workspace-cluster";
+import { User, Workspace, WorkspaceInstance } from "@khulnasoft/devtool-protocol";
+import { defaultGRPCOptions } from "@khulnasoft/devtool-protocol/lib/util/grpc";
+import { WorkspaceRegion } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
 import {
     ImageBuilderClient,
     ImageBuilderClientProvider,

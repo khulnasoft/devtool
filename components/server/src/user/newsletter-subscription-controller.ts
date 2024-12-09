@@ -7,7 +7,7 @@
 import express from "express";
 import { inject, injectable } from "inversify";
 import { UserDB } from "@devtool/devtool-db/lib";
-import { IAnalyticsWriter } from "@devtool/devtool-protocol/lib/analytics";
+import { IAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
 
 @injectable()
 export class NewsletterSubscriptionController {

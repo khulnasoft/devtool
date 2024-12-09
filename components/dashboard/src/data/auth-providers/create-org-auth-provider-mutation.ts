@@ -6,7 +6,7 @@
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { getOrgAuthProvidersQueryKey } from "./org-auth-providers-query";
-import { CreateAuthProviderRequest } from "@devtool/public-api/lib/devtool/v1/authprovider_pb";
+import { CreateAuthProviderRequest } from "@khulnasoft/public-api/lib/devtool/v1/authprovider_pb";
 import { authProviderClient } from "../../service/public-api";
 
 type CreateAuthProviderArgs = {

@@ -5,8 +5,8 @@
  */
 
 import { BUILTIN_INSTLLATION_ADMIN_USER_ID, TypeORM } from "@devtool/devtool-db/lib";
-import { DevtoolTokenType, Organization, User } from "@devtool/devtool-protocol";
-import { Experiments } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
+import { DevtoolTokenType, Organization, User } from "@khulnasoft/devtool-protocol";
+import { Experiments } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import * as chai from "chai";
 import { Container } from "inversify";
 import "mocha";
@@ -15,7 +15,7 @@ import { resetDB } from "@devtool/devtool-db/lib/test/reset-db";
 import { OrganizationService } from "../orgs/organization-service";
 import { UserService } from "./user-service";
 import { expectError } from "../test/expect-utils";
-import { ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { DevtoolTokenService } from "./devtool-token-service";
 
 const expect = chai.expect;

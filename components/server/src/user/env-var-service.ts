@@ -16,11 +16,11 @@ import {
     WorkspaceConfig,
     WorkspaceContext,
     WorkspaceType,
-} from "@devtool/devtool-protocol";
+} from "@khulnasoft/devtool-protocol";
 import { inject, injectable } from "inversify";
 import { Authorizer } from "../authorization/authorizer";
-import { IAnalyticsWriter } from "@devtool/devtool-protocol/lib/analytics";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { IAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { Config } from "../config";
 
 export interface ResolvedEnvVars {

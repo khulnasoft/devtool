@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { AdditionalUserData, User as UserProtocol } from "@devtool/devtool-protocol";
+import { AdditionalUserData, User as UserProtocol } from "@khulnasoft/devtool-protocol";
 import { useMutation } from "@tanstack/react-query";
 import { trackEvent } from "../../Analytics";
 import { getDevtoolService } from "../../service/service";

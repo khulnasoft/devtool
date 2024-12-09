@@ -5,7 +5,7 @@
  */
 
 import { inject, injectable } from "inversify";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 
 import { DevtoolTableDescriptionProvider, TableDescription } from "./tables";
 import { TypeORM } from "./typeorm/typeorm";

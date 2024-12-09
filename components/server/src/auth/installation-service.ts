@@ -10,16 +10,16 @@ import {
     Configuration,
     EmailDomainFilterEntry,
     DevtoolServer,
-} from "@devtool/devtool-protocol";
+} from "@khulnasoft/devtool-protocol";
 import { inject, injectable } from "inversify";
 import { EmailDomainFilterDB, TeamDB } from "@devtool/devtool-db/lib";
-import { BlockedRepository } from "@devtool/devtool-protocol/lib/blocked-repositories-protocol";
+import { BlockedRepository } from "@khulnasoft/devtool-protocol/lib/blocked-repositories-protocol";
 import { Authorizer } from "../authorization/authorizer";
 import { BlockedRepositoryDB } from "@devtool/devtool-db/lib/blocked-repository-db";
 import { Config } from "../config";
-import { SupportedWorkspaceClass } from "@devtool/devtool-protocol/lib/workspace-class";
+import { SupportedWorkspaceClass } from "@khulnasoft/devtool-protocol/lib/workspace-class";
 import { WorkspaceManagerClientProvider } from "@devtool/ws-manager/lib/client-provider";
-import { getExperimentsClientForBackend } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
+import { getExperimentsClientForBackend } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 
 @injectable()
 export class InstallationService {

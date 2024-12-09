@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { AuthProviderEntry as AuthProviderEntry } from "@devtool/devtool-protocol";
+import { AuthProviderEntry as AuthProviderEntry } from "@khulnasoft/devtool-protocol";
 import { createHash } from "crypto";
 
 export const AuthProviderEntryDB = Symbol("AuthProviderEntryDB");

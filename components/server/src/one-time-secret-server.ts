@@ -6,11 +6,11 @@
 
 import { injectable, inject } from "inversify";
 import express from "express";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { OneTimeSecretDB, DBWithTracing, TracedOneTimeSecretDB } from "@devtool/devtool-db/lib";
-import { Disposable } from "@devtool/devtool-protocol";
+import { Disposable } from "@khulnasoft/devtool-protocol";
 import * as opentracing from "opentracing";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { Config } from "./config";
 
 @injectable()

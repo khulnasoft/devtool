@@ -16,8 +16,8 @@ import { SpinnerLoader } from "../components/Loader";
 import searchIcon from "../icons/search.svg";
 import { Button } from "@podkit/buttons/Button";
 import { installationClient } from "../service/public-api";
-import { Sort, SortOrder } from "@devtool/public-api/lib/devtool/v1/sorting_pb";
-import { BlockedRepository, ListBlockedRepositoriesResponse } from "@devtool/public-api/lib/devtool/v1/installation_pb";
+import { Sort, SortOrder } from "@khulnasoft/public-api/lib/devtool/v1/sorting_pb";
+import { BlockedRepository, ListBlockedRepositoriesResponse } from "@khulnasoft/public-api/lib/devtool/v1/installation_pb";
 import { TextInputField } from "../components/forms/TextInputField";
 
 export function BlockedRepositories() {

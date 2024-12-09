@@ -6,7 +6,7 @@
 
 import { TypeORM, UserDB, resetDB } from "@devtool/devtool-db/lib";
 import { AuditLogDB } from "@devtool/devtool-db/lib/audit-log-db";
-import { Organization, User } from "@devtool/devtool-protocol";
+import { Organization, User } from "@khulnasoft/devtool-protocol";
 import { expect } from "chai";
 import { Container } from "inversify";
 import { v4 } from "uuid";
@@ -14,7 +14,7 @@ import { OrganizationService } from "../orgs/organization-service";
 import { createTestContainer } from "../test/service-testing-container-module";
 import { UserService } from "../user/user-service";
 import { AuditLogService } from "./AuditLogService";
-import { Experiments } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
+import { Experiments } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import { Timestamp } from "@bufbuild/protobuf";
 
 describe("AuditLogService", () => {

@@ -4,8 +4,8 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { User, Workspace, WorkspaceInstance } from "@devtool/devtool-protocol";
-import { WorkspaceClusterWoTLS, WorkspaceManagerConnectionInfo } from "@devtool/devtool-protocol/lib/workspace-cluster";
+import { User, Workspace, WorkspaceInstance } from "@khulnasoft/devtool-protocol";
+import { WorkspaceClusterWoTLS, WorkspaceManagerConnectionInfo } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
 import { PromisifiedWorkspaceManagerClient } from "@devtool/ws-manager/lib";
 import { IWorkspaceClusterStartSet, WorkspaceManagerClientProvider } from "@devtool/ws-manager/lib/client-provider";
 import { ChannelCredentials, Client, ClientOptions } from "@grpc/grpc-js";

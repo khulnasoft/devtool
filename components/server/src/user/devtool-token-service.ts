@@ -6,8 +6,8 @@
 
 import * as crypto from "crypto";
 import { DBDevtoolToken, UserDB } from "@devtool/devtool-db/lib";
-import { DevtoolToken, DevtoolTokenType } from "@devtool/devtool-protocol";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { DevtoolToken, DevtoolTokenType } from "@khulnasoft/devtool-protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { inject, injectable } from "inversify";
 import { Authorizer } from "../authorization/authorizer";
 

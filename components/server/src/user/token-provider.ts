@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { Token, User } from "@devtool/devtool-protocol";
+import { Token, User } from "@khulnasoft/devtool-protocol";
 
 export const TokenProvider = Symbol("TokenProvider");
 export interface TokenProvider {

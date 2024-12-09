@@ -10,8 +10,8 @@ import {
     TeamMemberInfo,
     TeamMemberRole,
     TeamMembershipInvite,
-} from "@devtool/devtool-protocol";
-import { ErrorCodes, ApplicationError } from "@devtool/devtool-protocol/lib/messaging/error";
+} from "@khulnasoft/devtool-protocol";
+import { ErrorCodes, ApplicationError } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { randomBytes } from "crypto";
 import { inject, injectable, optional } from "inversify";
 import slugify from "slugify";

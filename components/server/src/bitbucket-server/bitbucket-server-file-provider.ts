@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { Commit, Repository, User } from "@devtool/devtool-protocol";
+import { Commit, Repository, User } from "@khulnasoft/devtool-protocol";
 import { inject, injectable } from "inversify";
 import { FileProvider, MaybeContent, RevisionNotFoundError } from "../repohost/file-provider";
 import { BitbucketServerApi } from "./bitbucket-server-api";

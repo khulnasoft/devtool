@@ -5,8 +5,8 @@
  */
 
 import { UserDB, WorkspaceDB } from "@devtool/devtool-db/lib";
-import { SSHPublicKeyValue, UserSSHPublicKeyValue, WorkspaceInstance } from "@devtool/devtool-protocol";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { SSHPublicKeyValue, UserSSHPublicKeyValue, WorkspaceInstance } from "@khulnasoft/devtool-protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { inject, injectable } from "inversify";
 import { UpdateSSHKeyRequest } from "@devtool/ws-manager/lib";
 import { WorkspaceManagerClientProvider } from "@devtool/ws-manager/lib/client-provider";

@@ -6,12 +6,12 @@
 
 import { injectable, inject } from "inversify";
 
-import { User, Repository } from "@devtool/devtool-protocol";
+import { User, Repository } from "@khulnasoft/devtool-protocol";
 import { GitHubGraphQlEndpoint, GitHubRestApi } from "./api";
 import { RepositoryProvider } from "../repohost/repository-provider";
 import { RepoURL } from "../repohost/repo-url";
-import { Branch, CommitInfo, RepositoryInfo } from "@devtool/devtool-protocol/lib/protocol";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { Branch, CommitInfo, RepositoryInfo } from "@khulnasoft/devtool-protocol/lib/protocol";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 
 @injectable()
 export class GithubRepositoryProvider implements RepositoryProvider {

@@ -23,7 +23,7 @@ import {
     WorkspaceSession,
     PrebuiltWorkspaceWithWorkspace,
     PrebuildWithStatus,
-} from "@devtool/devtool-protocol";
+} from "@khulnasoft/devtool-protocol";
 
 export type MaybeWorkspace = Workspace | undefined;
 export type MaybeWorkspaceInstance = WorkspaceInstance | undefined;

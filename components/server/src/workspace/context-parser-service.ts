@@ -11,14 +11,14 @@ import {
     GitCheckoutInfo,
     PullRequestContext,
     ExternalImageConfigFile,
-} from "@devtool/devtool-protocol";
+} from "@khulnasoft/devtool-protocol";
 import { injectable, multiInject, inject } from "inversify";
 import { HostContextProvider } from "../auth/host-context-provider";
 import { IPrefixContextParser, IContextParser } from "./context-parser";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { ConfigProvider } from "./config-provider";
-import { InvalidDevtoolYMLError } from "@devtool/public-api-common/lib/public-api-errors";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { InvalidDevtoolYMLError } from "@khulnasoft/public-api-common/lib/public-api-errors";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { ImageFileRevisionMissing } from "../repohost";
 
 @injectable()

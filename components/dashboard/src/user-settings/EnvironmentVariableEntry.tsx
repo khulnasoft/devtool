@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { UserEnvVarValue } from "@devtool/devtool-protocol";
+import { UserEnvVarValue } from "@khulnasoft/devtool-protocol";
 import { Item, ItemField, ItemFieldContextMenu } from "../components/ItemsList";
 import { useState } from "react";
 

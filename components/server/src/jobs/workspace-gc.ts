@@ -5,7 +5,7 @@
  */
 
 import { injectable, inject, postConstruct } from "inversify";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import * as opentracing from "opentracing";
 import {
     TracedWorkspaceDB,
@@ -14,7 +14,7 @@ import {
     WorkspaceAndOwner,
     WorkspaceOwnerAndSoftDeleted,
 } from "@devtool/devtool-db/lib";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { Config } from "../config";
 import { Job } from "./runner";
 import { WorkspaceService } from "../workspace/workspace-service";

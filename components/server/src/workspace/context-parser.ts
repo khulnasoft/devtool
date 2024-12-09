@@ -4,8 +4,8 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { WorkspaceContext, User } from "@devtool/devtool-protocol";
-import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+import { WorkspaceContext, User } from "@khulnasoft/devtool-protocol";
+import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { inject, injectable } from "inversify";
 import { AuthProviderParams } from "../auth/auth-provider";
 import { URLSearchParams, URL } from "url";

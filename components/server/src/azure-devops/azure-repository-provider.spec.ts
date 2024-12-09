@@ -4,8 +4,8 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { User } from "@devtool/devtool-protocol";
-import { ifEnvVarNotSet } from "@devtool/devtool-protocol/lib/util/skip-if";
+import { User } from "@khulnasoft/devtool-protocol";
+import { ifEnvVarNotSet } from "@khulnasoft/devtool-protocol/lib/util/skip-if";
 import { expect } from "chai";
 import { suite, test, timeout, skip } from "@testdeck/mocha";
 import { DevData, DevTestHelper } from "../dev/dev-data";

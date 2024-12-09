@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { AuthProviderEntry } from "@devtool/devtool-protocol";
+import { AuthProviderEntry } from "@khulnasoft/devtool-protocol";
 import { MigrationInterface, QueryRunner } from "typeorm";
 import { columnExists, indexExists } from "./helper/helper";
 

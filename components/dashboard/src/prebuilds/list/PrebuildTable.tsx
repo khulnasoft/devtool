@@ -13,7 +13,7 @@ import { Subheading } from "@podkit/typography/Headings";
 import { cn } from "@podkit/lib/cn";
 import { LoadingState } from "@podkit/loading/LoadingState";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@podkit/select/Select";
-import { Prebuild } from "@devtool/public-api/lib/devtool/v1/prebuild_pb";
+import { Prebuild } from "@khulnasoft/public-api/lib/devtool/v1/prebuild_pb";
 import { Filter, Sort, SortField, StatusOption } from "./PrebuildList";
 import { SortCallback, SortableTableHead, TableSortOrder } from "@podkit/tables/SortableTable";
 import { ConfigurationDropdown } from "../configuration-input/ConfigurationInput";

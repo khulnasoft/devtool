@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { OrgMemberRole, OrganizationSettings, RoleRestrictions, TimeoutSettings } from "@devtool/devtool-protocol";
+import { OrgMemberRole, OrganizationSettings, RoleRestrictions, TimeoutSettings } from "@khulnasoft/devtool-protocol";
 import { Entity, Column, PrimaryColumn } from "typeorm";
 import { TypeORM } from "../typeorm";
 

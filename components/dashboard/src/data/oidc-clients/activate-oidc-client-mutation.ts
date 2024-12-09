@@ -8,7 +8,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { oidcService } from "../../service/public-api";
 import { useCurrentOrg } from "../organizations/orgs-query";
 import { getOIDCClientsQueryKey } from "./oidc-clients-query";
-import { SetClientConfigActivationResponse } from "@devtool/public-api/lib/devtool/experimental/v1/oidc_pb";
+import { SetClientConfigActivationResponse } from "@khulnasoft/public-api/lib/devtool/experimental/v1/oidc_pb";
 
 type ActivateOIDCClientArgs = {
     id: string;

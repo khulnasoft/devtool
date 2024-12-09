@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { getExperimentsClientForBackend } from "@devtool/devtool-protocol/lib/experiments/configcat-server";
+import { getExperimentsClientForBackend } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 
 export async function getFeatureFlagEnableExperimentalJBTB(userId: string): Promise<boolean> {
     return getExperimentsClientForBackend().getValueAsync("enable_experimental_jbtb", false, {

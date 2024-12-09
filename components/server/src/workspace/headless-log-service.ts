@@ -5,7 +5,7 @@
  */
 
 import { WorkspaceDB } from "@devtool/devtool-db/lib/workspace-db";
-import { HeadlessLogUrls } from "@devtool/devtool-protocol/lib/headless-workspace-log";
+import { HeadlessLogUrls } from "@khulnasoft/devtool-protocol/lib/headless-workspace-log";
 import { inject, injectable } from "inversify";
 import * as url from "url";
 import { Status, StatusServiceClient } from "@devtool/supervisor-api-grpcweb/lib/status_pb_service";
@@ -18,13 +18,13 @@ import {
 import { ResponseStream } from "@devtool/supervisor-api-grpcweb/lib/terminal_pb_service";
 import { ListenToOutputRequest, ListenToOutputResponse } from "@devtool/supervisor-api-grpcweb/lib/task_pb";
 import { TaskServiceClient } from "@devtool/supervisor-api-grpcweb/lib/task_pb_service";
-import { WorkspaceInstance } from "@devtool/devtool-protocol";
+import { WorkspaceInstance } from "@khulnasoft/devtool-protocol";
 import * as grpc from "@grpc/grpc-js";
 import { Config } from "../config";
 import * as browserHeaders from "browser-headers";
-import { log, LogContext } from "@devtool/devtool-protocol/lib/util/logging";
+import { log, LogContext } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { WebsocketTransport } from "../util/grpc-web-ws-transport";
-import { Deferred } from "@devtool/devtool-protocol/lib/util/deferred";
+import { Deferred } from "@khulnasoft/devtool-protocol/lib/util/deferred";
 import {
     ListLogsRequest,
     ListLogsResponse,
@@ -33,8 +33,8 @@ import {
 } from "@devtool/content-service/lib/headless-log_pb";
 import { CachingHeadlessLogServiceClientProvider } from "../util/content-service-sugar";
 import { ctxIsAborted, ctxOnAbort } from "../util/request-context";
-import { PREBUILD_LOGS_PATH_PREFIX as PREBUILD_LOGS_PATH_PREFIX_common } from "@devtool/public-api-common/lib/prebuild-utils";
-import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { PREBUILD_LOGS_PATH_PREFIX as PREBUILD_LOGS_PATH_PREFIX_common } from "@khulnasoft/public-api-common/lib/prebuild-utils";
+import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 
 export const HEADLESS_LOGS_PATH_PREFIX = "/headless-logs";
 export const HEADLESS_LOG_DOWNLOAD_PATH_PREFIX = "/headless-log-download";

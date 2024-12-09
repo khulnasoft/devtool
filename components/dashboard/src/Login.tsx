@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import * as DevtoolCookie from "@devtool/devtool-protocol/lib/util/devtool-cookie";
+import * as DevtoolCookie from "@khulnasoft/devtool-protocol/lib/util/devtool-cookie";
 import { useContext, useEffect, useState, useMemo, useCallback, FC } from "react";
 import { UserContext } from "./user-context";
 import { getDevtoolService } from "./service/service";
@@ -17,7 +17,7 @@ import { SSOLoginForm } from "./login/SSOLoginForm";
 import { useAuthProviderDescriptions } from "./data/auth-providers/auth-provider-descriptions-query";
 import { SetupPending } from "./login/SetupPending";
 import { useNeedsSetup } from "./dedicated-setup/use-needs-setup";
-import { AuthProviderDescription } from "@devtool/public-api/lib/devtool/v1/authprovider_pb";
+import { AuthProviderDescription } from "@khulnasoft/public-api/lib/devtool/v1/authprovider_pb";
 import { Button, ButtonProps } from "@podkit/buttons/Button";
 import { cn } from "@podkit/lib/cn";
 import { userClient } from "./service/public-api";

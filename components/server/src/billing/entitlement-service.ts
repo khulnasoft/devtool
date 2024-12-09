@@ -10,13 +10,13 @@ import {
     WorkspaceTimeoutDuration,
     WORKSPACE_TIMEOUT_DEFAULT_LONG,
     WORKSPACE_LIFETIME_LONG,
-} from "@devtool/devtool-protocol";
-import { AttributionId } from "@devtool/devtool-protocol/lib/attribution";
-import { BillingTier } from "@devtool/devtool-protocol/lib/protocol";
+} from "@khulnasoft/devtool-protocol";
+import { AttributionId } from "@khulnasoft/devtool-protocol/lib/attribution";
+import { BillingTier } from "@khulnasoft/devtool-protocol/lib/protocol";
 import { inject, injectable } from "inversify";
 import { BillingModes } from "./billing-mode";
 import { EntitlementServiceUBP } from "./entitlement-service-ubp";
-import { log } from "@devtool/devtool-protocol/lib/util/logging";
+import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 
 export interface MayStartWorkspaceResult {
     hitParallelWorkspaceLimit?: HitParallelWorkspaceLimit;
