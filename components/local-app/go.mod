@@ -5,14 +5,14 @@ go 1.22
 require (
 	github.com/desertbit/timer v0.0.0-20180107155436-c41aec40b27f // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
-	github.com/khulnasoft/devtool/devtool-protocol v0.0.0-00010101000000-000000000000
-	github.com/khulnasoft/devtool/local-app/api v0.0.0-00010101000000-000000000000
-	github.com/khulnasoft/devtool/supervisor/api v0.0.0-00010101000000-000000000000
 	github.com/golang/mock v1.6.0
 	github.com/google/go-cmp v0.5.9
 	github.com/google/uuid v1.3.0
 	github.com/improbable-eng/grpc-web v0.14.0
 	github.com/kevinburke/ssh_config v1.2.0
+	github.com/khulnasoft/devtool/devtool-protocol v0.0.0-00010101000000-000000000000
+	github.com/khulnasoft/devtool/local-app/api v0.0.0-00010101000000-000000000000
+	github.com/khulnasoft/devtool/supervisor/api v0.0.0-00010101000000-000000000000
 	github.com/mwitkow/go-conntrack v0.0.0-20190716064945-2f068394615f // indirect
 	github.com/rs/cors v1.8.0 // indirect
 	github.com/sirupsen/logrus v1.9.3
@@ -28,9 +28,9 @@ require (
 
 require (
 	github.com/bufbuild/connect-go v1.10.0
-	github.com/khulnasoft/devtool/components/public-api/go v0.0.0-00010101000000-000000000000
 	github.com/gookit/color v1.5.4
 	github.com/inconshreveable/go-update v0.0.0-20160112193335-8152e7eb6ccf
+	github.com/khulnasoft/devtool/components/public-api/go v0.0.0-00010101000000-000000000000
 	github.com/lmittmann/tint v1.0.3
 	github.com/manifoldco/promptui v0.9.0
 	github.com/mattn/go-isatty v0.0.17

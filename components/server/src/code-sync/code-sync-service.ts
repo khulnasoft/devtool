@@ -12,7 +12,7 @@ import express from "express";
 import { inject, injectable } from "inversify";
 import { BearerAuth } from "../auth/bearer-authenticator";
 import { WithFunctionAccessGuard } from "../auth/function-access";
-import { CodeSyncResourceDB, ALL_SERVER_RESOURCES, ServerResource, SyncResource } from "@devtool/devtool-db/lib";
+import { CodeSyncResourceDB, ALL_SERVER_RESOURCES, ServerResource, SyncResource } from "@khulnasoft/devtool-db/lib";
 import {
     DeleteRequest,
     DeleteResponse,
@@ -20,7 +20,7 @@ import {
     DownloadUrlResponse,
     UploadUrlRequest,
     UploadUrlResponse,
-} from "@devtool/content-service/lib/blobs_pb";
+} from "@khulnasoft/content-service/lib/blobs_pb";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { v4 as uuidv4 } from "uuid";
 import { accessCodeSyncStorage, UserRateLimiter } from "../auth/rate-limiter";

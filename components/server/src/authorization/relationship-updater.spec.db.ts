@@ -11,8 +11,8 @@ import {
     TypeORM,
     UserDB,
     WorkspaceDB,
-} from "@devtool/devtool-db/lib";
-import { resetDB } from "@devtool/devtool-db/lib/test/reset-db";
+} from "@khulnasoft/devtool-db/lib";
+import { resetDB } from "@khulnasoft/devtool-db/lib/test/reset-db";
 import { User, Workspace } from "@khulnasoft/devtool-protocol";
 import { Experiments } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import * as chai from "chai";

@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { BUILTIN_INSTLLATION_ADMIN_USER_ID, TypeORM } from "@devtool/devtool-db/lib";
+import { BUILTIN_INSTLLATION_ADMIN_USER_ID, TypeORM } from "@khulnasoft/devtool-db/lib";
 import {
     CommitContext,
     // EnvVarWithValue,
@@ -20,7 +20,7 @@ import * as chai from "chai";
 import { Container } from "inversify";
 import "mocha";
 import { createTestContainer } from "../test/service-testing-container-module";
-import { resetDB } from "@devtool/devtool-db/lib/test/reset-db";
+import { resetDB } from "@khulnasoft/devtool-db/lib/test/reset-db";
 import { OrganizationService } from "../orgs/organization-service";
 import { UserService } from "./user-service";
 import { expectError } from "../test/expect-utils";

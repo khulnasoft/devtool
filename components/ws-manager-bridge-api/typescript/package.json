@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@devtool/ws-manager-bridge-api",
+  "name": "@khulnasoft/ws-manager-bridge-api",
   "version": "0.1.5",
   "license": "UNLICENSED",
   "scripts": {

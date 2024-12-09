@@ -22,22 +22,26 @@ import {
     PortProtocol as WsManPortProtocol,
     DescribeClusterRequest,
     WorkspaceType,
-} from "@devtool/ws-manager/lib";
+} from "@khulnasoft/ws-manager/lib";
 import { scrubber, TrustedValue } from "@khulnasoft/devtool-protocol/lib/util/scrubbing";
-import { WorkspaceDB } from "@devtool/devtool-db/lib/workspace-db";
+import { WorkspaceDB } from "@khulnasoft/devtool-db/lib/workspace-db";
 import { log, LogContext } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { IAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
-import { TracedWorkspaceDB, DBWithTracing } from "@devtool/devtool-db/lib/traced-db";
+import { TracedWorkspaceDB, DBWithTracing } from "@khulnasoft/devtool-db/lib/traced-db";
 import { Metrics } from "./metrics";
 import { ClientProvider, WsmanSubscriber } from "./wsman-subscriber";
 import { Timestamp } from "google-protobuf/google/protobuf/timestamp_pb";
 import { Configuration } from "./config";
-import { WorkspaceClass, WorkspaceCluster, WorkspaceClusterDB } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
+import {
+    WorkspaceClass,
+    WorkspaceCluster,
+    WorkspaceClusterDB,
+} from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
 import { performance } from "perf_hooks";
 import { WorkspaceInstanceController } from "./workspace-instance-controller";
 import { PrebuildUpdater } from "./prebuild-updater";
-import { RedisPublisher } from "@devtool/devtool-db/lib";
+import { RedisPublisher } from "@khulnasoft/devtool-db/lib";
 
 export const WorkspaceManagerBridgeFactory = Symbol("WorkspaceManagerBridgeFactory");
 

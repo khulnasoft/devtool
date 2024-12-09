@@ -23,7 +23,7 @@ import { AddressInfo } from "net";
 import { WorkspaceDownloadService } from "./workspace/workspace-download-service";
 import { MonitoringEndpointsApp } from "./monitoring-endpoints";
 import { WebsocketConnectionManager } from "./websocket/websocket-connection-manager";
-import { TypeORM } from "@devtool/devtool-db/lib";
+import { TypeORM } from "@khulnasoft/devtool-db/lib";
 import { OneTimeSecretServer } from "./one-time-secret-server";
 import { Disposable, DisposableCollection } from "@khulnasoft/devtool-protocol";
 import { BearerAuth, isBearerAuthError } from "./auth/bearer-authenticator";

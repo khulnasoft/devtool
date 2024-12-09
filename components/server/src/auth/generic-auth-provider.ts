@@ -9,7 +9,7 @@ import { injectable, inject, postConstruct } from "inversify";
 import express from "express";
 import passport from "passport";
 import OAuth2Strategy from "passport-oauth2";
-import { UserDB } from "@devtool/devtool-db/lib";
+import { UserDB } from "@khulnasoft/devtool-db/lib";
 import { AuthProviderInfo, Identity, Token, User } from "@khulnasoft/devtool-protocol";
 import { log, LogContext } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { oauth2tokenCallback, OAuth2 } from "oauth";

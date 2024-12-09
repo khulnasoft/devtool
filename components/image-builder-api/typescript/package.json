@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@devtool/image-builder",
+  "name": "@khulnasoft/image-builder",
   "version": "0.1.5",
   "license": "UNLICENSED",
   "scripts": {
@@ -11,7 +11,7 @@
     "lib"
   ],
   "dependencies": {
-    "@devtool/content-service": "0.1.5",
+    "@khulnasoft/content-service": "*",
     "@khulnasoft/devtool-protocol": "*",
     "@grpc/grpc-js": "1.10.8",
     "google-protobuf": "^3.19.1",

@@ -5,6 +5,6 @@
 
 set -euo pipefail
 
-yarn --cwd /app/node_modules/@devtool/devtool-db run wait-for-db
-yarn --cwd /app/node_modules/@devtool/devtool-db run migrate-migrations
-yarn --cwd /app/node_modules/@devtool/devtool-db typeorm "$@"
+yarn --cwd /app/node_modules/@khulnasoft/devtool-db run wait-for-db
+yarn --cwd /app/node_modules/@khulnasoft/devtool-db run migrate-migrations
+yarn --cwd /app/node_modules/@khulnasoft/devtool-db typeorm "$@"

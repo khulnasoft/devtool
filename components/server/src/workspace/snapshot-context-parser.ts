@@ -6,7 +6,7 @@
 
 import { User, SnapshotContext, ContextURL } from "@khulnasoft/devtool-protocol";
 import { injectable, inject } from "inversify";
-import { WorkspaceDB } from "@devtool/devtool-db/lib";
+import { WorkspaceDB } from "@khulnasoft/devtool-db/lib";
 import { IContextParser } from "../workspace/context-parser";
 import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 

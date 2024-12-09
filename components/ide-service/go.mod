@@ -3,13 +3,13 @@ module github.com/khulnasoft/devtool/ide-service
 go 1.22
 
 require (
-	github.com/containerd/containerd v1.7.13
+	github.com/containerd/containerd v1.7.11
 	github.com/docker/cli v25.0.1+incompatible
 	github.com/docker/distribution v2.8.3+incompatible
+	github.com/heptiolabs/healthcheck v0.0.0-20211123025425-613501dd5deb
 	github.com/khulnasoft/devtool/common-go v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/devtool/devtool-protocol v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/devtool/ide-service-api v0.0.0-00010101000000-000000000000
-	github.com/heptiolabs/healthcheck v0.0.0-20211123025425-613501dd5deb
 	github.com/opencontainers/image-spec v1.1.0-rc2.0.20221005185240-3a7f492d3f1b
 	github.com/prometheus/client_golang v1.16.0
 	github.com/sirupsen/logrus v1.9.3
@@ -34,7 +34,6 @@ require (
 	github.com/felixge/httpsnoop v1.0.3 // indirect
 	github.com/frankban/quicktest v1.11.3 // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
-	github.com/khulnasoft/devtool/components/scrubber v0.0.0-00010101000000-000000000000 // indirect
 	github.com/go-logr/logr v1.3.0 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/go-test/deep v1.0.5 // indirect
@@ -45,6 +44,7 @@ require (
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0 // indirect
 	github.com/hashicorp/golang-lru v1.0.2 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
+	github.com/khulnasoft/devtool/components/scrubber v0.0.0-20241209224028-94c9dc49a033 // indirect
 	github.com/klauspost/compress v1.16.0 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.4 // indirect
 	github.com/mitchellh/reflectwalk v1.0.2 // indirect

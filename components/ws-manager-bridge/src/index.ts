@@ -10,7 +10,7 @@ import { Container } from "inversify";
 import { containerModule } from "./container-module";
 import { start } from "./main";
 
-import { dbContainerModule } from "@devtool/devtool-db/lib/container-module";
+import { dbContainerModule } from "@khulnasoft/devtool-db/lib/container-module";
 
 const container = new Container();
 container.load(containerModule);

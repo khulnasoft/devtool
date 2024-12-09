@@ -4,13 +4,13 @@ go 1.22
 
 require (
 	github.com/containerd/console v1.0.3
-	github.com/containerd/containerd v1.7.13
+	github.com/containerd/containerd v1.7.11
 	github.com/docker/cli v24.0.4+incompatible
 	github.com/docker/distribution v2.8.2+incompatible
-	github.com/khulnasoft/devtool/common-go v0.0.0-00010101000000-000000000000
 	github.com/google/go-containerregistry v0.19.0
 	github.com/hashicorp/go-retryablehttp v0.7.2
-	github.com/moby/buildkit v0.12.5
+	github.com/khulnasoft/devtool/common-go v0.0.0-00010101000000-000000000000
+	github.com/moby/buildkit v0.12.4
 	github.com/opencontainers/runtime-spec v1.1.0
 	github.com/sirupsen/logrus v1.9.3
 	github.com/spf13/cobra v1.7.0
@@ -31,7 +31,6 @@ require (
 	github.com/docker/docker v24.0.0+incompatible // indirect
 	github.com/docker/docker-credential-helpers v0.7.0 // indirect
 	github.com/felixge/httpsnoop v1.0.3 // indirect
-	github.com/khulnasoft/devtool/components/scrubber v0.0.0-00010101000000-000000000000 // indirect
 	github.com/go-logr/logr v1.3.0 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/gofrs/flock v0.8.1 // indirect
@@ -45,6 +44,7 @@ require (
 	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
 	github.com/hashicorp/golang-lru v1.0.2 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
+	github.com/khulnasoft/devtool/components/scrubber v0.0.0-20241209224028-94c9dc49a033 // indirect
 	github.com/klauspost/compress v1.17.2 // indirect
 	github.com/kr/text v0.2.0 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.4 // indirect

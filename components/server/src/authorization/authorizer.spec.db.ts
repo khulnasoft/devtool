@@ -4,8 +4,8 @@
  * See License.AGPL.txt in the project root for license information.
  */
 import { v1 } from "@authzed/authzed-node";
-import { TypeORM } from "@devtool/devtool-db/lib";
-import { resetDB } from "@devtool/devtool-db/lib/test/reset-db";
+import { TypeORM } from "@khulnasoft/devtool-db/lib";
+import { resetDB } from "@khulnasoft/devtool-db/lib/test/reset-db";
 import { Experiments } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import * as chai from "chai";
 import { Container } from "inversify";

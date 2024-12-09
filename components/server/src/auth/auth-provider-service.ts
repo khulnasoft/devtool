@@ -5,9 +5,14 @@
  */
 
 import { injectable, inject } from "inversify";
-import { AuthProviderEntry as AuthProviderEntry, AuthProviderInfo, OAuth2Config, User } from "@khulnasoft/devtool-protocol";
+import {
+    AuthProviderEntry as AuthProviderEntry,
+    AuthProviderInfo,
+    OAuth2Config,
+    User,
+} from "@khulnasoft/devtool-protocol";
 import { AuthProviderParams } from "./auth-provider";
-import { AuthProviderEntryDB, TeamDB } from "@devtool/devtool-db/lib";
+import { AuthProviderEntryDB, TeamDB } from "@khulnasoft/devtool-db/lib";
 import { Config } from "../config";
 import { v4 as uuidv4 } from "uuid";
 import { oauthUrls as githubUrls } from "../github/github-urls";

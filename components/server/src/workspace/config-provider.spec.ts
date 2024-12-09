@@ -12,7 +12,7 @@ import { Container, ContainerModule } from "inversify";
 import { DevtoolFileParser } from "@khulnasoft/devtool-protocol/lib/devtool-file-parser";
 import { HostContextProvider } from "../auth/host-context-provider";
 import { ConfigurationService } from "../config/configuration-service";
-import { TeamDB } from "@devtool/devtool-db/lib";
+import { TeamDB } from "@khulnasoft/devtool-db/lib";
 import { Config } from "../config";
 import { AuthorizationService } from "../user/authorization-service";
 import { EntitlementService } from "../billing/entitlement-service";

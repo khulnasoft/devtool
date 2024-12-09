@@ -4,12 +4,12 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { UserDB, WorkspaceDB } from "@devtool/devtool-db/lib";
+import { UserDB, WorkspaceDB } from "@khulnasoft/devtool-db/lib";
 import { SSHPublicKeyValue, UserSSHPublicKeyValue, WorkspaceInstance } from "@khulnasoft/devtool-protocol";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { inject, injectable } from "inversify";
-import { UpdateSSHKeyRequest } from "@devtool/ws-manager/lib";
-import { WorkspaceManagerClientProvider } from "@devtool/ws-manager/lib/client-provider";
+import { UpdateSSHKeyRequest } from "@khulnasoft/ws-manager/lib";
+import { WorkspaceManagerClientProvider } from "@khulnasoft/ws-manager/lib/client-provider";
 import { Authorizer } from "../authorization/authorizer";
 
 @injectable()

@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { WorkspaceDB } from "@devtool/devtool-db/lib/workspace-db";
+import { WorkspaceDB } from "@khulnasoft/devtool-db/lib/workspace-db";
 import { Disposable, DisposableCollection } from "@khulnasoft/devtool-protocol";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { repeat } from "@khulnasoft/devtool-protocol/lib/util/repeat";

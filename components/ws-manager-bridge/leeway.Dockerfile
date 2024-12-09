@@ -12,7 +12,7 @@ FROM cgr.dev/chainguard/node:18.17.1@sha256:af073516c203b6bd0b55a77a806a0950b486
 ENV NODE_OPTIONS=--unhandled-rejections=warn
 EXPOSE 3000
 COPY --from=builder --chown=node:node /app /app/
-WORKDIR /app/node_modules/@devtool/ws-manager-bridge
+WORKDIR /app/node_modules/@khulnasoft/ws-manager-bridge
 
 ARG __GIT_COMMIT
 ARG VERSION

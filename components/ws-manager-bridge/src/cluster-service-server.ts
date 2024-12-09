@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { WorkspaceDB } from "@devtool/devtool-db/lib/workspace-db";
+import { WorkspaceDB } from "@khulnasoft/devtool-db/lib/workspace-db";
 import { Queue } from "@khulnasoft/devtool-protocol";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import {
@@ -32,19 +32,19 @@ import {
     UpdateRequest,
     UpdateResponse,
     AdmissionConstraint as GRPCAdmissionConstraint,
-} from "@devtool/ws-manager-bridge-api/lib";
-import { WorkspaceManagerClientProvider } from "@devtool/ws-manager/lib/client-provider";
+} from "@khulnasoft/ws-manager-bridge-api/lib";
+import { WorkspaceManagerClientProvider } from "@khulnasoft/ws-manager/lib/client-provider";
 import {
     WorkspaceManagerClientProviderCompositeSource,
     WorkspaceManagerClientProviderSource,
-} from "@devtool/ws-manager/lib/client-provider-source";
+} from "@khulnasoft/ws-manager/lib/client-provider-source";
 import * as grpc from "@grpc/grpc-js";
 import { inject, injectable } from "inversify";
 import { BridgeController } from "./bridge-controller";
 import { Configuration } from "./config";
 import { GRPCError } from "./rpc";
 import { isWorkspaceRegion } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
-import { DescribeClusterRequest, DescribeClusterResponse, WorkspaceManagerClient } from "@devtool/ws-manager/lib";
+import { DescribeClusterRequest, DescribeClusterResponse, WorkspaceManagerClient } from "@khulnasoft/ws-manager/lib";
 
 export interface ClusterServiceServerOptions {
     port: number;

@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { UserDB, PersonalAccessTokenDB } from "@devtool/devtool-db/lib";
+import { UserDB, PersonalAccessTokenDB } from "@khulnasoft/devtool-db/lib";
 import { DevtoolTokenType, User } from "@khulnasoft/devtool-protocol";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import * as crypto from "crypto";

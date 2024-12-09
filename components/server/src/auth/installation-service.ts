@@ -12,13 +12,13 @@ import {
     DevtoolServer,
 } from "@khulnasoft/devtool-protocol";
 import { inject, injectable } from "inversify";
-import { EmailDomainFilterDB, TeamDB } from "@devtool/devtool-db/lib";
+import { EmailDomainFilterDB, TeamDB } from "@khulnasoft/devtool-db/lib";
 import { BlockedRepository } from "@khulnasoft/devtool-protocol/lib/blocked-repositories-protocol";
 import { Authorizer } from "../authorization/authorizer";
-import { BlockedRepositoryDB } from "@devtool/devtool-db/lib/blocked-repository-db";
+import { BlockedRepositoryDB } from "@khulnasoft/devtool-db/lib/blocked-repository-db";
 import { Config } from "../config";
 import { SupportedWorkspaceClass } from "@khulnasoft/devtool-protocol/lib/workspace-class";
-import { WorkspaceManagerClientProvider } from "@devtool/ws-manager/lib/client-provider";
+import { WorkspaceManagerClientProvider } from "@khulnasoft/ws-manager/lib/client-provider";
 import { getExperimentsClientForBackend } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 
 @injectable()

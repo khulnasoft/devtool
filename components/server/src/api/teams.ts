@@ -33,7 +33,7 @@ import {
     UpdateTeamMemberRequest,
     UpdateTeamMemberResponse,
 } from "@khulnasoft/public-api/lib/devtool/experimental/v1/teams_pb";
-import { TeamDB } from "@devtool/devtool-db/lib";
+import { TeamDB } from "@khulnasoft/devtool-db/lib";
 import { validate } from "uuid";
 import { OrgMemberInfo, Organization, TeamMembershipInvite } from "@khulnasoft/devtool-protocol";
 import { Timestamp } from "@bufbuild/protobuf";

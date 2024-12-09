@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@devtool/ws-manager-bridge",
+  "name": "@khulnasoft/ws-manager-bridge",
   "version": "0.1.5",
   "license": "UNLICENSED",
   "scripts": {
@@ -34,11 +34,11 @@
     "/dist"
   ],
   "dependencies": {
-    "@devtool/devtool-db": "0.1.5",
+    "@khulnasoft/devtool-db": "*",
     "@khulnasoft/devtool-protocol": "*",
-    "@devtool/ws-daemon": "0.1.5",
-    "@devtool/ws-manager": "0.1.5",
-    "@devtool/ws-manager-bridge-api": "0.1.5",
+    "@khulnasoft/ws-daemon": "*",
+    "@khulnasoft/ws-manager": "*",
+    "@khulnasoft/ws-manager-bridge-api": "*",
     "express": "^4.17.3",
     "inversify": "^6.0.1",
     "ioredis": "^5.3.2",

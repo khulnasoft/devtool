@@ -4,14 +4,14 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { TypeORM } from "@devtool/devtool-db/lib";
+import { TypeORM } from "@khulnasoft/devtool-db/lib";
 import { AuthProviderInfo, Organization, User } from "@khulnasoft/devtool-protocol";
 import { Experiments } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import * as chai from "chai";
 import { Container } from "inversify";
 import "mocha";
 import { createTestContainer, withTestCtx } from "../test/service-testing-container-module";
-import { resetDB } from "@devtool/devtool-db/lib/test/reset-db";
+import { resetDB } from "@khulnasoft/devtool-db/lib/test/reset-db";
 import { UserService } from "../user/user-service";
 import { AuthProviderService } from "./auth-provider-service";
 import { Config } from "../config";

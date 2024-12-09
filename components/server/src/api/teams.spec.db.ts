@@ -6,10 +6,15 @@
 import { Code, ConnectError, PromiseClient, createPromiseClient } from "@connectrpc/connect";
 import { createConnectTransport } from "@connectrpc/connect-node";
 import { Timestamp } from "@bufbuild/protobuf";
-import { TeamDB, TypeORM, UserDB, testContainer } from "@devtool/devtool-db/lib";
-import { DBTeam } from "@devtool/devtool-db/lib/typeorm/entity/db-team";
+import { TeamDB, TypeORM, UserDB, testContainer } from "@khulnasoft/devtool-db/lib";
+import { DBTeam } from "@khulnasoft/devtool-db/lib/typeorm/entity/db-team";
 import { TeamsService as TeamsServiceDefinition } from "@khulnasoft/public-api/lib/devtool/experimental/v1/teams_connect";
-import { GetTeamRequest, Team, TeamMember, TeamRole } from "@khulnasoft/public-api/lib/devtool/experimental/v1/teams_pb";
+import {
+    GetTeamRequest,
+    Team,
+    TeamMember,
+    TeamRole,
+} from "@khulnasoft/public-api/lib/devtool/experimental/v1/teams_pb";
 import { suite, test, timeout } from "@testdeck/mocha";
 import * as chai from "chai";
 import * as http from "http";

@@ -6,7 +6,7 @@
 
 import { ContainerModule } from "inversify";
 
-import { RedisPublisher, newRedisClient } from "@devtool/devtool-db/lib";
+import { RedisPublisher, newRedisClient } from "@khulnasoft/devtool-db/lib";
 import { IAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
 import { DevtoolFileParser } from "@khulnasoft/devtool-protocol/lib/devtool-file-parser";
 import { PrometheusClientCallMetrics } from "@khulnasoft/devtool-protocol/lib/messaging/client-call-metrics";
@@ -18,20 +18,20 @@ import {
     defaultGRPCOptions,
 } from "@khulnasoft/devtool-protocol/lib/util/grpc";
 import { prometheusClientMiddleware } from "@khulnasoft/devtool-protocol/lib/util/nice-grpc";
-import { IDEServiceClient, IDEServiceDefinition } from "@devtool/ide-service-api/lib/ide.pb";
-import { ImageBuilderClientCallMetrics, ImageBuilderClientProvider } from "@devtool/image-builder/lib";
-import { BillingServiceClient, BillingServiceDefinition } from "@devtool/usage-api/lib/usage/v1/billing.pb";
-import { UsageServiceClient, UsageServiceDefinition } from "@devtool/usage-api/lib/usage/v1/usage.pb";
+import { IDEServiceClient, IDEServiceDefinition } from "@khulnasoft/ide-service-api/lib/ide.pb";
+import { ImageBuilderClientCallMetrics, ImageBuilderClientProvider } from "@khulnasoft/image-builder/lib";
+import { BillingServiceClient, BillingServiceDefinition } from "@khulnasoft/usage-api/lib/usage/v1/billing.pb";
+import { UsageServiceClient, UsageServiceDefinition } from "@khulnasoft/usage-api/lib/usage/v1/usage.pb";
 import {
     IWorkspaceManagerClientCallMetrics,
     WorkspaceManagerClientProvider,
-} from "@devtool/ws-manager/lib/client-provider";
+} from "@khulnasoft/ws-manager/lib/client-provider";
 import {
     WorkspaceManagerClientProviderCompositeSource,
     WorkspaceManagerClientProviderDBSource,
     WorkspaceManagerClientProviderEnvSource,
     WorkspaceManagerClientProviderSource,
-} from "@devtool/ws-manager/lib/client-provider-source";
+} from "@khulnasoft/ws-manager/lib/client-provider-source";
 import * as grpc from "@grpc/grpc-js";
 import { Redis } from "ioredis";
 import { createChannel, createClient, createClientFactory } from "nice-grpc";

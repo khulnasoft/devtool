@@ -15,7 +15,6 @@ require (
 	cloud.google.com/go/compute/metadata v0.2.1 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
-	github.com/khulnasoft/devtool/components/scrubber v0.0.0-00010101000000-000000000000 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/google/uuid v1.3.0 // indirect
@@ -24,6 +23,7 @@ require (
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0 // indirect
 	github.com/hashicorp/golang-lru v1.0.2 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
+	github.com/khulnasoft/devtool/components/scrubber v0.0.0-20241209224028-94c9dc49a033 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.4 // indirect
 	github.com/mitchellh/reflectwalk v1.0.2 // indirect
 	github.com/prometheus/client_golang v1.16.0 // indirect

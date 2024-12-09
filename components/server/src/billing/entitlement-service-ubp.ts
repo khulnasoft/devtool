@@ -17,7 +17,7 @@ import {
 import { AttributionId } from "@khulnasoft/devtool-protocol/lib/attribution";
 import { inject, injectable } from "inversify";
 import { EntitlementService, HitParallelWorkspaceLimit, MayStartWorkspaceResult } from "./entitlement-service";
-import { CostCenter_BillingStrategy } from "@devtool/usage-api/lib/usage/v1/usage.pb";
+import { CostCenter_BillingStrategy } from "@khulnasoft/usage-api/lib/usage/v1/usage.pb";
 import { UsageService } from "../orgs/usage-service";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { VerificationService } from "../auth/verification-service";

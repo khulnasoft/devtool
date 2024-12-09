@@ -85,9 +85,9 @@ packages:
         # Run DB migrations
         - ["sh", "-c", "mkdir -p mig; cd mig; ../components-devtool-db--migrations/install.sh"]
         # migrate 'migrations'
-        - ["yarn", "--cwd", "mig/node_modules/@devtool/devtool-db", "run", "migrate-migrations"]
+        - ["yarn", "--cwd", "mig/node_modules/@khulnasoft/devtool-db", "run", "migrate-migrations"]
         # Run actual migrations
-        - ["yarn", "--cwd", "mig/node_modules/@devtool/devtool-db", "typeorm", "migrations:run"]
+        - ["yarn", "--cwd", "mig/node_modules/@khulnasoft/devtool-db", "typeorm", "migrations:run"]
         # Clean out package to not bload the build artifact
         - ["rm", "-rf", "mig"]
   - name: docker

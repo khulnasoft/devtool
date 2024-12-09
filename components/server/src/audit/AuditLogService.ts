@@ -4,8 +4,8 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { UserDB } from "@devtool/devtool-db/lib";
-import { AuditLogDB } from "@devtool/devtool-db/lib/audit-log-db";
+import { UserDB } from "@khulnasoft/devtool-db/lib";
+import { AuditLogDB } from "@khulnasoft/devtool-db/lib/audit-log-db";
 import { AuditLog } from "@khulnasoft/devtool-protocol/lib/audit-log";
 import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";

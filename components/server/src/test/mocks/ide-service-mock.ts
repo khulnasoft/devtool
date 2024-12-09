@@ -9,7 +9,7 @@ import {
     IDEServiceClient,
     ResolveWorkspaceConfigResponse,
     WorkspaceType,
-} from "@devtool/ide-service-api/lib/ide.pb";
+} from "@khulnasoft/ide-service-api/lib/ide.pb";
 import { injectable } from "inversify";
 import { CallOptions } from "nice-grpc-common";
 

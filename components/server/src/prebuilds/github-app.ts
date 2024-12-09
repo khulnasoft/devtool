@@ -18,7 +18,7 @@ import {
     ProjectDB,
     TeamDB,
     WebhookEventDB,
-} from "@devtool/devtool-db/lib";
+} from "@khulnasoft/devtool-db/lib";
 import express from "express";
 import { log, LogContext, LogrusLogLevel } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import {

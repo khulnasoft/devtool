@@ -53,7 +53,7 @@ func job(ctx *common.RenderContext) ([]runtime.Object, error) {
 						Command: []string{
 							"sh",
 							"-c",
-							"cd /app/node_modules/@devtool/devtool-db && yarn run wait-for-db && yarn run typeorm migration:show || true && yarn run typeorm migration:run",
+							"cd /app/node_modules/@khulnasoft/devtool-db && yarn run wait-for-db && yarn run typeorm migration:show || true && yarn run typeorm migration:run",
 						},
 					}},
 				},

@@ -4,10 +4,10 @@ go 1.22
 
 require (
 	github.com/cheggaaa/pb/v3 v3.0.5
+	github.com/google/uuid v1.3.0
 	github.com/khulnasoft/devtool/common-go v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/devtool/content-service/api v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/devtool/ws-manager/api v0.0.0-00010101000000-000000000000
-	github.com/google/uuid v1.3.0
 	github.com/sirupsen/logrus v1.9.3
 	github.com/spf13/cobra v1.4.0
 	google.golang.org/grpc v1.58.3
@@ -20,11 +20,11 @@ require (
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/fatih/color v1.7.0 // indirect
-	github.com/khulnasoft/devtool/components/scrubber v0.0.0-00010101000000-000000000000 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0 // indirect
 	github.com/hashicorp/golang-lru v1.0.2 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
+	github.com/khulnasoft/devtool/components/scrubber v0.0.0-20241209224028-94c9dc49a033 // indirect
 	github.com/mattn/go-colorable v0.1.2 // indirect
 	github.com/mattn/go-isatty v0.0.12 // indirect
 	github.com/mattn/go-runewidth v0.0.7 // indirect

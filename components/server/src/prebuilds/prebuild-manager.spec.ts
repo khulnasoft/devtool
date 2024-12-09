@@ -9,7 +9,7 @@ import { Container, ContainerModule } from "inversify";
 import "mocha";
 import * as chai from "chai";
 import { PrebuildManager } from "./prebuild-manager";
-import { TracedWorkspaceDB, WebhookEventDB } from "@devtool/devtool-db/lib";
+import { TracedWorkspaceDB, WebhookEventDB } from "@khulnasoft/devtool-db/lib";
 import { WorkspaceService } from "../workspace/workspace-service";
 import { HostContextProvider } from "../auth/host-context-provider";
 import { ConfigProvider } from "../workspace/config-provider";

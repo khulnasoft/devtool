@@ -4,8 +4,8 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { TypeORM, WorkspaceDB } from "@devtool/devtool-db/lib";
-import { resetDB } from "@devtool/devtool-db/lib/test/reset-db";
+import { TypeORM, WorkspaceDB } from "@khulnasoft/devtool-db/lib";
+import { resetDB } from "@khulnasoft/devtool-db/lib/test/reset-db";
 import {
     CommitContext,
     Organization,

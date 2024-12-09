@@ -22,7 +22,7 @@ import { OIDCCreateSessionPayload } from "./iam-oidc-create-session-payload";
 import { TeamMemberInfo, User } from "@khulnasoft/devtool-protocol";
 import { OrganizationService } from "../orgs/organization-service";
 import { UserService } from "../user/user-service";
-import { TeamDB, UserDB } from "@devtool/devtool-db/lib";
+import { TeamDB, UserDB } from "@khulnasoft/devtool-db/lib";
 const expect = chai.expect;
 
 @suite(timeout(10000))

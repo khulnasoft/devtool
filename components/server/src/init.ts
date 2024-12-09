@@ -57,7 +57,7 @@ import { Server } from "./server";
 import { log, LogrusLogLevel } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { installLogCountMetric } from "@khulnasoft/devtool-protocol/lib/util/logging-node";
 import { TracingManager } from "@khulnasoft/devtool-protocol/lib/util/tracing";
-import { TypeORM } from "@devtool/devtool-db/lib";
+import { TypeORM } from "@khulnasoft/devtool-db/lib";
 import { dbConnectionsEnqueued, dbConnectionsFree, dbConnectionsTotal } from "./prometheus-metrics";
 import { installCtxLogAugmenter } from "./util/log-context";
 if (process.env.NODE_ENV === "development") {

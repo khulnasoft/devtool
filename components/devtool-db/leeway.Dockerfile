@@ -21,7 +21,7 @@ RUN mkdir /home/jenkins && chown -R 10000 /home/jenkins
 COPY --from=proxy /bin/cloud_sql_proxy /bin/cloud_sql_proxy
 COPY --from=proxy /etc/ssl/certs/ /etc/ssl/certs/
 COPY --chown=10000:10000 --from=builder /app /app/
-WORKDIR /app/node_modules/@devtool/devtool-db
+WORKDIR /app/node_modules/@khulnasoft/devtool-db
 
 ARG __GIT_COMMIT
 ARG VERSION

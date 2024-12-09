@@ -6,7 +6,7 @@
 
 import { ProbotOctokit } from "probot";
 import { injectable, inject } from "inversify";
-import { WorkspaceDB, TracedWorkspaceDB, DBWithTracing } from "@devtool/devtool-db/lib";
+import { WorkspaceDB, TracedWorkspaceDB, DBWithTracing } from "@khulnasoft/devtool-db/lib";
 import { v4 as uuidv4 } from "uuid";
 import { HeadlessWorkspaceEvent } from "@khulnasoft/devtool-protocol/lib/headless-workspace-log";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";

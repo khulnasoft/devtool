@@ -12,7 +12,7 @@ import {
     UsageServiceClient,
     UsageServiceDefinition,
     Usage_Kind,
-} from "@devtool/usage-api/lib/usage/v1/usage.pb";
+} from "@khulnasoft/usage-api/lib/usage/v1/usage.pb";
 import { inject, injectable } from "inversify";
 import { Authorizer } from "../authorization/authorizer";
 import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";

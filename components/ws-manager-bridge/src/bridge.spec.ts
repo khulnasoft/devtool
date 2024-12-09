@@ -6,7 +6,7 @@
 
 import { suite, test } from "@testdeck/mocha";
 import * as chai from "chai";
-import { WorkspaceConditions, WorkspaceStatus } from "@devtool/ws-manager/lib";
+import { WorkspaceConditions, WorkspaceStatus } from "@khulnasoft/ws-manager/lib";
 import { hasRelevantDiff } from "./bridge";
 
 const expect = chai.expect;

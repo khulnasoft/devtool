@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import * as opentracing from "opentracing";
-import { DBWithTracing, TracedWorkspaceDB, WorkspaceDB, WebhookEventDB } from "@devtool/devtool-db/lib";
+import { DBWithTracing, TracedWorkspaceDB, WorkspaceDB, WebhookEventDB } from "@khulnasoft/devtool-db/lib";
 import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { Job } from "./runner";

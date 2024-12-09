@@ -6,12 +6,12 @@
 
 import { IDESettings, User, Workspace } from "@khulnasoft/devtool-protocol";
 import { IDEClient, IDEOption, IDEOptions, IDESettingsVersion } from "@khulnasoft/devtool-protocol/lib/ide-protocol";
-import * as IdeServiceApi from "@devtool/ide-service-api/lib/ide.pb";
+import * as IdeServiceApi from "@khulnasoft/ide-service-api/lib/ide.pb";
 import {
     IDEServiceClient,
     IDEServiceDefinition,
     ResolveWorkspaceConfigResponse,
-} from "@devtool/ide-service-api/lib/ide.pb";
+} from "@khulnasoft/ide-service-api/lib/ide.pb";
 import { getPrimaryEmail } from "@khulnasoft/public-api-common/lib/user-utils";
 import { inject, injectable } from "inversify";
 import { AuthorizationService } from "./user/authorization-service";

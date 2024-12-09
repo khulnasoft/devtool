@@ -6,15 +6,15 @@
 
 import { inject, injectable } from "inversify";
 import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
-import { WorkspaceStatus, WorkspaceType } from "@devtool/ws-manager/lib";
+import { WorkspaceStatus, WorkspaceType } from "@khulnasoft/ws-manager/lib";
 import { HeadlessWorkspaceEventType, WorkspaceInstance } from "@khulnasoft/devtool-protocol";
 import { log, LogContext } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { PrebuildStateMapper } from "./prebuild-state-mapper";
-import { DBWithTracing, TracedWorkspaceDB } from "@devtool/devtool-db/lib/traced-db";
-import { WorkspaceDB } from "@devtool/devtool-db/lib/workspace-db";
+import { DBWithTracing, TracedWorkspaceDB } from "@khulnasoft/devtool-db/lib/traced-db";
+import { WorkspaceDB } from "@khulnasoft/devtool-db/lib/workspace-db";
 import { Metrics } from "./metrics";
 import { filterStatus } from "./bridge";
-import { RedisPublisher } from "@devtool/devtool-db/lib";
+import { RedisPublisher } from "@khulnasoft/devtool-db/lib";
 
 @injectable()
 export class PrebuildUpdater {

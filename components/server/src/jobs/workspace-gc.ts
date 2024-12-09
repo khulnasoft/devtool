@@ -13,7 +13,7 @@ import {
     WorkspaceDB,
     WorkspaceAndOwner,
     WorkspaceOwnerAndSoftDeleted,
-} from "@devtool/devtool-db/lib";
+} from "@khulnasoft/devtool-db/lib";
 import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { Config } from "../config";
 import { Job } from "./runner";

@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { BUILTIN_INSTLLATION_ADMIN_USER_ID, TypeORM, UserDB } from "@devtool/devtool-db/lib";
+import { BUILTIN_INSTLLATION_ADMIN_USER_ID, TypeORM, UserDB } from "@khulnasoft/devtool-db/lib";
 import { Organization, OrganizationSettings, TeamMemberRole, User } from "@khulnasoft/devtool-protocol";
 import { Experiments } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import { ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
@@ -13,7 +13,7 @@ import { Container } from "inversify";
 import "mocha";
 import { createTestContainer, withTestCtx } from "../test/service-testing-container-module";
 import { OrganizationService } from "./organization-service";
-import { resetDB } from "@devtool/devtool-db/lib/test/reset-db";
+import { resetDB } from "@khulnasoft/devtool-db/lib/test/reset-db";
 import { expectError } from "../test/expect-utils";
 import { UserService } from "../user/user-service";
 import { DefaultWorkspaceImageValidator } from "./default-workspace-image-validator";

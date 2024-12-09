@@ -4,8 +4,8 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { AuthCodeRepositoryDB } from "@devtool/devtool-db/lib/typeorm/auth-code-repository-db";
-import { UserDB } from "@devtool/devtool-db/lib/user-db";
+import { AuthCodeRepositoryDB } from "@khulnasoft/devtool-db/lib/typeorm/auth-code-repository-db";
+import { UserDB } from "@khulnasoft/devtool-db/lib/user-db";
 import { User } from "@khulnasoft/devtool-protocol";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { OAuthRequest, OAuthResponse } from "@jmondi/oauth2-server";

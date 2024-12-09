@@ -10,7 +10,7 @@ import { start } from "./init";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { Container } from "inversify";
 import { productionContainerModule } from "./container-module";
-import { dbContainerModule } from "@devtool/devtool-db/lib/container-module";
+import { dbContainerModule } from "@khulnasoft/devtool-db/lib/container-module";
 import { DataCacheRedis } from "./redis/data-cache";
 
 const container = new Container();

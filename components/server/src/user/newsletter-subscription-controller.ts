@@ -6,7 +6,7 @@
 
 import express from "express";
 import { inject, injectable } from "inversify";
-import { UserDB } from "@devtool/devtool-db/lib";
+import { UserDB } from "@khulnasoft/devtool-db/lib";
 import { IAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
 
 @injectable()

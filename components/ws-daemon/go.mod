@@ -9,19 +9,19 @@ require (
 	github.com/bombsimon/logrusr/v2 v2.0.1
 	github.com/c9s/goprocinfo v0.0.0-20210130143923-c95fcf8c64a8
 	github.com/containerd/cgroups v1.1.0
-	github.com/containerd/containerd v1.7.13
+	github.com/containerd/containerd v1.7.11
 	github.com/containerd/typeurl/v2 v2.1.1
 	github.com/containers/storage v1.39.0
-	github.com/khulnasoft/devtool/common-go v0.0.0-00010101000000-000000000000
-	github.com/khulnasoft/devtool/content-service v0.0.0-00010101000000-000000000000
-	github.com/khulnasoft/devtool/content-service/api v0.0.0-00010101000000-000000000000
-	github.com/khulnasoft/devtool/ws-daemon/api v0.0.0-00010101000000-000000000000
-	github.com/khulnasoft/devtool/ws-manager/api v0.0.0-00010101000000-000000000000
 	github.com/golang/mock v1.6.0
 	github.com/google/go-cmp v0.6.0
 	github.com/google/nftables v0.1.0
 	github.com/google/uuid v1.6.0
 	github.com/heptiolabs/healthcheck v0.0.0-20211123025425-613501dd5deb
+	github.com/khulnasoft/devtool/common-go v0.0.0-00010101000000-000000000000
+	github.com/khulnasoft/devtool/content-service v0.0.0-00010101000000-000000000000
+	github.com/khulnasoft/devtool/content-service/api v0.0.0-00010101000000-000000000000
+	github.com/khulnasoft/devtool/ws-daemon/api v0.0.0-00010101000000-000000000000
+	github.com/khulnasoft/devtool/ws-manager/api v0.0.0-00010101000000-000000000000
 	github.com/onsi/ginkgo/v2 v2.17.1
 	github.com/onsi/gomega v1.32.0
 	github.com/opencontainers/runc v1.1.10
@@ -97,7 +97,6 @@ require (
 	github.com/fatih/structtag v1.2.0 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
 	github.com/fsnotify/fsnotify v1.7.0 // indirect
-	github.com/khulnasoft/devtool/components/scrubber v0.0.0-00010101000000-000000000000 // indirect
 	github.com/go-logr/logr v1.4.1 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/go-logr/zapr v1.3.0 // indirect
@@ -120,12 +119,13 @@ require (
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0 // indirect
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0 // indirect
 	github.com/hashicorp/golang-lru v1.0.2 // indirect
-	github.com/imdario/mergo v0.3.12 // indirect
+	github.com/imdario/mergo v0.3.13 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/josharian/native v0.0.0-20200817173448-b6b71def0850 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
+	github.com/khulnasoft/devtool/components/scrubber v0.0.0-20241209224028-94c9dc49a033 // indirect
 	github.com/klauspost/compress v1.17.6 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.6 // indirect
 	github.com/klauspost/pgzip v1.2.5 // indirect

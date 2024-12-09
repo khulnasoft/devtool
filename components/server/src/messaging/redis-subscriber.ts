@@ -27,7 +27,7 @@ import {
     updateSubscribersRegistered,
 } from "../prometheus-metrics";
 import { Redis } from "ioredis";
-import { WorkspaceDB } from "@devtool/devtool-db/lib";
+import { WorkspaceDB } from "@khulnasoft/devtool-db/lib";
 import { runWithRequestContext } from "../util/request-context";
 import { SYSTEM_USER } from "../authorization/authorizer";
 

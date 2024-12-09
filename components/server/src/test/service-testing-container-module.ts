@@ -6,8 +6,8 @@
 
 import * as grpc from "@grpc/grpc-js";
 import { IAnalyticsWriter, NullAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
-import { IDEServiceClient, IDEServiceDefinition } from "@devtool/ide-service-api/lib/ide.pb";
-import { UsageServiceDefinition } from "@devtool/usage-api/lib/usage/v1/usage.pb";
+import { IDEServiceClient, IDEServiceDefinition } from "@khulnasoft/ide-service-api/lib/ide.pb";
+import { UsageServiceDefinition } from "@khulnasoft/usage-api/lib/usage/v1/usage.pb";
 import { ContainerModule } from "inversify";
 import { v4 } from "uuid";
 import { AuthProvider, AuthProviderParams } from "../auth/auth-provider";
@@ -16,14 +16,14 @@ import { HostContextProviderImpl } from "../auth/host-context-provider-impl";
 import { SpiceDBClientProvider } from "../authorization/spicedb";
 import { AuthConfig, Config } from "../config";
 import { StorageClient } from "../storage/storage-client";
-import { testContainer } from "@devtool/devtool-db/lib";
+import { testContainer } from "@khulnasoft/devtool-db/lib";
 import { productionContainerModule } from "../container-module";
 import { createMock } from "./mocks/mock";
 import { UsageServiceClientMock } from "./mocks/usage-service-client-mock";
 import { env, nextTick } from "process";
-import { WorkspaceManagerClientProviderSource } from "@devtool/ws-manager/lib/client-provider-source";
+import { WorkspaceManagerClientProviderSource } from "@khulnasoft/ws-manager/lib/client-provider-source";
 import { WorkspaceClusterWoTLS } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
-import { WorkspaceManagerClientProvider } from "@devtool/ws-manager/lib/client-provider";
+import { WorkspaceManagerClientProvider } from "@khulnasoft/ws-manager/lib/client-provider";
 import {
     BuildInfo,
     BuildResponse,
@@ -31,8 +31,8 @@ import {
     IImageBuilderClient,
     LogInfo,
     ResolveWorkspaceImageResponse,
-} from "@devtool/image-builder/lib";
-import { IWorkspaceManagerClient, StartWorkspaceResponse } from "@devtool/ws-manager/lib";
+} from "@khulnasoft/image-builder/lib";
+import { IWorkspaceManagerClient, StartWorkspaceResponse } from "@khulnasoft/ws-manager/lib";
 import { TokenProvider } from "../user/token-provider";
 import { DevtoolHostUrl } from "@khulnasoft/devtool-protocol/lib/util/devtool-host-url";
 import * as crypto from "crypto";

@@ -16,12 +16,12 @@ import { filePathTelepresenceAware } from "@khulnasoft/devtool-protocol/lib/env"
 import {
     WorkspaceManagerClientProvider,
     IWorkspaceManagerClientCallMetrics,
-} from "@devtool/ws-manager/lib/client-provider";
+} from "@khulnasoft/ws-manager/lib/client-provider";
 import {
     WorkspaceManagerClientProviderCompositeSource,
     WorkspaceManagerClientProviderDBSource,
     WorkspaceManagerClientProviderSource,
-} from "@devtool/ws-manager/lib/client-provider-source";
+} from "@khulnasoft/ws-manager/lib/client-provider-source";
 import { ClusterService, ClusterServiceServer } from "./cluster-service-server";
 import { IAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
 import { newAnalyticsWriterFromEnv } from "@khulnasoft/devtool-protocol/lib/util/analytics";
@@ -35,7 +35,7 @@ import { WorkspaceInstanceController, WorkspaceInstanceControllerImpl } from "./
 import { AppClusterWorkspaceInstancesController } from "./app-cluster-instance-controller";
 import { PrebuildUpdater } from "./prebuild-updater";
 import { Redis } from "ioredis";
-import { RedisPublisher, newRedisClient } from "@devtool/devtool-db/lib";
+import { RedisPublisher, newRedisClient } from "@khulnasoft/devtool-db/lib";
 
 export const containerModule = new ContainerModule((bind) => {
     bind(BridgeController).toSelf().inSingletonScope();

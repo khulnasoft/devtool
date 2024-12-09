@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { WorkspaceDB } from "@devtool/devtool-db/lib/workspace-db";
+import { WorkspaceDB } from "@khulnasoft/devtool-db/lib/workspace-db";
 import { HeadlessLogUrls } from "@khulnasoft/devtool-protocol/lib/headless-workspace-log";
 import { inject, injectable } from "inversify";
 import * as url from "url";
@@ -30,7 +30,7 @@ import {
     ListLogsResponse,
     LogDownloadURLRequest,
     LogDownloadURLResponse,
-} from "@devtool/content-service/lib/headless-log_pb";
+} from "@khulnasoft/content-service/lib/headless-log_pb";
 import { CachingHeadlessLogServiceClientProvider } from "../util/content-service-sugar";
 import { ctxIsAborted, ctxOnAbort } from "../util/request-context";
 import { PREBUILD_LOGS_PATH_PREFIX as PREBUILD_LOGS_PATH_PREFIX_common } from "@khulnasoft/public-api-common/lib/prebuild-utils";

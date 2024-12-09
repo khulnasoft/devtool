@@ -5,15 +5,15 @@
  */
 
 import { injectable, inject } from "inversify";
-import { WorkspaceDB, TeamDB } from "@devtool/devtool-db/lib";
+import { WorkspaceDB, TeamDB } from "@khulnasoft/devtool-db/lib";
 import { User, Workspace } from "@khulnasoft/devtool-protocol";
 import { StorageClient } from "../storage/storage-client";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
-import { StopWorkspacePolicy } from "@devtool/ws-manager/lib";
+import { StopWorkspacePolicy } from "@khulnasoft/ws-manager/lib";
 import { AuthProviderService } from "../auth/auth-provider-service";
 import { WorkspaceService } from "../workspace/workspace-service";
 import { UserService } from "./user-service";
-import { TransactionalContext } from "@devtool/devtool-db/lib/typeorm/transactional-db-impl";
+import { TransactionalContext } from "@khulnasoft/devtool-db/lib/typeorm/transactional-db-impl";
 import { OrganizationService } from "../orgs/organization-service";
 
 @injectable()

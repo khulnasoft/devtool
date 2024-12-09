@@ -6,7 +6,7 @@
 
 import { inject, injectable } from "inversify";
 import * as grpc from "@grpc/grpc-js";
-import { ProjectDB, RedisPublisher, WorkspaceDB } from "@devtool/devtool-db/lib";
+import { ProjectDB, RedisPublisher, WorkspaceDB } from "@khulnasoft/devtool-db/lib";
 import {
     CommitContext,
     GetWorkspaceTimeoutResult,
@@ -48,7 +48,7 @@ import {
     AdmissionLevel,
     ControlAdmissionRequest,
     TakeSnapshotRequest,
-} from "@devtool/ws-manager/lib";
+} from "@khulnasoft/ws-manager/lib";
 import {
     WorkspaceStarter,
     StartWorkspaceOptions as StarterStartWorkspaceOptions,
@@ -61,7 +61,7 @@ import * as crypto from "crypto";
 import { WorkspaceRegion, isWorkspaceRegion } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
 import { RegionService } from "./region-service";
 import { LazyPrebuildManager, ProjectsService } from "../projects/projects-service";
-import { WorkspaceManagerClientProvider } from "@devtool/ws-manager/lib/client-provider";
+import { WorkspaceManagerClientProvider } from "@khulnasoft/ws-manager/lib/client-provider";
 import { SupportedWorkspaceClass } from "@khulnasoft/devtool-protocol/lib/workspace-class";
 import { Config } from "../config";
 import { goDurationToHumanReadable } from "@khulnasoft/devtool-protocol/lib/util/timeutil";

@@ -7,7 +7,7 @@
 import { injectable, inject } from "inversify";
 import { Token, Identity, User, TokenEntry } from "@khulnasoft/devtool-protocol";
 import { HostContextProvider } from "../auth/host-context-provider";
-import { UserDB } from "@devtool/devtool-db/lib";
+import { UserDB } from "@khulnasoft/devtool-db/lib";
 import { v4 as uuidv4 } from "uuid";
 import { TokenProvider } from "./token-provider";
 import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";

@@ -31,7 +31,7 @@ import { AuthorizationService } from "../user/authorization-service";
 import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { Config } from "../config";
 import { EntitlementService } from "../billing/entitlement-service";
-import { TeamDB } from "@devtool/devtool-db/lib";
+import { TeamDB } from "@khulnasoft/devtool-db/lib";
 import { InvalidDevtoolYMLError } from "@khulnasoft/public-api-common/lib/public-api-errors";
 import { ImageFileRevisionMissing, RevisionNotFoundError } from "../repohost";
 

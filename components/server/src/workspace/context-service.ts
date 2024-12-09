@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { WorkspaceDB, DBWithTracing, TracedWorkspaceDB } from "@devtool/devtool-db/lib";
+import { WorkspaceDB, DBWithTracing, TracedWorkspaceDB } from "@khulnasoft/devtool-db/lib";
 import {
     CommitContext,
     PrebuiltWorkspace,

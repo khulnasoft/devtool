@@ -6,7 +6,7 @@
 
 import { v1 } from "@authzed/authzed-node";
 
-import { BUILTIN_INSTLLATION_ADMIN_USER_ID } from "@devtool/devtool-db/lib";
+import { BUILTIN_INSTLLATION_ADMIN_USER_ID } from "@khulnasoft/devtool-db/lib";
 import { Project, TeamMemberRole } from "@khulnasoft/devtool-protocol";
 import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import {

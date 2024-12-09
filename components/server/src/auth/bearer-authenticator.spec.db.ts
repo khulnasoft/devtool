@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { TypeORM, resetDB } from "@devtool/devtool-db/lib";
+import { TypeORM, resetDB } from "@khulnasoft/devtool-db/lib";
 import { BearerAuth, PersonalAccessToken } from "./bearer-authenticator";
 import { expect } from "chai";
 import { describe } from "mocha";

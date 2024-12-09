@@ -16,7 +16,7 @@ import {
 } from "@khulnasoft/devtool-protocol";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { PrebuiltWorkspaceState, WithCommitHistory } from "@khulnasoft/devtool-protocol/lib/protocol";
-import { PrebuildWithWorkspace, WorkspaceDB } from "@devtool/devtool-db/lib";
+import { PrebuildWithWorkspace, WorkspaceDB } from "@khulnasoft/devtool-db/lib";
 import { Config } from "../config";
 import { HostContextProvider } from "../auth/host-context-provider";
 import { ImageSourceProvider } from "../workspace/image-source-provider";

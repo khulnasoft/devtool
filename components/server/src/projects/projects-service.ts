@@ -5,7 +5,7 @@
  */
 
 import { inject, injectable } from "inversify";
-import { DBWithTracing, ProjectDB, TracedWorkspaceDB, WebhookEventDB, WorkspaceDB } from "@devtool/devtool-db/lib";
+import { DBWithTracing, ProjectDB, TracedWorkspaceDB, WebhookEventDB, WorkspaceDB } from "@khulnasoft/devtool-db/lib";
 import {
     Branch,
     PrebuildWithStatus,
@@ -29,7 +29,7 @@ import { IAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
 import { ErrorCodes, ApplicationError } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { URL } from "url";
 import { Authorizer, SYSTEM_USER, SYSTEM_USER_ID } from "../authorization/authorizer";
-import { TransactionalContext } from "@devtool/devtool-db/lib/typeorm/transactional-db-impl";
+import { TransactionalContext } from "@khulnasoft/devtool-db/lib/typeorm/transactional-db-impl";
 import { daysBefore, isDateSmaller } from "@khulnasoft/devtool-protocol/lib/util/timeutil";
 import deepmerge from "deepmerge";
 import { runWithSubjectId } from "../util/request-context";
@@ -580,14 +580,14 @@ export class ProjectsService {
             try {
                 const webhookEnabled = await repoService.isDevtoolWebhookEnabled(user, project.cloneUrl);
                 return webhookEnabled
-                    ? events[0] ?? {
+                    ? (events[0] ?? {
                           commit: "n/a",
                           creationTime: "",
                           id: "initial_data",
                           type: "initial_data",
                           rawEvent: "{}",
                           status: "processed",
-                      }
+                      })
                     : undefined;
             } catch (error) {
                 if (!UnauthorizedError.is(error) && error.message !== "unsupported") {

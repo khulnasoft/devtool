@@ -10,7 +10,7 @@ import {
     SubscribeResponse,
     GetWorkspacesRequest,
     PromisifiedWorkspaceManagerClient,
-} from "@devtool/ws-manager/lib";
+} from "@khulnasoft/ws-manager/lib";
 import { Disposable } from "@khulnasoft/devtool-protocol";
 import { ClientReadableStream } from "@grpc/grpc-js";
 import { log, LogPayload } from "@khulnasoft/devtool-protocol/lib/util/logging";

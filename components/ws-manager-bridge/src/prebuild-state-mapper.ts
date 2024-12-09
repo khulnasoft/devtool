@@ -8,7 +8,7 @@ import { HeadlessWorkspaceEventType, PrebuiltWorkspace } from "@khulnasoft/devto
 import { Client as ExperimentsClient } from "@khulnasoft/devtool-protocol/lib/experiments/types";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { TrustedValue } from "@khulnasoft/devtool-protocol/lib/util/scrubbing";
-import { WorkspacePhase, WorkspaceStatus } from "@devtool/ws-manager/lib";
+import { WorkspacePhase, WorkspaceStatus } from "@khulnasoft/ws-manager/lib";
 import { inject, injectable } from "inversify";
 
 export interface PrebuildUpdate {

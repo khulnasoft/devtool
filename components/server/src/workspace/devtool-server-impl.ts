@@ -4,7 +4,14 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { UserDB, WorkspaceDB, DBWithTracing, TracedWorkspaceDB, TeamDB, DBDevtoolToken } from "@devtool/devtool-db/lib";
+import {
+    UserDB,
+    WorkspaceDB,
+    DBWithTracing,
+    TracedWorkspaceDB,
+    TeamDB,
+    DBDevtoolToken,
+} from "@khulnasoft/devtool-db/lib";
 import {
     AuthProviderEntry,
     AuthProviderInfo,
@@ -71,9 +78,13 @@ import {
     TraceContext,
     TraceContextWithSpan,
 } from "@khulnasoft/devtool-protocol/lib/util/tracing";
-import { RemoteIdentifyMessage, RemotePageMessage, RemoteTrackMessage } from "@khulnasoft/devtool-protocol/lib/analytics";
+import {
+    RemoteIdentifyMessage,
+    RemotePageMessage,
+    RemoteTrackMessage,
+} from "@khulnasoft/devtool-protocol/lib/analytics";
 import { SupportedWorkspaceClass } from "@khulnasoft/devtool-protocol/lib/workspace-class";
-import { StopWorkspacePolicy } from "@devtool/ws-manager/lib/core_pb";
+import { StopWorkspacePolicy } from "@khulnasoft/ws-manager/lib/core_pb";
 import { inject, injectable } from "inversify";
 import { v4 as uuidv4, validate as uuidValidate } from "uuid";
 import { Disposable, CancellationToken } from "vscode-jsonrpc";
@@ -119,7 +130,7 @@ import {
     BillingServiceClient,
     BillingServiceDefinition,
     StripeCustomer,
-} from "@devtool/usage-api/lib/usage/v1/billing.pb";
+} from "@khulnasoft/usage-api/lib/usage/v1/billing.pb";
 import { ClientError } from "nice-grpc-common";
 import { BillingModes } from "../billing/billing-mode";
 import { Authorizer, SYSTEM_USER, SYSTEM_USER_ID } from "../authorization/authorizer";
@@ -1734,9 +1745,14 @@ export class DevtoolServerImpl implements DevtoolServerWithTracing, Disposable {
         traceAPIParams(ctx, { options });
 
         const user = await this.checkAndBlockUser("generateNewDevtoolToken");
-        return this.devtoolTokenService.generateNewDevtoolToken(user.id, user.id, options, (dbToken: DBDevtoolToken) => {
-            return this.guardAccess({ kind: "devtoolToken", subject: dbToken }, "create");
-        });
+        return this.devtoolTokenService.generateNewDevtoolToken(
+            user.id,
+            user.id,
+            options,
+            (dbToken: DBDevtoolToken) => {
+                return this.guardAccess({ kind: "devtoolToken", subject: dbToken }, "create");
+            },
+        );
     }
 
     public async getDevtoolTokenScopes(ctx: TraceContext, tokenHash: string): Promise<string[]> {

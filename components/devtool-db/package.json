@@ -1,5 +1,5 @@
 {
-  "name": "@devtool/devtool-db",
+  "name": "@khulnasoft/devtool-db",
   "license": "AGPL-3.0",
   "version": "0.1.5",
   "scripts": {

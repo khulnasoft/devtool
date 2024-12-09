@@ -7,11 +7,11 @@
 import { inject, injectable, interfaces, optional } from "inversify";
 import * as grpc from "@grpc/grpc-js";
 import { createClientCallMetricsInterceptor, IClientCallMetrics } from "@khulnasoft/devtool-protocol/lib/util/grpc";
-import { IDEPluginServiceClient } from "@devtool/content-service/lib/ideplugin_grpc_pb";
-import { ContentServiceClient } from "@devtool/content-service/lib/content_grpc_pb";
-import { BlobServiceClient } from "@devtool/content-service/lib/blobs_grpc_pb";
-import { WorkspaceServiceClient } from "@devtool/content-service/lib/workspace_grpc_pb";
-import { HeadlessLogServiceClient } from "@devtool/content-service/lib/headless-log_grpc_pb";
+import { IDEPluginServiceClient } from "@khulnasoft/content-service/lib/ideplugin_grpc_pb";
+import { ContentServiceClient } from "@khulnasoft/content-service/lib/content_grpc_pb";
+import { BlobServiceClient } from "@khulnasoft/content-service/lib/blobs_grpc_pb";
+import { WorkspaceServiceClient } from "@khulnasoft/content-service/lib/workspace_grpc_pb";
+import { HeadlessLogServiceClient } from "@khulnasoft/content-service/lib/headless-log_grpc_pb";
 
 export const ContentServiceClientConfig = Symbol("ContentServiceClientConfig");
 export const ContentServiceClientCallMetrics = Symbol("ContentServiceClientCallMetrics");

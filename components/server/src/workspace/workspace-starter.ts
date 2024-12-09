@@ -13,8 +13,8 @@ import {
     PrebuildInitializer,
     SnapshotInitializer,
     WorkspaceInitializer,
-} from "@devtool/content-service/lib";
-import { CompositeInitializer, FromBackupInitializer } from "@devtool/content-service/lib/initializer_pb";
+} from "@khulnasoft/content-service/lib";
+import { CompositeInitializer, FromBackupInitializer } from "@khulnasoft/content-service/lib/initializer_pb";
 import {
     DBWithTracing,
     ProjectDB,
@@ -24,8 +24,8 @@ import {
     TracedWorkspaceDB,
     UserDB,
     WorkspaceDB,
-} from "@devtool/devtool-db/lib";
-import { BlockedRepositoryDB } from "@devtool/devtool-db/lib/blocked-repository-db";
+} from "@khulnasoft/devtool-db/lib";
+import { BlockedRepositoryDB } from "@khulnasoft/devtool-db/lib/blocked-repository-db";
 import {
     AdditionalContentContext,
     BillingTier,
@@ -67,7 +67,7 @@ import { Deferred } from "@khulnasoft/devtool-protocol/lib/util/deferred";
 import { LogContext, log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { WorkspaceRegion } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
-import * as IdeServiceApi from "@devtool/ide-service-api/lib/ide.pb";
+import * as IdeServiceApi from "@khulnasoft/ide-service-api/lib/ide.pb";
 import {
     BuildRegistryAuth,
     BuildRegistryAuthSelective,
@@ -80,15 +80,15 @@ import {
     BuildStatus,
     ImageBuilderClientProvider,
     ResolveBaseImageRequest,
-} from "@devtool/image-builder/lib";
+} from "@khulnasoft/image-builder/lib";
 import {
     IDEImage,
     PromisifiedWorkspaceManagerClient,
     StartWorkspaceResponse,
     StartWorkspaceSpec,
     WorkspaceFeatureFlag,
-} from "@devtool/ws-manager/lib";
-import { WorkspaceManagerClientProvider } from "@devtool/ws-manager/lib/client-provider";
+} from "@khulnasoft/ws-manager/lib";
+import { WorkspaceManagerClientProvider } from "@khulnasoft/ws-manager/lib/client-provider";
 import {
     AdmissionLevel,
     EnvironmentVariable,
@@ -102,7 +102,7 @@ import {
     StopWorkspacePolicy,
     StopWorkspaceRequest,
     DescribeWorkspaceRequest,
-} from "@devtool/ws-manager/lib/core_pb";
+} from "@khulnasoft/ws-manager/lib/core_pb";
 import * as grpc from "@grpc/grpc-js";
 import * as crypto from "crypto";
 import { inject, injectable } from "inversify";
@@ -192,7 +192,10 @@ export async function getWorkspaceClassForInstance(
 }
 
 class StartInstanceError extends Error {
-    constructor(public readonly reason: FailedInstanceStartReason, public readonly cause: any) {
+    constructor(
+        public readonly reason: FailedInstanceStartReason,
+        public readonly cause: any,
+    ) {
         super("Starting workspace instance failed: " + cause.message);
     }
 }
@@ -328,10 +331,10 @@ export class WorkspaceStarter {
                     const enableExperimentalJBTB = await getFeatureFlagEnableExperimentalJBTB(user.id);
                     const preferToolbox = !enableExperimentalJBTB
                         ? false
-                        : ideSettings?.preferToolbox ??
+                        : (ideSettings?.preferToolbox ??
                           user.additionalData?.ideSettings?.preferToolbox ??
                           ideConfig.preferToolbox ??
-                          false;
+                          false);
                     ideSettings = {
                         ...ideSettings,
                         defaultIde: ideConfig.ide,
@@ -979,7 +982,7 @@ export class WorkspaceStarter {
                     configuration.ideConfig!.useLatest = !!ideSettings.useLatestVersion;
                     configuration.ideConfig!.preferToolbox = !enableExperimentalJBTB
                         ? false
-                        : ideSettings.preferToolbox ?? false;
+                        : (ideSettings.preferToolbox ?? false);
                 } catch (error) {
                     log.error({ userId: user.id, workspaceId: workspace.id }, "cannot parse ideSettings", error);
                 }
@@ -2076,7 +2079,10 @@ export async function isWorkspaceClassDiscoveryEnabled(user: { id: string }): Pr
 }
 
 export class ScmStartError extends Error {
-    constructor(public readonly host: string, msg: string) {
+    constructor(
+        public readonly host: string,
+        msg: string,
+    ) {
         super(`${host}: ` + msg);
     }
 

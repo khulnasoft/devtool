@@ -8,7 +8,7 @@ import { inject, injectable } from "inversify";
 
 import { Config } from "../config";
 import { BillingMode } from "@khulnasoft/devtool-protocol/lib/billing-mode";
-import { CostCenter_BillingStrategy } from "@devtool/usage-api/lib/usage/v1/usage.pb";
+import { CostCenter_BillingStrategy } from "@khulnasoft/usage-api/lib/usage/v1/usage.pb";
 import { UsageService } from "../orgs/usage-service";
 
 /**

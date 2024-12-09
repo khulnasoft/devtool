@@ -4,8 +4,8 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { TypeORM, UserDB, resetDB } from "@devtool/devtool-db/lib";
-import { AuditLogDB } from "@devtool/devtool-db/lib/audit-log-db";
+import { TypeORM, UserDB, resetDB } from "@khulnasoft/devtool-db/lib";
+import { AuditLogDB } from "@khulnasoft/devtool-db/lib/audit-log-db";
 import { Organization, User } from "@khulnasoft/devtool-protocol";
 import { expect } from "chai";
 import { Container } from "inversify";

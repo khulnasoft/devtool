@@ -7,6 +7,7 @@ require (
 	github.com/Masterminds/semver v1.5.0 // indirect
 	github.com/Masterminds/sprig v2.22.0+incompatible
 	github.com/alecthomas/repr v0.0.0-20200325044227-4184120f674c
+	github.com/huandu/xstrings v1.3.2 // indirect
 	github.com/khulnasoft/devtool/common-go v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/devtool/components/public-api/go v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/devtool/content-service/api v0.0.0-00010101000000-000000000000
@@ -15,7 +16,6 @@ require (
 	github.com/khulnasoft/devtool/ws-daemon/api v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/devtool/ws-manager-bridge/api v0.0.0-00010101000000-000000000000
 	github.com/khulnasoft/devtool/ws-manager/api v0.0.0-00010101000000-000000000000
-	github.com/huandu/xstrings v1.3.2 // indirect
 	github.com/mitchellh/copystructure v1.2.0 // indirect
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/sirupsen/logrus v1.9.3
@@ -36,7 +36,6 @@ require (
 	github.com/fatih/camelcase v1.0.0 // indirect
 	github.com/fatih/gomodifytags v1.14.0 // indirect
 	github.com/fatih/structtag v1.2.0 // indirect
-	github.com/khulnasoft/devtool/components/scrubber v0.0.0-20230629121047-713293e23c47 // indirect
 	github.com/go-logr/logr v1.4.1 // indirect
 	github.com/go-openapi/jsonpointer v0.19.6 // indirect
 	github.com/go-openapi/jsonreference v0.20.2 // indirect
@@ -55,6 +54,7 @@ require (
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
+	github.com/khulnasoft/devtool/components/scrubber v0.0.0-20241209224028-94c9dc49a033 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/mitchellh/reflectwalk v1.0.2 // indirect
 	github.com/moby/spdystream v0.2.0 // indirect

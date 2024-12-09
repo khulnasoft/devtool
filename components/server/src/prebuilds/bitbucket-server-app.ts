@@ -6,7 +6,7 @@
 
 import express from "express";
 import { postConstruct, injectable, inject } from "inversify";
-import { TeamDB, WebhookEventDB } from "@devtool/devtool-db/lib";
+import { TeamDB, WebhookEventDB } from "@khulnasoft/devtool-db/lib";
 import { PrebuildManager } from "./prebuild-manager";
 import { TokenService } from "../user/token-service";
 import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";

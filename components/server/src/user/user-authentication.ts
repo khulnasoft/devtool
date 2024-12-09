@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import { User, Identity, Token, IdentityLookup } from "@khulnasoft/devtool-protocol";
-import { EmailDomainFilterDB, MaybeUser, UserDB } from "@devtool/devtool-db/lib";
+import { EmailDomainFilterDB, MaybeUser, UserDB } from "@khulnasoft/devtool-db/lib";
 import { HostContextProvider } from "../auth/host-context-provider";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { Config } from "../config";

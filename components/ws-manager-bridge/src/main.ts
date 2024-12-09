@@ -10,12 +10,12 @@ import * as prometheusClient from "prom-client";
 import { log, LogrusLogLevel } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { installLogCountMetric } from "@khulnasoft/devtool-protocol/lib/util/logging-node";
 import { DebugApp } from "@khulnasoft/devtool-protocol/lib/util/debug-app";
-import { TypeORM } from "@devtool/devtool-db/lib/typeorm/typeorm";
+import { TypeORM } from "@khulnasoft/devtool-db/lib/typeorm/typeorm";
 import { TracingManager } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { ClusterServiceServer } from "./cluster-service-server";
 import { BridgeController } from "./bridge-controller";
 import { AppClusterWorkspaceInstancesController } from "./app-cluster-instance-controller";
-import { redisMetricsRegistry } from "@devtool/devtool-db/lib";
+import { redisMetricsRegistry } from "@khulnasoft/devtool-db/lib";
 import { health, startHealthEndpoint } from "./healthz";
 
 log.enableJSONLogging("ws-manager-bridge", undefined, LogrusLogLevel.getFromEnv());

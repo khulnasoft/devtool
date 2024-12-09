@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { DeleteUserContentRequest, DeleteUserContentResponse } from "@devtool/content-service/lib/content_pb";
+import { DeleteUserContentRequest, DeleteUserContentResponse } from "@khulnasoft/content-service/lib/content_pb";
 import {
     PluginDownloadURLRequest,
     PluginDownloadURLResponse,
@@ -12,7 +12,7 @@ import {
     PluginHashResponse,
     PluginUploadURLRequest,
     PluginUploadURLResponse,
-} from "@devtool/content-service/lib/ideplugin_pb";
+} from "@khulnasoft/content-service/lib/ideplugin_pb";
 import {
     DeleteWorkspaceRequest,
     DeleteWorkspaceResponse,
@@ -20,7 +20,7 @@ import {
     WorkspaceDownloadURLResponse,
     WorkspaceSnapshotExistsRequest,
     WorkspaceSnapshotExistsResponse,
-} from "@devtool/content-service/lib/workspace_pb";
+} from "@khulnasoft/content-service/lib/workspace_pb";
 import { SnapshotUrl } from "@khulnasoft/devtool-protocol";
 import { inject, injectable } from "inversify";
 import {

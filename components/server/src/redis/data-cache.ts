@@ -11,7 +11,7 @@ import {
     redisCacheSetLatencyHistogram,
 } from "../prometheus-metrics";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
-import { DataCache } from "@devtool/devtool-db/lib/data-cache";
+import { DataCache } from "@khulnasoft/devtool-db/lib/data-cache";
 import { Redis } from "ioredis";
 
 const TTL_SEC = 5 * 60; // 5 minutes

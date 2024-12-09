@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { BUILTIN_INSTLLATION_ADMIN_USER_ID, UserDB } from "@devtool/devtool-db/lib";
+import { BUILTIN_INSTLLATION_ADMIN_USER_ID, UserDB } from "@khulnasoft/devtool-db/lib";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { inject, injectable } from "inversify";
 import { Job } from "./runner";

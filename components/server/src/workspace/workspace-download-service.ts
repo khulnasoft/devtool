@@ -6,7 +6,7 @@
 
 import { injectable, inject } from "inversify";
 import express from "express";
-import { TracedWorkspaceDB, DBWithTracing, WorkspaceDB } from "@devtool/devtool-db/lib";
+import { TracedWorkspaceDB, DBWithTracing, WorkspaceDB } from "@khulnasoft/devtool-db/lib";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { Permission, User } from "@khulnasoft/devtool-protocol";
 import { StorageClient } from "../storage/storage-client";

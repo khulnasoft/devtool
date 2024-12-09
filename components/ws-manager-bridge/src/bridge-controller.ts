@@ -7,8 +7,8 @@
 import { inject, injectable, interfaces } from "inversify";
 import { WorkspaceClusterInfo, WorkspaceManagerBridge, WorkspaceManagerBridgeFactory } from "./bridge";
 import { Configuration } from "./config";
-import { WorkspaceManagerClientProvider } from "@devtool/ws-manager/lib/client-provider";
-import { WorkspaceManagerClientProviderSource } from "@devtool/ws-manager/lib/client-provider-source";
+import { WorkspaceManagerClientProvider } from "@khulnasoft/ws-manager/lib/client-provider";
+import { WorkspaceManagerClientProviderSource } from "@khulnasoft/ws-manager/lib/client-provider-source";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { TLSConfig, WorkspaceClusterWoTLS } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
 import { WorkspaceCluster } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";

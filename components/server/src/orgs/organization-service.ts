@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { BUILTIN_INSTLLATION_ADMIN_USER_ID, TeamDB, UserDB } from "@devtool/devtool-db/lib";
+import { BUILTIN_INSTLLATION_ADMIN_USER_ID, TeamDB, UserDB } from "@khulnasoft/devtool-db/lib";
 import {
     OrgMemberInfo,
     Organization,
@@ -21,7 +21,7 @@ import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { inject, injectable } from "inversify";
 import { Authorizer, SYSTEM_USER, SYSTEM_USER_ID } from "../authorization/authorizer";
 import { ProjectsService } from "../projects/projects-service";
-import { TransactionalContext } from "@devtool/devtool-db/lib/typeorm/transactional-db-impl";
+import { TransactionalContext } from "@khulnasoft/devtool-db/lib/typeorm/transactional-db-impl";
 import { DefaultWorkspaceImageValidator } from "./default-workspace-image-validator";
 import { getPrimaryEmail } from "@khulnasoft/public-api-common/lib/user-utils";
 import { UserService } from "../user/user-service";

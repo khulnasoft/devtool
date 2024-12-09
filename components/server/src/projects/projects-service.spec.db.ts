@@ -4,8 +4,8 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { ProjectDB, TypeORM, UserDB, WorkspaceDB } from "@devtool/devtool-db/lib";
-import { resetDB } from "@devtool/devtool-db/lib/test/reset-db";
+import { ProjectDB, TypeORM, UserDB, WorkspaceDB } from "@khulnasoft/devtool-db/lib";
+import { resetDB } from "@khulnasoft/devtool-db/lib/test/reset-db";
 import { Organization, Project, ProjectSettings, User } from "@khulnasoft/devtool-protocol";
 import { Experiments } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import { ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";

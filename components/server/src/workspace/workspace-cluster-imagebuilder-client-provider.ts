@@ -11,12 +11,12 @@ import {
     ImageBuilderClient,
     ImageBuilderClientProvider,
     PromisifiedImageBuilderClient,
-} from "@devtool/image-builder/lib";
-import { WorkspaceManagerClientProvider } from "@devtool/ws-manager/lib/client-provider";
+} from "@khulnasoft/image-builder/lib";
+import { WorkspaceManagerClientProvider } from "@khulnasoft/ws-manager/lib/client-provider";
 import {
     WorkspaceManagerClientProviderCompositeSource,
     WorkspaceManagerClientProviderSource,
-} from "@devtool/ws-manager/lib/client-provider-source";
+} from "@khulnasoft/ws-manager/lib/client-provider-source";
 import { inject, injectable } from "inversify";
 
 @injectable()

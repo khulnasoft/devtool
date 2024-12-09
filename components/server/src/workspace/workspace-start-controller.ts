@@ -7,7 +7,7 @@
 import { inject, injectable } from "inversify";
 import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
 import { Job } from "../jobs/runner";
-import { DBWithTracing, TracedWorkspaceDB, UserDB, WorkspaceDB } from "@devtool/devtool-db/lib";
+import { DBWithTracing, TracedWorkspaceDB, UserDB, WorkspaceDB } from "@khulnasoft/devtool-db/lib";
 import { durationLongerThanSeconds } from "@khulnasoft/devtool-protocol/lib/util/timeutil";
 import { WorkspaceStarter } from "./workspace-starter";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";

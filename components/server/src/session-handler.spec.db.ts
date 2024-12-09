@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { TypeORM, resetDB } from "@devtool/devtool-db/lib";
+import { TypeORM, resetDB } from "@khulnasoft/devtool-db/lib";
 import { User } from "@khulnasoft/devtool-protocol";
 import { Deferred } from "@khulnasoft/devtool-protocol/lib/util/deferred";
 import { expect } from "chai";

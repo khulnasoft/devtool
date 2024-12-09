@@ -7,7 +7,7 @@
 import { ErrorCodes, ApplicationError } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { LinkedInProfile, User } from "@khulnasoft/devtool-protocol/lib/protocol";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
-import { LinkedInProfileDB } from "@devtool/devtool-db/lib";
+import { LinkedInProfileDB } from "@khulnasoft/devtool-db/lib";
 import { inject, injectable } from "inversify";
 import fetch from "node-fetch";
 import { Config } from "./config";

@@ -5,9 +5,12 @@
  */
 
 import { User, Workspace, WorkspaceInstance } from "@khulnasoft/devtool-protocol";
-import { WorkspaceClusterWoTLS, WorkspaceManagerConnectionInfo } from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
-import { PromisifiedWorkspaceManagerClient } from "@devtool/ws-manager/lib";
-import { IWorkspaceClusterStartSet, WorkspaceManagerClientProvider } from "@devtool/ws-manager/lib/client-provider";
+import {
+    WorkspaceClusterWoTLS,
+    WorkspaceManagerConnectionInfo,
+} from "@khulnasoft/devtool-protocol/lib/workspace-cluster";
+import { PromisifiedWorkspaceManagerClient } from "@khulnasoft/ws-manager/lib";
+import { IWorkspaceClusterStartSet, WorkspaceManagerClientProvider } from "@khulnasoft/ws-manager/lib/client-provider";
 import { ChannelCredentials, Client, ClientOptions } from "@grpc/grpc-js";
 
 export class WorkspaceManagerClientProviderMock extends WorkspaceManagerClientProvider {

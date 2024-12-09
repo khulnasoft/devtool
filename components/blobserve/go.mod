@@ -3,14 +3,14 @@ module github.com/khulnasoft/devtool/blobserve
 go 1.22
 
 require (
-	github.com/containerd/containerd v1.7.13
+	github.com/containerd/containerd v1.7.11
 	github.com/docker/cli v25.0.1+incompatible
 	github.com/docker/distribution v2.8.3+incompatible
-	github.com/khulnasoft/devtool/common-go v0.0.0-00010101000000-000000000000
-	github.com/khulnasoft/devtool/registry-facade v0.0.0-00010101000000-000000000000
 	github.com/google/go-cmp v0.6.0
 	github.com/gorilla/mux v1.8.1
 	github.com/heptiolabs/healthcheck v0.0.0-20211123025425-613501dd5deb
+	github.com/khulnasoft/devtool/common-go v0.0.0-00010101000000-000000000000
+	github.com/khulnasoft/devtool/registry-facade v0.0.0-00010101000000-000000000000
 	github.com/opencontainers/image-spec v1.1.0-rc2.0.20221005185240-3a7f492d3f1b
 	github.com/prometheus/client_golang v1.18.0
 	github.com/spf13/cobra v1.6.0
@@ -34,8 +34,6 @@ require (
 	github.com/facebookgo/atomicfile v0.0.0-20151019160806-2de1f203e7d5 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
-	github.com/khulnasoft/devtool/components/scrubber v0.0.0-00010101000000-000000000000 // indirect
-	github.com/khulnasoft/devtool/registry-facade/api v0.0.0-00010101000000-000000000000 // indirect
 	github.com/go-logr/logr v1.4.1 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
@@ -76,6 +74,8 @@ require (
 	github.com/ipld/go-ipld-prime v0.21.0 // indirect
 	github.com/jbenet/goprocess v0.1.4 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
+	github.com/khulnasoft/devtool/components/scrubber v0.0.0-20241209224028-94c9dc49a033 // indirect
+	github.com/khulnasoft/devtool/registry-facade/api v0.0.0-00010101000000-000000000000 // indirect
 	github.com/klauspost/compress v1.17.6 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.7 // indirect
 	github.com/libp2p/go-buffer-pool v0.1.0 // indirect

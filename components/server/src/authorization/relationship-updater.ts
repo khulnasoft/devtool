@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { ProjectDB, TeamDB, UserDB, WorkspaceDB } from "@devtool/devtool-db/lib";
+import { ProjectDB, TeamDB, UserDB, WorkspaceDB } from "@khulnasoft/devtool-db/lib";
 import { Organization, User } from "@khulnasoft/devtool-protocol";
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { inject, injectable } from "inversify";

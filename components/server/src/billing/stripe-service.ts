@@ -13,7 +13,7 @@ import {
     observeStripeClientRequestsCompleted,
     stripeClientRequestsCompletedDurationSeconds,
 } from "../prometheus-metrics";
-import { BillingServiceClient, BillingServiceDefinition } from "@devtool/usage-api/lib/usage/v1/billing.pb";
+import { BillingServiceClient, BillingServiceDefinition } from "@khulnasoft/usage-api/lib/usage/v1/billing.pb";
 import { ErrorCodes, ApplicationError } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { AttributionId } from "@khulnasoft/devtool-protocol/lib/attribution";
 

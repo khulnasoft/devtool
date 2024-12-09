@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { ProjectDB, UserDB } from "@devtool/devtool-db/lib";
+import { ProjectDB, UserDB } from "@khulnasoft/devtool-db/lib";
 import {
     CommitContext,
     EnvVar,

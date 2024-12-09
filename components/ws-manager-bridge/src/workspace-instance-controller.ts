@@ -5,20 +5,25 @@
  */
 
 import { TraceContext } from "@khulnasoft/devtool-protocol/lib/util/tracing";
-import { GetWorkspacesRequest } from "@devtool/ws-manager/lib";
-import { Disposable, DisposableCollection, RunningWorkspaceInfo, WorkspaceInstance } from "@khulnasoft/devtool-protocol";
+import { GetWorkspacesRequest } from "@khulnasoft/ws-manager/lib";
+import {
+    Disposable,
+    DisposableCollection,
+    RunningWorkspaceInfo,
+    WorkspaceInstance,
+} from "@khulnasoft/devtool-protocol";
 import { inject, injectable } from "inversify";
 import { Configuration } from "./config";
 import { log, LogContext } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { Metrics } from "./metrics";
-import { WorkspaceDB } from "@devtool/devtool-db/lib/workspace-db";
-import { DBWithTracing, TracedUserDB, TracedWorkspaceDB } from "@devtool/devtool-db/lib/traced-db";
-import { UserDB } from "@devtool/devtool-db/lib/user-db";
+import { WorkspaceDB } from "@khulnasoft/devtool-db/lib/workspace-db";
+import { DBWithTracing, TracedUserDB, TracedWorkspaceDB } from "@khulnasoft/devtool-db/lib/traced-db";
+import { UserDB } from "@khulnasoft/devtool-db/lib/user-db";
 import { IAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
 import { ClientProvider } from "./wsman-subscriber";
 import { repeat } from "@khulnasoft/devtool-protocol/lib/util/repeat";
 import { PrebuildUpdater } from "./prebuild-updater";
-import { RedisPublisher } from "@devtool/devtool-db/lib";
+import { RedisPublisher } from "@khulnasoft/devtool-db/lib";
 import { durationLongerThanSeconds } from "@khulnasoft/devtool-protocol/lib/util/timeutil";
 
 export const WorkspaceInstanceController = Symbol("WorkspaceInstanceController");

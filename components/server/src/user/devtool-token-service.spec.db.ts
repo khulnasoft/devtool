@@ -4,14 +4,14 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { BUILTIN_INSTLLATION_ADMIN_USER_ID, TypeORM } from "@devtool/devtool-db/lib";
+import { BUILTIN_INSTLLATION_ADMIN_USER_ID, TypeORM } from "@khulnasoft/devtool-db/lib";
 import { DevtoolTokenType, Organization, User } from "@khulnasoft/devtool-protocol";
 import { Experiments } from "@khulnasoft/devtool-protocol/lib/experiments/configcat-server";
 import * as chai from "chai";
 import { Container } from "inversify";
 import "mocha";
 import { createTestContainer } from "../test/service-testing-container-module";
-import { resetDB } from "@devtool/devtool-db/lib/test/reset-db";
+import { resetDB } from "@khulnasoft/devtool-db/lib/test/reset-db";
 import { OrganizationService } from "../orgs/organization-service";
 import { UserService } from "./user-service";
 import { expectError } from "../test/expect-utils";
@@ -67,7 +67,10 @@ describe("DevtoolTokenService", async () => {
         const resp1 = await gs.getDevtoolTokens(member.id, member.id);
         expect(resp1.length).to.equal(0);
 
-        await gs.generateNewDevtoolToken(member.id, member.id, { name: "token1", type: DevtoolTokenType.API_AUTH_TOKEN });
+        await gs.generateNewDevtoolToken(member.id, member.id, {
+            name: "token1",
+            type: DevtoolTokenType.API_AUTH_TOKEN,
+        });
 
         const resp2 = await gs.getDevtoolTokens(member.id, member.id);
         expect(resp2.length).to.equal(1);
@@ -75,13 +78,22 @@ describe("DevtoolTokenService", async () => {
         await expectError(ErrorCodes.NOT_FOUND, gs.getDevtoolTokens(stranger.id, member.id));
         await expectError(
             ErrorCodes.NOT_FOUND,
-            gs.generateNewDevtoolToken(stranger.id, member.id, { name: "token2", type: DevtoolTokenType.API_AUTH_TOKEN }),
+            gs.generateNewDevtoolToken(stranger.id, member.id, {
+                name: "token2",
+                type: DevtoolTokenType.API_AUTH_TOKEN,
+            }),
         );
     });
 
     it("should list devtool tokens", async () => {
-        await gs.generateNewDevtoolToken(member.id, member.id, { name: "token1", type: DevtoolTokenType.API_AUTH_TOKEN });
-        await gs.generateNewDevtoolToken(member.id, member.id, { name: "token2", type: DevtoolTokenType.API_AUTH_TOKEN });
+        await gs.generateNewDevtoolToken(member.id, member.id, {
+            name: "token1",
+            type: DevtoolTokenType.API_AUTH_TOKEN,
+        });
+        await gs.generateNewDevtoolToken(member.id, member.id, {
+            name: "token2",
+            type: DevtoolTokenType.API_AUTH_TOKEN,
+        });
 
         const tokens = await gs.getDevtoolTokens(member.id, member.id);
         expect(tokens.length).to.equal(2);

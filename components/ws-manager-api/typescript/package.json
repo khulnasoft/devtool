@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@devtool/ws-manager",
+  "name": "@khulnasoft/ws-manager",
   "version": "0.1.5",
   "license": "UNLICENSED",
   "files": [
@@ -25,7 +25,7 @@
     "exit": true
   },
   "dependencies": {
-    "@devtool/content-service": "0.1.5",
+    "@khulnasoft/content-service": "*",
     "@khulnasoft/devtool-protocol": "*",
     "@grpc/grpc-js": "1.10.8",
     "google-protobuf": "^3.19.1",

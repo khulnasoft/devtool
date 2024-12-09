@@ -12,7 +12,7 @@ import { incSpiceDBRequestsCheckTotal, observeSpicedbClientLatency, spicedbClien
 import { SpiceDBClientProvider } from "./spicedb";
 import * as grpc from "@grpc/grpc-js";
 import { base64decode } from "@jmondi/oauth2-server";
-import { DecodedZedToken } from "@devtool/spicedb-impl/lib/impl/v1/impl.pb";
+import { DecodedZedToken } from "@khulnasoft/spicedb-impl/lib/impl/v1/impl.pb";
 import { ctxTryGetCache, ctxTrySetCache } from "../util/request-context";
 import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { isGrpcError } from "@khulnasoft/devtool-protocol/lib/util/grpc";
@@ -72,7 +72,10 @@ interface DeletionResult {
 }
 
 export class SpiceDBAuthorizer {
-    constructor(private readonly clientProvider: SpiceDBClientProvider, private readonly tokenCache: ZedTokenCache) {}
+    constructor(
+        private readonly clientProvider: SpiceDBClientProvider,
+        private readonly tokenCache: ZedTokenCache,
+    ) {}
 
     private get client(): v1.ZedPromiseClientInterface {
         return this.clientProvider.getClient();

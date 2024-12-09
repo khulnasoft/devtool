@@ -6,8 +6,8 @@
 
 import * as crypto from "crypto";
 import { inject, injectable } from "inversify";
-import { OneTimeSecretDB, TeamDB, UserDB, WorkspaceDB } from "@devtool/devtool-db/lib";
-import { BUILTIN_INSTLLATION_ADMIN_USER_ID } from "@devtool/devtool-db/lib/user-db";
+import { OneTimeSecretDB, TeamDB, UserDB, WorkspaceDB } from "@khulnasoft/devtool-db/lib";
+import { BUILTIN_INSTLLATION_ADMIN_USER_ID } from "@khulnasoft/devtool-db/lib/user-db";
 import express from "express";
 import { Authenticator } from "../auth/authenticator";
 import { Config } from "../config";
@@ -32,7 +32,7 @@ import { ClientMetadata } from "../websocket/websocket-connection-manager";
 import * as fs from "fs/promises";
 import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { DevtoolServerImpl } from "../workspace/devtool-server-impl";
-import { StopWorkspacePolicy } from "@devtool/ws-manager/lib";
+import { StopWorkspacePolicy } from "@khulnasoft/ws-manager/lib";
 import { UserService } from "./user-service";
 import { WorkspaceService } from "../workspace/workspace-service";
 import { runWithSubjectId } from "../util/request-context";

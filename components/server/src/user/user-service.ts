@@ -6,7 +6,7 @@
 
 import { inject, injectable } from "inversify";
 import { Config } from "../config";
-import { UserDB } from "@devtool/devtool-db/lib";
+import { UserDB } from "@khulnasoft/devtool-db/lib";
 import { Authorizer } from "../authorization/authorizer";
 import {
     AdditionalUserData,
@@ -22,7 +22,7 @@ import { ApplicationError, ErrorCodes } from "@khulnasoft/devtool-protocol/lib/m
 import { log } from "@khulnasoft/devtool-protocol/lib/util/logging";
 import { CreateUserParams } from "./user-authentication";
 import { IAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
-import { TransactionalContext } from "@devtool/devtool-db/lib/typeorm/transactional-db-impl";
+import { TransactionalContext } from "@khulnasoft/devtool-db/lib/typeorm/transactional-db-impl";
 import { RelationshipUpdater } from "../authorization/relationship-updater";
 import { getName, getPrimaryEmail } from "@khulnasoft/public-api-common/lib/user-utils";
 

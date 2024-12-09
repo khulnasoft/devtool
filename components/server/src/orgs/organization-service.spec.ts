@@ -4,7 +4,7 @@
  * See License.AGPL.txt in the project root for license information.
  */
 
-import { TeamDB, testContainer } from "@devtool/devtool-db/lib";
+import { TeamDB, testContainer } from "@khulnasoft/devtool-db/lib";
 import * as chai from "chai";
 import { Container } from "inversify";
 import "mocha";

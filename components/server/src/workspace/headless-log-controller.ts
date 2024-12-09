@@ -23,9 +23,9 @@ import {
     FGAResourceAccessGuard,
     ResourceAccessGuard,
 } from "../auth/resource-access";
-import { DBWithTracing, TracedWorkspaceDB } from "@devtool/devtool-db/lib/traced-db";
-import { WorkspaceDB } from "@devtool/devtool-db/lib/workspace-db";
-import { TeamDB } from "@devtool/devtool-db/lib/team-db";
+import { DBWithTracing, TracedWorkspaceDB } from "@khulnasoft/devtool-db/lib/traced-db";
+import { WorkspaceDB } from "@khulnasoft/devtool-db/lib/workspace-db";
+import { TeamDB } from "@khulnasoft/devtool-db/lib/team-db";
 import {
     HEADLESS_LOGS_PATH_PREFIX,
     HEADLESS_LOG_DOWNLOAD_PATH_PREFIX,

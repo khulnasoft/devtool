@@ -10,7 +10,7 @@ import { inject, injectable } from "inversify";
 import { Config } from "../config";
 import { Twilio } from "twilio";
 import { ServiceContext } from "twilio/lib/rest/verify/v2/service";
-import { TeamDB, UserDB } from "@devtool/devtool-db/lib";
+import { TeamDB, UserDB } from "@khulnasoft/devtool-db/lib";
 import { ErrorCodes, ApplicationError } from "@khulnasoft/devtool-protocol/lib/messaging/error";
 import { v4 as uuidv4, validate as uuidValidate } from "uuid";
 import { IAnalyticsWriter } from "@khulnasoft/devtool-protocol/lib/analytics";
