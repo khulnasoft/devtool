@@ -1,0 +1,40 @@
+<!--
+ Copyright (c) 2021 Devtool GmbH. All rights reserved.
+ Licensed under the GNU Affero General Public License (AGPL).
+ See License.AGPL.txt in the project root for license information.
+-->
+
+<idea-plugin require-restart="false" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:include href="/META-INF/extensions.xml" xpointer="xpointer(/idea-plugin/*)"/>
+
+    <id>io.devtool.jetbrains.gateway</id>
+    <name>Devtool Gateway</name>
+    <vendor>Devtool</vendor>
+
+    <!-- Product and plugin compatibility requirements -->
+    <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+    <!-- uncomment when versin mismatch in JB Marketpace for GW plugin verifier is resolved
+    see https://jetbrains.slack.com/archives/C02BRJLGPGF/p1643369943314119?thread_ts=1643358812.185799&cid=C02BRJLGPGF
+    <depends>com.jetbrains.gateway</depends> -->
+
+    <depends optional="true">com.jetbrains.gateway</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <httpRequestHandler implementation="io.devtool.jetbrains.auth.DevtoolAuthCallbackHandler"/>
+        <applicationService serviceImplementation="io.devtool.jetbrains.gateway.DevtoolSettingsState"/>
+        <applicationConfigurable parentId="tools" instance="io.devtool.jetbrains.gateway.DevtoolSettingsConfigurable"
+                                 id="io.devtool.jetbrains.gateway.DevtoolSettingsConfigurable"
+                                 displayName="Devtool"/>
+        <applicationService serviceInterface="io.devtool.jetbrains.gateway.common.DevtoolConnectionHandleFactory"
+                            serviceImplementation="io.devtool.jetbrains.gateway.DevtoolConnectionHandleFactoryImpl"/>
+    </extensions>
+
+    <extensions defaultExtensionNs="com.jetbrains">
+        <gatewayConnector implementation="io.devtool.jetbrains.gateway.DevtoolConnector"/>
+        <gatewayConnectionProvider implementation="io.devtool.jetbrains.gateway.DevtoolConnectionProvider"/>
+    </extensions>
+
+    <applicationListeners>
+    </applicationListeners>
+</idea-plugin>

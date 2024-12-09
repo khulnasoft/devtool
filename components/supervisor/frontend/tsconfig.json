@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "lib",
+    "module": "ES6",
+    "target": "ES2021",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "strict": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "useUnknownInCatchVariables": false,
+    "moduleResolution": "Node"
+  },
+  "include": [
+    "src"
+  ]
+}

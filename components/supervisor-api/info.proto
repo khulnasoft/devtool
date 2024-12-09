@@ -1,0 +1,112 @@
+// Copyright (c) 2020 Devtool GmbH. All rights reserved.
+// Licensed under the GNU Affero General Public License (AGPL).
+// See License.AGPL.txt in the project root for license information.
+
+syntax = "proto3";
+
+package supervisor;
+
+import "google/api/annotations.proto";
+
+option go_package = "github.com/khulnasoft/devtool/supervisor/api";
+option java_package = "io.devtool.supervisor.api";
+
+service InfoService {
+    rpc WorkspaceInfo(WorkspaceInfoRequest) returns (WorkspaceInfoResponse) {
+        option (google.api.http) = {
+            get: "/v1/info/workspace"
+        };
+    }
+}
+
+message WorkspaceInfoRequest {}
+
+message WorkspaceInfoResponse {
+    message DevtoolAPI {
+        // endpoint is the websocket URL on which the token-accessible Devtool API is served on
+        string endpoint = 1;
+        // host is the host of the endpoint. Use this host to ask supervisor a token.
+        string host = 2;
+    }
+
+    // workspace_id is the workspace ID of this workspace.
+    string workspace_id = 1;
+
+    // instance_id is the instance ID of this workspace.
+    string instance_id = 2;
+
+    // checkout_location is the path where we initialized the workspace content
+    string checkout_location = 3;
+
+    // workspace_location is the location of the IDE workspace
+    oneof workspace_location {
+        // file means the workspace root is a file describing the workspace layout.
+        string workspace_location_file = 4;
+        // folder means the workspace root is a simple folder.
+        string workspace_location_folder = 5;
+    };
+
+    // user_home is the path to the user's home.
+    string user_home = 6;
+
+    // DevtoolAPI provides information to reach the Devtool server API.
+    DevtoolAPI devtool_api = 7;
+
+    // devtool_host provides Devtool host URL.
+    string devtool_host = 8;
+
+    // workspace_context_url is an URL for which the workspace was created.
+    string workspace_context_url = 9;
+
+    message Repository {
+        // owner is the repository owner
+        string owner = 1;
+        // name is the repository name
+        string name = 2;
+    }
+    // repository is a repository from which this workspace was created
+    Repository repository = 10;
+
+    // workspace_cluster_host provides the cluster host under which this workspace is served, e.g. ws-eu11.devtool.io
+    string workspace_cluster_host = 11;
+
+    // workspace_url is an URL for which the workspace is accessed.
+    string workspace_url = 12;
+
+    // ide_alias is an alias of IDE to be run. Possible values: "code", "code-latest", "theia"
+    string ide_alias = 13;
+
+    // ide_port is the port on which the IDE is to be run
+    uint32 ide_port = 14;
+
+    message WorkspaceClass {
+        // id is the id of the workspace class
+        string id = 1;
+
+        // display_name is the display_name of the workspace class
+        string display_name = 2;
+
+        // description is the description of the workspace class
+        string description = 3;
+    }
+    // workspace_class denotes the class of the workspace
+    WorkspaceClass workspace_class = 15;
+
+    // owner_id is user id who owns the workspace
+    string owner_id = 16;
+
+    // debug_workspace_type indicates whether it is a regular or prebuild debug workspace
+    DebugWorkspaceType debug_workspace_type = 17;
+
+    // configcat_enabled controls whether configcat is enabled
+    bool configcat_enabled = 18;
+
+    // DEPRECATED default_workspace_image is the default image of the workspace
+    reserved 19;
+}
+
+enum DebugWorkspaceType {
+  noDebug = 0;
+  regular = 1;
+  prebuild = 2;
+}

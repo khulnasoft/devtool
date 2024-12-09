@@ -1,0 +1,48 @@
+# Copyright (c) 2022 Devtool GmbH. All rights reserved.
+# Licensed under the GNU Affero General Public License (AGPL).
+# See License.AGPL.txt in the project root for license information.
+
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  labels:
+    prometheus: k8s
+    role: alert-rules
+  name: ws-manager-monitoring-rules
+spec:
+  groups:
+    - name: ws-manager
+      rules:
+      - alert: DevtoolWsManagerMk2CrashLooping
+        labels:
+          severity: critical
+          dedicated: included
+        annotations:
+          runbook_url: https://github.com/khulnasoft/runbooks/blob/main/runbooks/DevtoolWorkspaceDeploymentCrashlooping.md
+          summary: ws-manager-mk2 is crashlooping in cluster {{ $labels.cluster }}.
+          description: Pod {{ $labels.namespace }}/{{ $labels.pod }} ({{ $labels.container }}) is restarting {{ printf "%.2f" $value }} times / 3 minutes.
+        expr: |
+          increase(kube_pod_container_status_restarts_total{container="ws-manager-mk2", cluster!~"ephemeral.*"}[1m]) > 3
+        for: 3m
+      - alert: DevtoolWsManagerMk2ReplicasMismatch
+        labels:
+          severity: critical
+          dedicated: included
+        annotations:
+          runbook_url: https://github.com/khulnasoft/runbooks/blob/main/runbooks/DevtoolWorkspaceDeploymentReplicaMismatch.md
+          summary: Desired number of replicas for ws-manager-mk2 are not available in cluster {{ $labels.cluster }}
+          description: 'Desired number of replicas for ws-manager-mk2 are not available in cluster {{ $labels.cluster }}: {{ printf "%.2f" $value }} are missing'
+        expr: |
+          kube_deployment_spec_replicas{deployment="ws-manager-mk2", cluster!~"ephemeral.*"} != kube_deployment_status_replicas_available{deployment="ws-manager-mk2", cluster!~"ephemeral.*"}
+        for: 3m
+      - alert: DevtoolWsManagerMk2ReplicaUnavailable
+        labels:
+          # TODO(gpl): warning for now, to set it up and fine-tune it
+          severity: warning
+        annotations:
+          runbook_url: https://github.com/khulnasoft/runbooks/blob/main/runbooks/DevtoolWorkspaceDeploymentReplicaMismatch.md
+          summary: ws-manager-mk2 replicas are unavailable in cluster {{ $labels.cluster }}
+          description: 'ws-manager-mk2 pods are unavailable in cluster {{ $labels.cluster }}: {{ printf "%.2f" $value }}'
+        expr: |
+          kube_deployment_status_replicas_unavailable{deployment="ws-manager-mk2", cluster!~"ephemeral.*"} > 0
+        for: 10m

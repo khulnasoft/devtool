@@ -1,0 +1,45 @@
+packages:
+  - name: app
+    type: yarn
+    srcs:
+      - "src/**"
+      - "test/**"
+      - .eslintrc
+      - package.json
+      - mocha.opts
+    deps:
+      - components/content-service-api/typescript:lib
+      - components/devtool-db:lib
+      - components/devtool-protocol:lib
+      - components/image-builder-api/typescript:lib
+      - components/ws-manager-api/typescript:lib
+      - components/supervisor-api/typescript-grpcweb:lib
+      - components/usage-api/typescript:lib
+      - components/ide-service-api/typescript:lib
+      - components/public-api/typescript:lib
+      - components/public-api/typescript-common:lib
+      - components/devtool-db:dbtest-init
+      - components/spicedb:lib
+      - components/spicedb/typescript:lib
+    config:
+      packaging: offline-mirror
+      yarnLock: ${coreYarnLockBase}/yarn.lock
+      tsconfig: tsconfig.json
+      commands:
+        # leeway executes the build and test step in the wrong order, so we need to call a special script that builds before testing
+        test: ["yarn", "test:leeway"]
+  - name: docker
+    type: docker
+    deps:
+      - :app
+    argdeps:
+      - imageRepoBase
+    config:
+      buildArgs:
+        VERSION: ${version}
+      dockerfile: leeway.Dockerfile
+      metadata:
+        helm-component: server
+      image:
+        - ${imageRepoBase}/server:${version}
+        - ${imageRepoBase}/server:commit-${__git_commit}

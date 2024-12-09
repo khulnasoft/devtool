@@ -1,0 +1,30 @@
+{
+    "$schema": "./config-schema.json",
+    "orchestrator": {
+        "wsman": {
+            "address": "localhost:12001",
+            "tls": {
+                "ca": "./wsman-tls/ca.crt",
+                "crt": "./wsman-tls/tls.crt",
+                "key": "./wsman-tls/tls.key"
+            }
+        },
+        "pullSecret": "gcp-sa-registry-auth",
+        "baseImageRepository": "eu.gcr.io/devtool-core-dev/build/base-images",
+        "workspaceImageRepository": "eu.gcr.io/devtool-core-dev/build/workspace-images",
+        "builderImage": "eu.gcr.io/devtool-core-dev/build/image-builder-mk3/bob:4d9d04b1bf94218d47294f83b11eba652455a790"
+    },
+    "refCache": {
+        "interval": "6h0m0s",
+        "refs": [
+            "docker.io/devtool/workspace-full:latest"
+        ]
+    },
+    "server": {
+        "services": {
+            "grpc": {
+                "address": "0.0.0.0:8080"
+            }
+        }
+    }
+}

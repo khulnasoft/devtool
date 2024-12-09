@@ -1,0 +1,39 @@
+packages:
+  - name: app
+    type: go
+    deps:
+      - components/common-go:lib
+      - components/devtool-protocol/go:lib
+      - components/ide-service-api/go:lib
+    srcs:
+      - "**/*.go"
+      - "go.mod"
+      - "go.sum"
+      - "pkg/server/schema.json"
+      - "pkg/server/testdata/**"
+      - "example-ide-config.json"
+    env:
+      - CGO_ENABLED=0
+      - GOOS=linux
+    config:
+      packaging: app
+      buildCommand: ["go", "build", "-trimpath", "-ldflags=-buildid= -X 'github.com/khulnasoft/devtool/ide-service/cmd.Version=commit-${__git_commit}'"]
+
+  - name: docker
+    type: docker
+    deps:
+      - components/ide-service:app
+    argdeps:
+      - imageRepoBase
+    config:
+      metadata:
+        helm-component: ideService
+      dockerfile: leeway.Dockerfile
+      image:
+        - ${imageRepoBase}/ide-service:${version}
+        - ${imageRepoBase}/ide-service:commit-${__git_commit}
+scripts:
+  - name: gen-golden-files
+    script: |
+      go test -timeout 120s -run ./... github.com/khulnasoft/devtool/ide-service/pkg/server --force --update
+      git ls-files -- '*/**.golden' | xargs pre-commit run end-of-file-fixer --files || true

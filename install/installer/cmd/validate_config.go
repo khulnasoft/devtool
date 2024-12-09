@@ -1,0 +1,71 @@
+// Copyright (c) 2021 Devtool GmbH. All rights reserved.
+// Licensed under the GNU Affero General Public License (AGPL).
+// See License.AGPL.txt in the project root for license information.
+
+package cmd
+
+import (
+	"fmt"
+	"os"
+	"path/filepath"
+
+	"github.com/khulnasoft/devtool/common-go/log"
+	"github.com/khulnasoft/devtool/installer/pkg/config"
+	"github.com/spf13/cobra"
+)
+
+var validateConfigOpts struct {
+	Config string
+}
+
+// validateConfigCmd represents the cluster command
+var validateConfigCmd = &cobra.Command{
+	Use:   "config",
+	Short: "Validate the deployment configuration",
+	RunE: func(cmd *cobra.Command, args []string) error {
+		if validateConfigOpts.Config == "" {
+			log.Fatal("missing --config")
+		}
+		_, cfgVersion, cfg, err := loadConfig(validateConfigOpts.Config)
+		if err != nil {
+			return err
+		}
+
+		if err = runConfigValidation(cfgVersion, cfg); err != nil {
+			return err
+		}
+
+		return nil
+	},
+}
+
+// runConfigValidation this will run the validation and print any validation errors
+// It's silent if everything is fine
+func runConfigValidation(version string, cfg interface{}) error {
+	apiVersion, err := config.LoadConfigVersion(version)
+	if err != nil {
+		return err
+	}
+
+	res, err := config.Validate(apiVersion, cfg)
+	if err != nil {
+		return err
+	}
+	res.Marshal(os.Stdout)
+	if len(res.Fatal) > 0 {
+		return fmt.Errorf("configuration invalid")
+	}
+
+	return nil
+}
+
+func init() {
+	validateCmd.AddCommand(validateConfigCmd)
+
+	dir, err := os.Getwd()
+	if err != nil {
+		log.WithError(err).Fatal("Failed to get working directory")
+	}
+
+	validateCmd.PersistentFlags().StringVarP(&validateConfigOpts.Config, "config", "c", getEnvvar("DEVTOOL_INSTALLER_CONFIG", filepath.Join(dir, "devtool.config.yaml")), "path to the config file")
+}

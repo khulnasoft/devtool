@@ -1,0 +1,1 @@
+Find the license text in LICENSE.md

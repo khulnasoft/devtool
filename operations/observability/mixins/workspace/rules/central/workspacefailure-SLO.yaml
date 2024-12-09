@@ -1,0 +1,149 @@
+# Copyright (c) 2022 Devtool GmbH. All rights reserved.
+# Licensed under the GNU Affero General Public License (AGPL).
+# See License.AGPL.txt in the project root for license information.
+
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  labels:
+    prometheus: k8s
+    role: alert-rules
+  name: workspace-failure-slo-monitoring-rules
+spec:
+  groups:
+  - name: workspace-failure-SLO
+    rules:
+    - record: devtool_workspace_failure_total:5m_failure_ratio
+      expr: |
+        (
+          (
+            sum(rate(devtool_ws_manager_mk2_workspace_stops_total{reason="failed",type!~"Prebuild", cluster!~"ephemeral.*"}[5m]))
+            /
+            sum(rate(devtool_ws_manager_mk2_workspace_stops_total{type!~"Prebuild", cluster!~"ephemeral.*"}[5m]))
+          )
+        ) + (
+          (
+            sum(rate(grpc_server_handled_total{grpc_method="StartWorkspace",grpc_code!~"OK|ResourceExhausted", cluster!~"ephemeral.*"}[5m]))
+            /
+            sum(rate(grpc_server_handled_total{grpc_method="StartWorkspace", cluster!~"ephemeral.*"}[5m]))
+          )
+        )
+
+    - record: devtool_workspace_failure_total:30m_failure_ratio
+      expr: |
+        (
+          (
+            sum(rate(devtool_ws_manager_mk2_workspace_stops_total{reason="failed",type!~"Prebuild", cluster!~"ephemeral.*"}[30m]))
+            /
+            sum(rate(devtool_ws_manager_mk2_workspace_stops_total{type!~"Prebuild", cluster!~"ephemeral.*"}[30m]))
+          )
+        ) + (
+          (
+            sum(rate(grpc_server_handled_total{grpc_method="StartWorkspace",grpc_code!~"OK|ResourceExhausted", cluster!~"ephemeral.*"}[30m]))
+            /
+            sum(rate(grpc_server_handled_total{grpc_method="StartWorkspace", cluster!~"ephemeral.*"}[30m]))
+          )
+        )
+
+    - record: devtool_workspace_failure_total:1h_failure_ratio
+      expr: |
+        (
+          (
+            sum(rate(devtool_ws_manager_mk2_workspace_stops_total{reason="failed",type!~"Prebuild", cluster!~"ephemeral.*"}[1h]))
+            /
+            sum(rate(devtool_ws_manager_mk2_workspace_stops_total{type!~"Prebuild", cluster!~"ephemeral.*"}[1h]))
+          )
+        ) + (
+          (
+            sum(rate(grpc_server_handled_total{grpc_method="StartWorkspace",grpc_code!~"OK|ResourceExhausted", cluster!~"ephemeral.*"}[1h]))
+            /
+            sum(rate(grpc_server_handled_total{grpc_method="StartWorkspace", cluster!~"ephemeral.*"}[1h]))
+          )
+        )
+
+    - record: devtool_workspace_failure_total:2h_failure_ratio
+      expr: |
+        (
+          (
+            sum(rate(devtool_ws_manager_mk2_workspace_stops_total{reason="failed",type!~"Prebuild", cluster!~"ephemeral.*"}[2h]))
+            /
+            sum(rate(devtool_ws_manager_mk2_workspace_stops_total{type!~"Prebuild", cluster!~"ephemeral.*"}[2h]))
+          )
+        ) + (
+          (
+            sum(rate(grpc_server_handled_total{grpc_method="StartWorkspace",grpc_code!~"OK|ResourceExhausted", cluster!~"ephemeral.*"}[2h]))
+            /
+            sum(rate(grpc_server_handled_total{grpc_method="StartWorkspace", cluster!~"ephemeral.*"}[2h]))
+          )
+        )
+
+    - record: devtool_workspace_failure_total:6h_failure_ratio
+      expr: |
+        (
+          (
+            sum(rate(devtool_ws_manager_mk2_workspace_stops_total{reason="failed",type!~"Prebuild", cluster!~"ephemeral.*"}[6h]))
+            /
+            sum(rate(devtool_ws_manager_mk2_workspace_stops_total{type!~"Prebuild", cluster!~"ephemeral.*"}[6h]))
+          )
+        ) + (
+          (
+            sum(rate(grpc_server_handled_total{grpc_method="StartWorkspace",grpc_code!~"OK|ResourceExhausted", cluster!~"ephemeral.*"}[6h]))
+            /
+            sum(rate(grpc_server_handled_total{grpc_method="StartWorkspace", cluster!~"ephemeral.*"}[6h]))
+          )
+        )
+
+    - record: devtool_workspace_failure_total:1d_failure_ratio
+      expr: |
+        (
+          (
+            sum(rate(devtool_ws_manager_mk2_workspace_stops_total{reason="failed",type!~"Prebuild", cluster!~"ephemeral.*"}[1d]))
+            /
+            sum(rate(devtool_ws_manager_mk2_workspace_stops_total{type!~"Prebuild", cluster!~"ephemeral.*"}[1d]))
+          )
+        ) + (
+          (
+            sum(rate(grpc_server_handled_total{grpc_method="StartWorkspace",grpc_code!~"OK|ResourceExhausted", cluster!~"ephemeral.*"}[1d]))
+            /
+            sum(rate(grpc_server_handled_total{grpc_method="StartWorkspace", cluster!~"ephemeral.*"}[1d]))
+          )
+        )
+
+    - record: devtool_workspace_failure_total:3d_failure_ratio
+      expr: |
+        (
+          (
+            sum(rate(devtool_ws_manager_mk2_workspace_stops_total{reason="failed",type!~"Prebuild", cluster!~"ephemeral.*"}[3d]))
+            /
+            sum(rate(devtool_ws_manager_mk2_workspace_stops_total{type!~"Prebuild", cluster!~"ephemeral.*"}[3d]))
+          )
+        ) + (
+          (
+            sum(rate(grpc_server_handled_total{grpc_method="StartWorkspace",grpc_code!~"OK|ResourceExhausted", cluster!~"ephemeral.*"}[3d]))
+            /
+            sum(rate(grpc_server_handled_total{grpc_method="StartWorkspace", cluster!~"ephemeral.*"}[3d]))
+          )
+        )
+
+    - record: devtool_workspace_failure_total:30d_failure_ratio
+      expr: |
+        (
+          (
+            sum(rate(devtool_ws_manager_mk2_workspace_stops_total{reason="failed",type!~"Prebuild", cluster!~"ephemeral.*"}[30d]))
+            /
+            sum(rate(devtool_ws_manager_mk2_workspace_stops_total{type!~"Prebuild", cluster!~"ephemeral.*"}[30d]))
+          )
+        ) + (
+          (
+            sum(rate(grpc_server_handled_total{grpc_method="StartWorkspace",grpc_code!~"OK|ResourceExhausted", cluster!~"ephemeral.*"}[30d]))
+            /
+            sum(rate(grpc_server_handled_total{grpc_method="StartWorkspace", cluster!~"ephemeral.*"}[30d]))
+          )
+        )
+
+    - record: devtool_workspace_failure_total:slo_target
+      expr: "0.99"
+    - record: devtool_workspace_failure_total:error_budget_remaining
+      expr: devtool_workspace_failure_total:monthly_availability - devtool_workspace_failure_total:slo_target
+    - record: devtool_workspace_failure_total:monthly_availability
+      expr: 1 - devtool_workspace_failure_total:30d_failure_ratio

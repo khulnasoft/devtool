@@ -1,0 +1,14 @@
+packages:
+  - name: docker
+    type: docker
+    deps:
+      - dev/gpctl:app
+      - dev/kubecdl:app
+    argdeps:
+      - imageRepoBase
+    srcs:
+      - gcloud-default-config
+    config:
+      dockerfile: Dockerfile
+      image:
+        - ${imageRepoBase}/dev-environment:${version}

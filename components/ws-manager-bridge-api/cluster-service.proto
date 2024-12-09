@@ -1,0 +1,137 @@
+// Copyright (c) 2021 Devtool GmbH. All rights reserved.
+// Licensed under the GNU Affero General Public License (AGPL).
+// See License.AGPL.txt in the project root for license information.
+
+syntax = "proto3";
+
+package workspacemanagerbridge;
+
+option go_package = "github.com/khulnasoft/devtool/workspace-manager-bridge/api";
+
+// ClusterService enables WorkspaceClusters to be dynamically managed.
+service ClusterService {
+  // Register registers a new WorkspaceCluster.
+  rpc Register(RegisterRequest) returns (RegisterResponse) {}
+
+  // Update modififes properties of an already registered WorkspaceCluster.
+  rpc Update(UpdateRequest) returns (UpdateResponse) {}
+
+  // Deregister removes a WorkspaceCluster from available clusters.
+  rpc Deregister(DeregisterRequest) returns (DeregisterResponse) {}
+
+  // List returns the currently registered WorkspaceClusters.
+  rpc List(ListRequest) returns (ListResponse) {}
+}
+
+message RegisterRequest {
+  string name = 1;
+  string url = 2;
+  TlsConfig tls = 3;
+  RegistrationHints hints = 4;
+  repeated AdmissionConstraint admission_constraints = 5;
+  // the region this cluster is in, e.g. "europe-west1"
+  string region = 7;
+
+  // DEPRECATED
+  // repeated AdmissionPreference admission_preference = 6;
+  reserved 6;
+}
+
+message RegisterResponse {}
+
+message TlsConfig {
+  string ca = 1;
+  string crt = 2;
+  string key = 3;
+}
+
+message RegistrationHints {
+  Preferability perfereability = 1;
+  bool cordoned = 2;
+  reserved 3; // bool govern = 3;
+}
+
+message AdmissionConstraint {
+  message FeaturePreview {}
+  message HasPermission {
+    string permission = 1;
+  }
+
+  oneof constraint {
+    FeaturePreview has_feature_preview = 1;
+    HasPermission has_permission = 2;
+    // deprecated and removed: has_user_level = 3;
+    // deprecated and removed: bool has_more_resources = 4;
+  }
+}
+
+enum Preferability {
+  None = 0;
+  Prefer = 1;
+  DontSchedule = 2;
+}
+
+message ClusterStatus {
+  string name = 1;
+  string url = 2;
+  ClusterState state = 3;
+  int32 score = 4;
+  int32 max_score = 5;
+  bool governed = 6;
+  repeated AdmissionConstraint admission_constraint = 7;
+  bool static = 8;
+
+  reserved 10; // string application_cluster = 10;
+
+  // DEPRECATED
+  // repeated AdmissionPreference admission_preference = 9;
+  reserved 9;
+
+  // The region in which this cluster runs
+  string region = 11;
+}
+
+enum ClusterState {
+  UNKNOWN = 0;
+  AVAILABLE = 1;
+  CORDONED = 2;
+  DRAINING = 3;
+}
+
+message UpdateRequest {
+  string name = 1;
+  oneof property {
+    int32 score = 2;
+    int32 max_score = 3;
+    bool cordoned = 4;
+    ModifyAdmissionConstraint admission_constraint = 5;
+
+    // DEPRECATED
+    // ModifyAdmissionPreference admission_preference = 6;
+
+    TlsConfig tls = 7;
+  }
+}
+
+message ModifyAdmissionConstraint {
+  bool add = 1;
+  AdmissionConstraint constraint = 2;
+}
+
+message UpdateResponse {}
+
+message DeregisterRequest {
+  // name is the name of the WorkspaceCluster to deregister
+  string name = 1;
+  // force causes the cluster to be deregistered even if there are
+  // intances still running on the cluster.
+  bool force = 2;
+}
+
+message DeregisterResponse {}
+
+message ListRequest {}
+
+message ListResponse {
+  repeated ClusterStatus status = 1;
+}

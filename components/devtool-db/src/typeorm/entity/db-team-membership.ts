@@ -1,0 +1,30 @@
+/**
+ * Copyright (c) 2021 Devtool GmbH. All rights reserved.
+ * Licensed under the GNU Affero General Public License (AGPL).
+ * See License.AGPL.txt in the project root for license information.
+ */
+
+import { TeamMemberRole } from "@devtool/devtool-protocol";
+import { Entity, Column, PrimaryColumn, Index } from "typeorm";
+import { TypeORM } from "../typeorm";
+
+@Entity()
+// on DB but not Typeorm: @Index("ind_lastModified", ["_lastModified"])   // DBSync
+export class DBTeamMembership {
+    @PrimaryColumn(TypeORM.UUID_COLUMN_TYPE)
+    id: string;
+
+    @Column(TypeORM.UUID_COLUMN_TYPE)
+    @Index("ind_teamId")
+    teamId: string;
+
+    @Column(TypeORM.UUID_COLUMN_TYPE)
+    @Index("ind_userId")
+    userId: string;
+
+    @Column("varchar")
+    role: TeamMemberRole;
+
+    @Column("varchar")
+    creationTime: string;
+}

@@ -1,0 +1,7 @@
+.gradle
+.settings
+.vscode
+bin
+build
+gradle-local.properties
+.intellijPlatform

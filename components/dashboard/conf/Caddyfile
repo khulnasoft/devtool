@@ -1,0 +1,74 @@
+{
+	auto_https off
+	admin off
+}
+(static) {
+	@static_path {
+		path /static/* /favicon* /manifest.json
+	}
+
+	@static_asset {
+		file
+		path /static/* /favicon* /manifest.json
+	}
+
+	# static assets configure cache headers and do not check for changes
+	header @static_asset {
+		Cache-Control "public, max-age=31536000"
+		# remove Last-Modified header
+		-Last-Modified
+	}
+}
+
+(notstatic) {
+	@not_static_path {
+		not path /static/*
+	}
+
+	@not_static_assets {
+		not path /static/*
+	}
+
+	header @not_static_assets {
+		Cache-Control "no-cache, no-transform, must-revalidate"
+	}
+}
+
+:80 {
+	import static
+	import notstatic
+
+	redir /.well-known/security.txt https://www.devtool.io/.well-known/security.txt permanent
+	redir /environment-variables /settings/ permanent
+
+	rewrite /schemas/devtool-schema.json /static/schemas/devtool-schema.json
+
+	# avoid multiple redirects to return a static html file to not loose
+	# window.opener and brake the automatic closing of the auth redirect
+	rewrite /complete-auth /complete-auth/index.html
+
+	header -Server
+
+	root * /www
+	file_server {
+		precompressed gzip br
+	}
+
+	handle @static_path {
+		try_files {path}
+	}
+
+	handle @not_static_path {
+		try_files {path} {path}/ /index.html
+	}
+
+	handle {
+		respond "404 - Not Found" 404
+	}
+}
+
+# health-check
+:8080 {
+	respond /live 200
+	respond /ready 200
+}

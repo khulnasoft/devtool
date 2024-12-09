@@ -1,0 +1,49 @@
+packages:
+  - name: all
+    type: generic
+    deps:
+      - :lib
+      - components/devtool-protocol/go:lib
+      - components/devtool-protocol/java:lib
+  - name: lib
+    type: yarn
+    srcs:
+      - "data/*.json"
+      - "src/**"
+      - "test/**"
+      - .eslintrc
+      - mocha.opts
+      - package.json
+    config:
+      packaging: library
+      yarnLock: ${coreYarnLockBase}/yarn.lock
+      tsconfig: tsconfig.json
+      commands:
+        # leeway executes the build and test step in the wrong order, so we need to call a special script that builds before testing
+        test: ["yarn", "test:leeway"]
+  - name: devtool-schema
+    type: generic
+    srcs:
+      - data/devtool-schema.json
+    config:
+      commands:
+        - ["mv", "data/devtool-schema.json", "devtool-schema.json"]
+  - name: scripts
+    type: generic
+    srcs:
+      - "scripts/*"
+    config:
+      commands:
+        - ["sh", "-c", "mv scripts/* ."]
+  - name: publish
+    type: generic
+    env:
+      - DO_PUBLISH=${publishToNPM}
+    argdeps:
+      - npmPublishTrigger
+    deps:
+      - :lib
+      - :scripts
+    config:
+      commands:
+        - ["node", "components-devtool-protocol--scripts/publish.js", "${version}", "components-devtool-protocol--lib/package"]

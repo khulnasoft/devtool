@@ -1,0 +1,81 @@
+packages:
+  - name: raw-app
+    type: go
+    srcs:
+      - go.mod
+      - go.sum
+      - "**/*.go"
+      - "cmd/versions.yaml"
+      - "pkg/components/**/*.tpl"
+      - "pkg/components/**/*.crt"
+      - "pkg/components/**/*.key"
+      - "pkg/components/**/*.pem"
+      - "pkg/components/**/*.sql"
+      - "pkg/components/**/*.json"
+      - "pkg/components/spicedb/data/*.yaml"
+      - "scripts/*.sh"
+      - "third_party/charts/*/Chart.yaml"
+      - "third_party/charts/*/values.yaml"
+    deps:
+      - components/blobserve:lib
+      - components/common-go:lib
+      - components/devtool-db/go:lib
+      - components/content-service-api/go:lib
+      - components/content-service:lib
+      - components/ee/agent-smith:lib
+      - components/devtool-protocol/go:lib
+      - components/ide-metrics-api/go:lib
+      - components/ide-service-api/go:lib
+      - components/image-builder-api/go:lib
+      - components/openvsx-proxy:lib
+      - components/public-api/go:lib
+      - components/registry-facade-api/go:lib
+      - components/registry-facade:lib
+      - components/ws-daemon-api/go:lib
+      - components/ws-daemon:lib
+      - components/ws-manager-api/go:lib
+      - components/ws-manager-mk2:crd
+      - components/ws-proxy:lib
+      - components/usage:lib
+      - components/usage-api/go:lib
+      - components/node-labeler:lib
+      - dev/addlicense:app
+      - components/spicedb:lib
+      - components/server/go:lib
+    env:
+      - CGO_ENABLED=0
+    argdeps:
+      - imageRepoBase
+    prep:
+      - ["sh", "-c", "ls -d third_party/charts/*/ | while read f; do echo \"cd $f && helm dep up && cd -\"; done | sh"]
+      - ["mv", "_deps/components-ws-manager-mk2--crd/workspace.devtool.io_workspaces.yaml", "pkg/components/ws-manager-mk2/crd.yaml"]
+      - ["sh", "-c", "cat _deps/components-ws-manager-mk2--crd/workspace.devtool.io_snapshots.yaml >> pkg/components/ws-manager-mk2/crd.yaml"]
+    config:
+      packaging: app
+      buildCommand: ["go", "build", "-trimpath", "-ldflags", "-buildid= -w -s -X 'github.com/khulnasoft/devtool/installer/cmd.Version=commit-${__git_commit}' -X 'github.com/khulnasoft/devtool/installer/pkg/config.DevtoolContainerRegistry=${imageRepoBase}'"]
+  - name: app
+    type: generic
+    deps:
+      - :raw-app
+      - components:all-docker
+    argdeps:
+      - version
+    config:
+      commands:
+        - ["objcopy", "--add-section", "versionManifest=components--all-docker/versions.yaml", "install-installer--raw-app/installer", "installer"]
+        # Remove the deps component folders now that we have copied over (and modified) the installer to reduce
+        # the size of the build cache of this component.
+        - ["rm", "-rf", "install-installer--raw-app", "components--all-docker"]
+  - name: docker
+    type: docker
+    srcs:
+      - "scripts/*.sh"
+    deps:
+      - :app
+      - dev/gpctl:app
+    argdeps:
+      - imageRepoBase
+    config:
+      dockerfile: leeway.Dockerfile
+      image:
+        - ${imageRepoBase}/installer:${version}

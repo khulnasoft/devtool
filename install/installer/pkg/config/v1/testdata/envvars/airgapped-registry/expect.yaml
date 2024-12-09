@@ -1,0 +1,15 @@
+# Copyright (c) 2022 Devtool GmbH. All rights reserved.
+# Licensed under the GNU Affero General Public License (AGPL).
+# See License.AGPL.txt in the project root for license information.
+
+containerRegistry:
+  inCluster: true
+  privateBaseImageAllowList:
+    - local-registry-host.com
+    - docker.io
+domain: devtool.io
+dropImageRepo: true
+imagePullSecrets:
+  - kind: secret
+    name: local-registry-pull-secret
+repository: local-registry-address.com

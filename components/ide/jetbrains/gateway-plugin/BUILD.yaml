@@ -1,0 +1,57 @@
+packages:
+  - name: publish-stable
+    type: generic
+    deps:
+      - components/devtool-protocol/java:lib
+    srcs:
+      - "gradle.properties"
+      - "gradle-stable.properties"
+      - "gradle/wrapper/*"
+      - "gradlew"
+      - "src/main/kotlin/*"
+      - "src/main/resources/*"
+      - "src/main/resources-stable/*"
+      - "*.kts"
+      - "*.md"
+    argdeps:
+      - publishToJBMarketplace
+    env:
+      - DO_PUBLISH=${publishToJBMarketplace}
+      - SDKMAN_DIR=/home/devtool/.sdkman
+    config:
+      commands:
+        - - bash
+          - "-c"
+          - >
+            echo java=21.0.3.fx-zulu > .sdkmanrc
+            && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+            && sdk env install
+            && ./gradlew "-PpluginVersion=0.0.1-${version}" "-PdevtoolProtocolProjectPath=components-devtool-protocol-java--lib/" "-PenvironmentName=stable" "-Dgradle.user.home=/workspace/.gradle-stable" "-Dplugin.verifier.home.dir=$HOME/.cache/pluginVerifier-stable" "buildFromLeeway"
+  - name: publish-latest
+    type: generic
+    deps:
+      - components/devtool-protocol/java:lib
+    srcs:
+      - "gradle.properties"
+      - "gradle-latest.properties"
+      - "gradle/wrapper/*"
+      - "gradlew"
+      - "src/main/kotlin/*"
+      - "src/main/resources/*"
+      - "src/main/resources-latest/*"
+      - "*.kts"
+      - "*.md"
+    argdeps:
+      - publishToJBMarketplace
+    env:
+      - DO_PUBLISH=${publishToJBMarketplace}
+      - SDKMAN_DIR=/home/devtool/.sdkman
+    config:
+      commands:
+        - - bash
+          - "-c"
+          - >
+            echo java=21.0.3.fx-zulu > .sdkmanrc
+            && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+            && sdk env install
+            && ./gradlew "-PpluginVersion=0.0.1-${version}" "-PdevtoolProtocolProjectPath=components-devtool-protocol-java--lib/" "-PenvironmentName=latest" "-Dgradle.user.home=/workspace/.gradle-latest" "-Dplugin.verifier.home.dir=$HOME/.cache/pluginVerifier-latest" "buildFromLeeway"

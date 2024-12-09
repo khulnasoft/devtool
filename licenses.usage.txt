@@ -1,0 +1,62 @@
+github.com/spf13/cobra                           Apache License 2.0
+github.com/google/uuid                           BSD 3-Clause "New" or "Revised" License
+github.com/pmezard/go-difflib                    BSD 3-Clause "New" or "Revised" License
+gorm.io/gorm                                     MIT License
+github.com/prometheus/common                     Apache License 2.0
+github.com/robfig/cron                           MIT License
+../devtool-db/go                                 <license not found or detected>
+github.com/stretchr/testify                      MIT License
+github.com/go-sql-driver/mysql                   Mozilla Public License 2.0
+google.golang.org/protobuf                       BSD 3-Clause "New" or "Revised" License
+github.com/grpc-ecosystem/go-grpc-middleware     Apache License 2.0
+github.com/relvacode/iso8601                     MIT License
+github.com/cespare/xxhash                        MIT License
+golang.org/x/sync                                BSD 3-Clause "New" or "Revised" License
+golang.org/x/text                                BSD 3-Clause "New" or "Revised" License
+github.com/uber/jaeger-client-go                 Apache License 2.0
+github.com/mitchellh/reflectwalk                 MIT License
+gopkg.in/yaml.v3                                 Apache License 2.0
+github.com/prometheus/client_model               Apache License 2.0
+github.com/grpc-ecosystem/go-grpc-prometheus     Apache License 2.0
+google.golang.org/grpc                           Apache License 2.0
+github.com/redis/go-redis                        BSD 2-Clause "Simplified" License
+github.com/davecgh/go-spew                       ISC License
+golang.org/x/sys                                 BSD 3-Clause "New" or "Revised" License
+github.com/prometheus/procfs                     Apache License 2.0
+github.com/hashicorp/errwrap                     Mozilla Public License 2.0
+google.golang.org/genproto/googleapis/rpc        Apache License 2.0
+github.com/stripe/stripe-go                      MIT License
+../common-go                                     <license not found or detected>
+golang.org/x/net                                 BSD 3-Clause "New" or "Revised" License
+gorm.io/plugin/opentelemetry                     MIT License
+github.com/prometheus/client_golang              Apache License 2.0
+../usage-api/go                                  <license not found or detected>
+github.com/hashicorp/golang-lru                  Mozilla Public License 2.0
+github.com/go-logr/stdr                          Apache License 2.0
+github.com/slok/go-http-metrics                  Apache License 2.0
+github.com/hashicorp/go-multierror               Mozilla Public License 2.0
+github.com/beorn7/perks                          MIT License
+github.com/dgryski/go-rendezvous                 MIT License
+go.opentelemetry.io/otel                         Apache License 2.0
+gorm.io/datatypes                                MIT License
+../public-api/go                                 <license not found or detected>
+github.com/bufbuild/connect-go                   Apache License 2.0
+github.com/sirupsen/logrus                       MIT License
+github.com/jinzhu/now                            MIT License
+github.com/golang/protobuf                       BSD 3-Clause "New" or "Revised" License
+github.com/spf13/pflag                           BSD 3-Clause "New" or "Revised" License
+github.com/go-redsync/redsync                    BSD 3-Clause "New" or "Revised" License
+github.com/uber/jaeger-lib                       Apache License 2.0
+go.opentelemetry.io/otel/metric                  Apache License 2.0
+golang.org/x/xerrors                             BSD 3-Clause "New" or "Revised" License
+go.opentelemetry.io/otel/trace                   Apache License 2.0
+github.com/matttproud/golang_protobuf_extensions Apache License 2.0
+../scrubber                                      <license not found or detected>
+github.com/heptiolabs/healthcheck                Apache License 2.0
+go.uber.org/atomic                               MIT License
+github.com/pkg/errors                            BSD 2-Clause "Simplified" License
+github.com/go-logr/logr                          Apache License 2.0
+github.com/opentracing/opentracing-go            Apache License 2.0
+golang.org/x/time                                BSD 3-Clause "New" or "Revised" License
+github.com/jinzhu/inflection                     MIT License
+gorm.io/driver/mysql                             MIT License

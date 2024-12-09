@@ -1,0 +1,68 @@
+../common-go                                     <license not found or detected>
+github.com/prometheus/client_golang              Apache License 2.0
+github.com/mailru/easyjson                       MIT License
+golang.org/x/time                                BSD 3-Clause "New" or "Revised" License
+github.com/go-openapi/jsonpointer                Apache License 2.0
+github.com/google/gofuzz                         Apache License 2.0
+github.com/json-iterator/go                      MIT License
+github.com/subosito/gotenv                       MIT License
+github.com/prometheus/common                     Apache License 2.0
+github.com/grpc-ecosystem/go-grpc-middleware     Apache License 2.0
+github.com/pelletier/go-toml                     MIT License
+github.com/prometheus/procfs                     Apache License 2.0
+k8s.io/utils                                     Apache License 2.0
+github.com/golang/protobuf                       BSD 3-Clause "New" or "Revised" License
+golang.org/x/sys                                 BSD 3-Clause "New" or "Revised" License
+github.com/prometheus/client_model               Apache License 2.0
+github.com/spf13/viper                           MIT License
+github.com/mitchellh/go-homedir                  MIT License
+github.com/dgryski/go-rendezvous                 MIT License
+github.com/modern-go/concurrent                  Apache License 2.0
+k8s.io/kube-openapi                              Apache License 2.0
+github.com/google/uuid                           BSD 3-Clause "New" or "Revised" License
+github.com/magiconair/properties                 BSD 2-Clause "Simplified" License
+github.com/emicklei/go-restful                   MIT License
+../scrubber                                      <license not found or detected>
+gopkg.in/inf.v0                                  BSD 3-Clause "New" or "Revised" License
+github.com/mitchellh/reflectwalk                 MIT License
+github.com/cespare/xxhash                        MIT License
+github.com/go-logr/logr                          Apache License 2.0
+github.com/spf13/cobra                           Apache License 2.0
+github.com/go-openapi/swag                       Apache License 2.0
+k8s.io/apimachinery                              Apache License 2.0
+k8s.io/api                                       Apache License 2.0
+google.golang.org/genproto                       Apache License 2.0
+gopkg.in/ini.v1                                  Apache License 2.0
+k8s.io/klog                                      Apache License 2.0
+github.com/go-sql-driver/mysql                   Mozilla Public License 2.0
+github.com/hashicorp/golang-lru                  Mozilla Public License 2.0
+github.com/mitchellh/mapstructure                MIT License
+github.com/spf13/jwalterweatherman               MIT License
+golang.org/x/net                                 BSD 3-Clause "New" or "Revised" License
+github.com/go-openapi/jsonreference              Apache License 2.0
+github.com/spf13/afero                           Apache License 2.0
+github.com/davecgh/go-spew                       ISC License
+sigs.k8s.io/structured-merge-diff                Apache License 2.0
+github.com/gogo/protobuf                         <license not found or detected>
+github.com/modern-go/reflect2                    Apache License 2.0
+sigs.k8s.io/json                                 Apache License 2.0
+sigs.k8s.io/yaml                                 <license not found or detected>
+github.com/redis/go-redis                        BSD 2-Clause "Simplified" License
+github.com/matttproud/golang_protobuf_extensions Apache License 2.0
+github.com/spf13/cast                            MIT License
+github.com/hashicorp/hcl                         Mozilla Public License 2.0
+github.com/munnerz/goautoneg                     BSD 3-Clause "New" or "Revised" License
+golang.org/x/text                                BSD 3-Clause "New" or "Revised" License
+golang.org/x/term                                BSD 3-Clause "New" or "Revised" License
+github.com/fsnotify/fsnotify                     BSD 3-Clause "New" or "Revised" License
+github.com/beorn7/perks                          MIT License
+gopkg.in/yaml.v2                                 Apache License 2.0
+google.golang.org/protobuf                       BSD 3-Clause "New" or "Revised" License
+github.com/google/gnostic-models                 Apache License 2.0
+github.com/sirupsen/logrus                       MIT License
+github.com/spf13/pflag                           BSD 3-Clause "New" or "Revised" License
+github.com/josharian/intern                      MIT License
+k8s.io/client-go                                 Apache License 2.0
+google.golang.org/grpc                           Apache License 2.0
+golang.org/x/oauth2                              BSD 3-Clause "New" or "Revised" License
+gopkg.in/yaml.v3                                 Apache License 2.0

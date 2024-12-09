@@ -1,0 +1,5 @@
+{
+  "context": "{\"isFile\":false,\"path\":\"\",\"title\":\"khulnasoft/empty \",\"revision\":\"\",\"repository\":{\"cloneUrl\":\"https://github.com/khulnasoft/empty.git\",\"host\":\"github.com\",\"name\":\"empty\",\"owner\":\"khulnasoft\",\"private\":false},\"normalizedContextURL\":\"https://github.com/khulnasoft/empty\",\"checkoutLocation\":\"empty\"}",
+  "ide_settings": "{\"settingVersion\":\"2.0\",\"defaultIde\":\"code\",\"useLatestVersion\":false}",
+  "workspace_config": "{\"ports\":[],\"tasks\":[],\"image\":\"docker.io/devtool/workspace-full:latest\",\"_origin\":\"default\"}"
+}

@@ -1,0 +1,6 @@
+{
+  "type": 1,
+  "context": "{\"isFile\":false,\"path\":\"\",\"title\":\"khulnasoft/empty \",\"revision\":\"\",\"repository\":{\"cloneUrl\":\"https://github.com/khulnasoft/empty.git\",\"host\":\"github.com\",\"name\":\"empty\",\"owner\":\"khulnasoft\",\"private\":false},\"normalizedContextURL\":\"https://github.com/khulnasoft/empty\",\"checkoutLocation\":\"empty\"}",
+  "ide_settings": "{\"settingVersion\":\"2.0\",\"defaultIde\":\"intellij\",\"useLatestVersion\":false,\"PinnedIDEversions\":{\"intellij\":\"2024.1.2\"}}",
+  "workspace_config": "{\"tasks\":[{\"init\":\"echo 'init script'\",\"command\":\"echo 'start script'\"}],\"jetbrains\":{\"intellij\":{\"prebuilds\":{\"version\":\"both\"}}},\"_origin\":\"repo\",\"image\":\"docker.io/devtool/workspace-full:latest\",\"vscode\":{\"extensions\":[]}}"
+}

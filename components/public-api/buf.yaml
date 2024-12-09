@@ -1,0 +1,14 @@
+version: v1
+breaking:
+  use:
+    - WIRE_JSON
+  ignore:
+    # Do not enforce breaking change detection for the experimental package
+    - devtool/experimental
+    # TODO enable again after landing style changes
+    - devtool/v1
+lint:
+  use:
+    - DEFAULT
+  ignore:
+    - google

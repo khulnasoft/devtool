@@ -1,0 +1,145 @@
+github.com/ipfs/go-log                                        MIT License
+../scrubber                                                   <license not found or detected>
+github.com/spf13/cobra                                        Apache License 2.0
+github.com/libp2p/go-libp2p-kbucket                           MIT License
+k8s.io/api                                                    Apache License 2.0
+sigs.k8s.io/structured-merge-diff                             Apache License 2.0
+github.com/ipfs/go-metrics-interface                          MIT License
+k8s.io/klog                                                   Apache License 2.0
+github.com/minio/sha256-simd                                  Apache License 2.0
+github.com/jbenet/goprocess                                   MIT License
+github.com/gogo/protobuf                                      <license not found or detected>
+go.opentelemetry.io/otel/trace                                Apache License 2.0
+github.com/spf13/pflag                                        BSD 3-Clause "New" or "Revised" License
+github.com/ipfs/go-ipld-cbor                                  MIT License
+github.com/libp2p/go-libp2p-kad-dht                           MIT License
+github.com/hashicorp/golang-lru                               Mozilla Public License 2.0
+github.com/opencontainers/image-spec                          Apache License 2.0
+k8s.io/utils                                                  Apache License 2.0
+github.com/multiformats/go-varint                             MIT License
+go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp Apache License 2.0
+go.opentelemetry.io/otel/metric                               Apache License 2.0
+github.com/libp2p/go-libp2p-asn-util                          MIT License
+github.com/libp2p/go-msgio                                    MIT License
+github.com/heptiolabs/healthcheck                             Apache License 2.0
+github.com/rs/cors                                            MIT License
+github.com/polydawn/refmt                                     MIT License
+github.com/libp2p/go-netroute                                 BSD 3-Clause "New" or "Revised" License
+go.uber.org/multierr                                          MIT License
+github.com/google/uuid                                        BSD 3-Clause "New" or "Revised" License
+golang.org/x/net                                              BSD 3-Clause "New" or "Revised" License
+github.com/redis/go-redis                                     BSD 2-Clause "Simplified" License
+github.com/google/gopacket                                    BSD 3-Clause "New" or "Revised" License
+github.com/prometheus/procfs                                  Apache License 2.0
+github.com/klauspost/cpuid                                    MIT License
+github.com/hashicorp/golang-lru                               Mozilla Public License 2.0
+github.com/whyrusleeping/cbor-gen                             MIT License
+github.com/whyrusleeping/cbor                                 Apache License 2.0
+../common-go                                                  <license not found or detected>
+github.com/ipfs/go-unixfsnode                                 Apache License 2.0
+github.com/ipfs/go-ds-measure                                 MIT License
+golang.org/x/text                                             BSD 3-Clause "New" or "Revised" License
+github.com/opencontainers/go-digest                           <license not found or detected>
+google.golang.org/protobuf                                    BSD 3-Clause "New" or "Revised" License
+github.com/modern-go/concurrent                               Apache License 2.0
+github.com/ipfs/go-datastore                                  MIT License
+github.com/multiformats/go-multistream                        MIT License
+sigs.k8s.io/json                                              Apache License 2.0
+github.com/klauspost/compress                                 MIT License
+github.com/ipld/go-codec-dagpb                                Apache License 2.0
+github.com/cespare/xxhash                                     MIT License
+github.com/go-logr/logr                                       Apache License 2.0
+go.opentelemetry.io/otel                                      Apache License 2.0
+github.com/hashicorp/go-retryablehttp                         Mozilla Public License 2.0
+github.com/modern-go/reflect2                                 Apache License 2.0
+k8s.io/apimachinery                                           Apache License 2.0
+github.com/golang/protobuf                                    BSD 3-Clause "New" or "Revised" License
+github.com/ipfs/go-ipld-format                                MIT License
+github.com/docker/distribution                                Apache License 2.0
+github.com/mitchellh/go-homedir                               MIT License
+github.com/ipfs/bbloom                                        Creative Commons Zero v1.0 Universal
+github.com/multiformats/go-multiaddr                          MIT License
+github.com/libp2p/go-libp2p-routing-helpers                   MIT License
+github.com/ipld/go-car                                        Apache License 2.0
+github.com/prometheus/client_golang                           Apache License 2.0
+github.com/decred/dcrd/dcrec/secp256k1                        ISC License
+github.com/google/gofuzz                                      Apache License 2.0
+github.com/gorilla/handlers                                   BSD 3-Clause "New" or "Revised" License
+lukechampine.com/blake3                                       MIT License
+google.golang.org/grpc                                        Apache License 2.0
+github.com/uber/jaeger-lib                                    Apache License 2.0
+golang.org/x/exp                                              BSD 3-Clause "New" or "Revised" License
+github.com/multiformats/go-base32                             BSD 3-Clause "New" or "Revised" License
+github.com/whyrusleeping/base32                               <license not found or detected>
+../registry-facade                                            <license not found or detected>
+github.com/samber/lo                                          MIT License
+github.com/docker/docker-credential-helpers                   MIT License
+github.com/ipfs/go-block-format                               MIT License
+github.com/ipfs/go-log                                        MIT License
+github.com/ipfs/go-cid                                        MIT License
+golang.org/x/xerrors                                          BSD 3-Clause "New" or "Revised" License
+go.uber.org/atomic                                            MIT License
+golang.org/x/sys                                              BSD 3-Clause "New" or "Revised" License
+golang.org/x/crypto                                           BSD 3-Clause "New" or "Revised" License
+github.com/alecthomas/units                                   MIT License
+github.com/docker/cli                                         Apache License 2.0
+github.com/json-iterator/go                                   MIT License
+github.com/multiformats/go-multihash                          MIT License
+gonum.org/v1/gonum                                            BSD 3-Clause "New" or "Revised" License
+github.com/prometheus/client_model                            Apache License 2.0
+go.uber.org/zap                                               MIT License
+github.com/whyrusleeping/go-keyspace                          MIT License
+github.com/ipfs/go-ipfs-cmds                                  MIT License
+github.com/pkg/errors                                         BSD 2-Clause "Simplified" License
+github.com/libp2p/go-libp2p-record                            MIT License
+github.com/fsnotify/fsnotify                                  BSD 3-Clause "New" or "Revised" License
+github.com/crackcomm/go-gitignore                             MIT License
+github.com/multiformats/go-multiaddr-dns                      MIT License
+github.com/hashicorp/errwrap                                  Mozilla Public License 2.0
+github.com/ipfs/go-ipld-legacy                                Apache License 2.0
+github.com/facebookgo/atomicfile                              BSD 3-Clause "New" or "Revised" License
+github.com/ipfs/go-ipfs-util                                  MIT License
+github.com/hashicorp/go-cleanhttp                             Mozilla Public License 2.0
+google.golang.org/genproto/googleapis/rpc                     Apache License 2.0
+go4.org                                                       Apache License 2.0
+github.com/gorilla/mux                                        BSD 3-Clause "New" or "Revised" License
+github.com/miekg/dns                                          BSD 3-Clause "New" or "Revised" License
+github.com/prometheus/common                                  Apache License 2.0
+github.com/multiformats/go-base36                             Apache License 2.0
+gopkg.in/inf.v0                                               BSD 3-Clause "New" or "Revised" License
+github.com/multiformats/go-multicodec                         Apache License 2.0
+github.com/spaolacci/murmur3                                  BSD 3-Clause "New" or "Revised" License
+github.com/libp2p/go-libp2p                                   MIT License
+github.com/ipfs/go-fs-lock                                    MIT License
+github.com/grpc-ecosystem/go-grpc-prometheus                  Apache License 2.0
+github.com/opentracing/opentracing-go                         Apache License 2.0
+github.com/petar/GoLLRB                                       BSD 3-Clause "New" or "Revised" License
+github.com/hashicorp/go-multierror                            Mozilla Public License 2.0
+github.com/mr-tron/base58                                     MIT License
+../registry-facade-api/go                                     <license not found or detected>
+golang.org/x/time                                             BSD 3-Clause "New" or "Revised" License
+github.com/ipfs/go-bitfield                                   Apache License 2.0
+github.com/multiformats/go-multibase                          MIT License
+github.com/moby/locker                                        Apache License 2.0
+github.com/ipfs/boxo                                          Apache License 2.0
+github.com/libp2p/go-cidranger                                MIT License
+github.com/mitchellh/reflectwalk                              MIT License
+github.com/mattn/go-isatty                                    MIT License
+github.com/felixge/httpsnoop                                  MIT License
+github.com/beorn7/perks                                       MIT License
+github.com/blang/semver                                       MIT License
+github.com/go-logr/stdr                                       Apache License 2.0
+golang.org/x/sync                                             BSD 3-Clause "New" or "Revised" License
+github.com/grpc-ecosystem/go-grpc-middleware                  Apache License 2.0
+github.com/containerd/log                                     Apache License 2.0
+github.com/ipfs/kubo                                          Apache License 2.0
+gopkg.in/yaml.v2                                              Apache License 2.0
+github.com/containerd/containerd                              Apache License 2.0
+github.com/ipld/go-ipld-prime                                 MIT License
+github.com/pbnjay/memory                                      BSD 3-Clause "New" or "Revised" License
+github.com/dgryski/go-rendezvous                              MIT License
+github.com/libp2p/go-buffer-pool                              MIT License
+github.com/sirupsen/logrus                                    MIT License
+github.com/distribution/reference                             Apache License 2.0
+go.opencensus.io                                              Apache License 2.0
+github.com/uber/jaeger-client-go                              Apache License 2.0

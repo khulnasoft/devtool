@@ -1,0 +1,70 @@
+name: Code Nightly
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read # This is required for actions/checkout
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  create-runner:
+    uses: khulnasoft/gce-github-runner/.github/workflows/create-vm.yml@main
+    secrets:
+      runner_token: ${{ secrets.SELF_HOSTED_GITHUB_RUNNER_TOKEN }}
+      gcp_credentials: ${{ secrets.SELF_HOSTED_GITHUB_RUNNER_GCP_CREDENTIALS }}
+
+  build:
+    runs-on: ${{ needs.create-runner.outputs.label }}
+    needs: [create-runner]
+    container:
+      image: eu.gcr.io/devtool-core-dev/dev/dev-environment:main-gha.30393
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-environment
+        with:
+          identity_provider: ${{ github.ref == 'refs/heads/main' && secrets.CORE_DEV_PROVIDER || secrets.DEV_PREVIEW_PROVIDER }}
+          service_account: ${{ github.ref == 'refs/heads/main' && secrets.CORE_DEV_SA || secrets.DEV_PREVIEW_SA }}
+          leeway_segment_key: ${{ secrets.LEEWAY_SEGMENT_KEY }}
+      - id: build-code
+        name: Build
+        env:
+          PR_DESC: "${{ steps.pr-details.outputs.pr_body }}"
+          MAIN_BRANCH: ${{ (github.head_ref || github.ref) == 'refs/heads/main' }}
+          LEEWAY_REMOTE_CACHE_BUCKET: ${{ github.ref == 'refs/heads/main' && 'leeway-cache-main-c514a01' || 'leeway-cache-dev-3ac8ef5' }}
+        run: |
+          export LEEWAY_WORKSPACE_ROOT=$GITHUB_WORKSPACE
+
+          codeHeadCommit=$(curl -H 'Accept: application/vnd.github.VERSION.sha' https://api.github.com/repos/khulnasoft/openvscode-server/commits/gp-code/main)
+          codeVersion=$(curl https://raw.githubusercontent.com/khulnasoft/openvscode-server/$codeHeadCommit/package.json | jq .version)
+          imageRepoBase=${{ github.ref == 'refs/heads/main' && 'eu.gcr.io/devtool-core-dev/build' || 'eu.gcr.io/devtool-dev-artifact/build' }}
+          cd components/ide/code
+          leeway build \
+            -Dversion=nightly \
+            -DimageRepoBase=$imageRepoBase \
+            -DcodeCommit=$codeHeadCommit \
+            -DcodeVersion=$codeVersion \
+            -DcodeQuality=insider \
+            .:docker-nightly
+      - name: Get previous job's status
+        id: lastrun
+        uses: filiptronicek/get-last-job-status@main
+      - name: Slack Notification
+        if: ${{ (success() && steps.lastrun.outputs.status == 'failed') || failure() }}
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.IDE_SLACK_WEBHOOK }}
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_FOOTER: "<https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|Workflow logs>"
+
+  delete-runner:
+    if: always()
+    needs:
+      - create-runner
+      - build
+    uses: khulnasoft/gce-github-runner/.github/workflows/delete-vm.yml@main
+    secrets:
+      gcp_credentials: ${{ secrets.SELF_HOSTED_GITHUB_RUNNER_GCP_CREDENTIALS }}
+    with:
+      runner-label: ${{ needs.create-runner.outputs.label }}
+      machine-zone: ${{ needs.create-runner.outputs.machine-zone }}

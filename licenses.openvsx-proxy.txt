@@ -1,0 +1,30 @@
+../common-go                                     <license not found or detected>
+../scrubber                                      <license not found or detected>
+golang.org/x/xerrors                             BSD 3-Clause "New" or "Revised" License
+golang.org/x/net                                 BSD 3-Clause "New" or "Revised" License
+golang.org/x/sys                                 BSD 3-Clause "New" or "Revised" License
+github.com/hashicorp/golang-lru                  Mozilla Public License 2.0
+github.com/prometheus/client_model               Apache License 2.0
+github.com/go-redis/redis                        BSD 2-Clause "Simplified" License
+github.com/prometheus/procfs                     Apache License 2.0
+github.com/mitchellh/reflectwalk                 MIT License
+github.com/golang/protobuf                       BSD 3-Clause "New" or "Revised" License
+github.com/sirupsen/logrus                       MIT License
+github.com/grpc-ecosystem/go-grpc-middleware     Apache License 2.0
+github.com/bradfitz/gomemcache                   Apache License 2.0
+github.com/prometheus/client_golang              Apache License 2.0
+github.com/google/uuid                           BSD 3-Clause "New" or "Revised" License
+github.com/eko/gocache                           MIT License
+github.com/asaskevich/govalidator                MIT License
+github.com/matttproud/golang_protobuf_extensions Apache License 2.0
+github.com/prometheus/common                     Apache License 2.0
+github.com/cespare/xxhash                        MIT License
+github.com/blang/semver                          MIT License
+github.com/beorn7/perks                          MIT License
+google.golang.org/protobuf                       BSD 3-Clause "New" or "Revised" License
+github.com/configcat/go-sdk                      MIT License
+github.com/go-ozzo/ozzo-validation               MIT License
+google.golang.org/genproto                       Apache License 2.0
+golang.org/x/text                                BSD 3-Clause "New" or "Revised" License
+github.com/allegro/bigcache                      Apache License 2.0
+google.golang.org/grpc                           Apache License 2.0

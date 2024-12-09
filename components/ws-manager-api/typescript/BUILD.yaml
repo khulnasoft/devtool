@@ -1,0 +1,18 @@
+packages:
+  - name: lib
+    type: yarn
+    deps:
+      - components/content-service-api/typescript:lib
+      - components/devtool-protocol:lib
+    srcs:
+      - "src/*.ts"
+      - "src/*.js"
+      - package.json
+      - mocha.opts
+    config:
+      packaging: library
+      dontTest: false
+      commands:
+        build: ["yarn", "build"]
+      yarnLock: ${coreYarnLockBase}/../yarn.lock
+      tsconfig: tsconfig.json

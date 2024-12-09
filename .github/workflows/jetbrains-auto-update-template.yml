@@ -1,0 +1,92 @@
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read  # This is required for actions/checkout
+on:
+  workflow_call:
+    inputs:
+      productId:
+        type: string
+        required: true
+      productCode:
+        type: string
+        required: true
+
+jobs:
+  create-runner:
+    uses: khulnasoft/gce-github-runner/.github/workflows/create-vm.yml@main
+    secrets:
+      runner_token: ${{ secrets.SELF_HOSTED_GITHUB_RUNNER_TOKEN }}
+      gcp_credentials: ${{ secrets.SELF_HOSTED_GITHUB_RUNNER_GCP_CREDENTIALS }}
+    with:
+      task: ${{ inputs.productId }}
+
+  update-jetbrains:
+    runs-on: ${{ needs.create-runner.outputs.label }}
+    container:
+      image: eu.gcr.io/devtool-core-dev/dev/dev-environment:main-gha.30393
+    needs: [ create-runner ]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Environment
+        uses: ./.github/actions/setup-environment
+        with:
+          identity_provider: ${{ github.ref == 'refs/heads/main' && secrets.CORE_DEV_PROVIDER || secrets.DEV_PREVIEW_PROVIDER }}
+          service_account: ${{ github.ref == 'refs/heads/main' && secrets.CORE_DEV_SA || secrets.DEV_PREVIEW_SA }}
+          leeway_segment_key: ${{ secrets.LEEWAY_SEGMENT_KEY }}
+      - name: Install dependencies
+        run: |
+          cd ./components/ide/gha-update-image/
+          yarn
+          npm i -g bun
+      - name: Find Nightly Target
+        id: find-target
+        run: |
+          cd ./components/ide/gha-update-image/
+          bun run index-jb-nightly.ts --task=1 --productCode=${{ inputs.productCode }}
+
+          if [ -f /tmp/__gh_output.txt ]
+          then
+            cat /tmp/__gh_output.txt >> $GITHUB_OUTPUT
+          fi
+      - name: Leeway build
+        id: leeway-build
+        if: ${{ steps.find-target.outputs.buildNumber }}
+        env:
+          LEEWAY_MAX_PROVENANCE_BUNDLE_SIZE: "8388608"
+          LEEWAY_REMOTE_CACHE_BUCKET: ${{ github.ref == 'refs/heads/main' && 'leeway-cache-main-c514a01' || 'leeway-cache-dev-3ac8ef5' }}
+        run: |
+          echo "May upgrade latest ${{ inputs.productId }} image with ${{ steps.find-target.outputs.editorSummary }}"
+          imageRepoBase=${{ github.ref == 'refs/heads/main' && 'eu.gcr.io/devtool-core-dev/build' || 'eu.gcr.io/devtool-dev-artifact/build' }}
+          output=$(leeway build -Dversion=latest -DimageRepoBase=$imageRepoBase -DbuildNumber=${{ steps.find-target.outputs.buildNumber }} components/ide/jetbrains/image:${{ steps.find-target.outputs.image }}-latest -DjbBackendVersion=${{ steps.find-target.outputs.jbBackendVersion }} --dry-run)
+          if echo "$output" | grep -q "🔧[[:space:]]*build"; then
+            echo "leewayUsingCache=false" >> $GITHUB_OUTPUT
+            echo "Needs to build"
+            echo "Upgrade latest ${{ inputs.productId }} image with ${{ steps.find-target.outputs.editorSummary }}" >> $GITHUB_STEP_SUMMARY
+            leeway build -Dversion=latest -DimageRepoBase=$imageRepoBase -DbuildNumber=${{ steps.find-target.outputs.buildNumber }} components/ide/jetbrains/image:${{ steps.find-target.outputs.image }}-latest -DjbBackendVersion=${{ steps.find-target.outputs.jbBackendVersion }}
+          else
+            echo "leewayUsingCache=true" >> $GITHUB_OUTPUT
+            echo "No need to build"
+          fi
+      - name: Get previous job's status
+        id: lastrun
+        uses: filiptronicek/get-last-job-status@main
+      - name: Slack Notification
+        if: ${{ (success() && steps.find-target.outputs.buildNumber && steps.leeway-build.outputs.leewayUsingCache == 'false') || failure() }}
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.IDE_SLACK_WEBHOOK }}
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_TITLE: Upgrade latest ${{ inputs.productId }} image with ${{ steps.find-target.outputs.editorSummary }}
+          SLACK_FOOTER: "<https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|Workflow logs>"
+
+  delete-runner:
+    if: always()
+    needs:
+      - create-runner
+      - update-jetbrains
+    uses: khulnasoft/gce-github-runner/.github/workflows/delete-vm.yml@main
+    secrets:
+      gcp_credentials: ${{ secrets.SELF_HOSTED_GITHUB_RUNNER_GCP_CREDENTIALS }}
+    with:
+      runner-label: ${{ needs.create-runner.outputs.label }}
+      machine-zone: ${{ needs.create-runner.outputs.machine-zone }}

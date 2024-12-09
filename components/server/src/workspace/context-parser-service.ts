@@ -1,0 +1,217 @@
+/**
+ * Copyright (c) 2020 Devtool GmbH. All rights reserved.
+ * Licensed under the GNU Affero General Public License (AGPL).
+ * See License.AGPL.txt in the project root for license information.
+ */
+
+import {
+    WorkspaceContext,
+    User,
+    CommitContext,
+    GitCheckoutInfo,
+    PullRequestContext,
+    ExternalImageConfigFile,
+} from "@devtool/devtool-protocol";
+import { injectable, multiInject, inject } from "inversify";
+import { HostContextProvider } from "../auth/host-context-provider";
+import { IPrefixContextParser, IContextParser } from "./context-parser";
+import { TraceContext } from "@devtool/devtool-protocol/lib/util/tracing";
+import { ConfigProvider } from "./config-provider";
+import { InvalidDevtoolYMLError } from "@devtool/public-api-common/lib/public-api-errors";
+import { ApplicationError, ErrorCodes } from "@devtool/devtool-protocol/lib/messaging/error";
+import { ImageFileRevisionMissing } from "../repohost";
+
+@injectable()
+export class ContextParser {
+    @multiInject(IPrefixContextParser) protected readonly prefixParser: IPrefixContextParser[];
+    @multiInject(IContextParser) protected readonly contextParsers: IContextParser[];
+    @inject(HostContextProvider) protected readonly hostContextProvider: HostContextProvider;
+    @inject(ConfigProvider) protected readonly configProvider: ConfigProvider;
+
+    protected get allContextParsers(): IContextParser[] {
+        const result = [...this.contextParsers];
+        const hostContextParsers = this.hostContextProvider
+            .getAll()
+            .filter((host) => !!host.contextParser)
+            .map((host) => host.contextParser!);
+        result.push(...hostContextParsers);
+        return result;
+    }
+
+    public normalizeContextURL(contextURL: string): string {
+        for (const parser of [...this.prefixParser, ...this.allContextParsers]) {
+            const normalizedURL = parser.normalize && parser.normalize(contextURL);
+            if (normalizedURL) {
+                return normalizedURL;
+            }
+        }
+        return contextURL;
+    }
+
+    public async handle(ctx: TraceContext, user: User, contextURL: string): Promise<WorkspaceContext> {
+        const span = TraceContext.startSpan("ContextParser.handle", ctx);
+        span.setTag("contextURL", contextURL);
+
+        let result: WorkspaceContext | undefined;
+        try {
+            const prefixResult = this.findPrefix(user, contextURL);
+            if (prefixResult) {
+                contextURL = this.normalizeContextURL(contextURL.substring(prefixResult.prefix.length));
+            }
+
+            result = await this.internalHandleWithoutPrefix({ span }, user, contextURL);
+
+            result = await this.handleMultiRepositoryContext({ span }, user, result);
+
+            if (prefixResult) {
+                result = await prefixResult.parser.handle(user, prefixResult.prefix, result);
+            }
+        } catch (e) {
+            span.logEvent("error", e);
+            throw e;
+        } finally {
+            span.finish();
+        }
+
+        return result;
+    }
+
+    protected async internalHandleWithoutPrefix(
+        ctx: TraceContext,
+        user: User,
+        nonPrefixedContextURL: string,
+    ): Promise<WorkspaceContext> {
+        const span = TraceContext.startSpan("ContextParser.internalHandle", ctx);
+        try {
+            let result: WorkspaceContext | undefined;
+
+            for (const parser of this.allContextParsers) {
+                if (parser.canHandle(user, nonPrefixedContextURL)) {
+                    result = await parser.handle({ span }, user, nonPrefixedContextURL);
+                    break;
+                }
+            }
+            if (!result) {
+                throw new ApplicationError(
+                    ErrorCodes.BAD_REQUEST,
+                    `Couldn't parse context '${nonPrefixedContextURL}'.`,
+                );
+            }
+
+            // TODO: Make the parsers return the context with normalizedContextURL set
+            result.normalizedContextURL = nonPrefixedContextURL;
+            return result;
+        } finally {
+            span.finish();
+        }
+    }
+
+    protected buildUpstreamCloneUrl(context: CommitContext): string | undefined {
+        let upstreamCloneUrl: string | undefined = undefined;
+        if (PullRequestContext.is(context) && context.base) {
+            upstreamCloneUrl = context.base.repository.cloneUrl;
+        } else if (context.repository.fork) {
+            upstreamCloneUrl = context.repository.fork.parent.cloneUrl;
+        }
+
+        if (context.repository.cloneUrl === upstreamCloneUrl) {
+            return undefined;
+        }
+        return upstreamCloneUrl;
+    }
+
+    protected async handleMultiRepositoryContext(
+        ctx: TraceContext,
+        user: User,
+        context: WorkspaceContext,
+    ): Promise<WorkspaceContext> {
+        if (!CommitContext.is(context)) {
+            return context;
+        }
+        const span = TraceContext.startSpan("ContextParser.handleMultiRepositoryContext", ctx);
+        try {
+            // Note: we only care about repo related stuff in this function.
+            // Fields like `config.image` will not be exposed, so we don't pass organizationId here
+            let config = await this.configProvider.fetchConfig({ span }, user, context);
+            let mainRepoContext: WorkspaceContext | undefined;
+            if (config.config.mainConfiguration) {
+                mainRepoContext = await this.internalHandleWithoutPrefix(
+                    { span },
+                    user,
+                    config.config.mainConfiguration,
+                );
+                if (!CommitContext.is(mainRepoContext)) {
+                    throw new InvalidDevtoolYMLError({
+                        violations: [`Cannot find main repository '${config.config.mainConfiguration}'.`],
+                    });
+                }
+                // Note: we only care about repo related stuff in this function.
+                // Fields like `config.image` will not be exposed, so we don't pass organizationId here
+                config = await this.configProvider.fetchConfig({ span }, user, mainRepoContext);
+            }
+
+            if (config.config.additionalRepositories && config.config.additionalRepositories.length > 0) {
+                const subRepoCommits: GitCheckoutInfo[] = [];
+                for (const subRepo of config.config.additionalRepositories) {
+                    let subContext = (await this.internalHandleWithoutPrefix(
+                        { span },
+                        user,
+                        subRepo.url,
+                    )) as CommitContext;
+                    if (!CommitContext.is(subContext)) {
+                        throw new InvalidDevtoolYMLError({
+                            violations: [`Cannot find sub-repository '${subRepo.url}'.`],
+                        });
+                    }
+                    if (context.repository.cloneUrl === subContext.repository.cloneUrl) {
+                        // if it's the repo from the original context we want to use that commit.
+                        subContext = JSON.parse(JSON.stringify(context));
+                    }
+
+                    subRepoCommits.push({
+                        ...subContext,
+                        checkoutLocation: subRepo.checkoutLocation || subContext.repository.name,
+                        upstreamRemoteURI: this.buildUpstreamCloneUrl(subContext),
+                        // we want to create a local branch on all repos, in case it's a multi-repo change. If it's not there are no drawbacks anyway.
+                        ref: context.ref,
+                        refType: context.refType,
+                        localBranch: context.localBranch,
+                    });
+                }
+                context.additionalRepositoryCheckoutInfo = subRepoCommits;
+            }
+            // if the original contexturl was pointing to a subrepo we update the commit information with the mainContext.
+            if (mainRepoContext && CommitContext.is(mainRepoContext)) {
+                context.repository = mainRepoContext.repository;
+                context.revision = mainRepoContext.revision;
+            }
+            context.checkoutLocation = config.config.checkoutLocation || context.repository.name;
+            context.upstreamRemoteURI = this.buildUpstreamCloneUrl(context);
+            if (!context.warnings) {
+                context.warnings = [];
+            }
+
+            if (ExternalImageConfigFile.is(config.config.image)) {
+                if (config.config.image.externalSource.revision === ImageFileRevisionMissing) {
+                    context.warnings.push("The Dockerfile specified in the .devtool.yml file was not found.");
+
+                    // we let the image builder try cloning the context's revision
+                    config.config.image.externalSource.revision = context.revision;
+                }
+            }
+
+            return context;
+        } finally {
+            span.finish();
+        }
+    }
+
+    protected findPrefix(user: User, context: string): { prefix: string; parser: IPrefixContextParser } | undefined {
+        for (const parser of this.prefixParser) {
+            const prefix = parser.findPrefix(user, context);
+            if (prefix) {
+                return { prefix, parser };
+            }
+        }
+    }
+}

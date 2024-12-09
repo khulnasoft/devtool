@@ -1,0 +1,36 @@
+github.com/spf13/pflag                           BSD 3-Clause "New" or "Revised" License
+github.com/prometheus/client_model               Apache License 2.0
+github.com/grpc-ecosystem/go-grpc-prometheus     Apache License 2.0
+github.com/golang/protobuf                       BSD 3-Clause "New" or "Revised" License
+github.com/sirupsen/logrus                       MIT License
+nhooyr.io/websocket                              ISC License
+github.com/prometheus/common                     Apache License 2.0
+github.com/cenkalti/backoff                      MIT License
+../common-go                                     <license not found or detected>
+github.com/grpc-ecosystem/grpc-gateway           BSD 3-Clause "New" or "Revised" License
+github.com/spf13/cobra                           Apache License 2.0
+github.com/soheilhy/cmux                         Apache License 2.0
+github.com/grpc-ecosystem/go-grpc-middleware     Apache License 2.0
+github.com/mitchellh/reflectwalk                 MIT License
+golang.org/x/xerrors                             BSD 3-Clause "New" or "Revised" License
+github.com/cespare/xxhash                        MIT License
+golang.org/x/sys                                 BSD 3-Clause "New" or "Revised" License
+google.golang.org/grpc                           Apache License 2.0
+github.com/matttproud/golang_protobuf_extensions Apache License 2.0
+golang.org/x/text                                BSD 3-Clause "New" or "Revised" License
+../scrubber                                      <license not found or detected>
+golang.org/x/net                                 BSD 3-Clause "New" or "Revised" License
+github.com/gorilla/websocket                     BSD 2-Clause "Simplified" License
+github.com/prometheus/procfs                     Apache License 2.0
+github.com/hashicorp/golang-lru                  Mozilla Public License 2.0
+github.com/opentracing/opentracing-go            Apache License 2.0
+../ide-metrics-api/go                            <license not found or detected>
+google.golang.org/protobuf                       BSD 3-Clause "New" or "Revised" License
+google.golang.org/genproto                       Apache License 2.0
+golang.org/x/time                                BSD 3-Clause "New" or "Revised" License
+github.com/klauspost/compress                    MIT License
+github.com/rs/cors                               MIT License
+github.com/improbable-eng/grpc-web               Apache License 2.0
+github.com/beorn7/perks                          MIT License
+github.com/prometheus/client_golang              Apache License 2.0
+github.com/desertbit/timer                       MIT License

@@ -1,0 +1,158 @@
+// Copyright (c) 2021 Devtool GmbH. All rights reserved.
+// Licensed under the GNU Affero General Public License (AGPL).
+// See License.AGPL.txt in the project root for license information.
+
+package proxy
+
+import (
+	"bytes"
+	_ "embed"
+	"encoding/base64"
+	"fmt"
+	"text/template"
+
+	"github.com/khulnasoft/devtool/installer/pkg/common"
+	ideProxyComponent "github.com/khulnasoft/devtool/installer/pkg/components/ide-proxy"
+	minioComponent "github.com/khulnasoft/devtool/installer/pkg/components/minio"
+	openvsxproxy "github.com/khulnasoft/devtool/installer/pkg/components/openvsx-proxy"
+
+	"golang.org/x/crypto/bcrypt"
+	corev1 "k8s.io/api/core/v1"
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"k8s.io/apimachinery/pkg/runtime"
+	"k8s.io/utils/pointer"
+)
+
+//go:embed templates/configmap/vhost.docker-registry.tpl
+var vhostDockerRegistry []byte
+
+//go:embed templates/configmap/vhost.empty.tpl
+var vhostEmptyTmpl []byte
+
+//go:embed templates/configmap/vhost.minio.tpl
+var vhostMinioTmpl []byte
+
+//go:embed templates/configmap/vhost.open-vsx.tpl
+var vhostOpenVSXTmpl []byte
+
+//go:embed templates/configmap/vhost.ide-proxy.tpl
+var ideProxyTmpl []byte
+
+type commonTpl struct {
+	Domain       string
+	ReverseProxy string
+}
+
+type dockerRegistryTpl struct {
+	Domain       string
+	ReverseProxy string
+	Username     string
+	Password     string
+}
+
+type openVSXTpl struct {
+	Domain  string
+	RepoURL string
+}
+
+func renderTemplate(tpl []byte, values interface{}) (*string, error) {
+	t, err := template.New("template").Parse(string(tpl))
+	if err != nil {
+		return nil, err
+	}
+
+	var parsed bytes.Buffer
+	err = t.Execute(&parsed, values)
+	if err != nil {
+		return nil, err
+	}
+
+	rendered := parsed.String()
+
+	return &rendered, nil
+}
+
+const kubeDomain = "svc.cluster.local"
+
+func configmap(ctx *common.RenderContext) ([]runtime.Object, error) {
+	empty, err := renderTemplate(vhostEmptyTmpl, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	openVSX, err := renderTemplate(vhostOpenVSXTmpl, openVSXTpl{
+		Domain:  ctx.Config.Domain,
+		RepoURL: fmt.Sprintf("openvsx-proxy.%s.%s:%d", ctx.Namespace, kubeDomain, openvsxproxy.ServicePort),
+	})
+	if err != nil {
+		return nil, err
+	}
+
+	ideProxy, err := renderTemplate(ideProxyTmpl, commonTpl{
+		Domain:       ctx.Config.Domain,
+		ReverseProxy: fmt.Sprintf("ide-proxy.%s.%s:%d", ctx.Namespace, kubeDomain, ideProxyComponent.ServicePort),
+	})
+	if err != nil {
+		return nil, err
+	}
+
+	data := map[string]string{
+		"vhost.empty":     *empty,
+		"vhost.open-vsx":  *openVSX,
+		"vhost.ide-proxy": *ideProxy,
+	}
+
+	if ctx.Config.ObjectStorage.CloudStorage == nil {
+		// Don't expose Minio if using cloud storage
+		minio, err := renderTemplate(vhostMinioTmpl, commonTpl{
+			Domain:       ctx.Config.Domain,
+			ReverseProxy: fmt.Sprintf("minio.%s.%s:%d", ctx.Namespace, kubeDomain, minioComponent.ServiceConsolePort),
+		})
+		if err != nil {
+			return nil, err
+		}
+		data["vhost.minio"] = *minio
+	}
+
+	if pointer.BoolDeref(ctx.Config.ContainerRegistry.InCluster, false) {
+		username := ctx.Values.InternalRegistryUsername
+		if username == "" {
+			return nil, fmt.Errorf("unknown value: internal registry username")
+		}
+
+		password := ctx.Values.InternalRegistryPassword
+		if password == "" {
+			return nil, fmt.Errorf("unknown value: internal registry password")
+		}
+
+		hashedPassword, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
+		if err != nil {
+			return nil, err
+		}
+
+		dockerRegistry, err := renderTemplate(vhostDockerRegistry, dockerRegistryTpl{
+			Domain:       ctx.Config.Domain,
+			ReverseProxy: fmt.Sprintf("https://%s.%s.%s", common.DockerRegistryName, ctx.Namespace, kubeDomain),
+			Username:     username,
+			Password:     base64.StdEncoding.EncodeToString(hashedPassword),
+		})
+		if err != nil {
+			return nil, err
+		}
+
+		data["vhost.docker-registry"] = *dockerRegistry
+	}
+
+	return []runtime.Object{
+		&corev1.ConfigMap{
+			TypeMeta: common.TypeMetaConfigmap,
+			ObjectMeta: metav1.ObjectMeta{
+				Name:        fmt.Sprintf("%s-config", Component),
+				Namespace:   ctx.Namespace,
+				Labels:      common.CustomizeLabel(ctx, Component, common.TypeMetaConfigmap),
+				Annotations: common.CustomizeAnnotation(ctx, Component, common.TypeMetaConfigmap),
+			},
+			Data: data,
+		},
+	}, nil
+}

@@ -1,0 +1,114 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$ref": "#/definitions/ServiceConfig",
+  "title": "image-builder config schema - generated using img generate config",
+  "definitions": {
+    "Configuration": {
+      "required": [
+        "wsman",
+        "baseImageRepository",
+        "workspaceImageRepository",
+        "builderImage"
+      ],
+      "properties": {
+        "wsman": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "$ref": "#/definitions/WorkspaceManagerConfig"
+        },
+        "pullSecret": {
+          "type": "string"
+        },
+        "pullSecretFile": {
+          "type": "string"
+        },
+        "baseImageRepository": {
+          "type": "string"
+        },
+        "workspaceImageRepository": {
+          "type": "string"
+        },
+        "builderImage": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object"
+    },
+    "RefCacheConfig": {
+      "required": [
+        "interval",
+        "refs"
+      ],
+      "properties": {
+        "interval": {
+          "type": "string"
+        },
+        "refs": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object"
+    },
+    "ServiceConfig": {
+      "required": [
+        "orchestrator",
+        "server"
+      ],
+      "properties": {
+        "orchestrator": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "$ref": "#/definitions/Configuration"
+        },
+        "refCache": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "$ref": "#/definitions/RefCacheConfig"
+        },
+        "server": {
+          "$ref": "#/definitions/Configuration"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object"
+    },
+    "TLS": {
+      "required": [
+        "ca",
+        "crt",
+        "key"
+      ],
+      "properties": {
+        "ca": {
+          "type": "string"
+        },
+        "crt": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object"
+    },
+    "WorkspaceManagerConfig": {
+      "required": [
+        "address"
+      ],
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "tls": {
+          "$schema": "http://json-schema.org/draft-04/schema#",
+          "$ref": "#/definitions/TLS"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object"
+    }
+  }
+}

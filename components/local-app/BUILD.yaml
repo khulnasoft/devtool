@@ -1,0 +1,52 @@
+packages:
+  # remaining packages are added by the BUILD.js generator
+  - name: docker
+    type: docker
+    deps:
+      - :app-with-manifest
+    argdeps:
+      - imageRepoBase
+    config:
+      buildArgs:
+        VERSION: ${version}
+      dockerfile: leeway.Dockerfile
+      image:
+        - ${imageRepoBase}/local-app:${version}
+        - ${imageRepoBase}/local-app:commit-${__git_commit}
+  - name: update-manifest
+    type: go
+    srcs:
+      - go.mod
+      - go.sum
+      - "**/*.go"
+      - version.txt
+    deps:
+      - components/supervisor-api/go:lib
+      - components/devtool-protocol/go:lib
+      - components/local-app-api/go:lib
+      - components/public-api/go:lib
+    config:
+      packaging: app
+      dontTest: true
+      buildCommand: ["go", "build", "-o", "update-manifest", "./main/update-manifest/main.go"]
+  - name: app-with-manifest
+    type: generic
+    deps:
+      - :app
+      - :update-manifest
+    config:
+      commands:
+        - ["sh", "-c", "mkdir -p bin && mv components-local-app--app/bin/* bin/"]
+        - ["sh", "-c", "components-local-app--update-manifest/update-manifest --cwd bin | tee bin/manifest.json"]
+        - ["rm", "-rf", "components-local-app--update-manifest", "components-local-app--app"]
+scripts:
+  - name: install-cli
+    description: "Install devtool-cli as `devtool` command and add auto-completion. Usage: '. $(leeway run components/local-app:install-cli)'"
+    script: |
+      go build -o devtool ./main/devtool-cli
+      sudo mv devtool /usr/bin/devtool
+      sudo chmod +x /usr/bin/devtool
+  - name: cli-completion
+    description: "Add completion of devtool-cli to bash-completion. Usage: '. $(leeway run components/local-app:cli-completion)'"
+    script: |
+      sudo /usr/bin/devtool completion bash | sudo tee /usr/share/bash-completion/completions/devtool > /dev/null

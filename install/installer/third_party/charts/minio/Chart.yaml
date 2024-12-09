@@ -1,0 +1,12 @@
+# Copyright (c) 2021 Devtool GmbH. All rights reserved.
+# Licensed under the GNU Affero General Public License (AGPL).
+# See License.AGPL.txt in the project root for license information.
+
+apiVersion: v2
+description: Devtool Minio
+name: minio
+version: 1.0.0
+dependencies:
+  - name: minio
+    version: 11.10.24
+    repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami

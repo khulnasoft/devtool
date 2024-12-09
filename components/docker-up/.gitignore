@@ -1,0 +1,4 @@
+bin
+docker-compose
+docker.tgz
+runc
