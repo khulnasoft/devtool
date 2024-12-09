@@ -1,0 +1,13 @@
+{
+  "devtoolServiceUrl": "wss://main.preview.devtool-dev.com/api/v1",
+  "server": {
+    "services": {
+      "grpc": {
+        "address": ":9001"
+      },
+      "http": {
+        "address": ":9002"
+      }
+    }
+  }
+}
