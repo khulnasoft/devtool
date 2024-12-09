@@ -8,16 +8,16 @@ import { WorkspaceDB } from "@devtool/devtool-db/lib/workspace-db";
 import { HeadlessLogUrls } from "@khulnasoft/devtool-protocol/lib/headless-workspace-log";
 import { inject, injectable } from "inversify";
 import * as url from "url";
-import { Status, StatusServiceClient } from "@devtool/supervisor-api-grpcweb/lib/status_pb_service";
+import { Status, StatusServiceClient } from "@khulnasoft/supervisor-api-grpcweb/lib/status_pb_service";
 import {
     TasksStatusRequest,
     TasksStatusResponse,
     TaskState,
     TaskStatus,
-} from "@devtool/supervisor-api-grpcweb/lib/status_pb";
-import { ResponseStream } from "@devtool/supervisor-api-grpcweb/lib/terminal_pb_service";
-import { ListenToOutputRequest, ListenToOutputResponse } from "@devtool/supervisor-api-grpcweb/lib/task_pb";
-import { TaskServiceClient } from "@devtool/supervisor-api-grpcweb/lib/task_pb_service";
+} from "@khulnasoft/supervisor-api-grpcweb/lib/status_pb";
+import { ResponseStream } from "@khulnasoft/supervisor-api-grpcweb/lib/terminal_pb_service";
+import { ListenToOutputRequest, ListenToOutputResponse } from "@khulnasoft/supervisor-api-grpcweb/lib/task_pb";
+import { TaskServiceClient } from "@khulnasoft/supervisor-api-grpcweb/lib/task_pb_service";
 import { WorkspaceInstance } from "@khulnasoft/devtool-protocol";
 import * as grpc from "@grpc/grpc-js";
 import { Config } from "../config";

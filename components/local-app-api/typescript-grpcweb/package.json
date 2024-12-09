@@ -11,7 +11,7 @@
     "lib"
   ],
   "dependencies": {
-    "@devtool/supervisor-api-grpcweb": "0.1.5",
+    "@khulnasoft/supervisor-api-grpcweb": "0.1.5",
     "@improbable-eng/grpc-web": "0.14.0",
     "google-protobuf": "^3.19.1"
   },

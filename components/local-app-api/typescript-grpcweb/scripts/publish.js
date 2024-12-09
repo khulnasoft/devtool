@@ -17,7 +17,7 @@ const localAppPckPath = path.join(process.cwd(), "components-local-app-api-types
 
 const supervisorPck = JSON.parse(fs.readFileSync(path.join(supervisorPckPath, "package.json"), "utf-8"));
 const localAppPck = JSON.parse(fs.readFileSync(path.join(localAppPckPath, "package.json"), "utf-8"));
-localAppPck.dependencies["@devtool/supervisor-api-grpcweb"] = supervisorPck.version;
+localAppPck.dependencies["@khulnasoft/supervisor-api-grpcweb"] = supervisorPck.version;
 fs.writeFileSync(path.join(localAppPckPath, "package.json"), JSON.stringify(localAppPck, undefined, 2), "utf-8");
 
 process.argv.push("components-local-app-api-typescript-grpcweb--lib/package");

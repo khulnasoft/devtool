@@ -1,11 +1,11 @@
 {
   "private": true,
-  "name": "@devtool/supervisor-frontend",
+  "name": "@khulnasoft/supervisor-frontend",
   "license": "UNLICENSED",
   "version": "0.0.0",
   "dependencies": {
-    "@khulnasoft/devtool-protocol": "0.1.5",
-    "@devtool/supervisor-api-grpc": "0.1.5",
+    "@khulnasoft/devtool-protocol": "*",
+    "@khulnasoft/supervisor-api-grpc": "*",
     "buffer": "^4.3.0",
     "crypto-browserify": "3.12.0",
     "process": "^0.11.10",

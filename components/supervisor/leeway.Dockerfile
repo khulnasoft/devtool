@@ -18,7 +18,7 @@ FROM scratch
 # BEWARE: This must be the first layer in the image, s.t. that blobserve
 #         can serve the IDE host. Even moving WORKDIR before this line
 #         would break things.
-COPY components-supervisor-frontend--app/node_modules/@devtool/supervisor-frontend/dist/ /.supervisor/frontend/
+COPY components-supervisor-frontend--app/node_modules/@khulnasoft/supervisor-frontend/dist/ /.supervisor/frontend/
 
 WORKDIR "/.supervisor"
 COPY components-supervisor--app/supervisor \

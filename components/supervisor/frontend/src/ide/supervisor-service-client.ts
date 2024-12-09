@@ -8,8 +8,8 @@ import {
     SupervisorStatusResponse,
     IDEStatusResponse,
     ContentStatusResponse,
-} from "@devtool/supervisor-api-grpc/lib/status_pb";
-import { WorkspaceInfoResponse } from "@devtool/supervisor-api-grpc/lib/info_pb";
+} from "@khulnasoft/supervisor-api-grpc/lib/status_pb";
+import { WorkspaceInfoResponse } from "@khulnasoft/supervisor-api-grpc/lib/info_pb";
 import { workspaceUrl } from "../shared/urls";
 import { FrontendDashboardServiceClient } from "../shared/frontend-dashboard-service";
 import { Timeout } from "@khulnasoft/devtool-protocol/lib/util/timeout";

@@ -8,15 +8,6 @@ require (
 	github.com/cenkalti/backoff/v4 v4.2.0
 	github.com/creack/pty v1.1.18
 	github.com/fsnotify/fsnotify v1.4.9
-	github.com/khulnasoft/devtool/common-go v0.0.0-00010101000000-000000000000
-	github.com/khulnasoft/devtool/components/public-api/go v0.0.0-00010101000000-000000000000
-	github.com/khulnasoft/devtool/content-service v0.0.0-00010101000000-000000000000
-	github.com/khulnasoft/devtool/content-service/api v0.0.0-00010101000000-000000000000
-	github.com/khulnasoft/devtool/devtool-protocol v0.0.0-00010101000000-000000000000
-	github.com/khulnasoft/devtool/ide-metrics-api v0.0.0-00010101000000-000000000000
-	github.com/khulnasoft/devtool/supervisor/api v0.0.0-00010101000000-000000000000
-	github.com/khulnasoft/devtool/ws-daemon/api v0.0.0-00010101000000-000000000000
-	github.com/khulnasoft/go-reaper v0.0.0-20241024192051-78d04cc2e25f
 	github.com/golang/mock v1.6.0
 	github.com/google/go-cmp v0.6.0
 	github.com/google/uuid v1.6.0
@@ -25,6 +16,14 @@ require (
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.11.3
 	github.com/improbable-eng/grpc-web v0.14.0
+	github.com/khulnasoft/devtool/common-go v0.0.0-00010101000000-000000000000
+	github.com/khulnasoft/devtool/components/public-api/go v0.0.0-00010101000000-000000000000
+	github.com/khulnasoft/devtool/content-service v0.0.0-00010101000000-000000000000
+	github.com/khulnasoft/devtool/content-service/api v0.0.0-00010101000000-000000000000
+	github.com/khulnasoft/devtool/devtool-protocol v0.0.0-00010101000000-000000000000
+	github.com/khulnasoft/devtool/ide-metrics-api v0.0.0-00010101000000-000000000000
+	github.com/khulnasoft/devtool/supervisor/api v0.0.0-00010101000000-000000000000
+	github.com/khulnasoft/devtool/ws-daemon/api v0.0.0-00010101000000-000000000000
 	github.com/prometheus/client_golang v1.16.0
 	github.com/prometheus/client_model v0.3.0
 	github.com/prometheus/common v0.42.0
@@ -34,11 +33,11 @@ require (
 	github.com/sirupsen/logrus v1.9.3
 	github.com/soheilhy/cmux v0.1.5
 	github.com/spf13/cobra v1.4.0
-	golang.org/x/crypto v0.21.0
-	golang.org/x/net v0.22.0
-	golang.org/x/sync v0.6.0
-	golang.org/x/sys v0.18.0
-	golang.org/x/term v0.18.0
+	golang.org/x/crypto v0.24.0
+	golang.org/x/net v0.26.0
+	golang.org/x/sync v0.7.0
+	golang.org/x/sys v0.21.0
+	golang.org/x/term v0.21.0
 	golang.org/x/xerrors v0.0.0-20231012003039-104605ab7028
 	google.golang.org/grpc v1.62.1
 	google.golang.org/protobuf v1.33.0
@@ -50,12 +49,14 @@ require (
 	github.com/go-logr/logr v1.4.1 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/google/s2a-go v0.1.7 // indirect
+	github.com/khulnasoft/devtool/components/scrubber v0.0.0-20241209224028-94c9dc49a033 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.6 // indirect
 	github.com/mattn/go-colorable v0.1.8 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
 	github.com/mgutz/ansi v0.0.0-20200706080929-d51e80ef957d // indirect
 	github.com/onsi/ginkgo v1.16.5 // indirect
 	github.com/onsi/gomega v1.27.10 // indirect
+	github.com/rogpeppe/go-internal v1.13.1 // indirect
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.49.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.49.0 // indirect
 	go.opentelemetry.io/otel v1.24.0 // indirect
@@ -66,7 +67,6 @@ require (
 )
 
 require (
-	github.com/khulnasoft/devtool/components/scrubber v0.0.0-00010101000000-000000000000 // indirect
 	github.com/mitchellh/reflectwalk v1.0.2 // indirect
 	inet.af/tcpproxy v0.0.0-20221017015627-91f861402626
 )
@@ -155,9 +155,9 @@ require (
 	go.opencensus.io v0.24.0 // indirect
 	go.uber.org/atomic v1.4.0 // indirect
 	golang.org/x/oauth2 v0.18.0 // indirect
-	golang.org/x/text v0.14.0 // indirect
+	golang.org/x/text v0.16.0 // indirect
 	golang.org/x/time v0.5.0 // indirect
-	golang.org/x/tools v0.9.3 // indirect
+	golang.org/x/tools v0.22.0 // indirect
 	google.golang.org/api v0.171.0 // indirect
 	google.golang.org/appengine v1.6.8 // indirect
 	google.golang.org/genproto v0.0.0-20240213162025-012b6fc9bca9 // indirect

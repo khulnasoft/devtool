@@ -7,6 +7,6 @@
 /**
  * Public API for the single umd module.
  */
-export { TunnelVisiblity, TunnelVisiblityMap } from "@devtool/supervisor-api-grpcweb/lib/port_pb";
+export { TunnelVisiblity, TunnelVisiblityMap } from "@khulnasoft/supervisor-api-grpcweb/lib/port_pb";
 export * from "../lib/localapp_pb";
 export * from "../lib/localapp_pb_service";
