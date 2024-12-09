@@ -1,24 +1,3 @@
-<a href="https://www.devtool.io">
-  <img width="1500" alt="Devtool banner image" src="https://github.com/khulnasoft/devtool/assets/55068936/ff393a65-a4f3-4997-a066-10337562cc34">
-</a>
-
-<br>
-<br>
-
-
-
-<div align="center" style="flex-direction: row;">
-  <a href="https://www.devtool.io#gh-light-mode-only">
-    <img src="https://github.com/khulnasoft/devtool/assets/55068936/01a00b23-e1f5-4650-a629-89db8e300708" style="width: 256px">
-  </a>
-  <a href="https://www.devtool.io#gh-dark-mode-only">
-    <img src="https://github.com/khulnasoft/devtool/assets/55068936/ff437ec6-adda-4814-9e92-fff44cfd00ad" style="width: 256px">
-  </a>
-</div>
-
-
-[Devtool](https://www.devtool.io)’s developer platform provides on-demand, pre-configured environments that automatically integrate into any tool, library, or dependency required for creating software. Devtool workspaces are the fastest and most secure way to ship software and are as easy as adding a `.devtool.yml` file to the root of any repository.
-
 📄 [Read Cloud Development Environment white paper](https://www.devtool.io/whitepaper/cde)
 
 
