@@ -1,17 +1,3 @@
-📄 [Read Cloud Development Environment white paper](https://www.devtool.io/whitepaper/cde)
-
-
-<div align="center" style="flex-direction: row;">
-  <a href="https://www.devtool.io#gh-light-mode-only">
-    <img src="https://github.com/khulnasoft/devtool/assets/55068936/84beb5da-fa5b-4966-a454-8f5b2607a8ed">
-  </a>
-  <a href="https://www.devtool.io#gh-dark-mode-only">
-    <img src="https://github.com/khulnasoft/devtool/assets/55068936/3912a60a-65a9-45f2-b151-93621ac8bf53">
-  </a>
-</div>
-
-
-
 ## Features
 
 - **Dev environments as code** - Devtool is like infrastructure-as-code, but for your development environment. Devtool defines your editor extensions and requires dependencies in a declarative [`.devtool.yml` configuration](https://www.devtool.io/docs/introduction/devtool-tutorial/2-configure-your-devtool-yml). Spinning up dev environments is easily repeatable and reproducible empowering you to automate, version-control, and share dev environments across your team.
